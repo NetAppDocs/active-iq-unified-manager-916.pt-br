@@ -1,0 +1,36 @@
+---
+permalink: performance-checker/task_view_performance_charts_to_compare_volumes_or_luns_in_qos_policy.html 
+sidebar: sidebar 
+keywords: view, performance, charts, compare, volumes, luns, same, qos, policy, group 
+summary: Você pode visualizar os volumes e LUNs que estão nos mesmos grupos de políticas de QoS e, em seguida, comparar o desempenho em um único gráfico de IOPS, MB/s ou IOPS/TB para identificar quaisquer problemas. 
+---
+= Visualize gráficos de desempenho para comparar volumes ou LUNs que estão no mesmo grupo de políticas de QoS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode visualizar os volumes e LUNs que estão nos mesmos grupos de políticas de QoS e, em seguida, comparar o desempenho em um único gráfico de IOPS, MB/s ou IOPS/TB para identificar quaisquer problemas.
+
+As etapas para comparar o desempenho de volumes no mesmo grupo de políticas de QoS são mostradas abaixo.  As etapas para visualizar essas informações para um LUN são semelhantes.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento* > *Volumes*.
++
+A visualização Saúde: Todos os volumes é exibida por padrão.
+
+. No menu Exibir, selecione *Desempenho: Volumes no Grupo de Políticas de QoS*.
+. Clique no nome do volume que você deseja revisar.
++
+A página Performance Explorer é exibida para o volume.
+
+. No menu Exibir e comparar, selecione *Volumes no mesmo grupo de políticas de QoS*.
++
+Os outros volumes que compartilham a mesma política de QoS estão listados na tabela abaixo.
+
+. Clique no botão *Adicionar* para adicionar esses volumes aos gráficos para que você possa comparar IOPS, MB/s, IOPS/TB e outros contadores de desempenho para todos os volumes selecionados nos gráficos.
++
+Você pode alterar o intervalo de tempo para visualizar o desempenho em intervalos de tempo diferentes do padrão de 72 horas.
+
+

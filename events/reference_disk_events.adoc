@@ -1,0 +1,66 @@
+---
+permalink: events/reference_disk_events.html 
+sidebar: sidebar 
+keywords: disks, events, impact area, availability 
+summary: Os eventos de discos fornecem informações sobre o status dos discos para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, nível de impacto, tipo de fonte e gravidade. 
+---
+= Eventos de discos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de discos fornecem informações sobre o status dos discos para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, nível de impacto, tipo de fonte e gravidade.
+
+
+
+== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+Discos Flash - Blocos Sobressalentes Quase Consumidos (ocumEvtClusterFlashDiskFewerSpareBlockError)
+ a| 
+Risco
+ a| 
+Conjunto
+ a| 
+Erro
+
+
+
+ a| 
+Discos Flash - Sem Blocos Sobressalentes (ocumEvtClusterFlashDiskNoSpareBlockCritical)
+ a| 
+Incidente
+ a| 
+Conjunto
+ a| 
+Crítico
+
+
+
+ a| 
+Alguns discos não atribuídos (ocumEvtClusterUnassignedDisksSome)
+ a| 
+Risco
+ a| 
+Conjunto
+ a| 
+Aviso
+
+
+
+ a| 
+Alguns discos com falha (ocumEvtDisksSomeFailed)
+ a| 
+Incidente
+ a| 
+Conjunto
+ a| 
+Crítico
+
+|===

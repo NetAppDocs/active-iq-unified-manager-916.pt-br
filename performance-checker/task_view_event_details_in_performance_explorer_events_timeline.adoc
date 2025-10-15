@@ -1,0 +1,49 @@
+---
+permalink: performance-checker/task_view_event_details_in_performance_explorer_events_timeline.html 
+sidebar: sidebar 
+keywords: view, event, details, timeline 
+summary: Você pode visualizar todos os eventos e seus detalhes relacionados no painel Linha do tempo de eventos do Performance Explorer.  Este é um método rápido e eficiente de visualizar todos os eventos de integridade e desempenho que ocorreram no objeto raiz durante um intervalo de tempo especificado, o que pode ser útil na solução de problemas de desempenho. 
+---
+= Ver detalhes do evento na Linha do tempo de eventos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode visualizar todos os eventos e seus detalhes relacionados no painel Linha do tempo de eventos do Performance Explorer.  Este é um método rápido e eficiente de visualizar todos os eventos de integridade e desempenho que ocorreram no objeto raiz durante um intervalo de tempo especificado, o que pode ser útil na solução de problemas de desempenho.
+
+O painel Linha do tempo de eventos mostra eventos críticos, de erro, de aviso e informativos que ocorreram no objeto raiz durante o intervalo de tempo selecionado.  Cada gravidade de evento tem seu próprio cronograma.  Eventos únicos e múltiplos são representados por um ponto de evento na linha do tempo.  Você pode posicionar o cursor sobre um ponto de evento para ver os detalhes do evento.  Para aumentar a granularidade visual de vários eventos, você pode diminuir o intervalo de tempo.  Isso distribui vários eventos em eventos únicos, permitindo que você visualize e investigue cada evento separadamente.
+
+Cada ponto de evento de desempenho na Linha do tempo de eventos se alinha verticalmente com um pico correspondente nas linhas de tendência dos gráficos de contagem que são exibidas abaixo da Linha do tempo de eventos.  Isso fornece uma correlação visual direta entre eventos e desempenho geral.  Os eventos de saúde também são exibidos na linha do tempo, mas esses tipos de eventos não necessariamente correspondem a um pico em um dos gráficos de desempenho.
+
+.Passos
+. No painel *Linha do tempo de eventos*, posicione o cursor sobre um ponto de evento em uma linha do tempo para visualizar um resumo do evento ou eventos naquele ponto do evento.
++
+Uma caixa de diálogo pop-up exibe informações sobre os tipos de eventos, a data e a hora em que os eventos ocorreram, o estado e a duração do evento.
+
+. Veja detalhes completos do evento para um evento ou vários eventos:
++
+|===
+| Para fazer isso... | Clique aqui... 
+
+
+ a| 
+Ver detalhes de um único evento
+ a| 
+*Ver detalhes do evento* na caixa de diálogo pop-up.
+
+
+
+ a| 
+Ver detalhes de vários eventos
+ a| 
+*Ver detalhes do evento* na caixa de diálogo pop-up.
+
+[NOTE]
+====
+Clicar em um único evento na caixa de diálogo de vários eventos exibe a página Detalhes do evento apropriada.
+
+====
+|===
+

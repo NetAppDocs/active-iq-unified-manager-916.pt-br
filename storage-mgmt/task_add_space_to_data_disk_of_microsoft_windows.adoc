@@ -1,0 +1,55 @@
+---
+permalink: storage-mgmt/task_add_space_to_data_disk_of_microsoft_windows.html 
+sidebar: sidebar 
+keywords: add space, logica, drive, microsoft windows server 
+summary: Se precisar aumentar a quantidade de espaço em disco para o banco de dados do Unified Manager, você poderá adicionar capacidade à unidade lógica na qual o Unified Manager está instalado. 
+---
+= Adicionar espaço à unidade lógica do servidor Microsoft Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se precisar aumentar a quantidade de espaço em disco para o banco de dados do Unified Manager, você poderá adicionar capacidade à unidade lógica na qual o Unified Manager está instalado.
+
+.Antes de começar
+Você deve ter privilégios de administrador do Windows.
+
+Recomendamos que você faça backup do banco de dados do Unified Manager antes de adicionar espaço em disco.
+
+.Passos
+. Efetue login como administrador no servidor Windows no qual você deseja adicionar espaço em disco.
+. Siga o passo que corresponde ao método que você deseja usar para adicionar mais espaço:
++
+|===
+| Opção | Descrição 
+
+
+ a| 
+Em um servidor físico, adicione capacidade à unidade lógica na qual o servidor Unified Manager está instalado.
+ a| 
+Siga os passos do tópico da Microsoft:
+
+https://technet.microsoft.com/en-us/library/cc771473(v=ws.11).aspx["Estender um volume básico"]
+
+
+
+ a| 
+Em um servidor físico, adicione uma unidade de disco rígido.
+ a| 
+Siga os passos do tópico da Microsoft:
+
+https://msdn.microsoft.com/en-us/library/dd163551.aspx["Adicionando unidades de disco rígido"]
+
+
+
+ a| 
+Em uma máquina virtual, aumente o tamanho de uma partição de disco.
+ a| 
+Siga os passos do tópico VMware:
+
+https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1004071["Aumentando o tamanho de uma partição de disco"]
+
+|===
+

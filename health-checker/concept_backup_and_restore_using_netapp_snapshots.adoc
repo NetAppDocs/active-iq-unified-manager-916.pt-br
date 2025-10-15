@@ -1,0 +1,20 @@
+---
+permalink: health-checker/concept_backup_and_restore_using_netapp_snapshots.html 
+sidebar: sidebar 
+keywords: snapshot copy, copies, restore, using, netapp, snapshots 
+summary: Uma cópia do NetApp Snapshot cria uma imagem pontual do banco de dados do Unified Manager e dos arquivos de configuração que você pode usar para restaurar em caso de falha do sistema ou perda de dados.  Você agenda uma cópia do Snapshot para ser gravada em um volume em um dos seus clusters ONTAP periodicamente para que você sempre tenha uma cópia atualizada. 
+---
+= Backup e restauração usando NetApp Snapshots
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Uma cópia do NetApp Snapshot cria uma imagem pontual do banco de dados do Unified Manager e dos arquivos de configuração que você pode usar para restaurar em caso de falha do sistema ou perda de dados.  Você agenda uma cópia do Snapshot para ser gravada em um volume em um dos seus clusters ONTAP periodicamente para que você sempre tenha uma cópia atualizada.
+
+[NOTE]
+====
+Esta funcionalidade não está disponível para o Active IQ Unified Manager instalado em um dispositivo virtual.
+
+====

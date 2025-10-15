@@ -1,0 +1,160 @@
+---
+permalink: data-protection/reference_aggregates_dialog_box.html 
+sidebar: sidebar 
+keywords: aggregates, dialog box 
+summary: Você pode usar a caixa de diálogo Agregados para selecionar os agregados que deseja adicionar ao seu pool de recursos. 
+---
+= Caixa de diálogo Agregados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a caixa de diálogo Agregados para selecionar os agregados que deseja adicionar ao seu pool de recursos.
+
+
+
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes tarefas:
+
+* *Adicionar*
++
+Adiciona os agregados selecionados ao pool de recursos.  O botão Adicionar não é habilitado até que pelo menos um agregado seja selecionado.
+
+* *Cancelar*
++
+Descarta as alterações e fecha a caixa de diálogo Agregados.
+
+
+
+
+
+== Lista de agregados
+
+A lista Agregados exibe (em formato tabular) os nomes e propriedades dos agregados monitorados.
+
+* *Status*
++
+Exibe o status atual de um volume.  O status pode ser Crítico (image:../media/sev_critical_um60.png[""] ), Erro (image:../media/sev_error_um60.png[""] ), Aviso (image:../media/sev_warning_um60.png[""] ), ou Normal (image:../media/sev_normal_um60.png[""] ).
+
++
+Você pode mover o ponteiro sobre o status para visualizar mais informações sobre o evento ou eventos gerados para o volume.
+
+* *Nome do Agregado*
++
+Exibe o nome do agregado.
+
+* *Estado*
++
+Exibe o estado atual do agregado, que pode ser um dos seguintes:
+
++
+** Off-line
++
+Acesso de leitura ou gravação não é permitido.
+
+** Restrito
++
+Operações limitadas (como reconstrução de paridade) são permitidas, mas o acesso a dados não é permitido.
+
+** On-line
++
+É permitido acesso de leitura e gravação aos volumes hospedados neste agregado.
+
+** Criando
++
+O agregado está sendo criado.
+
+** Destruindo
++
+O agregado está sendo destruído.
+
+** Fracassado
++
+O agregado não pode ser colocado on-line.
+
+** Congelado
++
+O agregado (temporariamente) não está atendendo solicitações.
+
+** Inconsistente
++
+O agregado foi marcado como corrompido; você deve entrar em contato com o suporte técnico.
+
+** Ferro restrito
++
+Ferramentas de diagnóstico não podem ser executadas no agregado.
+
+** Montagem
++
+O agregado está em processo de montagem.
+
+** Parcial
++
+Pelo menos um disco foi encontrado para o agregado, mas dois ou mais discos estão faltando.
+
+** Quietude
++
+O agregado está sendo silenciado.
+
+** Silenciou
++
+O agregado está inativo.
+
+** Revertido
++
+A reversão de um agregado é concluída.
+
+** Desmontado
++
+O agregado está offline.
+
+** Desmontagem
++
+O agregado está sendo retirado do ar.
+
+** Desconhecido
++
+O agregado é descoberto, mas as informações agregadas ainda não foram recuperadas pelo servidor do Unified Manager.
+
+
+
+* *Conjunto*
++
+Exibe o nome do cluster no qual o agregado reside.
+
+* *Nó*
++
+Exibe o nome do controlador de armazenamento que contém o agregado.
+
+* *Capacidade total*
++
+Exibe o tamanho total dos dados (em MB, GB e assim por diante) do agregado.  Por padrão, esta coluna está oculta.
+
+* *Capacidade Comprometida*
++
+Exibe o espaço total (em MB, GB e assim por diante) comprometido para todos os volumes no agregado.  Por padrão, esta coluna está oculta.
+
+* *Capacidade Utilizada*
++
+Exibe a quantidade de espaço (em MB, GB e assim por diante) que é usada no agregado.
+
+* *Capacidade disponível*
++
+Exibe a quantidade de espaço (em MB, GB e assim por diante) disponível para dados no agregado.  Por padrão, esta coluna está oculta.
+
+* *Disponível %*
++
+Exibe a porcentagem de espaço disponível para dados no agregado.  Por padrão, esta coluna está oculta.
+
+* *Usado %*
++
+Exibe a porcentagem de espaço usada pelos dados no agregado.
+
+* *Tipo RAID*
++
+Exibe o tipo de RAID do volume selecionado.  O tipo de RAID pode ser RAID0, RAID4, RAID-DP, RAID-TEC ou RAID misto.
+
+

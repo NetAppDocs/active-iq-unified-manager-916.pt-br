@@ -1,0 +1,55 @@
+---
+permalink: events/reference_storage_shelf_events.html 
+sidebar: sidebar 
+keywords: storage, shelf, events, impact area, availability 
+summary: Os eventos da prateleira de armazenamento informam se sua prateleira de armazenamento está anormal para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, nível de impacto, tipo de fonte e gravidade. 
+---
+= Eventos de prateleiras de armazenamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos da prateleira de armazenamento informam se sua prateleira de armazenamento está anormal para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, nível de impacto, tipo de fonte e gravidade.
+
+
+
+== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+Faixa de tensão anormal (ocumEvtShelfVoltageAbnormal)
+ a| 
+Risco
+ a| 
+Prateleira de armazenamento
+ a| 
+Aviso
+
+
+
+ a| 
+Faixa de corrente anormal (ocumEvtShelfCurrentAbnormal)
+ a| 
+Risco
+ a| 
+Prateleira de armazenamento
+ a| 
+Aviso
+
+
+
+ a| 
+Temperatura anormal (ocumEvtShelfTemperatureAbnormal)
+ a| 
+Risco
+ a| 
+Prateleira de armazenamento
+ a| 
+Aviso
+
+|===

@@ -1,0 +1,61 @@
+---
+permalink: health-checker/task_perform_corrective_action_for_storage_failover_interconnect_links.html 
+sidebar: sidebar 
+keywords: perform, corrective action, storage failover, interconnect links 
+summary: Ao exibir a página Detalhes do evento de um evento relacionado a failover de armazenamento, você pode revisar as informações resumidas da página para determinar a urgência do evento, a possível causa do problema e a possível resolução do problema. 
+---
+= Executar ação corretiva para links de interconexão de failover de armazenamento inativos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ao exibir a página Detalhes do evento de um evento relacionado a failover de armazenamento, você pode revisar as informações resumidas da página para determinar a urgência do evento, a possível causa do problema e a possível resolução do problema.
+
+.Antes de começar
+Você deve ter a função de Operador, Administrador de Aplicativos ou Administrador de Armazenamento.
+
+Neste cenário de exemplo, o resumo do evento fornecido na página Detalhes do evento contém as seguintes informações sobre a condição de inatividade do link de interconexão de failover de armazenamento:
+
+[listing]
+----
+Event: Storage Failover Interconnect One or More Links Down
+
+Summary
+
+Severity: Warning
+State: New
+Impact Level: Risk
+Impact Area: Availability
+Source: aardvark
+Source Type: Node
+Acknowledged By:
+Resolved By:
+Assigned To:
+Cause: At least one storage failover interconnected link
+       between the nodes aardvark and bonobo is down.
+       RDMA interconnect is up (Link0 up, Link1 down)
+----
+As informações do evento de exemplo indicam que um link de interconexão de failover de armazenamento, Link1, entre os nós do par HA aardvark e bonobo está inativo, mas que o Link0 entre Apple e Boy está ativo.  Como um link está ativo, o acesso remoto à memória dinâmica (RDMA) ainda está funcionando e uma tarefa de failover de armazenamento ainda pode ser bem-sucedida.
+
+No entanto, para garantir que ambos os links não falhem e que a proteção contra failover de armazenamento seja totalmente desabilitada, você decide diagnosticar melhor o motivo da queda do Link1.
+
+.Passos
+. Na página de detalhes do *Evento*, você pode clicar no link para o evento especificado no campo Origem para obter mais detalhes de outros eventos que podem estar relacionados à condição de link de interconexão de failover de armazenamento inativo.
++
+Neste exemplo, a origem do evento é o nó chamado aardvark.  Clicar no nome desse nó exibe os Detalhes de HA para o par de HA afetado, aardvark e bonobo, na guia Nós da página Detalhes do cluster/saúde, e exibe outros eventos que ocorreram recentemente no par de HA afetado.
+
+. Confira os *Detalhes do HA* para mais informações relacionadas ao evento.
++
+Neste exemplo, as informações relevantes estão na tabela Eventos.  A tabela mostra o evento "`Storage Failover Connection One or More Link Down`", o horário em que o evento foi gerado e, novamente, o nó de onde esse evento se originou.
+
+
+
+Usando as informações de localização do nó nos Detalhes do HA, solicite ou conclua pessoalmente uma inspeção física e reparo do problema de failover de armazenamento nos nós do par HA afetados.
+
+*Informações relacionadas*
+
+link:../events/reference_event_details_page.html["Página de detalhes do evento"]
+
+link:../config/reference_unified_manager_roles_and_capabilities.html["Funções e recursos do usuário do Unified Manager"]

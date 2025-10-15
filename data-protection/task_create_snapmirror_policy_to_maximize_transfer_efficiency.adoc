@@ -1,0 +1,34 @@
+---
+permalink: data-protection/task_create_snapmirror_policy_to_maximize_transfer_efficiency.html 
+sidebar: sidebar 
+keywords: create, snapmirror, policy, maximize, transfer, efficiency 
+summary: Você pode criar uma política do SnapMirror para especificar a prioridade de transferência do SnapMirror para relacionamentos de proteção.  As políticas do SnapMirror permitem maximizar a eficiência da transferência da origem para o destino atribuindo prioridades para que transferências de prioridade mais baixa sejam programadas para serem executadas após transferências de prioridade normal. 
+---
+= Crie uma política SnapMirror para maximizar a eficiência de transferência
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar uma política do SnapMirror para especificar a prioridade de transferência do SnapMirror para relacionamentos de proteção.  As políticas do SnapMirror permitem maximizar a eficiência da transferência da origem para o destino atribuindo prioridades para que transferências de prioridade mais baixa sejam programadas para serem executadas após transferências de prioridade normal.
+
+.Antes de começar
+* Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+* Você deve ter configurado a Automação de Fluxo de Trabalho.
+* Esta tarefa pressupõe que você já tenha preenchido a área Informações de destino na caixa de diálogo Configurar proteção.
+
+
+.Passos
+. Na guia * SnapMirror* da caixa de diálogo *Configurar proteção*, clique no link *Criar política* na área *Configurações de relacionamento*.
++
+A caixa de diálogo Criar política do SnapMirror é exibida.
+
+. No campo *Nome da política*, digite o nome que você deseja dar à política.
+. No campo *Prioridade de transferência*, selecione a prioridade de transferência que deseja atribuir à política.
+. No campo *Comentário*, insira um comentário opcional para a política.
+. Clique em *Criar*.
++
+A nova política é exibida na lista suspensa Política do SnapMirror .
+
+

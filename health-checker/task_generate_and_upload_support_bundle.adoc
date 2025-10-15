@@ -1,0 +1,89 @@
+---
+permalink: health-checker/task_generate_and_upload_support_bundle.html 
+sidebar: sidebar 
+keywords: generate, upload, support bundle 
+summary: Você pode gerar um pacote de suporte, contendo informações de diagnóstico, para que possa enviá-lo ao suporte técnico para obter ajuda na solução de problemas.  Você também pode carregar o pacote de suporte para a NetApp a partir do console de manutenção. 
+---
+= Gerar e carregar um pacote de suporte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode gerar um pacote de suporte, contendo informações de diagnóstico, para que possa enviá-lo ao suporte técnico para obter ajuda na solução de problemas.
+
+A partir do Unified Manager 9.8, se o seu servidor Unified Manager estiver conectado à Internet, você também poderá carregar o pacote de suporte para o NetApp a partir do console de manutenção.
+
+.Antes de começar
+Você deve ter acesso ao console de manutenção como usuário de manutenção.
+
+Como alguns tipos de dados de suporte podem usar uma grande quantidade de recursos do cluster ou levar muito tempo para serem concluídos, ao selecionar o pacote de suporte completo, você pode especificar os tipos de dados a serem incluídos ou excluídos para reduzir o tamanho do pacote de suporte.  Você também tem a opção de criar um pacote de suporte leve que contém apenas 30 dias de logs e registros de banco de dados de configuração — ele exclui dados de desempenho, arquivos de gravação de aquisição e despejo de heap do servidor.
+
+O Unified Manager armazena apenas os dois pacotes de suporte gerados mais recentemente.  Pacotes de suporte mais antigos são excluídos do sistema.
+
+.Passos
+. No console de manutenção *Menu Principal*, selecione *Suporte/Diagnóstico*.
+. Selecione *Gerar pacote de suporte leve* ou *Gerar pacote de suporte* dependendo do nível de detalhes que você deseja ter no pacote de suporte.
+. Se você escolher o pacote de suporte completo, selecione ou desmarque os seguintes tipos de dados para incluir ou excluir no pacote de suporte:
++
+** *despejo de banco de dados*
++
+Um despejo do banco de dados do servidor MySQL.
+
+** *despejo de pilha*
++
+Um instantâneo do estado dos principais processos do servidor do Unified Manager.  Esta opção está desabilitada por padrão e deve ser selecionada somente quando solicitada pelo suporte ao cliente.
+
+** *gravações de aquisição*
++
+Uma gravação de todas as comunicações entre o Unified Manager e os clusters monitorados.
+
+
+
++
+[NOTE]
+====
+Se você desmarcar todos os tipos de dados, o pacote de suporte ainda será gerado com outros dados do Unified Manager.
+
+====
+. Tipo `g` e pressione Enter para gerar o pacote de suporte.
++
+Como a geração de um pacote de suporte é uma operação que exige muita memória, você será solicitado a verificar se tem certeza de que deseja gerar o pacote de suporte neste momento.
+
+. Tipo `y` e pressione Enter para gerar o pacote de suporte.
++
+Se você não quiser gerar o pacote de suporte neste momento, digite `n` e pressione Enter.
+
+. Se você incluiu arquivos de despejo de banco de dados no pacote de suporte completo, será solicitado a especificar o período para o qual deseja que as estatísticas de desempenho sejam incluídas.  Incluir estatísticas de desempenho pode levar muito tempo e espaço, então você também pode despejar o banco de dados sem incluir estatísticas de desempenho:
++
+.. Insira a data de início no formato AAAAMMDD.
++
+Por exemplo, insira `20210101` para 1º de janeiro de 2021.  Digitar `n` se você não quiser que estatísticas de desempenho sejam incluídas.
+
+.. Insira o número de dias de estatísticas a serem incluídos, começando às 00h da data de início especificada.
++
+Você pode inserir um número de 1 a 10.
+
+
+
++
+Se você estiver incluindo estatísticas de desempenho, o sistema exibirá o período de tempo durante o qual as estatísticas de desempenho serão coletadas.
+
+. Após a criação do pacote de suporte, você será perguntado se deseja enviá-lo ao NetApp.  Tipo `y` e pressione Enter.
++
+Você será solicitado a inserir o número do seu caso de suporte.
+
+. Se você já tiver um número de caso, insira-o e pressione Enter.  Caso contrário, basta pressionar Enter.
++
+O pacote de suporte é carregado no NetApp.
+
+
+
+Se o seu servidor Unified Manager não estiver conectado à Internet ou se você não conseguir carregar o pacote de suporte por qualquer outro motivo, poderá recuperá-lo e enviá-lo manualmente.  Você pode recuperá-lo usando um cliente SFTP ou usando comandos CLI do UNIX ou Linux.  Em instalações do Windows, você pode usar a Área de Trabalho Remota (RDP) para recuperar o pacote de suporte.
+
+O pacote de suporte gerado reside no diretório /support em sistemas VMware, em /opt/netapp/data/support/ em sistemas Linux e em ProgramData\ NetApp\OnCommandAppData\ocum\support em sistemas Windows.
+
+*Informações relacionadas*
+
+link:../config/reference_unified_manager_roles_and_capabilities.html["Funções e recursos do usuário do Unified Manager"]

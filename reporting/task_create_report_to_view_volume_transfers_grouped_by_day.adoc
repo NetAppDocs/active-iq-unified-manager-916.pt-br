@@ -1,0 +1,34 @@
+---
+permalink: reporting/task_create_report_to_view_volume_transfers_grouped_by_day.html 
+sidebar: sidebar 
+keywords: create, report, view, volume, transfers, day 
+summary: Você pode criar um relatório para visualizar transferências de volume agrupadas por dia. 
+---
+= Crie um relatório para visualizar as transferências de volume agrupadas por dia
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar um relatório para visualizar transferências de volume agrupadas por dia.
+
+.Antes de começar
+* Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+
+Use as etapas a seguir para criar uma exibição personalizada para transferências de volume agrupadas por dia e, em seguida, agende um relatório para ser gerado para essa exibição.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento* > *Volumes*.
+. No menu Exibir, selecione *Relacionamento* > *Taxa de transferência do último mês*.
+. Clique na parte superior da coluna "`Dia`" para classificar as transferências de volume por dia.
+. Salve a visualização com um nome específico que reflita o que a visualização está mostrando, por exemplo "`Transferências de volume por dia`".
+. Clique no botão *Relatórios agendados* na página de inventário.
+. Digite um nome para o agendamento do relatório e preencha os outros campos do relatório e clique na marca de seleção (image:../media/blue_check.gif[""] ) no final da linha.
++
+O relatório é enviado imediatamente como um teste.  Depois disso, o relatório é gerado e enviado por e-mail aos destinatários listados usando a frequência especificada.
+
+
+
+Com base nos resultados mostrados no relatório, você pode investigar o volume de transferências por dia.

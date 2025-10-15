@@ -1,0 +1,18 @@
+---
+permalink: data-protection/concept_monitor_storage_vm_disaster_recovery_relationships.html 
+sidebar: sidebar 
+keywords: disaster recovery, monitor, storage vm protection, relationships 
+summary: O Active IQ Unified Manager oferece suporte ao monitoramento de relacionamentos de recuperação de desastres de VM de armazenamento, o que fornece recuperação de desastres na granularidade de um nível de VM de armazenamento.  A recuperação de desastres da VM de armazenamento permite a recuperação de dados presentes nos volumes constituintes da VM de armazenamento e a recuperação da configuração da VM de armazenamento. 
+---
+= Monitorar relacionamentos de proteção de recuperação de desastres de VM de armazenamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Active IQ Unified Manager oferece suporte ao monitoramento de relacionamentos de recuperação de desastres de VM de armazenamento, o que fornece recuperação de desastres na granularidade de um nível de VM de armazenamento.  A recuperação de desastres da VM de armazenamento permite a recuperação de dados presentes nos volumes constituintes da VM de armazenamento e a recuperação da configuração da VM de armazenamento.
+
+Um relacionamento DR de VM de armazenamento é criado da VM de armazenamento de origem para a VM de armazenamento de destino para fornecer recuperação de desastres assíncrona.  Você pode selecionar replicar toda ou um subconjunto da configuração da VM de armazenamento (excluindo a configuração de rede e protocolo) junto com os volumes de dados com base na configuração do cluster.
+
+Após a configuração do relacionamento de recuperação de desastres da VM de armazenamento, quando a VM de armazenamento de origem fica indisponível devido a uma falha de hardware ou desastre ambiental, a VM de armazenamento de destino é iniciada, o que fornece acesso aos dados com o mínimo de interrupção.  Da mesma forma, quando a VM de armazenamento de origem fica disponível, ela é ressincronizada com a VM de armazenamento de destino e, em seguida, a origem é reiniciada para fornecer dados.  Você pode usar comandos do SnapMirror para configurar e gerenciar o relacionamento de recuperação de desastres da VM de armazenamento.

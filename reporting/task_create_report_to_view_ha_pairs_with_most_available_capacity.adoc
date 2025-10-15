@@ -1,0 +1,42 @@
+---
+permalink: reporting/task_create_report_to_view_ha_pairs_with_most_available_capacity.html 
+sidebar: sidebar 
+keywords: create, report, view, HA pairs, available, capacity 
+summary: 'Você pode criar um relatório para encontrar os pares de alta disponibilidade (HA) com maior capacidade de provisionar novos volumes e LUNs.' 
+---
+= Crie um relatório para visualizar pares de HA com maior capacidade disponível
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar um relatório para encontrar os pares de alta disponibilidade (HA) com maior capacidade de provisionar novos volumes e LUNs.
+
+.Antes de começar
+* Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+
+Use as etapas a seguir para criar uma exibição personalizada que exiba pares de HA classificados pela maior capacidade disponível para provisionar novos volumes e LUNs e, em seguida, agende um relatório para ser gerado para essa exibição.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento* > *Clusters*.
+. No menu Exibir, selecione *Capacidade* > *Todos os clusters*.
+. Selecione *Mostrar/Ocultar* para remover quaisquer colunas que você não deseja no relatório.
+. Arraste a coluna "`Capacidade agregada não utilizada`" para perto da coluna "`Par HA`".
+. Clique no ícone de filtro, adicione o seguinte filtro e clique em *Aplicar filtro*:
++
+** Capacidade agregada não utilizada maior que 0,5 TB
+
+
+. Clique na parte superior da coluna "`Capacidade agregada não utilizada`" para classificar os resultados pela maior quantidade de capacidade agregada não utilizada.
+. Salve a visualização com um nome específico que reflita o que a visualização está mostrando, por exemplo, "`Capacidade agregada menos utilizada`", e clique na marca de seleção (image:../media/blue_check.gif[""] ).
+. Clique no botão *Relatórios agendados* na página de inventário.
+. Clique em *Adicionar agendamento* para adicionar uma nova linha à página Agendamentos de relatórios para que você possa definir as características do agendamento para o novo relatório.
+. Digite um nome para o agendamento do relatório e preencha os outros campos do relatório e clique na marca de seleção (image:../media/blue_check.gif[""] ) no final da linha.
++
+O relatório é enviado imediatamente como um teste.  Depois disso, o relatório é gerado e enviado por e-mail aos destinatários listados usando a frequência especificada.
+
+
+
+Com base nos resultados mostrados no relatório, talvez você queira balancear os pares de HA com base na capacidade agregada.

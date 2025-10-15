@@ -1,0 +1,58 @@
+---
+permalink: storage-mgmt/task_create_and_edit_psls.html 
+sidebar: sidebar 
+keywords: create, edit, performance, service, Levels 
+summary: Quando os Níveis de Serviço de Desempenho definidos pelo sistema não correspondem aos requisitos da sua carga de trabalho, você pode criar seus próprios Níveis de Serviço de Desempenho otimizados para suas cargas de trabalho. 
+---
+= Criar e editar níveis de serviço de desempenho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando os Níveis de Serviço de Desempenho definidos pelo sistema não correspondem aos requisitos da sua carga de trabalho, você pode criar seus próprios Níveis de Serviço de Desempenho otimizados para suas cargas de trabalho.
+
+.Antes de começar
+* Você deve ter a função de Administrador do Aplicativo.
+* O nome do Nível de Serviço de Desempenho deve ser exclusivo e você não pode usar as seguintes palavras-chave reservadas:
++
+`Prime`, `Extreme` , `Performance` , `Value` , `Unassigned` , `Learning` , `Idle` , `Default` , e `None` .
+
+
+
+Você cria e edita Níveis de Serviço de Desempenho personalizados na página Níveis de Serviço de Desempenho, definindo os objetivos de nível de serviço necessários para os aplicativos que acessarão o armazenamento.
+
+[NOTE]
+====
+Não é possível modificar um Nível de Serviço de Desempenho se ele estiver atualmente atribuído a uma carga de trabalho.
+
+====
+.Passos
+. No painel de navegação esquerdo, em *Configurações*, selecione *Políticas* > *Níveis de serviço de desempenho*.
+. Na página *Níveis de serviço de desempenho*, clique no botão apropriado dependendo se você deseja criar um novo Nível de serviço de desempenho ou se deseja editar um Nível de serviço de desempenho existente.
++
+|===
+| Para... | Siga estes passos... 
+
+
+ a| 
+Crie um novo Nível de Serviço de Desempenho
+ a| 
+Clique em *Adicionar*.
+
+
+
+ a| 
+Editar um Nível de Serviço de Desempenho existente
+ a| 
+Selecione um Nível de Serviço de Desempenho existente e clique em *Editar*.
+
+|===
++
+A página para adicionar ou editar um Nível de Serviço de Desempenho é exibida.
+
+. Personalize o Nível de Serviço de Desempenho especificando os objetivos de desempenho e clique em *Enviar* para salvar o Nível de Serviço de Desempenho.
+
+
+Você pode aplicar o novo ou alterado Nível de Serviço de Desempenho às cargas de trabalho (LUNs, Compartilhamentos de Arquivos NFS, Compartilhamentos CIFS) na página Cargas de Trabalho ou ao provisionar uma nova carga de trabalho.

@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/concept_view_node_and_aggregate_available_iops_values.html 
+sidebar: sidebar 
+keywords: view, node, aggregate, available, iops, values 
+summary: Você pode monitorar os valores de IOPS disponíveis para todos os nós ou para todos os agregados em um cluster, ou pode visualizar detalhes de um único nó ou agregado. 
+---
+= Exibir valores de IOPS disponíveis para nós e agregados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode monitorar os valores de IOPS disponíveis para todos os nós ou para todos os agregados em um cluster, ou pode visualizar detalhes de um único nó ou agregado.
+
+Os valores de IOPS disponíveis aparecem nas páginas de Inventário de Desempenho e nos gráficos da página do Explorador de Desempenho para nós e agregados.  Por exemplo, ao visualizar um nó na página Node/Performance Explorer, você pode selecionar o gráfico de contador "`IOPS disponíveis`" na lista para poder comparar os valores de IOPS disponíveis para o nó e vários agregados naquele nó.
+
+image::../media/available_iops_zoom.gif[Uma captura de tela da interface do usuário que mostra como você pode visualizar um nó na página Node/Performance Explorer e selecionar “IOPS disponíveis” na lista.]
+
+Monitorar o contador de IOPS disponível permite que você identifique:
+
+* Os nós ou agregados que têm os maiores valores de IOPS disponíveis para ajudar a determinar onde futuras cargas de trabalho podem ser implantadas.
+* Os nós ou agregados que têm os menores valores de IOPS disponíveis para identificar os recursos que você deve monitorar para possíveis problemas de desempenho futuros.
+* Os volumes e LUNs mais movimentados em um agregado que tem um pequeno valor de IOPS disponível.
+

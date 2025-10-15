@@ -1,0 +1,31 @@
+---
+permalink: health-checker/task_delete_values_from_annotations.html 
+sidebar: sidebar 
+keywords: delete, values, annotations 
+summary: Você pode excluir valores associados a anotações personalizadas quando esse valor não se aplicar mais à anotação. 
+---
+= Excluir valores das anotações
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode excluir valores associados a anotações personalizadas quando esse valor não se aplicar mais à anotação.
+
+.Antes de começar
+* Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+* O valor da anotação não deve ser associado a nenhuma regra de anotação ou regra de grupo.
+
+
+Você não pode excluir valores de anotações predefinidas.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Anotações*.
+. Na lista de anotações na aba *Anotações*, selecione a anotação da qual você deseja excluir um valor.
+. Na área *Valores* da guia *Anotações*, selecione o valor que deseja excluir e clique em *Excluir*.
+. Na caixa de diálogo *Aviso*, clique em *Sim*.
++
+O valor é excluído e não é mais exibido na lista de valores da anotação selecionada.
+
+

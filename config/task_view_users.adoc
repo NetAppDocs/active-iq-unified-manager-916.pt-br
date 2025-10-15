@@ -1,0 +1,21 @@
+---
+permalink: config/task_view_users.html 
+sidebar: sidebar 
+keywords: view, users 
+summary: Você pode usar a página Usuários para visualizar a lista de usuários que gerenciam objetos de armazenamento e dados usando o Unified Manager.  Você pode visualizar detalhes sobre os usuários, como nome de usuário, tipo de usuário, endereço de e-mail e a função atribuída aos usuários. 
+---
+= Ver usuários
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a página Usuários para visualizar a lista de usuários que gerenciam objetos de armazenamento e dados usando o Unified Manager.  Você pode visualizar detalhes sobre os usuários, como nome de usuário, tipo de usuário, endereço de e-mail e a função atribuída aos usuários.
+
+.Antes de começar
+Você deve ter a função de Administrador do Aplicativo.
+
+.Etapa
+. No painel de navegação esquerdo, clique em *Geral* > *Usuários*.
+

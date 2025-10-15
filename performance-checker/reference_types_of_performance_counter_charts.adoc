@@ -1,0 +1,138 @@
+---
+permalink: performance-checker/reference_types_of_performance_counter_charts.html 
+sidebar: sidebar 
+keywords: types, performance, counter, charts 
+summary: Existem gráficos de desempenho padrão que exibem os valores do contador para o objeto de armazenamento selecionado.  Cada um dos gráficos do contador de detalhamento exibe os valores totais separados em leitura, gravação e outras categorias.  Além disso, alguns gráficos de contador de detalhamento exibem detalhes adicionais quando o gráfico é exibido na visualização Zoom. 
+---
+= Tipos de gráficos de contador de desempenho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Existem gráficos de desempenho padrão que exibem os valores do contador para o objeto de armazenamento selecionado.  Cada um dos gráficos do contador de detalhamento exibe os valores totais separados em leitura, gravação e outras categorias.  Além disso, alguns gráficos de contador de detalhamento exibem detalhes adicionais quando o gráfico é exibido na visualização Zoom.
+
+A tabela a seguir mostra os gráficos de contadores de desempenho disponíveis.
+
+|===
+| Gráficos disponíveis | Descrição do gráfico 
+
+
+ a| 
+Eventos
+ a| 
+Exibe eventos críticos, de erro, de aviso e de informação em correlação com os gráficos estatísticos do objeto raiz.  Os eventos de saúde são exibidos além dos eventos de desempenho para fornecer uma imagem completa dos motivos pelos quais o desempenho pode ser afetado.
+
+
+
+ a| 
+Latência - Total
+ a| 
+Número de milissegundos necessários para responder às solicitações do aplicativo.  Observe que os valores médios de latência são ponderados por E/S.
+
+
+
+ a| 
+Latência - Análise
+ a| 
+As mesmas informações mostradas em Latência Total, mas com os dados de desempenho separados em leitura, gravação e outras latências.  Esta opção de gráfico se aplica somente quando o objeto selecionado é um SVM, nó, agregado, volume, LUN ou namespace.
+
+
+
+ a| 
+Latência - Componentes do Cluster
+ a| 
+As mesmas informações mostradas em Latência Total, mas com os dados de desempenho separados em latência por componente do cluster.  Esta opção de gráfico se aplica somente quando o objeto selecionado é um volume.
+
+
+
+ a| 
+IOPS - Total
+ a| 
+Número de operações de entrada/saída processadas por segundo.  Quando exibido para um nó, selecionar "`Total`" exibe o IOPS para dados que se movem por esse nó e que podem residir no nó local ou remoto, e selecionar "`Total (Local)`" exibe o IOPS para dados que residem somente no nó atual.
+
+
+
+ a| 
+IOPS - Análise
+ a| 
+As mesmas informações mostradas no Total de IOPS, mas com os dados de desempenho separados em leitura, gravação e outros IOPS.  Esta opção de gráfico se aplica somente quando o objeto selecionado é um SVM, nó, agregado, volume, LUN ou namespace.
+
+Quando exibido na visualização Zoom, o gráfico de volumes exibe valores mínimos e máximos de taxa de transferência de QoS, se configurado no ONTAP.
+
+Quando exibido para um nó, selecionar "`Breakdown`" exibe o detalhamento de IOPS para dados que se movem por esse nó e que podem residir no nó local ou remoto, e selecionar "`Breakdown (Local)`" exibe o detalhamento de IOPS para dados que residem somente no nó atual.
+
+
+
+ a| 
+IOPS - Protocolos
+ a| 
+As mesmas informações mostradas no IOPS Total, mas os dados de desempenho são separados em gráficos individuais para tráfego de protocolo CIFS, NFS, FCP, NVMe e iSCSI.  Esta opção de gráfico se aplica somente quando o objeto selecionado é um SVM.
+
+
+
+ a| 
+IOPS/TB - Total
+ a| 
+Número de operações de entrada/saída processadas por segundo com base no espaço total que está sendo consumido pela carga de trabalho, em terabytes.  Também chamado de densidade de E/S, esse contador mede quanto desempenho pode ser fornecido por uma determinada quantidade de capacidade de armazenamento.  Quando exibido na visualização Zoom, o gráfico de volumes exibe os valores de QoS esperados e de pico de taxa de transferência, se configurado no ONTAP.
+
+Esta opção de gráfico se aplica somente quando o objeto selecionado é um volume.
+
+
+
+ a| 
+MB/s - Total
+ a| 
+Número de megabytes de dados transferidos de e para o objeto por segundo.
+
+
+
+ a| 
+MB/s - Repartição
+ a| 
+As mesmas informações mostradas no gráfico MB/s, mas com os dados de taxa de transferência separados em leituras de disco, leituras de Flash Cache, gravações e outros.  Quando exibido na visualização Zoom, o gráfico de volumes exibe valores máximos de taxa de transferência de QoS, se configurado no ONTAP.
+
+Esta opção de gráfico se aplica somente quando o objeto selecionado é um SVM, nó, agregado, volume, LUN ou namespace.
+
+[NOTE]
+====
+Os dados do Flash Cache são exibidos somente para nós e somente quando um módulo Flash Cache está instalado no nó.
+
+====
+
+
+ a| 
+Capacidade de Desempenho Utilizada - Total
+ a| 
+Porcentagem da capacidade de desempenho que está sendo consumida pelo nó ou agregado.
+
+
+
+ a| 
+Capacidade de Desempenho Utilizada - Detalhamento
+ a| 
+Capacidade de desempenho Dados usados separados em protocolos de usuário e processos em segundo plano do sistema.  Além disso, a quantidade de capacidade de desempenho livre é mostrada.
+
+
+
+ a| 
+IOPS disponíveis - Total
+ a| 
+Número de operações de entrada/saída por segundo que estão atualmente disponíveis (gratuitas) neste objeto.  Esse número é o resultado da subtração do IOPS usado atualmente do IOPS total que o Unified Manager calcula que o objeto pode executar.  Esta opção de gráfico se aplica somente quando o objeto selecionado é um nó ou agregado.
+
+
+
+ a| 
+Utilização - Total
+ a| 
+Porcentagem de recursos disponíveis do objeto que está sendo usado.  A utilização indica a utilização do nó para nós, a utilização do disco para agregados e a utilização da largura de banda para portas.  Esta opção de gráfico se aplica somente quando o objeto selecionado é um nó, agregado ou porta.
+
+
+
+ a| 
+Taxa de Perda de Cache - Total
+ a| 
+Porcentagem de solicitações de leitura de aplicativos clientes que são retornadas do disco em vez de serem retornadas do cache.  Esta opção de gráfico se aplica somente quando o objeto selecionado é um volume.
+
+|===

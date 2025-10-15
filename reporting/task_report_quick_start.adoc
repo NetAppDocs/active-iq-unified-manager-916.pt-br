@@ -1,0 +1,91 @@
+---
+permalink: reporting/task_report_quick_start.html 
+sidebar: sidebar 
+keywords: reporting, quick, start 
+summary: 'Crie um relatório personalizado de exemplo para experimentar explorar visualizações e agendar relatórios.  Este relatório de início rápido encontra uma lista de volumes que você pode querer mover para a camada de nuvem porque há uma quantidade considerável de dados inativos (frios).  Você abrirá a visualização Desempenho: Todos os volumes, personalizará a visualização usando filtros e colunas, salvará a visualização personalizada como um relatório e agendará o relatório para ser compartilhado uma vez por semana.' 
+---
+= Início rápido de relatórios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Crie um relatório personalizado de exemplo para experimentar explorar visualizações e agendar relatórios.  Este relatório de início rápido encontra uma lista de volumes que você pode querer mover para a camada de nuvem porque há uma quantidade considerável de dados inativos (frios).  Você abrirá a visualização Desempenho: Todos os volumes, personalizará a visualização usando filtros e colunas, salvará a visualização personalizada como um relatório e agendará o relatório para ser compartilhado uma vez por semana.
+
+.Antes de começar
+* Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+* Você deve ter configurado agregados do FabricPool e ter volumes nesses agregados.
+
+
+Siga os passos abaixo para:
+
+* Abra a visualização padrão
+* Personalize as colunas filtrando e classificando os dados
+* Salvar a visualização
+* Agende um relatório para ser gerado para a visualização personalizada
+
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento* > *Volumes*.
+. No menu Exibir, selecione *Desempenho* > *Todos os volumes*.
+. Clique em *Mostrar/Ocultar* para garantir que a coluna "`Tipos de disco`" apareça na exibição.
++
+image::../media/show_hide_3.png[Uma captura de tela da interface do usuário que mostra a lista suspensa do menu Mostrar/Ocultar.]
+
++
+Adicione ou remova outras colunas para criar uma exibição que contenha os campos importantes para o seu relatório.
+
+. Arraste a coluna "`Tipos de disco`" para perto da coluna "`Recomendação de nuvem`".
+. Clique no ícone de filtro para adicionar os três filtros a seguir e, em seguida, clique em *Aplicar filtro*:
++
+** Tipos de disco contém FabricPool
+** Recomendação de nuvem contém nível
+** Dados frios maiores que 10 GBimage:../media/filter_cold_data_2.png["Uma captura de tela da interface do usuário que mostra como aplicar o filtro a partir da opção de filtro."]
+
+
++
+Observe que cada filtro é unido por um AND lógico para que todos os volumes retornados atendam a todos os critérios.  Você pode adicionar no máximo cinco filtros.
+
+. Clique na parte superior da coluna Dados Frios para classificar os resultados de modo que os volumes com mais dados frios apareçam na parte superior da visualização.
+. Quando a exibição é personalizada, o nome da exibição é Exibição não salva.  Nomeie a exibição para refletir o que ela está mostrando, por exemplo, "`Vols alteram política de níveis`".  Quando terminar, clique na marca de seleção ou pressione *Enter* para salvar a visualização com o novo nome.
++
+image::../media/report_vol_code_data_2.png[Uma captura de tela da interface do usuário que mostra a página de política de níveis de alteração do Vols com as colunas necessárias na ordem correta.]
+
+. Baixe o relatório como um arquivo *CSV*, *Excel* ou *PDF* para ver o resultado antes de agendá-lo ou compartilhá-lo.
++
+Abra o arquivo com um aplicativo instalado, como o Microsoft Excel (CSV ou Excel) ou o Adobe Acrobat (PDF), ou salve o arquivo.
+
++
+[NOTE]
+====
+Você pode personalizar ainda mais seu relatório usando filtros complexos, classificações, tabelas dinâmicas ou gráficos baixando a visualização como um arquivo Excel.  Depois de abrir o arquivo no Excel, use os recursos avançados para personalizar seu relatório.  Quando estiver satisfeito, carregue o arquivo Excel.  Este arquivo, com suas personalizações, é aplicado à exibição quando o relatório é executado.
+
+====
++
+Para obter mais informações sobre como personalizar relatórios usando o Excel, consulte _Exemplos de relatórios do Microsoft Excel_.
+
+. Clique no botão *Relatórios agendados* na página de inventário.  Todos os relatórios agendados relacionados ao objeto, neste caso volumes, aparecem na lista.
++
+image::../media/scheduled_reports_3.gif[Uma captura de tela da interface do usuário que mostra todos os relatórios agendados relacionados ao objeto.]
+
+. Clique em *Adicionar agendamento* para adicionar uma nova linha à página Agendamentos de relatórios para que você possa definir as características do agendamento para o novo relatório.
+. Digite um nome para o relatório e preencha os outros campos do relatório e clique na marca de seleção (image:../media/blue_check.gif[""] ) no final da linha.
++
+O relatório é enviado imediatamente como um teste.  Depois disso, o relatório é gerado e enviado por e-mail aos destinatários listados usando a frequência especificada.
+
++
+O seguinte relatório de exemplo está no formato CSV:
+
++
+image::../media/csv_sample_report.gif[Uma captura de tela da interface do usuário que mostra um relatório de exemplo no formato CSV.]
+
++
+O seguinte relatório de exemplo está em formato PDF:
+
++
+image::../media/pdf_sample_report.gif[Uma captura de tela da interface do usuário que mostra um relatório de exemplo em formato PDF.]
+
+
+
+Com base nos resultados mostrados no relatório, talvez você queira usar o ONTAP System Manager ou o ONTAP CLI para alterar a política de camadas para "`auto`" ou "`all`" para determinados volumes para descarregar mais dados frios para a camada de nuvem.

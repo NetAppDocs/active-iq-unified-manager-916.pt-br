@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/concept_monitor_cluster_performance_navigation.html 
+sidebar: sidebar 
+keywords: monitor, cluster, performance, navigation 
+summary: Você pode monitorar o desempenho de todos os clusters gerenciados pelo Unified Manager.  O monitoramento de seus clusters fornece uma visão geral do desempenho do cluster e do objeto e inclui o monitoramento de eventos de desempenho.  Você pode visualizar o desempenho e os eventos em alto nível ou pode investigar mais detalhadamente quaisquer detalhes do desempenho do cluster e do objeto, bem como dos eventos de desempenho. 
+---
+= Monitorar a navegação de desempenho do cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode monitorar o desempenho de todos os clusters gerenciados pelo Unified Manager.  O monitoramento de seus clusters fornece uma visão geral do desempenho do cluster e do objeto e inclui o monitoramento de eventos de desempenho.  Você pode visualizar o desempenho e os eventos em alto nível ou pode investigar mais detalhadamente quaisquer detalhes do desempenho do cluster e do objeto, bem como dos eventos de desempenho.
+
+Este é um exemplo dos muitos caminhos possíveis de navegação de desempenho de cluster:
+
+. No painel de navegação esquerdo, clique em *Armazenamento* > *Agregados*.
+. Para visualizar informações sobre o desempenho desses agregados, selecione a visualização Desempenho: Todos os agregados.
+. Identifique o agregado que você deseja investigar e clique no nome dele para navegar até a página Aggregate / Performance Explorer.
+. Opcionalmente, selecione outros objetos para comparar com este agregado no menu Exibir e Comparar e adicione um dos objetos ao painel de comparação.
++
+Estatísticas para ambos os objetos aparecerão nos gráficos de contagem para comparação.
+
+. No painel Comparação, à direita na página do Explorer, clique em *Visualização com Zoom* em um dos gráficos de contadores para visualizar detalhes sobre o histórico de desempenho desse agregado.
+
+
+image::../media/monitor_cluster_performance.png[Uma captura de tela da interface do usuário que mostra como você pode investigar um agregado específico.]

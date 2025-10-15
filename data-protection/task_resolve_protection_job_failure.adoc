@@ -1,0 +1,36 @@
+---
+permalink: data-protection/task_resolve_protection_job_failure.html 
+sidebar: sidebar 
+keywords: resolve, protection, job failure 
+summary: Este fluxo de trabalho fornece um exemplo de como você pode identificar e resolver uma falha de tarefa de proteção no painel do Unified Manager. 
+---
+= Resolver uma falha de trabalho de proteção
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este fluxo de trabalho fornece um exemplo de como você pode identificar e resolver uma falha de tarefa de proteção no painel do Unified Manager.
+
+.Antes de começar
+Como algumas tarefas neste fluxo de trabalho exigem que você efetue login usando a função de Administrador, você deve estar familiarizado com as funções necessárias para usar várias funcionalidades.
+
+Neste cenário, você acessa a página Painel para verificar se há algum problema com seus trabalhos de proteção.  Na área Incidente de Proteção, você percebe que há um incidente de Trabalho Encerrado, mostrando um erro de Falha de Trabalho de Proteção em um volume.  Você investiga esse erro para determinar a possível causa e a possível resolução.
+
+.Passos
+. No painel Incidentes de proteção da área Incidentes e riscos não resolvidos do painel, clique no evento *Falha na tarefa de proteção*.
++
+[TIP]
+====
+O texto vinculado ao evento é escrito no formato `object_name:/object_name - Error Name` , como `cluster2_src_svm:/cluster2_src_vol2 - Protection Job Failed` .
+
+====
++
+A página Detalhes do evento para a tarefa de proteção com falha é exibida.
+
+. Revise a mensagem de erro no campo Causa da área *Resumo* para determinar o problema e avaliar possíveis ações corretivas.
++
+Verlink:task_identify_problem_for_failed_protection_job.html["Identificar o problema e executar ações corretivas para um trabalho de proteção com falha"] .
+
+

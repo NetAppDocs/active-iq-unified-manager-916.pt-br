@@ -1,0 +1,62 @@
+---
+permalink: data-protection/task_view_storage_vms_based_on_protection_status.html 
+sidebar: sidebar 
+keywords: storage vm, view protection status 
+summary: Você pode usar a página VMs de armazenamento do Inventário para visualizar todas as VMs de armazenamento no Active IQ Unified Manager e filtrar as VMs de armazenamento com base em seu status de proteção. 
+---
+= Exibir VMs de armazenamento com base no status de proteção
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a página VMs de armazenamento do Inventário para visualizar todas as VMs de armazenamento no Active IQ Unified Manager e filtrar as VMs de armazenamento com base em seu status de proteção.
+
+.Antes de começar
+Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+Uma nova coluna Função de proteção é adicionada à exibição de VMs de armazenamento que fornece informações sobre se a VM de armazenamento está protegida ou desprotegida.
+
+[NOTE]
+====
+Se um cluster de origem não for adicionado ao Active IQ Unified Manager, todas as informações relacionadas a esse cluster ficarão indisponíveis nas grades.
+
+====
+.Passos
+. No painel de navegação esquerdo, clique em *ARMAZENAMENTO* > *VMs de armazenamento*.
+. No menu *EXIBIR*, selecione *Saúde* > *Todas as VMs de armazenamento*.
++
+A tela Saúde: Todas as VMs de armazenamento é exibida.
+
+. Clique em *Filtro* para visualizar uma das seguintes VMs de armazenamento.
++
+[cols="2*"]
+|===
+| Para visualizar | Valor do filtro 
+
+
+ a| 
+*VMs de armazenamento protegidas*
+ a| 
+*Função de Proteção* é *Protegida*
+
+
+
+ a| 
+*VMs de armazenamento desprotegidas*
+ a| 
+*Função de Proteção* é *Desprotegida*
+
+|===
++
+[NOTE]
+====
+Não é possível visualizar as VMs de armazenamento protegidas e desprotegidas ao mesmo tempo.  Você precisará limpar o filtro existente para reaplicar uma nova opção de filtro.
+
+====
+. Clique em *Aplicar filtro*.
++
+A exibição Não salva exibe todas as VMs de armazenamento que estão protegidas ou desprotegidas pela recuperação de desastres da VM de armazenamento com base nas suas seleções de filtro.
+
+

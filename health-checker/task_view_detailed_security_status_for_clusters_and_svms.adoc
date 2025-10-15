@@ -1,0 +1,74 @@
+---
+permalink: health-checker/task_view_detailed_security_status_for_clusters_and_svms.html 
+sidebar: sidebar 
+keywords: view, cluster security status, svm security status, volume encryption status, compliance, security hardening, encryption, anti-ransomware, certificate expiry, clusters page, storage VMs page, System Manager 
+summary: A página Segurança mostra o status de segurança de alto nível para todos os clusters e VMs de armazenamento.  O status detalhado do cluster inclui conformidade do cluster, conformidade do SVM e conformidade da criptografia de volume. 
+---
+= Exibir status de segurança para clusters e VMs de armazenamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Active IQ Unified Manager permite que você visualize o status de segurança dos objetos de armazenamento em seu ambiente de diferentes pontos na interface.  Você pode coletar e analisar informações e relatórios com base em parâmetros definidos e detectar comportamento suspeito ou alterações não autorizadas no sistema nos clusters monitorados e VMs de armazenamento.
+
+Para recomendações de segurança, consulte o https://www.netapp.com/pdf.html?item=/media/10674-tr4569pdf.pdf["Guia de reforço de segurança da NetApp para ONTAP 9"^]
+
+
+
+== Exibir status de segurança em nível de objeto na página Segurança
+
+Como administrador do sistema, você pode usar a página *Segurança* para obter visibilidade da força de segurança dos seus clusters ONTAP e VMs de armazenamento nos níveis de data center e site.  Os objetos suportados são cluster, VMs de armazenamento e volumes. Siga estes passos:
+
+.Passos
+. No painel de navegação esquerdo, clique em *Painel*.
+. Dependendo se você deseja visualizar o status de segurança de todos os clusters monitorados ou de um único cluster, selecione *Todos os clusters* ou selecione um único cluster no menu suspenso.
+. Clique na seta para a direita no painel *Segurança*.  A página Segurança é exibida.
+
+
+Clicando nos gráficos de barras, contagens e `View Reports` links levam você para a página Volumes, Clusters ou VMs de armazenamento para que você visualize os detalhes correspondentes ou gere relatórios, conforme necessário.
+
+A página Segurança exibe os seguintes painéis:
+
+* *Conformidade do Cluster*: o status de segurança (número de clusters que estão em conformidade ou não) de todos os clusters em um data center
+* *Conformidade de VM de armazenamento*: o status de segurança (número de VMs de armazenamento que estão em conformidade ou não) para todas as VMs de armazenamento em seu data center
+* *Criptografia de Volume*: o status de criptografia do volume (número de volumes criptografados ou não criptografados) de todos os volumes em seu ambiente
+* *Status do Volume Anti-ransomware*: o status de segurança (número de volumes com anti-ransomware ativado ou desativado) de todos os volumes em seu ambiente
+* *Autenticação e certificados de cluster*: o número de clusters usando cada tipo de método de autenticação, como SAML, Active Directory ou por meio de certificados e autenticação local.  O painel também exibe o número de clusters cujos certificados expiraram ou estão prestes a expirar em 60 dias.
+
+
+
+
+== Veja os detalhes de segurança de todos os clusters na página Clusters
+
+A página de detalhes *Clusters / Segurança* permite que você visualize o status de conformidade de segurança no nível do cluster.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento > Clusters*.
+. Selecione *Exibir > Segurança > Todos os clusters*.
+
+
+Parâmetros de segurança padrão, como FIPS global, Telnet, configurações SSH inseguras, banner de login, protocolo de tempo de rede, AutoSupport HTTPS Transport e o status de expiração do certificado do cluster são exibidos.
+
+Você pode clicar noimage:icon_kabob.gif["ícone de kabob"] botão mais opções e escolha visualizar os detalhes de segurança na página *Segurança* do Unified Manager ou no System Manager.  Você deve ter credenciais válidas para visualizar os detalhes no Gerenciador do Sistema.
+
+
+NOTE: Se um cluster tiver um certificado expirado, você pode clicar em `expired` em *Validade do Certificado de Cluster* e renove-o no Gerenciador do Sistema (9.10.1 e posterior).  Você não pode clicar `expired` se a instância do System Manager for de uma versão anterior à 9.10.1.
+
+
+
+== Visualize detalhes de segurança de todos os clusters na página de VMs de armazenamento
+
+A página de detalhes *VMs de armazenamento / Segurança* permite que você visualize o status de conformidade de segurança no nível da VM de armazenamento.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento > VMs de armazenamento*.
+. Selecione *Exibir > Segurança > Todas as VMs de armazenamento*.  Uma lista de clusters com os parâmetros de segurança é exibida.
+
+
+Você pode ter uma visão padrão da conformidade de segurança das VMs de armazenamento verificando os parâmetros de segurança, como VMs de armazenamento, cluster, banner de login, log de auditoria e configurações SSH inseguras.
+
+Você pode clicar noimage:icon_kabob.gif["ícone de kabob"] botão mais opções e escolha visualizar os detalhes de segurança na página *Segurança* do Unified Manager ou no System Manager.  Você deve ter credenciais válidas para visualizar os detalhes no Gerenciador do Sistema.
+
+Para obter detalhes de segurança anti-ransomware para volumes e VMs de armazenamento, consultelink:../health-checker/task_view_antiransomware_status_of_all_volumes_storage_vms.html["Visualizando o status anti-ransomware de todos os volumes e VMs de armazenamento"] .

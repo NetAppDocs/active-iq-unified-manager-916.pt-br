@@ -1,0 +1,48 @@
+---
+permalink: config/task_configure_event_notification_settings.html 
+sidebar: sidebar 
+keywords: configure, event, notification, settings 
+summary: Você pode configurar o Unified Manager para enviar notificações de alerta quando um evento for gerado ou quando um evento for atribuído a um usuário.  Você pode configurar o servidor SMTP usado para enviar o alerta e definir vários mecanismos de notificação — por exemplo, notificações de alerta podem ser enviadas como e-mails ou interceptações SNMP. 
+---
+= Configurar as definições de notificação de eventos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar o Unified Manager para enviar notificações de alerta quando um evento for gerado ou quando um evento for atribuído a um usuário.  Você pode configurar o servidor SMTP usado para enviar o alerta e definir vários mecanismos de notificação. Por exemplo, as notificações de alerta podem ser enviadas como e-mails ou interceptações SNMP.
+
+.Antes de começar
+Você deve ter as seguintes informações:
+
+* Endereço de e-mail de onde a notificação de alerta é enviada
++
+O endereço de e-mail aparece no campo "`De`" nas notificações de alerta enviadas.  Se o e-mail não puder ser entregue por qualquer motivo, esse endereço de e-mail também será usado como destinatário de e-mails não entregues.
+
+* Nome do host do servidor SMTP e o nome de usuário e senha para acessar o servidor
+* Nome do host ou endereço IP do host de destino da armadilha que receberá a armadilha SNMP, juntamente com a versão SNMP, porta da armadilha de saída, comunidade e outros valores de configuração SNMP necessários
++
+Para especificar vários destinos de interceptação, separe cada host com uma vírgula.  Nesse caso, todas as outras configurações SNMP, como versão e porta de interceptação de saída, devem ser as mesmas para todos os hosts na lista.
+
+
+
+Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Geral* > *Notificações*.
+. Na página Notificações, configure as configurações apropriadas.
++
+*Notas:*
+
++
+** Se o Endereço De estiver preenchido com o endereço "+ActiveIQUnifiedManager@localhost.com+", você deverá alterá-lo para um endereço de e-mail real e funcional para garantir que todas as notificações por e-mail sejam entregues com sucesso.
+** Se o nome do host do servidor SMTP não puder ser resolvido, você poderá especificar o endereço IP (IPv4 ou IPv6) do servidor SMTP em vez do nome do host.
+
+
+. Clique em *Salvar*.
+. Se você selecionou a opção *Usar STARTTLS* ou *Usar SSL*, uma página de certificado será exibida depois que você clicar no botão *Salvar*.  Verifique os detalhes do certificado e aceite o certificado para salvar as configurações de notificação.
++
+Você pode clicar no botão *Exibir detalhes do certificado* para visualizar os detalhes do certificado.  Se o certificado existente estiver expirado, desmarque a caixa *Usar STARTTLS* ou *Usar SSL*, salve as configurações de notificação e marque novamente a caixa *Usar STARTTLS* ou *Usar SSL* para visualizar um novo certificado.
+
+

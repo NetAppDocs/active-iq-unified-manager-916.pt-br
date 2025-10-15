@@ -1,0 +1,54 @@
+---
+permalink: events/task_subscribe_to_ontap_ems_events.html 
+sidebar: sidebar 
+keywords: subscribe, ontap, ems events 
+summary: 'Você pode assinar para receber eventos do Sistema de Gerenciamento de Eventos (EMS) gerados por sistemas instalados com o software ONTAP .  Um subconjunto de eventos de EMS é relatado ao Unified Manager automaticamente, mas eventos de EMS adicionais são relatados somente se você tiver se inscrito nesses eventos.' 
+---
+= Inscreva-se nos eventos do ONTAP EMS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode assinar para receber eventos do Sistema de Gerenciamento de Eventos (EMS) gerados por sistemas instalados com o software ONTAP .  Um subconjunto de eventos de EMS é relatado ao Unified Manager automaticamente, mas eventos de EMS adicionais são relatados somente se você tiver se inscrito nesses eventos.
+
+.Antes de começar
+Não assine eventos do EMS que já foram adicionados automaticamente ao Unified Manager, pois isso pode causar confusão ao receber dois eventos para o mesmo problema.
+
+Você pode se inscrever em qualquer número de eventos do EMS.  Todos os eventos nos quais você se inscreve são validados, e somente os eventos validados são aplicados aos clusters que você está monitorando no Unified Manager.  O _Catálogo de eventos ONTAP 9 EMS_ fornece informações detalhadas sobre todas as mensagens EMS para a versão especificada do software ONTAP 9.  Localize a versão apropriada do _Catálogo de Eventos EMS_ na página Documentação do Produto ONTAP 9 para obter uma lista dos eventos aplicáveis.
+
+https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Biblioteca de produtos ONTAP 9"]
+
+Você pode configurar alertas para os eventos do ONTAP EMS nos quais você se inscreveu e pode criar scripts personalizados para serem executados para esses eventos.
+
+[NOTE]
+====
+Se você não receber os eventos do ONTAP EMS nos quais se inscreveu, pode haver um problema com a configuração de DNS do cluster, que está impedindo que o cluster alcance o servidor do Unified Manager.  Para resolver esse problema, o administrador do cluster deve corrigir a configuração de DNS do cluster e reiniciar o Unified Manager.  Isso liberará os eventos EMS pendentes no servidor do Unified Manager.
+
+====
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Configuração de evento*.
+. Na página Configuração de evento, clique no botão *Inscrever-se em eventos do EMS*.
+. Na caixa de diálogo Inscrever-se em eventos do EMS, insira o nome do evento do ONTAP EMS no qual você deseja se inscrever.
++
+Para visualizar os nomes dos eventos EMS aos quais você pode se inscrever, no shell do cluster ONTAP , você pode usar o `event route show` comando (antes do ONTAP 9) ou o `event catalog show` comando (ONTAP 9 ou posterior).
+
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_and_receive_alerts_from_ONTAP_EMS_Event_Subscription_in_Active_IQ_Unified_Manager["Como configurar e receber alertas do ONTAP EMS Event Subscription no Active IQ Unified Manager"]
+
+. Clique em *Adicionar*.
++
+O evento EMS é adicionado à lista de eventos EMS inscritos, mas a coluna Aplicável ao cluster exibe o status como "`Desconhecido`" para o evento EMS que você adicionou.
+
+. Clique em *Salvar e Fechar* para registrar a assinatura do evento EMS no cluster.
+. Clique em *Inscrever-se em eventos do EMS* novamente.
++
+O status "`Sim`" aparece na coluna Aplicável ao Cluster para o evento EMS que você adicionou.
+
++
+Se o status não for "`Sim`", verifique a ortografia do nome do evento ONTAP EMS.  Se o nome for inserido incorretamente, você deverá remover o evento incorreto e adicioná-lo novamente.
+
+
+
+Quando o evento ONTAP EMS ocorre, o evento é exibido na página Eventos.  Você pode selecionar o evento para ver detalhes sobre o evento do EMS na página Detalhes do evento.  Você também pode gerenciar a disposição do evento ou criar alertas para o evento.

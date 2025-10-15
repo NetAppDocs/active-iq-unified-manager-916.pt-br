@@ -1,0 +1,55 @@
+---
+permalink: events/reference_snapshot_events.html 
+sidebar: sidebar 
+keywords: snapshot, events, impact area, availability 
+summary: Os eventos de instantâneo fornecem informações sobre o status dos instantâneos, o que permite monitorar os instantâneos em busca de possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento, o nome da armadilha, o nível de impacto, o tipo de fonte e a gravidade. 
+---
+= Eventos instantâneos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de instantâneo fornecem informações sobre o status dos instantâneos, o que permite monitorar os instantâneos em busca de possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento, o nome da armadilha, o nível de impacto, o tipo de fonte e a gravidade.
+
+
+
+== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+Exclusão automática de instantâneo desabilitada (não aplicável)
+ a| 
+Evento
+ a| 
+Volume
+ a| 
+Informação
+
+
+
+ a| 
+Exclusão automática de instantâneo habilitada (não aplicável)
+ a| 
+Evento
+ a| 
+Volume
+ a| 
+Informação
+
+
+
+ a| 
+Configuração de exclusão automática de instantâneo modificada (não aplicável)
+ a| 
+Evento
+ a| 
+Volume
+ a| 
+Informação
+
+|===

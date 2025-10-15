@@ -1,0 +1,42 @@
+---
+permalink: storage-mgmt/reference_data_mirroring_status_definitions.html 
+sidebar: sidebar 
+keywords: data mirror, status, definitions 
+summary: As configurações do MetroCluster fornecem espelhamento de dados e a capacidade adicional de iniciar um failover se um site inteiro ficar indisponível.  O status do espelhamento de dados entre os clusters em uma configuração MetroCluster pode ser Normal ou Espelhamento indisponível.  Entender o status permite que você gerencie suas configurações do MetroCluster de forma eficaz. 
+---
+= Definições de status de espelhamento de dados para MetroCluster sobre FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As configurações do MetroCluster sobre FC fornecem espelhamento de dados e a capacidade adicional de iniciar um failover se um site inteiro ficar indisponível.  O status do espelhamento de dados entre os clusters em uma configuração MetroCluster sobre FC pode ser Normal ou Espelhamento indisponível.  Entender o status permite que você gerencie suas configurações do MetroCluster de forma eficaz.
+
+|===
+| Status de espelhamento de dados | Descrição | Ícone exibido 
+
+
+ a| 
+Normal
+ a| 
+O espelhamento de dados entre os clusters na configuração do MetroCluster é normal.
+ a| 
+image:../media/metrocluster_connectivity_optimal.gif["ícone de conectividade ideal do metrocluster"]
+
+
+
+ a| 
+Espelhamento indisponível
+ a| 
+O espelhamento de dados entre os clusters na configuração do MetroCluster não está disponível devido à alternância.  Por exemplo, quando o cluster de parceiros está inativo devido a um desastre ou quando há uma troca planejada para fins de teste.
+ a| 
+Troca com erros:
+
+image::../media/metrocluster_connectivity_down.gif[ícone de conectividade inativa do metrocluster]
+
+Mudança bem-sucedida:
+
+image::../media/metrocluster_connectivity_failover.gif[ícone de failover de conectividade do metrocluster]
+
+|===

@@ -1,0 +1,159 @@
+---
+permalink: performance-checker/reference_types_of_system_defined_performance_threshold_policies.html 
+sidebar: sidebar 
+keywords: system-defined, performance, threshold, policies, cluster, node. aggregate, qos 
+summary: O Unified Manager fornece algumas políticas de limite padrão que monitoram o desempenho do cluster e geram eventos automaticamente.  Essas políticas são habilitadas por padrão e geram eventos de aviso ou informação quando os limites de desempenho monitorados são violados. 
+---
+= Tipos de políticas de limite de desempenho definidas pelo sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Unified Manager fornece algumas políticas de limite padrão que monitoram o desempenho do cluster e geram eventos automaticamente.  Essas políticas são habilitadas por padrão e geram eventos de aviso ou informação quando os limites de desempenho monitorados são violados.
+
+[NOTE]
+====
+As políticas de limite de desempenho definidas pelo sistema não estão habilitadas nos sistemas Cloud Volumes ONTAP, ONTAP Edge ou ONTAP Select .
+
+====
+Se estiver recebendo eventos desnecessários de quaisquer políticas de limite de desempenho definidas pelo sistema, você poderá desabilitar os eventos para políticas individuais na página Configuração de Eventos.
+
+
+
+== Políticas de limite de cluster
+
+As políticas de limite de desempenho do cluster definidas pelo sistema são atribuídas, por padrão, a cada cluster monitorado pelo Unified Manager:
+
+* *Desequilíbrio de carga do cluster*
++
+Identifica situações em que um nó está operando com uma carga muito maior do que outros nós no cluster e, portanto, potencialmente afetando as latências da carga de trabalho.
+
++
+Ele faz isso comparando o valor da capacidade de desempenho usada para todos os nós em um cluster para ver se algum nó excedeu o valor limite de 30% por mais de 24 horas.  Este é um evento de alerta.
+
+* *Desequilíbrio de capacidade do cluster*
++
+Identifica situações em que um agregado tem uma capacidade utilizada muito maior do que outros agregados no cluster e, portanto, pode afetar o espaço necessário para as operações.
+
++
+Ele faz isso comparando o valor da capacidade usada para todos os agregados no cluster para ver se há uma diferença de 70% entre quaisquer agregados.  Este é um evento de alerta.
+
+
+
+
+
+== Políticas de limite de nó
+
+As políticas de limite de desempenho de nó definidas pelo sistema são atribuídas, por padrão, a cada nó nos clusters monitorados pelo Unified Manager:
+
+* *Limite de capacidade de desempenho utilizada ultrapassado*
++
+Identifica situações em que um único nó está operando acima dos limites de sua eficiência operacional e, portanto, potencialmente afetando as latências da carga de trabalho.
+
++
+Ele faz isso procurando por nós que estão usando mais de 100% de sua capacidade de desempenho por mais de 12 horas.  Este é um evento de alerta.
+
+* *Par de nós HA superutilizado*
++
+Identifica situações em que os nós em um par HA estão operando acima dos limites de eficiência operacional do par HA.
+
++
+Ele faz isso observando o valor da capacidade de desempenho usada para os dois nós no par HA.  Se a capacidade de desempenho combinada usada pelos dois nós exceder 200% por mais de 12 horas, um failover do controlador afetará as latências da carga de trabalho.  Este é um evento informativo.
+
+* *Fragmentação do disco do nó*
++
+Identifica situações em que um disco ou discos em um agregado são fragmentados, tornando lentos os principais serviços do sistema e potencialmente afetando as latências da carga de trabalho em um nó.
+
++
+Ele faz isso observando certas taxas de operação de leitura e gravação em todos os agregados em um nó.  Esta política também pode ser acionada durante a ressincronização do SyncMirror ou quando erros são encontrados durante operações de limpeza de disco.  Este é um evento de alerta.
+
++
+[NOTE]
+====
+A política "`Fragmentação de disco de nó`" analisa agregados somente de HDD; agregados de Flash Pool, SSD e FabricPool não são analisados.
+
+====
+
+
+
+
+== Políticas de limite agregado
+
+A política de limite de desempenho agregado definida pelo sistema é atribuída por padrão a cada agregado nos clusters monitorados pelo Unified Manager:
+
+* *Discos agregados superutilizados*
++
+Identifica situações em que um agregado está operando acima dos limites de sua eficiência operacional, afetando potencialmente as latências da carga de trabalho.  Ele identifica essas situações procurando por agregados em que os discos no agregado são utilizados em mais de 95% por mais de 30 minutos.  Essa política multicondição executa a seguinte análise para ajudar a determinar a causa do problema:
+
++
+** Um disco no agregado está passando por atividade de manutenção em segundo plano?
++
+Algumas das atividades de manutenção em segundo plano pelas quais um disco pode estar passando são reconstrução de disco, limpeza de disco, ressincronização do SyncMirror e reparação.
+
+** Há um gargalo de comunicação na interconexão Fibre Channel da prateleira de disco?
+** Há pouco espaço livre no agregado?  Um evento de aviso é emitido para esta política somente se uma (ou mais) das três políticas subordinadas também forem consideradas violadas.  Um evento de desempenho não é acionado se apenas os discos no agregado forem utilizados em mais de 95%.
+
+
+
+
+[NOTE]
+====
+A política "`Discos agregados superutilizados`" analisa agregados somente de HDD e agregados de Flash Pool (híbridos); agregados de SSD e FabricPool não são analisados.
+
+====
+
+
+== Políticas de limite de latência de carga de trabalho
+
+As políticas de limite de latência de carga de trabalho definidas pelo sistema são atribuídas a qualquer carga de trabalho que tenha uma política de Nível de Serviço de Desempenho configurada com um valor de "`latência esperada`" definido:
+
+* *Limite de latência de LUN/volume de carga de trabalho violado, conforme definido pelo nível de serviço de desempenho*
++
+Identifica volumes (compartilhamentos de arquivos) e LUNs que excederam seu limite de "`latência esperada`" e que estão afetando o desempenho da carga de trabalho.  Este é um evento de alerta.
+
++
+Ele faz isso procurando por cargas de trabalho que excederam o valor de latência esperado em 30% do tempo durante a hora anterior.
+
+
+
+
+
+== Políticas de limite de QoS
+
+As políticas de limite de desempenho de QoS definidas pelo sistema são atribuídas a qualquer carga de trabalho que tenha uma política de taxa de transferência máxima de QoS ONTAP configurada (IOPS, IOPS/TB ou MB/s).  O Unified Manager aciona um evento quando o valor da taxa de transferência da carga de trabalho é 15% menor que o valor de QoS configurado:
+
+* *Limite máximo de QoS IOPS ou MB/s*
++
+Identifica volumes e LUNs que excederam seu limite máximo de IOPS ou MB/s de taxa de transferência de QoS e que estão afetando a latência da carga de trabalho.  Este é um evento de alerta.
+
++
+Quando uma única carga de trabalho é atribuída a um grupo de políticas, isso é feito procurando por cargas de trabalho que excederam o limite máximo de taxa de transferência definido no grupo de políticas de QoS atribuído durante cada período de coleta da hora anterior.
+
++
+Quando várias cargas de trabalho compartilham uma única política de QoS, isso é feito adicionando o IOPS ou MB/s de todas as cargas de trabalho na política e verificando esse total em relação ao limite.
+
+* *QoS Peak IOPS/TB ou IOPS/TB com limite de tamanho de bloco*
++
+Identifica volumes que excederam seu limite de taxa de transferência de pico de IOPS/TB de QoS adaptável (ou IOPS/TB com limite de tamanho de bloco) e que estão afetando a latência da carga de trabalho.  Este é um evento de alerta.
+
++
+Ele faz isso convertendo o limite de pico de IOPS/TB definido na política de QoS adaptável em um valor máximo de IOPS de QoS com base no tamanho de cada volume e, em seguida, procura volumes que excederam o IOPS máximo de QoS durante cada período de coleta de desempenho da hora anterior.
+
++
+[NOTE]
+====
+Esta política é aplicada a volumes somente quando o cluster é instalado com o software ONTAP 9.3 e posterior.
+
+====
++
+Quando o elemento "`tamanho do bloco`" é definido na política de QoS adaptável, o limite é convertido em um valor máximo de QoS em MB/s com base no tamanho de cada volume.  Em seguida, ele procura volumes que excederam o QoS máximo de MB/s durante cada período de coleta de desempenho da hora anterior.
+
++
+[NOTE]
+====
+Esta política é aplicada a volumes somente quando o cluster é instalado com o software ONTAP 9.5 e posterior.
+
+====
+

@@ -1,0 +1,44 @@
+---
+permalink: health-checker/task_configure_conditions_for_annotation_rules.html 
+sidebar: sidebar 
+keywords: unified manager, configure, conditions, annotation rules 
+summary: Você pode configurar uma ou mais condições para criar regras de anotação que o Unified Manager aplica aos objetos de armazenamento.  Os objetos de armazenamento que satisfazem a regra de anotação são anotados com o valor especificado na regra. 
+---
+= Configurar condições para regras de anotação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar uma ou mais condições para criar regras de anotação que o Unified Manager aplica aos objetos de armazenamento.  Os objetos de armazenamento que satisfazem a regra de anotação são anotados com o valor especificado na regra.
+
+.Antes de começar
+Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Anotações*.
+. Na aba *Regras de Anotação*, clique em *Adicionar*.
+. Na caixa de diálogo *Adicionar regra de anotação*, insira um nome para a regra.
+. Selecione um tipo de objeto na lista Tipo de objeto de destino e, em seguida, selecione um nome de anotação e um valor na lista.
+. Na seção *Condições* da caixa de diálogo, selecione um operando e um operador da lista e insira um valor de condição ou clique em *Adicionar condição* para criar uma nova condição.
+. Clique em *Salvar e Adicionar*.
+
+
+
+
+== Exemplo de configuração de uma condição para uma regra de anotação
+
+Considere uma condição para o tipo de objeto SVM, onde o nome do objeto contém "`svm_data`".
+
+Execute as seguintes etapas na caixa de diálogo Adicionar regra de anotação para configurar a condição:
+
+.Passos
+. Insira um nome para a regra de anotação.
+. Selecione o tipo de objeto de destino como SVM.
+. Selecione uma anotação da lista de anotações e um valor.
+. No campo *Condições*, selecione *Nome do Objeto* como operando.
+. Selecione *Contém* como operador.
+. Insira o valor como `svm_data` .
+. Clique em *Adicionar*.
+

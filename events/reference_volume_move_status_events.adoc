@@ -1,0 +1,66 @@
+---
+permalink: events/reference_volume_move_status_events.html 
+sidebar: sidebar 
+keywords: volume, move, status, events, impact area, capacity 
+summary: Os eventos de status de movimentação de volume informam sobre o status da movimentação do seu volume para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, nível de impacto, tipo de fonte e gravidade. 
+---
+= Eventos de status de movimentação de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de status de movimentação de volume informam sobre o status da movimentação do seu volume para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, nível de impacto, tipo de fonte e gravidade.
+
+
+
+== Área de impacto: capacidade
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+Status da movimentação de volume: Em andamento (não aplicável)
+ a| 
+Evento
+ a| 
+Volume
+ a| 
+Informação
+
+
+
+ a| 
+Status de movimentação de volume - Falha (ocumEvtVolumeMoveFailed)
+ a| 
+Risco
+ a| 
+Volume
+ a| 
+Erro
+
+
+
+ a| 
+Status da movimentação de volume: Concluído (não aplicável)
+ a| 
+Evento
+ a| 
+Volume
+ a| 
+Informação
+
+
+
+ a| 
+Movimento de volume - Corte adiado (ocumEvtVolumeMoveCutoverDeferred)
+ a| 
+Risco
+ a| 
+Volume
+ a| 
+Aviso
+
+|===

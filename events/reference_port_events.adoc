@@ -1,0 +1,128 @@
+---
+permalink: events/reference_port_events.html 
+sidebar: sidebar 
+keywords: port, events, impact area, availability, performance 
+summary: Os eventos de porta fornecem status sobre as portas do cluster para que você possa monitorar alterações ou problemas na porta, como se ela está inativa. 
+---
+= Eventos portuários
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de porta fornecem status sobre as portas do cluster para que você possa monitorar alterações ou problemas na porta, como se ela está inativa.
+
+
+
+== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+Status da porta inativo (ocumEvtPortStatusDown)
+ a| 
+Incidente
+ a| 
+Nó
+ a| 
+Crítico
+
+|===
+
+
+== Área de impacto: desempenho
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+Limite crítico de MB/s da porta de rede violado (ocumNetworkPortMbpsIncident)
+ a| 
+Incidente
+ a| 
+Porta
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de aviso de porta de rede MB/s violado (ocumNetworkPortMbpsWarning)
+ a| 
+Risco
+ a| 
+Porta
+ a| 
+Aviso
+
+
+
+ a| 
+Limite crítico de MB/s da porta FCP violado (ocumFcpPortMbpsIncident)
+ a| 
+Incidente
+ a| 
+Porta
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de aviso de MB/s da porta FCP violado (ocumFcpPortMbpsWarning)
+ a| 
+Risco
+ a| 
+Porta
+ a| 
+Aviso
+
+
+
+ a| 
+Limite crítico de utilização da porta de rede violado (ocumNetworkPortUtilizationIncident)
+ a| 
+Incidente
+ a| 
+Porta
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de aviso de utilização de porta de rede violado (ocumNetworkPortUtilizationWarning)
+ a| 
+Risco
+ a| 
+Porta
+ a| 
+Aviso
+
+
+
+ a| 
+Limite crítico de utilização da porta FCP violado (ocumFcpPortUtilizationIncident)
+ a| 
+Incidente
+ a| 
+Porta
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de aviso de utilização da porta FCP violado (ocumFcpPortUtilizationWarning)
+ a| 
+Risco
+ a| 
+Porta
+ a| 
+Aviso
+
+|===

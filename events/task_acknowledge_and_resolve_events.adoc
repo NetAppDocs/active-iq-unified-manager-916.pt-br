@@ -1,0 +1,61 @@
+---
+permalink: events/task_acknowledge_and_resolve_events.html 
+sidebar: sidebar 
+keywords: acknowledge, resolve, events 
+summary: Você deve reconhecer um evento antes de começar a trabalhar no problema que o gerou para não continuar recebendo notificações de alerta repetidas.  Depois de tomar uma ação corretiva para um evento específico, você deve marcá-lo como resolvido. 
+---
+= Reconhecer e resolver eventos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve reconhecer um evento antes de começar a trabalhar no problema que o gerou para não continuar recebendo notificações de alerta repetidas.  Depois de tomar uma ação corretiva para um evento específico, você deve marcá-lo como resolvido.
+
+.Antes de começar
+Você deve ter a função de Operador, Administrador de Aplicativos ou Administrador de Armazenamento.
+
+Você pode reconhecer e resolver vários eventos simultaneamente.
+
+[NOTE]
+====
+Você não pode reconhecer eventos de informação.
+
+====
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de eventos*.
+. Na lista de eventos, execute as seguintes ações para reconhecer os eventos:
++
+|===
+| Se você quiser... | Faça isso... 
+
+
+ a| 
+Reconhecer e marcar um único evento como resolvido
+ a| 
+.. Clique no nome do evento.
+.. Na página Detalhes do evento, determine a causa do evento.
+.. Clique em *Reconhecer*.
+.. Tome as medidas corretivas apropriadas.
+.. Clique em *Marcar como resolvido*.
+
+
+
+
+ a| 
+Reconhecer e marcar vários eventos como resolvidos
+ a| 
+.. Determine a causa dos eventos na respectiva página de detalhes do evento.
+.. Selecione os eventos.
+.. Clique em *Reconhecer*.
+.. Tome as medidas corretivas apropriadas.
+.. Clique em *Marcar como resolvido*.
+
+
+|===
++
+Depois que o evento é marcado como resolvido, ele é movido para a lista de eventos resolvidos.
+
+. *Opcional*: Na área *Notas e atualizações*, adicione uma nota sobre como você abordou o evento e clique em *Publicar*.
+

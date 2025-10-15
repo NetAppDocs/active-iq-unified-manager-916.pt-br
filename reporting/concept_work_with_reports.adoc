@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_work_with_reports.html 
+sidebar: sidebar 
+keywords: work, reports 
+summary: Aprenda como encontrar e personalizar visualizações de páginas de inventário em relatórios agendados compartilháveis. 
+---
+= Trabalhar com relatórios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aprenda como encontrar e personalizar visualizações de páginas de inventário em relatórios agendados compartilháveis.

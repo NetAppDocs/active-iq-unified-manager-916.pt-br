@@ -1,0 +1,18 @@
+---
+permalink: config/concept_what_role_based_access_control_does.html 
+sidebar: sidebar 
+keywords: role-based, access, control 
+summary: 'O controle de acesso baseado em funções (RBAC) permite que os administradores gerenciem grupos de usuários definindo funções.  Se você precisar restringir o acesso a funcionalidades específicas para administradores selecionados, será necessário configurar contas de administrador para eles.  Se quiser restringir as informações que os administradores podem visualizar e as operações que eles podem executar, você deve aplicar funções às contas de administrador que criar.' 
+---
+= O que o controle de acesso baseado em função faz
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O controle de acesso baseado em funções (RBAC) permite que os administradores gerenciem grupos de usuários definindo funções.  Se você precisar restringir o acesso a funcionalidades específicas para administradores selecionados, será necessário configurar contas de administrador para eles.  Se quiser restringir as informações que os administradores podem visualizar e as operações que eles podem executar, você deve aplicar funções às contas de administrador que criar.
+
+O servidor de gerenciamento usa RBAC para login de usuário e permissões de função.  Se você não alterou as configurações padrão do servidor de gerenciamento para acesso de usuário administrativo, não será necessário efetuar login para visualizá-las.
+
+Quando você inicia uma operação que requer privilégios específicos, o servidor de gerenciamento solicita que você faça login. Por exemplo, para criar contas de administrador, você deve fazer login com acesso de conta de administrador do aplicativo.

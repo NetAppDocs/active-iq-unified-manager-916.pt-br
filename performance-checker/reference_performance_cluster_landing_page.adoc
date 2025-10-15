@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/reference_performance_cluster_landing_page.html 
+sidebar: sidebar 
+keywords: performance, cluster, landing page 
+summary: A página inicial do cluster de desempenho exibe o status de desempenho de alto nível de um cluster selecionado.  A página permite que você acesse detalhes completos de cada contador de desempenho para os objetos de armazenamento no cluster selecionado. 
+---
+= Página de destino do cluster de desempenho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página inicial do cluster de desempenho exibe o status de desempenho de alto nível de um cluster selecionado.  A página permite que você acesse detalhes completos de cada contador de desempenho para os objetos de armazenamento no cluster selecionado.
+
+A página inicial do Cluster de Desempenho inclui quatro guias que separam os detalhes do cluster em quatro áreas de informações:
+
+* Página de resumo
++
+** Painel Eventos de Cluster
+** Gráficos de desempenho de MB/s e IOPS
+** Painel Objetos Gerenciados
+
+
+* Página dos Melhores Desempenhos
+* Página do Explorer
+* Página de informações
+

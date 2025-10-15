@@ -1,0 +1,50 @@
+---
+permalink: health-checker/task_disable_specific_security_events.html 
+sidebar: sidebar 
+keywords: disable, specific, security events 
+summary: Todos os eventos são ativados por padrão.  Você pode desabilitar eventos específicos para impedir a geração de notificações para aqueles eventos que não são importantes no seu ambiente.  Você pode habilitar eventos que estão desabilitados se quiser voltar a receber notificações sobre eles. 
+---
+= Desabilitar eventos de segurança específicos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Todos os eventos são ativados por padrão.  Você pode desabilitar eventos específicos para impedir a geração de notificações para aqueles eventos que não são importantes no seu ambiente.  Você pode habilitar eventos que estão desabilitados se quiser voltar a receber notificações sobre eles.
+
+.Antes de começar
+Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+Quando você desabilita eventos, os eventos gerados anteriormente no sistema são marcados como obsoletos, e os alertas configurados para esses eventos não são acionados.  Quando você habilita eventos que estão desabilitados, as notificações para esses eventos são geradas a partir do próximo ciclo de monitoramento.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Configuração de evento*.
+. Na página Configuração de *Evento*, desabilite ou habilite eventos escolhendo uma das seguintes opções:
++
+[cols="2*"]
+|===
+| Se você quiser... | Então faça isto... 
+
+
+ a| 
+Desativar eventos
+ a| 
+.. Clique em *Desativar*.
+.. Na caixa de diálogo Desativar eventos, selecione a gravidade *Aviso*.  Esta é a categoria para todos os eventos de segurança.
+.. Na coluna Eventos correspondentes, selecione os eventos de segurança que você deseja desabilitar e clique na seta para a direita para mover esses eventos para a coluna Desabilitar eventos.
+.. Clique em *Salvar e Fechar*.
+.. Verifique se os eventos que você desativou são exibidos na exibição de lista da página Configuração de eventos.
+
+
+
+
+ a| 
+Habilitar eventos
+ a| 
+.. Na lista de eventos desabilitados, marque a caixa de seleção do evento ou eventos que você deseja reativar.
+.. Clique em *Ativar*.
+
+
+|===
+

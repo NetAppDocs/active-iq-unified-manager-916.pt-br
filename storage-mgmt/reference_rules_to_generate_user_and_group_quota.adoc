@@ -1,0 +1,80 @@
+---
+permalink: storage-mgmt/reference_rules_to_generate_user_and_group_quota.html 
+sidebar: sidebar 
+keywords: rules, generate, user, group, quota, email, address, page, area, define, add comments, syntax, command buttons 
+summary: A página Regras para gerar endereços de e-mail de cota de usuários e grupos permite que você crie regras para especificar endereços de e-mail com base na cota de usuários associada a clusters, SVMs, volumes, qtrees, usuários ou grupos de usuários.  Uma notificação é enviada para o endereço de e-mail especificado quando uma cota é violada. 
+---
+= Página Regras para gerar endereço de e-mail de cota de usuário e grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página Regras para gerar endereços de e-mail de cota de usuários e grupos permite que você crie regras para especificar endereços de e-mail com base na cota de usuários associada a clusters, SVMs, volumes, qtrees, usuários ou grupos de usuários.  Uma notificação é enviada para o endereço de e-mail especificado quando uma cota é violada.
+
+
+
+== Área de regras
+
+Você deve definir as regras para um endereço de e-mail de cota.  Você também pode adicionar comentários para explicar as regras.
+
+
+
+== Como você define regras
+
+Você deve inserir as regras na ordem em que deseja executá-las.  Se o critério da primeira regra for atendido, o endereço de e-mail será gerado com base nessa regra.  Se o critério não for atendido, o critério para a próxima regra será considerado, e assim por diante.  Cada linha lista uma regra separada.  A regra padrão é a última regra da lista.  Você pode alterar a ordem de prioridade das regras.  Entretanto, você não pode alterar a ordem da regra padrão.
+
+Por exemplo, se você quiser usar o endereço de e-mail qtree1@xyz.com para receber notificações sobre violações de cota para qtree1 e usar o endereço de e-mail admin@xyz.com para todos os outros qtrees, as regras devem ser listadas na seguinte ordem:
+
+* se ($QTREE == 'qtree1') então qtree1@xyz.com
+* se ($QTREE == *) então admin@xyz.com
+
+
+Se nenhum dos critérios para as regras especificadas for atendido, a regra padrão será usada:
+
+se ($USER_OR_GROUP == *) então $USER_OR_GROUP@$DOMAIN
+
+Se mais de um usuário tiver a mesma cota, os nomes dos usuários serão exibidos como valores separados por vírgula e as regras não serão aplicáveis à cota.
+
+
+
+== Como você adiciona comentários
+
+Você pode adicionar comentários para explicar as regras.  Você deve usar # no início de cada comentário e cada linha lista um comentário separado.
+
+
+
+== Sintaxe das regras
+
+A sintaxe da regra deve ser uma das seguintes:
+
+* se ( `valid variableoperator *` ) então `email ID@domain name`
++
+if é uma palavra-chave e está em letras minúsculas.  O operador é ==.  O ID de e-mail pode conter qualquer caractere, as variáveis válidas $USER_OR_GROUP, $USER ou $GROUP, ou uma combinação de qualquer caractere e as variáveis válidas $USER_OR_GROUP, $USER ou $GROUP.  O nome de domínio pode conter qualquer caractere, a variável válida $DOMAIN ou uma combinação de qualquer caractere e a variável válida $DOMAIN.  Variáveis válidas podem estar em maiúsculas ou minúsculas, mas não devem ser uma combinação de ambas.  Por exemplo, $domain e $DOMAIN são válidos, mas $Domain não é uma variável válida.
+
+* se ( `valid variableoperator `string`` ) então `email ID@domain name`
++
+if é uma palavra-chave e está em minúsculas.  O operador pode ser contains ou ==.  O ID de e-mail pode conter qualquer caractere, as variáveis válidas $USER_OR_GROUP, $USER ou $GROUP, ou uma combinação de qualquer caractere e as variáveis válidas $USER_OR_GROUP, $USER ou $GROUP.  O nome de domínio pode conter qualquer caractere, a variável válida $DOMAIN ou uma combinação de qualquer caractere e a variável válida $DOMAIN.  Variáveis válidas podem estar em maiúsculas ou minúsculas, mas não devem ser uma combinação de ambas.  Por exemplo, $domain e $DOMAIN são válidos, mas $Domain não é uma variável válida.
+
+
+
+
+
+== Botões de comando
+
+Os botões de comando permitem que você salve, valide ou cancele as regras criadas:
+
+* *Validar*
++
+Valida a sintaxe da regra criada.  Se houver erros durante a validação, a regra que gera o erro será exibida junto com uma mensagem de erro.
+
+* *Restaurar para os padrões de fábrica*
++
+Permite restaurar as regras de endereço para os valores padrão de fábrica.
+
+* *Salvar*
++
+Valida a sintaxe da regra e salva a regra se não houver erros.  Se houver erros durante a validação, a regra que gera o erro será exibida junto com uma mensagem de erro.
+
+

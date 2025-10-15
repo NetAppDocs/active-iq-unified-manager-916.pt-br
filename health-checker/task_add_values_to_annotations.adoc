@@ -1,0 +1,29 @@
+---
+permalink: health-checker/task_add_values_to_annotations.html 
+sidebar: sidebar 
+keywords: add, values, annotations 
+summary: Você pode adicionar valores às anotações e, em seguida, associar objetos de armazenamento a um par nome-valor de anotação específico.  Adicionar valores às anotações ajuda você a gerenciar objetos de armazenamento de forma mais eficaz. 
+---
+= Adicionar valores às anotações
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode adicionar valores às anotações e, em seguida, associar objetos de armazenamento a um par nome-valor de anotação específico.  Adicionar valores às anotações ajuda você a gerenciar objetos de armazenamento de forma mais eficaz.
+
+.Antes de começar
+Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+Você não pode adicionar valores a anotações predefinidas.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Anotações*.
+. Na página *Anotações*, selecione a anotação à qual deseja adicionar um valor e clique em *Adicionar* na seção *Valores*.
+. Na caixa de diálogo *Adicionar valor de anotação*, especifique um valor para a anotação.
++
+O valor especificado deve ser exclusivo para a anotação selecionada.
+
+. Clique em *Adicionar*.
+

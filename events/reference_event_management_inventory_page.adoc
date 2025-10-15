@@ -1,0 +1,174 @@
+---
+permalink: events/reference_event_management_inventory_page.html 
+sidebar: sidebar 
+keywords: event, management, inventory, page, filter, components, xommand buttons, list 
+summary: A página de inventário do Gerenciamento de Eventos permite que você visualize uma lista de eventos atuais e suas propriedades.  Você pode executar tarefas como reconhecer, resolver e atribuir eventos.  Você também pode adicionar um alerta para eventos específicos. 
+---
+= Página de inventário de gerenciamento de eventos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página de inventário do Gerenciamento de Eventos permite que você visualize uma lista de eventos atuais e suas propriedades.  Você pode executar tarefas como reconhecer, resolver e atribuir eventos.  Você também pode adicionar um alerta para eventos específicos.
+
+As informações nesta página são atualizadas automaticamente a cada 5 minutos para garantir que os eventos mais recentes sejam exibidos.
+
+
+
+== Componentes do filtro
+
+Permite que você personalize as informações exibidas na lista de eventos.  Você pode refinar a lista de eventos exibidos usando os seguintes componentes:
+
+* Menu Exibir para selecionar em uma lista predefinida de seleções de filtros.
++
+Isso inclui itens como todos os eventos ativos (novos e reconhecidos), eventos de desempenho ativos, eventos atribuídos a mim (o usuário conectado) e todos os eventos gerados durante todas as janelas de manutenção.
+
+* Painel de pesquisa para refinar a lista de eventos inserindo termos completos ou parciais.
+* Botão de filtro que inicia o painel Filtros para que você possa selecionar todos os campos e atributos de campo disponíveis para refinar a lista de eventos.
+
+
+
+
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes tarefas:
+
+* *Atribuir a*
++
+Permite que você selecione o usuário ao qual o evento será atribuído.  Quando você atribui um evento a um usuário, o nome do usuário e a hora em que você atribuiu o evento são adicionados à lista de eventos dos eventos selecionados.
+
++
+** Meu
++
+Atribui o evento ao usuário conectado no momento.
+
+** Outro usuário
++
+Exibe a caixa de diálogo Atribuir Proprietário, que permite atribuir ou reatribuir o evento a outros usuários.  Você também pode cancelar a atribuição de eventos deixando o campo de propriedade em branco.
+
+
+
+* *Reconhecer*
++
+Reconhece os eventos selecionados.
+
++
+Quando você reconhece um evento, seu nome de usuário e o horário em que você reconheceu o evento são adicionados à lista de eventos selecionados.  Quando você reconhece um evento, você é responsável por gerenciá-lo.
+
++
+[NOTE]
+====
+Você não pode reconhecer eventos de informação.
+
+====
+* *Marcar como resolvido*
++
+Permite que você altere o estado do evento para resolvido.
+
++
+Quando você resolve um evento, seu nome de usuário e o horário em que você resolveu o evento são adicionados à lista de eventos selecionados.  Depois de tomar a ação corretiva para o evento, você deve marcá-lo como resolvido.
+
+* *Adicionar alerta*
++
+Exibe a caixa de diálogo Adicionar alerta, que permite adicionar alertas para os eventos selecionados.
+
+* *Relatórios*
++
+Permite exportar detalhes da visualização do evento atual para um arquivo de valores separados por vírgulas (.csv) ou documento PDF.
+
+* *Mostrar/Ocultar Seletor de Colunas*
++
+Permite que você escolha as colunas que serão exibidas na página e selecione a ordem em que elas serão exibidas.
+
+
+
+
+
+== Lista de eventos
+
+Exibe detalhes de todos os eventos ordenados por tempo de disparo.
+
+Por padrão, a visualização Todos os eventos ativos é exibida para mostrar os eventos novos e confirmados dos últimos sete dias que têm um Nível de Impacto de Incidente ou Risco.
+
+* *Tempo Acionado*
++
+A hora em que o evento foi gerado.
+
+* *Gravidade*
++
+Gravidade do evento: Crítico (image:../media/sev_critical_um60.png[""] ), Erro (image:../media/sev_error_um60.png[""] ), Aviso (image:../media/sev_warning_um60.png[""] ) e Informações (image:../media/sev_information_um60.gif[""] ).
+
+* *Estado*
++
+O estado do evento: Novo, Reconhecido, Resolvido ou Obsoleto.
+
+* *Nível de Impacto*
++
+O nível de impacto do evento: Incidente, Risco, Evento ou Atualização.
+
+* *Área de Impacto*
++
+Área de impacto do evento: Disponibilidade, Capacidade, Desempenho, Proteção, Configuração ou Segurança.
+
+* *Nome*
++
+O nome do evento.  Você pode selecionar o nome para exibir a página Detalhes do evento para esse evento.
+
+* *Fonte*
++
+O nome do objeto no qual o evento ocorreu.  Você pode selecionar o nome para exibir a página de detalhes de integridade ou desempenho desse objeto.
+
++
+Quando ocorre uma violação da política de QoS compartilhada, somente o objeto de carga de trabalho que está consumindo mais IOPS ou MB/s é mostrado neste campo.  Cargas de trabalho adicionais que usam esta política são exibidas na página Detalhes do evento.
+
+* *Tipo de fonte*
++
+O tipo de objeto (por exemplo, VM de armazenamento, volume ou Qtree) ao qual o evento está associado.
+
+* *Atribuído a*
++
+O nome do usuário ao qual o evento é atribuído.
+
+* *Origem do Evento*
++
+Se o evento teve origem no "Active IQ Portal" ou diretamente no "Active IQ Unified Manager".
+
+* *Nome da anotação*
++
+O nome da anotação atribuída ao objeto de armazenamento.
+
+* *Notas*
++
+O número de notas adicionadas para um evento.
+
+* *Dias pendentes*
++
+O número de dias desde que o evento foi gerado inicialmente.
+
+* *Tempo Atribuído*
++
+O tempo decorrido desde que o evento foi atribuído a um usuário.  Se o tempo decorrido exceder uma semana, o registro de data e hora em que o evento foi atribuído a um usuário será exibido.
+
+* *Reconhecido por*
++
+O nome do usuário que reconheceu o evento.  O campo ficará em branco se o evento não for reconhecido.
+
+* *Hora Reconhecida*
++
+O tempo decorrido desde que o evento foi reconhecido.  Se o tempo decorrido exceder uma semana, o registro de data e hora em que o evento foi reconhecido será exibido.
+
+* *Resolvido por*
++
+O nome do usuário que resolveu o evento.  O campo ficará em branco se o evento não for resolvido.
+
+* *Tempo Resolvido*
++
+O tempo decorrido desde que o evento foi resolvido.  Se o tempo decorrido exceder uma semana, o registro de data e hora em que o evento foi resolvido será exibido.
+
+* *Tempo Obsoleto*
++
+O momento em que o estado do evento se tornou obsoleto.
+
+

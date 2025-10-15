@@ -1,0 +1,85 @@
+---
+permalink: data-protection/reference_initialize_update_relationship_dialog_box.html 
+sidebar: sidebar 
+keywords: initialize, update, dialog box 
+summary: A caixa de diálogo Inicializar/Atualizar permite que você execute uma transferência de linha de base pela primeira vez em um novo relacionamento de proteção ou atualize um relacionamento se ele já estiver inicializado e você desejar executar uma atualização manual, não programada e incremental. 
+---
+= Caixa de diálogo Inicializar/Atualizar
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Inicializar/Atualizar permite que você execute uma transferência de linha de base pela primeira vez em um novo relacionamento de proteção ou atualize um relacionamento se ele já estiver inicializado e você desejar executar uma atualização manual, não programada e incremental.
+
+
+
+== Guia Opções de Transferência
+
+A guia Opções de transferência permite alterar a prioridade de inicialização de uma transferência e alterar a largura de banda usada durante as transferências.
+
+* *Prioridade de transferência*
++
+A prioridade na qual a transferência é executada.  Você pode selecionar Normal ou Baixo.  Relacionamentos com políticas que especificam uma prioridade de transferência normal são executados antes daquelas que especificam uma prioridade de transferência baixa.  Normal é selecionado por padrão.
+
+* *Taxa Máxima de Transferência*
++
+Especifica a taxa máxima na qual os dados são transferidos entre clusters pela rede.  Se você optar por não usar uma taxa de transferência máxima, a transferência básica entre relacionamentos será ilimitada.  Se você selecionar mais de um relacionamento com diferentes taxas máximas de transferência, poderá especificar uma das seguintes configurações de taxa máxima de transferência:
+
++
+** Use valores especificados durante a configuração ou edição de relacionamento individual
++
+Quando selecionadas, as operações de inicialização e atualização usam a taxa de transferência máxima especificada no momento da criação ou edição de cada relacionamento.  Este campo está disponível somente quando vários relacionamentos com diferentes taxas de transferência estão sendo inicializados ou atualizados.
+
+** Ilimitado
++
+Indica que não há limitação de largura de banda nas transferências entre relacionamentos.  Este campo está disponível somente quando vários relacionamentos com diferentes taxas de transferência estão sendo inicializados ou atualizados.
+
+** Limitar a largura de banda para
++
+Quando selecionada, a largura de banda da rede é limitada ao valor especificado.  Você pode inserir um valor numérico e selecionar quilobytes por segundo (KBps), megabytes por segundo (MBps), gigabytes por segundo (GBps) ou terabytes por segundo (TBps).  A taxa máxima de transferência especificada deve ser maior que 1 KBps e menor que 4 TBps.
+
+
+
+
+
+
+
+== Guia Cópias de instantâneos de origem
+
+A guia Cópias do Snapshot de Origem exibe as seguintes informações sobre a cópia do Snapshot de origem usada para a transferência de linha de base:
+
+* *Volume de origem*
++
+Exibe os nomes dos volumes de origem correspondentes.
+
+* *Volume de destino*
++
+Exibe os nomes dos volumes de destino selecionados.
+
+* *Tipo de fonte*
++
+Exibe o tipo de volume.  O tipo pode ser Leitura/gravação ou Proteção de Dados.
+
+* *Cópia instantânea*
++
+Exibe a cópia do Snapshot usada para a transferência de dados.  Clicar no valor Cópia de instantâneo exibe a caixa de diálogo Selecionar cópia de instantâneo de origem, na qual você pode selecionar uma cópia de instantâneo específica para sua transferência, dependendo do tipo de relacionamento de proteção que você tem e da operação que está executando.  A opção para especificar uma cópia de Snapshot diferente não está disponível para fontes de tipo de proteção de dados.
+
+
+
+
+
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes tarefas:
+
+* *Cancelar*
++
+Descarta suas seleções e fecha a caixa de diálogo Inicializar/Atualizar.
+
+* *Enviar*
++
+Salva suas seleções e inicia o trabalho de inicialização ou atualização.
+
+

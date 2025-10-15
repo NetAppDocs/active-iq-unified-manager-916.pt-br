@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_troubleshooting_workloads_using_workload_analyzer.html 
+sidebar: sidebar 
+keywords: workload analyzer, troubleshoot 
+summary: O analisador de carga de trabalho fornece uma maneira de visualizar critérios importantes de integridade e desempenho para uma única carga de trabalho em uma única página para auxiliar na solução de problemas.  Ao visualizar todos os eventos atuais e passados de uma carga de trabalho, você pode ter uma ideia melhor do motivo pelo qual a carga de trabalho pode estar tendo um problema de desempenho ou capacidade agora. 
+---
+= Solucionar problemas de cargas de trabalho usando o analisador de carga de trabalho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O analisador de carga de trabalho fornece uma maneira de visualizar critérios importantes de integridade e desempenho para uma única carga de trabalho em uma única página para auxiliar na solução de problemas.  Ao visualizar todos os eventos atuais e passados de uma carga de trabalho, você pode ter uma ideia melhor do motivo pelo qual a carga de trabalho pode estar tendo um problema de desempenho ou capacidade agora.
+
+Usar essa ferramenta também pode ajudar a determinar se o armazenamento é a causa de algum problema de desempenho de um aplicativo ou se o problema é causado por um problema de rede ou outro problema relacionado.
+
+Você pode iniciar essa funcionalidade de vários lugares na interface do usuário:
+
+* Na seleção Análise de Carga de Trabalho no menu de navegação à esquerda
+* Na página de detalhes do evento, clicando no botão *Analisar carga de trabalho*
+* Em qualquer página de inventário de carga de trabalho (volume, LUN, carga de trabalho, compartilhamento NFS ou compartilhamento SMB/CIFS), clicando no ícone maisimage:../media/more_icon.gif[""] , então *Analisar Carga de Trabalho*
+* Na página Máquinas Virtuais, clicando no botão *Analisar Carga de Trabalho* de qualquer objeto Datastore
+
+
+Ao iniciar a ferramenta no menu de navegação à esquerda, você pode inserir o nome de qualquer carga de trabalho que deseja analisar e selecionar o intervalo de tempo para o qual deseja solucionar problemas.  Ao iniciar a ferramenta em qualquer uma das páginas de carga de trabalho ou inventário de máquina virtual, o nome da carga de trabalho é preenchido automaticamente e os dados da carga de trabalho são apresentados com o intervalo de tempo padrão de 2 horas.  Ao iniciar a ferramenta na página Detalhes do evento, o nome da carga de trabalho é preenchido automaticamente e os dados de 10 dias são exibidos.

@@ -1,0 +1,85 @@
+---
+permalink: storage-mgmt/concept_manage_storage_efficiency_policies.html 
+sidebar: sidebar 
+keywords: manage, storage, efficiency, policies, guidelines, create, custom 
+summary: 'Uma Política de Eficiência de Armazenamento (SEP) permite definir as características de eficiência de armazenamento de uma carga de trabalho.  Você pode atribuir um SEP a uma carga de trabalho ao criá-la inicialmente ou depois editando a carga de trabalho.' 
+---
+= Gerenciar políticas de eficiência de armazenamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Uma Política de Eficiência de Armazenamento (SEP) permite definir as características de eficiência de armazenamento de uma carga de trabalho.  Você pode atribuir um SEP a uma carga de trabalho ao criá-la inicialmente ou depois editando a carga de trabalho.
+
+A eficiência de armazenamento inclui o uso de tecnologias como provisionamento fino, desduplicação e compactação de dados que aumentam a utilização do armazenamento e diminuem os custos de armazenamento.  Ao criar SEPs, você pode usar essas tecnologias de economia de espaço individualmente ou em conjunto para atingir a máxima eficiência de armazenamento.  Quando você associa as políticas às suas cargas de trabalho de armazenamento, as configurações de política especificadas são atribuídas a elas.  O Unified Manager permite que você atribua SEPs definidos pelo sistema e pelo usuário para otimizar os recursos de armazenamento no seu data center.
+
+O Unified Manager fornece dois SEPs definidos pelo sistema: Alto e Baixo.  Esses SEPs são aplicáveis à maioria das cargas de trabalho de armazenamento em um data center. No entanto, você pode criar suas próprias políticas se os SEPs definidos pelo sistema não atenderem aos seus requisitos.
+
+Não é possível modificar um SEP definido pelo sistema ou que esteja atualmente atribuído a uma carga de trabalho.  Não é possível excluir um SEP atribuído a uma carga de trabalho ou se ele for o único SEP disponível.
+
+A página Políticas de eficiência de armazenamento lista os SEPs disponíveis e permite adicionar, editar e excluir SEPs personalizados.  Esta página exibe as seguintes informações:
+
+|===
+| Campo | Descrição 
+
+
+ a| 
+Nome
+ a| 
+Nome do SEP.
+
+
+
+ a| 
+Tipo
+ a| 
+Se a política é definida pelo sistema ou pelo usuário.
+
+
+
+ a| 
+Reserva Espacial
+ a| 
+Se o volume é provisionado de forma fina ou espessa.
+
+
+
+ a| 
+Desduplicação
+ a| 
+Se a desduplicação está habilitada na carga de trabalho:
+
+* Em linha: a desduplicação ocorre durante a gravação na carga de trabalho
+* Contexto: A desduplicação ocorre na carga de trabalho
+* Desativar: a desduplicação está desativada na carga de trabalho
+
+
+
+
+ a| 
+Compressão
+ a| 
+Se a compactação de dados está habilitada na carga de trabalho:
+
+* Em linha: a compactação de dados ocorre durante a gravação na carga de trabalho
+* Contexto: A compressão de dados ocorre na carga de trabalho
+* Desativar: a compactação de dados é desativada na carga de trabalho
+
+
+
+
+ a| 
+Cargas de trabalho
+ a| 
+Número de cargas de trabalho de armazenamento que foram atribuídas ao SEP
+
+|===
+
+
+== Diretrizes para criar uma Política de Eficiência de Armazenamento personalizada
+
+Se os SEPs existentes não atenderem aos requisitos de política para suas cargas de trabalho de armazenamento, você poderá criar um SEP personalizado.  No entanto, é recomendável que você tente usar os SEPs definidos pelo sistema para suas cargas de trabalho de armazenamento e crie SEPs personalizados somente se necessário.
+
+Você pode visualizar o SEP atribuído às cargas de trabalho na página Todas as cargas de trabalho e na página Detalhes do volume/integridade.  Você pode visualizar a taxa de redução de dados no nível do cluster (sem cópias de instantâneo) com base nessas eficiências de armazenamento no painel Capacidade no Painel e na exibição Capacidade: Todos os clusters.

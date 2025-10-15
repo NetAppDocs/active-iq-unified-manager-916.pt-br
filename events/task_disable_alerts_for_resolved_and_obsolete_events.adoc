@@ -1,0 +1,42 @@
+---
+permalink: events/task_disable_alerts_for_resolved_and_obsolete_events.html 
+sidebar: sidebar 
+keywords: enable, disable, alerts, resolved, obsolete, events 
+summary: 'Para todos os eventos que você configurou para enviar alertas, uma mensagem de alerta é enviada quando esses eventos passam por todos os estados disponíveis: Novo, Reconhecido, Resolvido e Obsoleto.  Se não quiser receber alertas sobre eventos conforme eles passam para os estados Resolvido e Obsoleto, você pode configurar uma configuração global para suprimir esses alertas.' 
+---
+= Habilitar e desabilitar alertas para eventos Resolvidos e Obsoletos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para todos os eventos que você configurou para enviar alertas, uma mensagem de alerta é enviada quando esses eventos passam por todos os estados disponíveis: Novo, Reconhecido, Resolvido e Obsoleto.  Se não quiser receber alertas sobre eventos conforme eles passam para os estados Resolvido e Obsoleto, você pode configurar uma configuração global para suprimir esses alertas.
+
+.Antes de começar
+Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+Por padrão, os alertas não são enviados para eventos à medida que eles passam para os estados Resolvido e Obsoleto.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Configuração de alerta*.
+. Na página *Configuração de alerta*, execute uma das seguintes ações usando o controle deslizante ao lado do item *Alertas para eventos resolvidos e obsoletos*:
++
+|===
+| Para... | Faça isso... 
+
+
+ a| 
+Pare de enviar alertas quando os eventos forem resolvidos ou se tornarem obsoletos
+ a| 
+Mova o controle deslizante para a esquerda
+
+
+
+ a| 
+Comece a enviar alertas conforme os eventos forem resolvidos ou se tornarem obsoletos
+ a| 
+Mova o controle deslizante para a direita
+
+|===
+

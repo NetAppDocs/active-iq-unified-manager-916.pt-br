@@ -1,0 +1,55 @@
+---
+permalink: api-automation/concept_manage_active_directory.html 
+sidebar: sidebar 
+keywords: manage, active, directory, mapping 
+summary: Você pode usar as APIs listadas aqui para gerenciar mapeamentos do Active Directory no SVM que são necessários para provisionar compartilhamentos CIFS nos SVMs.  Os mapeamentos do Active Directory precisam ser configurados para mapear as SVMs com o ONTAP. 
+---
+= Gerenciar mapeamento do Active Directory usando APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar as APIs listadas aqui para gerenciar mapeamentos do Active Directory no SVM que são necessários para provisionar compartilhamentos CIFS nos SVMs.  Os mapeamentos do Active Directory precisam ser configurados para mapear as SVMs com o ONTAP.
+
+
+
+== Exibir mapeamentos do Active Directory
+
+Você pode visualizar os detalhes de configuração dos mapeamentos do Active Directory para uma SVM usando o seguinte método.  Para visualizar os mapeamentos do Active Directory em uma SVM, você precisa inserir a chave SVM.  Para consultar os detalhes de um mapeamento específico, você deve inserir a chave de mapeamento.
+
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+PEGAR
+ a| 
+`/storage-provider/active-directories-mappings`
+
+`/storage-provider/active-directories-mappings/\{key}`
+
+|===
+
+
+== Adicionar mapeamento do Active Directory
+
+Você pode criar mapeamentos do Active Directory em uma SVM usando o seguinte método.  Você deve inserir os detalhes do mapeamento como parâmetros de entrada.
+
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+PUBLICAR
+ a| 
+`/storage-provider/active-directories-mappings`
+
+|===

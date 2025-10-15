@@ -1,0 +1,68 @@
+---
+permalink: data-protection/reference_resynchronize_dialog_box.html 
+sidebar: sidebar 
+keywords: resynchronize, dialog box 
+summary: A caixa de diálogo Ressincronizar permite que você ressincronize dados em um relacionamento SnapMirror ou SnapVault que foi interrompido anteriormente e então o destino se tornou um volume de leitura/gravação.  Você também pode ressincronizar quando uma cópia comum necessária do Snapshot no volume de origem for excluída, causando falha nas atualizações do SnapMirror ou SnapVault . 
+---
+= Caixa de diálogo Ressincronizar
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Ressincronizar permite que você ressincronize dados em um relacionamento SnapMirror ou SnapVault que foi interrompido anteriormente e então o destino se tornou um volume de leitura/gravação.  Você também pode ressincronizar quando uma cópia comum necessária do Snapshot no volume de origem for excluída, causando falha nas atualizações do SnapMirror ou SnapVault .
+
+
+
+== Guia Opções de ressincronização
+
+A guia Opções de ressincronização permite que você defina a prioridade de transferência e a taxa máxima de transferência para o relacionamento de proteção que você está ressincronizando.
+
+* *Prioridade de transferência*
++
+A prioridade na qual a transferência é executada.  Você pode selecionar Normal ou Baixo.  Relacionamentos com políticas que especificam uma prioridade de transferência normal são executados antes daqueles com políticas que especificam uma prioridade de transferência baixa.
+
+* *Taxa Máxima de Transferência*
++
+Especifica a taxa máxima na qual os dados são transferidos entre clusters pela rede.  Quando selecionada, a largura de banda da rede é limitada ao valor especificado.  Você pode inserir um valor numérico e selecionar quilobytes por segundo (KBps), megabytes por segundo (MBps), gigabytes por segundo (GBps) ou TBps.  Se você optar por não usar uma taxa de transferência máxima, a transferência básica entre relacionamentos será ilimitada.
+
+
+
+
+
+== Guia Cópias de instantâneos de origem
+
+A guia Cópias do Snapshot de Origem exibe as seguintes informações sobre a cópia do Snapshot de origem usada para a transferência de linha de base:
+
+* *Volume de origem*
++
+Exibe os nomes dos volumes de origem correspondentes.
+
+* *Volume de destino*
++
+Exibe os nomes dos volumes de destino selecionados.
+
+* *Tipo de fonte*
++
+Exibe o tipo de volume: Leitura/gravação ou Proteção de dados.
+
+* *Cópia instantânea*
++
+Exibe a cópia do Snapshot usada para a transferência de dados.  Clicar no valor Cópia de instantâneo exibe a caixa de diálogo Selecionar cópia de instantâneo de origem, na qual você pode selecionar uma cópia de instantâneo específica para sua transferência, dependendo do tipo de relacionamento de proteção que você tem e da operação que está executando.
+
+
+
+
+
+== Botões de comando
+
+* *Enviar*
++
+Inicia o processo de ressincronização e fecha a caixa de diálogo Ressincronizar.
+
+* *Cancelar*
++
+Cancela suas seleções e fecha a caixa de diálogo Ressincronizar.
+
+

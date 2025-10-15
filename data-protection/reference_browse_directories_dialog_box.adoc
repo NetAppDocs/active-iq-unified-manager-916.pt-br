@@ -1,0 +1,54 @@
+---
+permalink: data-protection/reference_browse_directories_dialog_box.html 
+sidebar: sidebar 
+keywords: browse, directories, dialog box 
+summary: Você pode usar a caixa de diálogo Procurar diretórios quando quiser restaurar dados para um diretório em um cluster e SVM que seja diferente da fonte original.  O cluster e o volume de origem originais são selecionados por padrão. 
+---
+= Caixa de diálogo Navegar por diretórios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a caixa de diálogo Procurar diretórios quando quiser restaurar dados para um diretório em um cluster e SVM que seja diferente da fonte original.  O cluster e o volume de origem originais são selecionados por padrão.
+
+A caixa de diálogo Procurar diretórios permite que você selecione o cluster, o SVM, o volume e o caminho do diretório para os quais deseja restaurar os dados.
+
+* *Conjunto*
++
+Lista os destinos de cluster disponíveis para os quais você pode restaurar.  Por padrão, o cluster do volume de origem original é selecionado.
+
+* *Lista suspensa SVM*
++
+Lista o SVM disponível para o cluster selecionado.  Por padrão, o SVM do volume de origem original é selecionado.
+
+* *Volume*
++
+Lista todos os volumes de leitura/gravação em um SVM selecionado.  Você pode filtrar os volumes por nome e por espaço disponível.  O volume com mais espaço é listado primeiro e assim por diante, em ordem decrescente.  Por padrão, o volume da fonte original é selecionado.
+
+* *Caixa de texto do caminho do arquivo*
++
+Permite que você digite o caminho do arquivo para o qual deseja restaurar os dados.  O caminho que você inserir já deve existir.
+
+* *Nome*
++
+Exibe os nomes das pastas disponíveis para o volume selecionado.  Clicar em uma pasta na lista Nome exibe as subpastas, se houver alguma.  Os arquivos contidos nas pastas não são exibidos.  Clicandoimage:../media/icon_upfolder.gif["ícone de pasta superior"] depois de selecionar uma pasta, você sobe um nível na estrutura de diretórios.
+
+
+
+
+
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes tarefas:
+
+* *Selecione o diretório*
++
+Aplica suas seleções e fecha a caixa de diálogo Procurar diretórios.  Se nenhum diretório for selecionado, este botão será desabilitado.
+
+* *Cancelar*
++
+Descarta suas seleções e fecha a caixa de diálogo Procurar diretórios.
+
+

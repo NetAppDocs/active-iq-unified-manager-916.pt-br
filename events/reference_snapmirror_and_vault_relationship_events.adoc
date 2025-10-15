@@ -1,0 +1,109 @@
+---
+permalink: events/reference_snapmirror_and_vault_relationship_events.html 
+sidebar: sidebar 
+keywords: asynchronous, mirror, vault, relationship, events, impact area, protection 
+summary: Os eventos de relacionamento do SnapMirror e do Vault assíncronos fornecem informações sobre o status dos seus relacionamentos do SnapMirror e do Vault assíncronos para que você possa monitorar possíveis problemas.  Eventos de relacionamento de espelho e cofre assíncronos são suportados para relacionamentos de proteção de volume e VM de armazenamento.  Mas somente relacionamentos de Vault não são suportados para recuperação de desastres de VM de armazenamento.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, o nível de impacto, o tipo de fonte e a gravidade. 
+---
+= Eventos de relacionamento de espelho e cofre assíncronos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de relacionamento do SnapMirror e do Vault assíncronos fornecem informações sobre o status dos seus relacionamentos do SnapMirror e do Vault assíncronos para que você possa monitorar possíveis problemas.  Eventos de relacionamento de espelho e cofre assíncronos são suportados para relacionamentos de proteção de volume e VM de armazenamento.  Mas somente relacionamentos de Vault não são suportados para recuperação de desastres de VM de armazenamento.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, o nível de impacto, o tipo de fonte e a gravidade.
+
+
+
+== Área de impacto: proteção
+
+[NOTE]
+====
+Os eventos de relacionamento SnapMirror e Vault também são gerados para VMs de armazenamento protegidas pela recuperação de desastres de VMs de armazenamento, mas não para quaisquer relacionamentos de objetos constituintes.
+
+====
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+Espelho e cofre assíncronos não saudáveis (ocumEvtMirrorVaultRelationshipUnhealthy)
+ a| 
+Risco
+ a| 
+Relacionamento SnapMirror
+ a| 
+Aviso
+
+
+
+ a| 
+Espelho e cofre assíncronos quebrados (ocumEvtMirrorVaultRelationshipStateBrokenoff)
+ a| 
+Risco
+ a| 
+Relacionamento SnapMirror
+ a| 
+Erro
+
+
+
+ a| 
+Falha na inicialização do espelho e do cofre assíncronos (ocumEvtMirrorVaultRelationshipInitializeFailed)
+ a| 
+Risco
+ a| 
+Relacionamento SnapMirror
+ a| 
+Erro
+
+
+
+ a| 
+Falha na atualização assíncrona do espelho e do cofre (ocumEvtMirrorVaultRelationshipUpdateFailed)
+ a| 
+Risco
+ a| 
+Relacionamento SnapMirror
+ a| 
+Erro
+
+
+
+ a| 
+Erro de atraso de espelho e cofre assíncrono (ocumEvtMirrorVaultRelationshipLagError)
+ a| 
+Risco
+ a| 
+Relacionamento SnapMirror
+ a| 
+Erro
+
+
+
+ a| 
+Aviso de atraso de espelho e cofre assíncrono (ocumEvtMirrorVaultRelationshipLagWarning)
+ a| 
+Risco
+ a| 
+Relacionamento SnapMirror
+ a| 
+Aviso
+
+
+
+ a| 
+Falha na ressincronização do espelho assíncrono e do cofre (ocumEvtMirrorVaultRelationshipResyncFailed)
+ a| 
+Risco
+ a| 
+Relacionamento SnapMirror
+ a| 
+Erro
+
+|===
+[NOTE]
+====
+O evento "Falha na atualização do SnapMirror " é gerado pelo portal Active IQ (Config Advisor).
+
+====

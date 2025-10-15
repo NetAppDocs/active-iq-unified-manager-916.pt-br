@@ -1,0 +1,49 @@
+---
+permalink: health-checker/task_resolve_volume_offline_issues.html 
+sidebar: sidebar 
+keywords: resolve, volume, offline issues 
+summary: Este fluxo de trabalho fornece um exemplo de como você pode avaliar e resolver um evento offline de volume que o Unified Manager pode exibir na página de inventário do Gerenciamento de Eventos.  Neste cenário, você é um administrador que usa o Unified Manager para solucionar problemas de um ou mais eventos de volume offline. 
+---
+= Resolver problemas de volume offline
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este fluxo de trabalho fornece um exemplo de como você pode avaliar e resolver um evento offline de volume que o Unified Manager pode exibir na página de inventário do Gerenciamento de Eventos.  Neste cenário, você é um administrador que usa o Unified Manager para solucionar problemas de um ou mais eventos de volume offline.
+
+.Antes de começar
+Você deve ter a função de Operador, Administrador de Aplicativos ou Administrador de Armazenamento.
+
+Os volumes podem ser relatados offline por vários motivos:
+
+* O administrador do SVM deliberadamente colocou o volume offline.
+* O nó do cluster de hospedagem do volume está inativo e o failover de armazenamento para seu parceiro de par de HA também falhou.
+* A máquina virtual de armazenamento (SVM) de hospedagem do volume foi interrompida porque o nó que hospeda o volume raiz dessa SVM está inativo.
+* O agregado de hospedagem do volume está inativo devido à falha simultânea de dois discos RAID.
+
+
+Você pode usar a página de inventário do Gerenciamento de Eventos e as páginas de detalhes do Cluster/Integridade, VM de Armazenamento/Integridade e Volume/Integridade para confirmar ou eliminar uma ou mais dessas possibilidades.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de eventos*.
+. Na página de inventário *Gerenciamento de eventos*, selecione *Eventos de disponibilidade ativa*.
+. Clique no link de hipertexto exibido para o evento Volume Offline.
++
+A página Detalhes do evento para o incidente de disponibilidade é exibida.
+
+. Nessa página, verifique as notas para ver se há alguma indicação de que o administrador do SVM colocou o volume em questão offline.
+. Na página de detalhes do *Evento*, você pode revisar as informações de uma ou mais das seguintes tarefas:
++
+** Revise as informações exibidas no campo Causa para possível orientação de diagnóstico.
++
+Neste exemplo, as informações no campo Causa informam apenas que o volume está offline.
+
+** Verifique a área Notas e Atualizações para ver se há alguma indicação de que o administrador do SVM colocou deliberadamente o volume em questão offline.
+** Clique na origem do evento, neste caso o volume relatado offline, para obter mais informações sobre esse volume.
+** Atribua o evento a um administrador.
+** Reconheça o evento ou, se apropriado, marque-o como resolvido.
+
+
+

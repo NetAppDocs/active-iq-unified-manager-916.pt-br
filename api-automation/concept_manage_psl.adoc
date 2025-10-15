@@ -1,0 +1,114 @@
+---
+permalink: api-automation/concept_manage_psl.html 
+sidebar: sidebar 
+keywords: manage, performance, service, level 
+summary: Você pode visualizar, criar, modificar e excluir Níveis de Serviço de Desempenho usando as APIs do provedor de armazenamento no seu Active IQ Unified Manager. 
+---
+= Gerencie os níveis de serviço de desempenho usando APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode visualizar, criar, modificar e excluir Níveis de Serviço de Desempenho usando as APIs do provedor de armazenamento no seu Active IQ Unified Manager.
+
+
+
+== Ver níveis de serviço de desempenho
+
+Você pode usar o método a seguir para visualizar os Níveis de Serviço de Desempenho para atribuí-los às cargas de trabalho de armazenamento.  A API lista todos os Níveis de Serviço de Desempenho definidos pelo sistema e criados pelo usuário e recupera os atributos de todos os Níveis de Serviço de Desempenho.  Se quiser consultar um Nível de Serviço de Desempenho específico, você precisa inserir o ID exclusivo do Nível de Serviço de Desempenho para recuperar seus detalhes.
+
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+PEGAR
+ a| 
+`/storage-provider/performance-service-levels`
+
+`/storage-provider/performance-service-levels/\{key}`
+
+|===
+
+
+== Adicionar níveis de serviço de desempenho
+
+Você pode usar o método a seguir para criar Níveis de Serviço de Desempenho personalizados e atribuí-los às suas cargas de trabalho de armazenamento se os Níveis de Serviço de Desempenho definidos pelo sistema não atenderem aos objetivos de nível de serviço (SLOs) necessários para as cargas de trabalho de armazenamento.  Insira os detalhes do Nível de Serviço de Desempenho que você deseja criar.  Para as propriedades do IOPS, certifique-se de inserir um intervalo válido de valores.
+
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+PUBLICAR
+ a| 
+`/storage-provider/performance-service-levels`
+
+|===
+
+
+== Excluir níveis de serviço de desempenho
+
+Você pode usar o seguinte método para excluir um Nível de Serviço de Desempenho específico.  Não é possível excluir um Nível de Serviço de Desempenho se ele estiver atribuído a uma carga de trabalho ou se for o único Nível de Serviço de Desempenho disponível.  Você precisa fornecer o ID exclusivo do Nível de Serviço de Desempenho como um parâmetro de entrada para excluir um Nível de Serviço de Desempenho específico.
+
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+EXCLUIR
+ a| 
+`/storage-provider/performance-service-levels/\{key}`
+
+|===
+
+
+== Modificar os níveis de serviço de desempenho
+
+Você pode usar o seguinte método para modificar um Nível de Serviço de Desempenho e atualizar suas propriedades.  Não é possível modificar um Nível de Serviço de Desempenho definido pelo sistema ou atribuído a uma carga de trabalho.  Você precisa fornecer o ID exclusivo do para modificar um Nível de Serviço de Desempenho específico.  Você também deve inserir a propriedade IOPS que deseja atualizar, juntamente com um valor válido.
+
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+CORREÇÃO
+ a| 
+`/storage-provider/performance-service-levels/\{key}`
+
+|===
+
+
+== Visualizar recursos agregados com base nos níveis de serviço de desempenho
+
+Você pode usar o método a seguir para consultar os recursos agregados com base nos Níveis de Serviço de Desempenho.  Esta API retorna a lista de agregados disponíveis no seu data center e indica os recursos em termos de Níveis de Serviço de Desempenho que podem ser suportados nesses agregados.  Ao provisionar cargas de trabalho em um volume, você pode visualizar a capacidade de um agregado de oferecer suporte a um Nível de Serviço de Desempenho específico e provisionar cargas de trabalho com base nessa capacidade.  Sua capacidade de especificar o agregado está disponível somente quando você provisiona uma carga de trabalho usando APIs.  Esta funcionalidade não está disponível na interface web do Unified Manager.
+
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+PEGAR
+ a| 
+`/storage-provider/aggregate-capabilities`
+
+`/storage-provider/aggregate-capabilities/\{key}`
+
+|===

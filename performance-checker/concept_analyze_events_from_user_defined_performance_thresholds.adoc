@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_analyze_events_from_user_defined_performance_thresholds.html 
+sidebar: sidebar 
+keywords: analyze, events, user-defined, performance, thresholds 
+summary: Eventos gerados a partir de limites definidos pelo usuário indicam que um contador de desempenho para um determinado objeto de armazenamento, por exemplo, um agregado ou volume, ultrapassou o limite definido na política.  Isso indica que o objeto de cluster está enfrentando um problema de desempenho. 
+---
+= Analisar eventos a partir de limites de desempenho definidos pelo usuário
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eventos gerados a partir de limites definidos pelo usuário indicam que um contador de desempenho para um determinado objeto de armazenamento, por exemplo, um agregado ou volume, ultrapassou o limite definido na política.  Isso indica que o objeto de cluster está enfrentando um problema de desempenho.
+
+Use a página Detalhes do evento para analisar o evento de desempenho e tomar medidas corretivas, se necessário, para retornar o desempenho ao normal.

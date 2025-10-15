@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/concept_understand_more_about_quotas.html 
+sidebar: sidebar 
+keywords: understand, more, quotas 
+summary: Entender os conceitos sobre cotas ajuda você a gerenciar suas cotas de usuários e cotas de grupos de usuários com eficiência. 
+---
+= Entenda mais sobre cotas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Entender os conceitos sobre cotas ajuda você a gerenciar suas cotas de usuários e cotas de grupos de usuários com eficiência.

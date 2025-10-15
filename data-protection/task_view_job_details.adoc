@@ -1,0 +1,23 @@
+---
+permalink: data-protection/task_view_job_details.html 
+sidebar: sidebar 
+keywords: view, job, details 
+summary: Depois de iniciar um trabalho, você pode acompanhar seu progresso na página Detalhes do trabalho e monitorar as tarefas associadas em busca de possíveis erros. 
+---
+= Ver detalhes do trabalho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de iniciar um trabalho, você pode acompanhar seu progresso na página Detalhes do trabalho e monitorar as tarefas associadas em busca de possíveis erros.
+
+.Antes de começar
+Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Proteção* > *Trabalhos*.
+. Na página Tarefas, clique no nome de uma tarefa na coluna *Nome* para exibir a lista de tarefas associadas à tarefa.
+. Clique em uma tarefa para exibir informações adicionais no painel *Detalhes da tarefa* e no painel *Mensagens da tarefa* à direita da lista de tarefas.
+

@@ -1,0 +1,87 @@
+---
+permalink: events/reference_event_details_page.html 
+sidebar: sidebar 
+keywords: event, details, page 
+summary: Na página Detalhes do evento, você pode visualizar os detalhes de um evento selecionado, como gravidade do evento, nível de impacto, área de impacto e origem do evento.  Você também pode visualizar informações adicionais sobre possíveis soluções para resolver o problema. 
+---
+= Página de detalhes do evento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Na página Detalhes do evento, você pode visualizar os detalhes de um evento selecionado, como gravidade do evento, nível de impacto, área de impacto e origem do evento.  Você também pode visualizar informações adicionais sobre possíveis soluções para resolver o problema.
+
+* *Nome do evento*
++
+O nome do evento e a hora em que o evento foi visto pela última vez.
+
++
+Para eventos sem desempenho, enquanto o evento estiver no estado Novo ou Reconhecido, as últimas informações vistas não serão conhecidas e, portanto, ficarão ocultas.
+
+* *Descrição do Evento*
++
+Uma breve descrição do evento.
+
++
+Em alguns casos, o motivo do evento ser acionado é fornecido na descrição do evento.
+
+* *Componente em Contenção*
++
+Para eventos de desempenho dinâmico, esta seção exibe ícones que representam os componentes lógicos e físicos do cluster.  Se um componente estiver em disputa, seu ícone será circulado e destacado em vermelho.
+
++
+Consulte _Componentes do cluster e por que eles podem estar em disputa_ para obter uma descrição dos componentes exibidos aqui.
+
+
+
+As seções Informações do evento, Diagnóstico do sistema e Ações sugeridas são descritas em outros tópicos.
+
+
+
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes tarefas:
+
+* *Ícone de notas*
++
+Permite que você adicione ou atualize uma nota sobre o evento e revise todas as notas deixadas por outros usuários.
+
+
+
+*Menu de ações*
+
+* *Atribuir a mim*
++
+Atribui o evento a você.
+
+* *Atribuir a outros*
++
+Abre a caixa de diálogo Atribuir Proprietário, que permite atribuir ou reatribuir o evento a outros usuários.
+
++
+Quando você atribui um evento a um usuário, o nome do usuário e a hora em que o evento foi atribuído são adicionados à lista de eventos dos eventos selecionados.
+
++
+Você também pode cancelar a atribuição de eventos deixando o campo de propriedade em branco.
+
+* *Reconhecer*
++
+Reconhece os eventos selecionados para que você não continue recebendo notificações de alerta repetidas.
+
++
+Quando você reconhece um evento, seu nome de usuário e o horário em que você reconheceu o evento são adicionados à lista de eventos (Reconhecido por) para os eventos selecionados.  Quando você reconhece um evento, você assume a responsabilidade de gerenciá-lo.
+
+* *Marcar como resolvido*
++
+Permite que você altere o estado do evento para Resolvido.
+
++
+Quando você resolve um evento, seu nome de usuário e o horário em que você resolveu o evento são adicionados à lista de eventos (Resolvido por) para os eventos selecionados.  Depois de tomar a ação corretiva para o evento, você deve marcá-lo como resolvido.
+
+* *Adicionar alerta*
++
+Exibe a caixa de diálogo Adicionar alerta, que permite adicionar um alerta para o evento selecionado.
+
+

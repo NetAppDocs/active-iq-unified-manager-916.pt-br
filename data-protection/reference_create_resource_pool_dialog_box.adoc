@@ -1,0 +1,58 @@
+---
+permalink: data-protection/reference_create_resource_pool_dialog_box.html 
+sidebar: sidebar 
+keywords: create, resource pool, dialog box 
+summary: Você pode usar a caixa de diálogo Criar pool de recursos para nomear e descrever um novo pool de recursos e adicionar e excluir agregados desse pool de recursos. 
+---
+= Caixa de diálogo Criar pool de recursos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a caixa de diálogo Criar pool de recursos para nomear e descrever um novo pool de recursos e adicionar e excluir agregados desse pool de recursos.
+
+
+
+== Nome do pool de recursos
+
+As caixas de texto permitem que você adicione as seguintes informações para criar um pool de recursos:
+
+Permite que você especifique um nome de pool de recursos.
+
+
+
+== Descrição
+
+Permite que você descreva um pool de recursos.
+
+
+
+== Membros
+
+Exibe os membros do pool de recursos.  Você também pode adicionar e excluir membros.
+
+
+
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes tarefas:
+
+* *Adicionar*
++
+Abre a caixa de diálogo Agregados para que você possa adicionar agregados de um cluster específico ao pool de recursos.  Você pode adicionar agregados de diferentes clusters, mas os mesmos agregados não podem ser adicionados a mais de um pool de recursos.
+
+* *Remover*
++
+Permite remover agregados selecionados do pool de recursos.
+
+* *Criar*
++
+Cria o pool de recursos.  Este botão não será habilitado até que as informações sejam inseridas nos campos Nome ou Descrição do pool de recursos.
+
+* *Cancelar*
++
+Descarta as alterações e fecha a caixa de diálogo Criar pool de recursos.
+
+

@@ -1,0 +1,40 @@
+---
+permalink: data-protection/task_view_volume_protection_relationships.html 
+sidebar: sidebar 
+keywords: view, volume, protection relationships 
+summary: 'Na exibição Relacionamento: Todos os relacionamentos e na página Relacionamentos de volume, você pode visualizar o status dos relacionamentos de volume existentes do SnapMirror e do SnapVault .  Você também pode examinar detalhes sobre relacionamentos de proteção, incluindo status de transferência e atraso, detalhes de origem e destino, informações de programação e política e assim por diante.' 
+---
+= Exibir relacionamentos de proteção de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Na exibição Relacionamento: Todos os relacionamentos e na página Relacionamentos de volume, você pode visualizar o status dos relacionamentos de volume existentes do SnapMirror e do SnapVault .  Você também pode examinar detalhes sobre relacionamentos de proteção, incluindo status de transferência e atraso, detalhes de origem e destino, informações de programação e política e assim por diante.
+
+.Antes de começar
+Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+Você também pode iniciar comandos de relacionamento a partir desta página.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento* > *Volumes*.
+. No menu Exibir, selecione *Relacionamento* > *Todos os relacionamentos*.
++
+A visualização Relacionamento: Todos os relacionamentos é exibida.
+
+. Escolha uma das seguintes maneiras de visualizar os detalhes da proteção de volume:
++
+** Para visualizar informações atuais sobre todos os relacionamentos de volume, permaneça na página padrão *Todos os relacionamentos*.
+** Para visualizar informações detalhadas sobre as tendências de transferência de volume ao longo de um período de tempo, no menu Exibir, selecione Relacionamento: Exibição de status de transferência do último mês.
+** Para visualizar informações detalhadas sobre a atividade de transferência de volume no dia a dia, no menu Exibir, selecione Relacionamento: Visualização da taxa de transferência do último mês.
+
+
++
+[NOTE]
+====
+As visualizações de transferência de volume exibem informações somente para volumes em relacionamentos assíncronos - volumes em relacionamentos síncronos não são mostrados.
+
+====
+

@@ -1,0 +1,47 @@
+---
+permalink: install-linux/task_restart_unified_manager.html 
+sidebar: sidebar 
+keywords: restart, unified manager 
+summary: Talvez seja necessário reiniciar o Unified Manager após fazer alterações na configuração. 
+---
+= Reiniciar o Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Talvez seja necessário reiniciar o Unified Manager após fazer alterações na configuração.
+
+.Antes de começar
+Você deve ter acesso de usuário root ao servidor Red Hat Enterprise Linux no qual o Unified Manager está instalado.
+
+.Passos
+. Efetue login como usuário root no servidor no qual deseja reiniciar o serviço Unified Manager.
+. Pare o serviço Unified Manager e o serviço MySQL associado nesta ordem:
++
+`systemctl stop ocieau`
+
++
+`systemctl stop ocie`
+
++
+`systemctl stop mysqld`
+
+. Inicie os serviços MySQL e Unified Manager nesta ordem:
++
+`systemctl start mysqld`
+
++
+`systemctl start ocie`
+
++
+`systemctl start ocieau`
+
+
+
+[NOTE]
+====
+`mysqld`é um programa daemon necessário para iniciar e parar o servidor MySQL.
+
+====

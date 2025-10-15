@@ -1,0 +1,61 @@
+---
+permalink: reporting/task_manage_report_schedules.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode gerenciar seus agendamentos de relatórios na página Agendamentos de Relatórios.  Você pode visualizar, modificar ou excluir programações existentes. 
+---
+= Gerenciar agendamentos de relatórios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode gerenciar seus agendamentos de relatórios na página Agendamentos de Relatórios.  Você pode visualizar, modificar ou excluir programações existentes.
+
+[NOTE]
+.Antes de começar
+====
+Não é possível agendar novos relatórios na página Agendamentos de Relatórios.  Você só pode adicionar relatórios agendados das páginas de inventário de objetos.
+
+====
+* Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Agendamentos de relatórios*.
+. Na página Cronogramas de Relatórios:
++
+[cols="2*"]
+|===
+| Se você quiser... | Então... 
+
+
+ a| 
+Ver uma programação existente
+ a| 
+Percorra a lista de relatórios existentes usando as barras de rolagem e os controles de página.
+
+
+
+ a| 
+Editar uma programação existente
+ a| 
+.. Clique no ícone maisimage:../media/more_icon.gif[""] para o cronograma que você deseja usar.
+.. Clique em *Editar*.
+.. Faça as alterações necessárias.
+.. Clique na marca de seleção para salvar suas alterações.
+
+
+
+
+ a| 
+Excluir uma programação existente
+ a| 
+.. Clique no ícone maisimage:../media/more_icon.gif[""] para o cronograma que você deseja usar.
+.. Clique em *Excluir*.
+.. Confirme sua decisão.
+
+
+|===
+

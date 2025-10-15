@@ -1,0 +1,35 @@
+---
+permalink: data-protection/task_resume_scheduled_transfers_voldtls_page.html 
+sidebar: sidebar 
+keywords: resume schedule, transfers, quiesce, relationship,  volume, health details page 
+summary: Depois de encerrar um relacionamento para impedir que transferências agendadas ocorram, você pode usar Retomar na página Detalhes do volume/integridade para reativar as transferências agendadas para que os dados no volume de origem ou primário sejam protegidos.  As transferências são retomadas a partir de um ponto de verificação, se houver, no próximo intervalo de transferência agendado. 
+---
+= Retomar transferências agendadas em um relacionamento desativado na página de detalhes de Volume/Saúde
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de encerrar um relacionamento para impedir que transferências agendadas ocorram, você pode usar *Retomar* na página Detalhes do volume/saúde para reativar as transferências agendadas para que os dados no volume de origem ou primário sejam protegidos.  As transferências são retomadas a partir de um ponto de verificação, se houver, no próximo intervalo de transferência agendado.
+
+.Antes de começar
+* Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+* Você deve ter configurado a Automação de Fluxo de Trabalho.
+
+
+.Passos
+. Na guia *Proteção* da página de detalhes *Volume / Saúde*, clique com o botão direito do mouse na exibição de topologia em um relacionamento desativado que você deseja retomar.
++
+Como alternativa, selecione *Retomar* no menu *Ações* > *Relacionamento*.
+
+. Na caixa de diálogo *Continuar*, clique em *Continuar*.
++
+Você retornará à página de detalhes de Volume/Saúde.
+
+. Para visualizar as tarefas relacionadas e acompanhar seu progresso, clique no link da tarefa exibido na parte superior da página de detalhes *Volume / Saúde*.
+. Na página de detalhes do *Trabalho*, clique em *Atualizar* para atualizar a lista de tarefas e os detalhes das tarefas associadas ao trabalho de configuração de proteção e para determinar quando o trabalho será concluído.
++
+Após a conclusão dos trabalhos, as transferências de dados serão retomadas no próximo intervalo de transferência agendado.
+
+

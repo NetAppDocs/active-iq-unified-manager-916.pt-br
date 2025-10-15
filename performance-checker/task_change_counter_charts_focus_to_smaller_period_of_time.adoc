@@ -1,0 +1,33 @@
+---
+permalink: performance-checker/task_change_counter_charts_focus_to_smaller_period_of_time.html 
+sidebar: sidebar 
+keywords: change, counter, charts, focus, shorter, period, time 
+summary: Você pode usar o mouse para reduzir o intervalo de tempo e focar em um período específico no painel Gráfico do Contador ou na janela Exibição de Zoom dos Gráficos do Contador.  Isso permite que você tenha uma visão mais granular e microscópica de qualquer parte da linha do tempo de dados de desempenho, eventos e limites. 
+---
+= Alterar o foco dos gráficos de contador para um período de tempo mais curto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o mouse para reduzir o intervalo de tempo e focar em um período específico no painel Gráfico do Contador ou na janela Exibição de Zoom dos Gráficos do Contador.  Isso permite que você tenha uma visão mais granular e microscópica de qualquer parte da linha do tempo de dados de desempenho, eventos e limites.
+
+.Antes de começar
+O cursor deve ter mudado para uma lupa para indicar que esta funcionalidade está ativa.
+
+[NOTE]
+====
+Ao usar esse recurso, que altera a linha do tempo para exibir valores que correspondem à exibição mais granular, o intervalo de tempo e data no seletor *Intervalo de tempo* não muda dos valores originais do gráfico.
+
+====
+.Passos
+. Para ampliar um período específico de tempo, clique usando a lupa e arraste o mouse para destacar a área que você deseja ver em detalhes.
++
+Os valores do contador para o período de tempo selecionado preenchem o gráfico do contador.
+
+. Para retornar ao período de tempo original definido no seletor *Intervalo de tempo*, clique no botão *Redefinir zoom do gráfico*.
++
+O gráfico do contador é exibido em seu estado original.
+
+

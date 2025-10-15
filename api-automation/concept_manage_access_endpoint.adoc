@@ -1,0 +1,98 @@
+---
+permalink: api-automation/concept_manage_access_endpoint.html 
+sidebar: sidebar 
+keywords: manage, endpoints, access 
+summary: 'Você precisa criar pontos de extremidade de acesso ou interfaces lógicas (LIFs), que são necessários para provisionar máquinas virtuais de armazenamento (SVMs), LUNs e compartilhamentos de arquivos.  Você pode visualizar, criar, modificar e excluir os pontos de extremidade de acesso para SVMs, LUNs ou compartilhamentos de arquivos no seu ambiente do Active IQ Unified Manager .' 
+---
+= Gerenciar endpoints de acesso usando APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você precisa criar pontos de extremidade de acesso ou interfaces lógicas (LIFs), que são necessários para provisionar máquinas virtuais de armazenamento (SVMs), LUNs e compartilhamentos de arquivos.  Você pode visualizar, criar, modificar e excluir os pontos de extremidade de acesso para SVMs, LUNs ou compartilhamentos de arquivos no seu ambiente do Active IQ Unified Manager .
+
+
+
+== Exibir pontos de extremidade de acesso
+
+Você pode visualizar uma lista dos pontos de extremidade de acesso no seu ambiente do Unified Manager usando o seguinte método.  Para consultar uma lista de pontos de extremidade de acesso de um SVM, LUN ou compartilhamento de arquivos específico, você precisa inserir o identificador exclusivo do SVM, LUN ou compartilhamento de arquivos.  Você também pode inserir a chave exclusiva do ponto de extremidade de acesso para recuperar os detalhes do ponto de extremidade de acesso específico.
+
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+PEGAR
+ a| 
+`/storage-provider/access-endpoints`
+
+`/storage-provider/access-endpoints/\{key}`
+
+|===
+
+
+== Adicionar pontos de extremidade de acesso
+
+Você pode criar pontos de extremidade de acesso personalizados e atribuir propriedades necessárias a eles.  Você deve inserir os detalhes do ponto de extremidade de acesso que deseja criar como parâmetros de entrada.  Você pode usar esta API, o System Manager ou o ONTAP CLI para criar um ponto de extremidade de acesso em cada nó.  Endereços IPv4 e IPv6 são suportados para criação de pontos de extremidade de acesso.
+
+[NOTE]
+====
+Você deve configurar seu SVM com um número mínimo de pontos de extremidade de acesso por nó para o provisionamento bem-sucedido de LUNs e compartilhamentos de arquivos.  Você deve configurar seu SVM com pelo menos dois pontos de extremidade de acesso por nó, um compatível com o protocolo CIFS e/ou NFS e outro compatível com o protocolo iSCSI ou FCP.
+
+====
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+PUBLICAR
+ a| 
+`/storage-provider/access-endpoints`
+
+|===
+
+
+== Excluir pontos de extremidade de acesso
+
+Você pode excluir um ponto de extremidade de acesso específico usando o seguinte método.  Você precisa fornecer a chave do ponto de extremidade de acesso como um parâmetro de entrada para excluir um ponto de extremidade de acesso específico.
+
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+EXCLUIR
+ a| 
+`/storage-provider/access-endpoints/\{key}`
+
+|===
+
+
+== Modificar pontos de extremidade de acesso
+
+Você pode modificar um ponto de extremidade de acesso e atualizar suas propriedades usando o seguinte método.  Você precisa fornecer a chave do ponto de extremidade de acesso para modificar um ponto de extremidade de acesso específico.  Você também precisa inserir a propriedade que deseja atualizar, juntamente com seu valor.
+
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+CORREÇÃO
+ a| 
+`/storage-provider/access-endpoints/\{key}`
+
+|===

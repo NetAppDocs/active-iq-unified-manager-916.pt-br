@@ -1,0 +1,16 @@
+---
+permalink: storage-mgmt/concept_understand_user_interface.html 
+sidebar: sidebar 
+keywords: understand, user, interface 
+summary: A interface do usuário do Unified Manager consiste principalmente em um painel que fornece uma visão geral dos objetos monitorados.  A interface do usuário também fornece acesso à visualização de todos os objetos do cluster. 
+---
+= Entenda a interface do usuário
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A interface do usuário do Unified Manager consiste principalmente em um painel que fornece uma visão geral dos objetos monitorados.  A interface do usuário também fornece acesso à visualização de todos os objetos do cluster.
+
+Você pode selecionar uma visualização preferida e usar os botões de ação conforme necessário.  A configuração da sua tela é salva em um espaço de trabalho para que todas as funcionalidades necessárias estejam disponíveis quando você iniciar o Unified Manager.  No entanto, quando você navega de uma visualização para outra e depois retorna, a visualização pode não ser a mesma.

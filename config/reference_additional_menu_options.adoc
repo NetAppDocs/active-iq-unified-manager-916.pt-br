@@ -1,0 +1,66 @@
+---
+permalink: config/reference_additional_menu_options.html 
+sidebar: sidebar 
+keywords: additional menu, options 
+summary: As seguintes opções de menu permitem que você execute várias tarefas administrativas no servidor do Unified Manager. 
+---
+= Opções adicionais de menu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As seguintes opções de menu permitem que você execute várias tarefas administrativas no servidor do Unified Manager.
+
+As seguintes opções de menu estão disponíveis:
+
+* *Redefinir certificado do servidor*
++
+Regenera o certificado do servidor HTTPS.
+
++
+Você pode regenerar o certificado do servidor na GUI do Unified Manager clicando em *Geral* > *Certificados HTTPS* > *Regenerar certificado HTTPS*.
+
+* *Desabilitar autenticação SAML*
++
+Desativa a autenticação SAML para que o provedor de identidade (IdP) não forneça mais autenticação de logon para usuários que acessam a GUI do Unified Manager.  Esta opção de console normalmente é usada quando um problema com o servidor IdP ou a configuração SAML impede que os usuários acessem a GUI do Unified Manager.
+
+* *Provedor de dados externo*
++
+Fornece opções para conectar o Unified Manager a um provedor de dados externo.  Depois de estabelecer a conexão, os dados de desempenho são enviados a um servidor externo para que especialistas em desempenho de armazenamento possam mapear as métricas de desempenho usando software de terceiros. As seguintes opções são exibidas:
+
++
+** *Exibir configuração do servidor* — Exibe as configurações atuais de conexão e configuração de um provedor de dados externo.
+** *Adicionar/Modificar conexão do servidor* — Permite que você insira novas configurações de conexão para um provedor de dados externo ou altere as configurações existentes.
+** *Modificar configuração do servidor* — Permite que você insira novas configurações para um provedor de dados externo ou altere as configurações existentes.
+** *Excluir conexão do servidor* — Exclui a conexão com um provedor de dados externo.
++
+Após a conexão ser excluída, o Unified Manager perde a conexão com o servidor externo.
+
+
+
+* *Restauração de backup*
++
+Para obter informações, consulte os tópicos emlink:../health-checker/concept_manage_backup_and_restore_operations.html["Gerenciando operações de backup e restauração"] .
+
+* *Configuração do intervalo de pesquisa de desempenho*
++
+Fornece uma opção para configurar a frequência com que o Unified Manager coleta dados estatísticos de desempenho de clusters.  O intervalo de coleta padrão é de 5 minutos.
+
++
+Você pode alterar esse intervalo para 10 ou 15 minutos se perceber que as coletas de grandes clusters não estão sendo concluídas no prazo.
+
+* *Ver/Alterar Portas de Aplicativos*
++
+Fornece uma opção para alterar as portas padrão que o Unified Manager usa para os protocolos HTTP e HTTPS, se necessário para segurança.  As portas padrão são 80 para HTTP e 443 para HTTPS.
+
+* *Controle o acesso à porta 3306 do MySQL*
++
+Controla o acesso do host à porta padrão do MySQL 3306.  Por motivos de segurança, o acesso por essa porta é restrito apenas ao host local durante uma nova instalação do Unified Manager em sistemas Linux, Windows e VMware vSphere.  Esta opção permite que você alterne a visibilidade desta porta entre o host local e os hosts remotos, ou seja, se ela estiver habilitada somente para o host local no seu ambiente, você também poderá disponibilizar esta porta para hosts remotos.  Como alternativa, quando habilitado para todos os hosts, você pode restringir o acesso desta porta somente ao host local.  Se o acesso foi habilitado em hosts remotos anteriormente, a configuração será mantida em um cenário de atualização.  Você deve verificar as configurações de firewall em sistemas Windows depois de alternar a visibilidade da porta e desabilitar as configurações de firewall se as configurações estiverem definidas para restringir o acesso à porta 3306 do MySQL.
+
+* *Saída*
++
+Sai do menu do console de manutenção.
+
+

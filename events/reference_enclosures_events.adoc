@@ -1,0 +1,101 @@
+---
+permalink: events/reference_enclosures_events.html 
+sidebar: sidebar 
+keywords: enclosures, events, impact area, availability, configuration 
+summary: Os eventos de gabinetes fornecem informações sobre o status dos gabinetes de prateleira de disco no seu data center para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, nível de impacto, tipo de fonte e gravidade. 
+---
+= Eventos de recintos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de gabinetes fornecem informações sobre o status dos gabinetes de prateleira de disco no seu data center para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, nível de impacto, tipo de fonte e gravidade.
+
+
+
+== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+Falha nos ventiladores da prateleira de disco (ocumEvtShelfFanFailed)
+ a| 
+Incidente
+ a| 
+Prateleira de armazenamento
+ a| 
+Crítico
+
+
+
+ a| 
+Falha nas fontes de alimentação da prateleira de disco (ocumEvtShelfPowerSupplyFailed)
+ a| 
+Incidente
+ a| 
+Prateleira de armazenamento
+ a| 
+Crítico
+
+
+
+ a| 
+Multicaminho da prateleira de disco não configurado (ocumDiskShelfConnectivityNotInMultiPath)
+
+Este evento não se aplica a:
+
+* Clusters que estão em uma configuração MetroCluster
+* As seguintes plataformas: FAS2554, FAS2552, FAS2520 e FAS2240
+
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Aviso
+
+
+
+ a| 
+Falha no caminho da prateleira de disco (ocumDiskShelfConnectivityPathFailure)
+ a| 
+Risco
+ a| 
+Prateleira de armazenamento
+ a| 
+Aviso
+
+|===
+
+
+== Área de impacto: configuração
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+Prateleira de disco descoberta (não aplicável)
+ a| 
+Evento
+ a| 
+Nó
+ a| 
+Informação
+
+
+
+ a| 
+Prateleiras de disco removidas (não aplicável)
+ a| 
+Evento
+ a| 
+Nó
+ a| 
+Informação
+
+|===

@@ -1,0 +1,65 @@
+---
+permalink: config/task_access_maintenance_console.html 
+sidebar: sidebar 
+keywords: access, maintenance console 
+summary: Se a interface do usuário do Unified Manager não estiver em operação ou se você precisar executar funções que não estão disponíveis na interface do usuário, você poderá acessar o console de manutenção para gerenciar seu sistema Unified Manager. 
+---
+= Acesse o console de manutenção
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se a interface do usuário do Unified Manager não estiver em operação ou se você precisar executar funções que não estão disponíveis na interface do usuário, você poderá acessar o console de manutenção para gerenciar seu sistema Unified Manager.
+
+.Antes de começar
+Você deve ter instalado e configurado o Unified Manager.
+
+Após 15 minutos de inatividade, o console de manutenção desconecta você.
+
+[NOTE]
+====
+Quando instalado no VMware, se você já tiver efetuado login como usuário de manutenção por meio do console do VMware, não será possível efetuar login simultaneamente usando o Secure Shell.
+
+====
+.Etapa
+. Siga estas etapas para acessar o console de manutenção:
++
+[cols="2*"]
+|===
+| Neste sistema operacional... | Siga estes passos... 
+
+
+ a| 
+VMware
+ a| 
+.. Usando o Secure Shell, conecte-se ao endereço IP ou ao nome de domínio totalmente qualificado do dispositivo virtual do Unified Manager.
+.. Efetue login no console de manutenção usando seu nome de usuário e senha de manutenção.
+
+
+
+
+ a| 
+Linux
+ a| 
+.. Usando o Secure Shell, conecte-se ao endereço IP ou ao nome de domínio totalmente qualificado do sistema Unified Manager.
+.. Efetue login no sistema com o nome de usuário de manutenção (umadmin) e a senha.
+.. Digite o comando `maintenance_console` e pressione Enter.
+
+
+
+
+ a| 
+Windows
+ a| 
+.. Efetue login no sistema Unified Manager com credenciais de administrador.
+.. Inicie o PowerShell como administrador do Windows.
+.. Digite o comando `maintenance_console` e pressione Enter.
+
+
+|===
++
+O menu do console de manutenção do Unified Manager é exibido.
+
+

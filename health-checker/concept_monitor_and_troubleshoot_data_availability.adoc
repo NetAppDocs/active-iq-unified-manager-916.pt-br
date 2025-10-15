@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept_monitor_and_troubleshoot_data_availability.html 
+sidebar: sidebar 
+keywords: monitor, troubleshoot, data availability 
+summary: O Unified Manager monitora a confiabilidade com que usuários autorizados podem acessar seus dados armazenados, alerta você sobre condições que bloqueiam ou impedem esse acesso e permite que você diagnostique essas condições e atribua e acompanhe sua resolução. 
+---
+= Monitorar e solucionar problemas de disponibilidade de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Unified Manager monitora a confiabilidade com que usuários autorizados podem acessar seus dados armazenados, alerta você sobre condições que bloqueiam ou impedem esse acesso e permite que você diagnostique essas condições e atribua e acompanhe sua resolução.
+
+Os tópicos do fluxo de trabalho de disponibilidade nesta seção descrevem exemplos de como um administrador de armazenamento pode usar a interface de usuário da Web do Unified Manager para descobrir, diagnosticar e atribuir para resolução condições de hardware e software que afetam negativamente a disponibilidade de dados.

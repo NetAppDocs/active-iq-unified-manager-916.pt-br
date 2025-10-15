@@ -1,0 +1,63 @@
+---
+permalink: data-protection/task_restore_data_use_health_volume_details_page.html 
+sidebar: sidebar 
+keywords: restore, data, volume, health details page, console 
+summary: Você pode restaurar arquivos, diretórios ou um volume inteiro substituídos ou excluídos de uma cópia do Snapshot usando o recurso de restauração na página de detalhes Volume/Integridade. 
+---
+= Restaurar dados usando as páginas Volume e Detalhes do Volume/Saúde
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode restaurar arquivos, diretórios ou um volume inteiro substituídos ou excluídos de uma cópia do Snapshot usando o recurso de restauração nas páginas de detalhes Volume e Volume/Integridade.
+
+.Antes de começar
+Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+
+NOTE: Observe os seguintes pontos:
+
+* Não é possível restaurar fluxos de arquivos NTFS.
+* A opção de restauração não está disponível quando:
++
+** O ID do volume é desconhecido: por exemplo, quando você tem um relacionamento entre clusters e o cluster de destino ainda não foi descoberto.
+** O volume está configurado para replicação síncrona do SnapMirror .
+
+
+
+
+.Passos
+. No painel de navegação esquerdo, vá para *Armazenamento > Volumes*.
+. Selecione o volume e clique no botão *Restaurar*.  Como alternativa, clique no volume para acessar *Volume / Detalhes de integridade > Ações > Restaurar*.  A caixa de diálogo Restaurar é exibida.  Para obter informações sobre esta página, consultelink:../data-protection/reference_restore_dialog_box.html["Caixa de diálogo Restaurar"] .
+. Selecione o volume e a cópia do Snapshot dos quais você deseja restaurar os dados, se diferente do padrão.
+. Selecione os itens que deseja restaurar, por exemplo, o LUN de origem.
++
+Você pode restaurar o volume inteiro ou especificar pastas e arquivos que deseja restaurar.
+
+. Selecione o local onde você deseja que os itens selecionados sejam restaurados: *Local original* ou *Local alternativo existente*.
+. Se você selecionar um local alternativo existente, faça um dos seguintes:
++
+** No campo de texto Caminho de restauração, digite o caminho do local para o qual você deseja restaurar os dados e clique em *Selecionar diretório*.
+** Clique em *Navegar* para abrir a caixa de diálogo Procurar diretórios e concluir as seguintes etapas:
++
+... Selecione o cluster de destino, a VM de armazenamento (SVM) e o volume para os quais você deseja restaurar.
+... Na tabela Nome, selecione um nome de diretório que deve ser restaurado.
+... Clique em *Selecionar diretório*.
+
+
+
+
+. Clique em *Restaurar*.
++
+O processo de restauração é iniciado.  Um trabalho é criado no backend para concluir o processo de restauração.
+
+. Se quiser visualizar o andamento do trabalho, no painel de navegação esquerdo, navegue até *Proteção > Trabalhos* para visualizar o status do trabalho de restauração na lista de trabalhos.
++
+[NOTE]
+====
+Se uma operação de restauração falhar entre clusters do Cloud Volumes ONTAP HA com um erro NDMP, talvez seja necessário adicionar uma rota AWS explícita no cluster de destino para que o destino possa se comunicar com o LIF de gerenciamento de cluster do sistema de origem.  Você executa esta etapa de configuração usando o NetApp Console.
+
+====
+

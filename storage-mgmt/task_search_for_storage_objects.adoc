@@ -1,0 +1,59 @@
+---
+permalink: storage-mgmt/task_search_for_storage_objects.html 
+sidebar: sidebar 
+keywords: search, storage, objects 
+summary: Para acessar rapidamente um objeto específico, você pode usar o campo Pesquisar todos os objetos de armazenamento na parte superior da barra de menu.  Este método de pesquisa global em todos os objetos permite que você localize rapidamente objetos específicos por tipo.  Os resultados da pesquisa são classificados por tipo de objeto de armazenamento e você pode filtrá-los ainda mais por objeto usando o menu suspenso. 
+---
+= Pesquisar objetos de armazenamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para acessar rapidamente um objeto específico, você pode usar o campo *Pesquisar todos os objetos de armazenamento* na parte superior da barra de menu.  Este método de pesquisa global em todos os objetos permite que você localize rapidamente objetos específicos por tipo.  Os resultados da pesquisa são classificados por tipo de objeto de armazenamento e você pode filtrá-los ainda mais por objeto usando o menu suspenso.
+
+.Antes de começar
+* Você deve ter uma das seguintes funções para executar esta tarefa: Operador, Administrador de Aplicativos ou Administrador de Armazenamento.
+* Uma pesquisa válida deve conter pelo menos três caracteres.
+
+
+Ao usar o valor do menu suspenso "Todos", a pesquisa global exibe o número total de resultados encontrados em todas as categorias de objetos; com um máximo de 25 resultados de pesquisa para cada categoria de objeto.  Você pode selecionar um tipo de objeto específico no menu suspenso para refinar a pesquisa dentro de um tipo de objeto específico.  Neste caso, a lista retornada não se restringe aos 25 principais objetos.
+
+Os tipos de objetos que você pode pesquisar incluem:
+
+* Aglomerados
+* Nós
+* VMs de armazenamento
+* Agregados
+* Volumes
+* Qtrees
+* Ações de PMEs
+* Ações NFS
+* Cotas de usuário ou grupo
+* LUNs
+* Espaços para nomes NVMe
+* Grupos Iniciadores
+* Iniciadores
+* Grupo de Consistência
+
+
+Inserir um nome de carga de trabalho retorna a lista de cargas de trabalho na categoria Volumes ou LUNs apropriada.
+
+Você pode clicar em qualquer objeto nos resultados da pesquisa para navegar até a página de detalhes de saúde desse objeto.  Se não houver uma página de integridade direta para um objeto, a página de integridade do objeto pai será exibida.  Por exemplo, ao pesquisar um LUN específico, a página de detalhes do SVM na qual o LUN reside é exibida.
+
+[NOTE]
+====
+Portas e LIFs não podem ser pesquisadas na barra de pesquisa global.
+
+====
+.Passos
+. Selecione um tipo de objeto no menu para refinar os resultados da pesquisa para apenas um único tipo de objeto.
+. Digite no mínimo três caracteres do nome do objeto no campo *Pesquisar todos os objetos de armazenamento*.
++
+Neste exemplo, a caixa suspensa tem o tipo de objeto Volumes selecionado.  Digitar "vol1" no campo *Pesquisar todos os objetos de armazenamento* exibe uma lista de todos os volumes cujos nomes contêm esses caracteres.
+
++
+image::../media/opm_search_field_jpg.gif[Campo de pesquisa no Unified Manager]
+
+

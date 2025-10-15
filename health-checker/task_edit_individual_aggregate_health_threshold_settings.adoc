@@ -1,0 +1,32 @@
+---
+permalink: health-checker/task_edit_individual_aggregate_health_threshold_settings.html 
+sidebar: sidebar 
+keywords: edit, individual, aggregate, health, threshold, settings 
+summary: Você pode editar as configurações de limite de integridade para capacidade agregada, crescimento e cópias de instantâneo de um ou mais agregados.  Quando um limite é ultrapassado, alertas são gerados e você recebe notificações.  Essas notificações ajudam você a tomar medidas preventivas com base no evento gerado. 
+---
+= Editar configurações individuais de limite de integridade agregada
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode editar as configurações de limite de integridade para capacidade agregada, crescimento e cópias de instantâneo de um ou mais agregados.  Quando um limite é ultrapassado, alertas são gerados e você recebe notificações.  Essas notificações ajudam você a tomar medidas preventivas com base no evento gerado.
+
+.Antes de começar
+Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+Com base nas alterações nos valores limite, os eventos são gerados ou tornados obsoletos no próximo ciclo de monitoramento.
+
+Quando o crescimento automático é habilitado em volumes que residem no agregado, os limites de capacidade do agregado são considerados violados com base no tamanho máximo do volume definido pelo crescimento automático, não com base no tamanho do volume original.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento* > *Agregados*.
+. Na exibição *Saúde: Todos os agregados*, selecione um ou mais agregados e clique em *Editar limites*.
+. Na caixa de diálogo *Editar Limites de Agregação*, edite as configurações de limite de um dos seguintes: capacidade, crescimento ou cópias de instantâneo, marcando a caixa de seleção apropriada e modificando as configurações.
+. Clique em *Salvar*.
+
+
+*Informações relacionadas*
+
+link:../config/task_add_users.html["Adicionando usuários"]

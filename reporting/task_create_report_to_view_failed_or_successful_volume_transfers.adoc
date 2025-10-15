@@ -1,0 +1,36 @@
+---
+permalink: reporting/task_create_report_to_view_failed_or_successful_volume_transfers.html 
+sidebar: sidebar 
+keywords: create, report, view, failed, successful, volume, transfer 
+summary: Você pode criar um relatório que exiba o status das transferências de volume.  Você pode visualizar transferências de volume com e sem sucesso neste relatório. 
+---
+= Crie um relatório para visualizar a transferência de volume com falha ou bem-sucedida
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar um relatório que exiba o status das transferências de volume.  Você pode visualizar transferências de volume com e sem sucesso neste relatório.
+
+.Antes de começar
+* Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+
+Use as etapas a seguir para criar uma exibição personalizada para mostrar quais transferências falharam e quais foram bem-sucedidas e, em seguida, agende um relatório para ser gerado para essa exibição.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento* > *Volumes*.
+. No menu Exibir, selecione *Relacionamento* > *Status de transferência do último mês*.
+. Selecione *Mostrar/Ocultar* para remover quaisquer colunas que você não deseja no relatório.
+. Arraste a coluna "`Resultado da Operação`" para perto da coluna "Estado`".
+. Clique na parte superior da coluna "`Resultado da operação`" para classificar os volumes por status.
+. Salve a visualização com um nome específico que reflita o que a visualização está mostrando, por exemplo "`Volumes por status de transferência`".
+. Clique no botão *Relatórios agendados* na página de inventário.
+. Digite um nome para o agendamento do relatório e preencha os outros campos do relatório e clique na marca de seleção (image:../media/blue_check.gif[""] ) no final da linha.
++
+O relatório é enviado imediatamente como um teste.  Depois disso, o relatório é gerado e enviado por e-mail aos destinatários listados usando a frequência especificada.
+
+
+
+Com base nos resultados mostrados no relatório, você pode investigar o status da transferência.

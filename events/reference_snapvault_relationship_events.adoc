@@ -1,0 +1,99 @@
+---
+permalink: events/reference_snapvault_relationship_events.html 
+sidebar: sidebar 
+keywords: snapvault, relationship, events, impact area, protection 
+summary: Os eventos de relacionamento do SnapVault fornecem informações sobre o status dos seus relacionamentos do SnapVault para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, nível de impacto, tipo de fonte e gravidade. 
+---
+= Eventos de relacionamento do SnapVault
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de relacionamento do SnapVault fornecem informações sobre o status dos seus relacionamentos do SnapVault para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, nível de impacto, tipo de fonte e gravidade.
+
+
+
+== Área de impacto: proteção
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+Cofre assíncrono com problemas de integridade (ocumEvtSnapVaultRelationshipUnhealthy)
+ a| 
+Risco
+ a| 
+Relacionamento SnapMirror
+ a| 
+Aviso
+
+
+
+ a| 
+Cofre assíncrono quebrado (ocumEvtSnapVaultRelationshipStateBrokenoff)
+ a| 
+Risco
+ a| 
+Relacionamento SnapMirror
+ a| 
+Erro
+
+
+
+ a| 
+Falha na inicialização do Vault assíncrono (ocumEvtSnapVaultRelationshipInitializeFailed)
+ a| 
+Risco
+ a| 
+Relacionamento SnapMirror
+ a| 
+Erro
+
+
+
+ a| 
+Falha na atualização do Vault assíncrono (ocumEvtSnapVaultRelationshipUpdateFailed)
+ a| 
+Risco
+ a| 
+Relacionamento SnapMirror
+ a| 
+Erro
+
+
+
+ a| 
+Erro de atraso do Vault assíncrono (ocumEvtSnapVaultRelationshipLagError)
+ a| 
+Risco
+ a| 
+Relacionamento SnapMirror
+ a| 
+Erro
+
+
+
+ a| 
+Aviso de atraso do Vault assíncrono (ocumEvtSnapVaultRelationshipLagWarning)
+ a| 
+Risco
+ a| 
+Relacionamento SnapMirror
+ a| 
+Aviso
+
+
+
+ a| 
+Falha na ressincronização do Vault assíncrono (ocumEvtSnapvaultRelationshipResyncFailed)
+ a| 
+Risco
+ a| 
+Relacionamento SnapMirror
+ a| 
+Erro
+
+|===

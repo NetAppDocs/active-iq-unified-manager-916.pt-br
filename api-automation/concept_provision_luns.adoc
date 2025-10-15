@@ -1,0 +1,276 @@
+---
+permalink: api-automation/concept_provision_luns.html 
+sidebar: sidebar 
+keywords: provision, luns 
+summary: 'Você pode provisionar LUNs em suas Máquinas Virtuais de Armazenamento (SVMs) usando as APIs de provisionamento fornecidas como parte do Active IQ Unified Manager.  Este fluxo de trabalho de provisionamento detalha as etapas para recuperar as chaves dos SVMs, Níveis de Serviço de Desempenho e Políticas de Eficiência de Armazenamento antes de criar o LUN.' 
+---
+= Provisionar LUNs usando APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode provisionar LUNs em suas Máquinas Virtuais de Armazenamento (SVMs) usando as APIs de provisionamento fornecidas como parte do Active IQ Unified Manager.  Este fluxo de trabalho de provisionamento detalha as etapas para recuperar as chaves dos SVMs, Níveis de Serviço de Desempenho e Políticas de Eficiência de Armazenamento antes de criar o LUN.
+
+O diagrama a seguir ilustra as etapas em um fluxo de trabalho de provisionamento de LUN.
+
+image::../media/create_luns.gif[criar luns]
+
+[NOTE]
+====
+Este fluxo de trabalho pressupõe que os clusters ONTAP foram adicionados ao Unified Manager e que a chave do cluster foi obtida.  O fluxo de trabalho também pressupõe que as SVMs já foram criadas nos clusters.
+
+====
+. Obtenha a chave SVM para a SVM na qual você deseja criar o LUN, conforme descrito no tópico de fluxo de trabalho _Verificando SVMs em clusters_.
+. Obtenha a chave para o Nível de Serviço de Desempenho executando a seguinte API e recuperando a chave da resposta.
++
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+PEGAR
+ a| 
+`/storage-provider/performance-service-levels`
+
+|===
++
+[NOTE]
+====
+Você pode recuperar os detalhes dos Níveis de Serviço de Desempenho definidos pelo sistema definindo o `system_defined` parâmetro de entrada para `true` .  Na saída, obtenha a chave do Nível de Serviço de Desempenho que você deseja aplicar ao LUN.
+
+====
+. Opcionalmente, obtenha a chave da Política de Eficiência de Armazenamento para a Política de Eficiência de Armazenamento que você deseja aplicar no LUN executando a seguinte API e recuperando a chave da resposta.
++
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+PEGAR
+ a| 
+`/storage-provider/storage-efficiency-policies`
+
+|===
+. Determine se grupos iniciadores (igroups) foram criados para conceder acesso ao destino LUN que você deseja criar.
++
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+centro de dados
+ a| 
+PEGAR
+ a| 
+`/datacenter/protocols/san/igroups`  `/datacenter/protocols/san/igroups/\{key}`
+
+|===
++
+Você deve inserir o valor do parâmetro para indicar o SVM para o qual o igroup tem acesso autorizado.  Além disso, se você quiser consultar um igroup específico, insira o nome do igroup (chave) como um parâmetro de entrada.
+
+. Na saída, se você puder encontrar o igroup ao qual deseja conceder acesso, obtenha a chave.  Caso contrário, crie o igroup.
++
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+centro de dados
+ a| 
+PUBLICAR
+ a| 
+`/datacenter/protocols/san/igroups`
+
+|===
++
+Você deve inserir os detalhes do igroup que deseja criar como parâmetros de entrada.  Esta é uma chamada síncrona e você pode verificar a criação do igroup na saída.  Em caso de erro, uma mensagem será exibida para você solucionar o problema e executar novamente a API.
+
+. Crie o LUN.
++
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+PUBLICAR
+ a| 
+`/storage-provider/luns`
+
+|===
++
+Para criar o LUN, certifique-se de ter adicionado os valores recuperados como parâmetros de entrada obrigatórios.
+
++
+[NOTE]
+====
+A Política de Eficiência de Armazenamento é um parâmetro opcional para criar LUNs.
+
+====
++
+*Exemplo de cURL*
+
++
+Você deve inserir todos os detalhes do LUN que deseja criar, como parâmetros de entrada.
+
++
+A saída JSON exibe uma chave de objeto Job que você pode usar para verificar o LUN criado.
+
+. Verifique a criação do LUN usando a chave do objeto Job retornada na consulta do Job:
++
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+servidor de gerenciamento
+ a| 
+PEGAR
+ a| 
+`/management-server/jobs/\{key}`
+
+|===
++
+No final da resposta, você vê a chave do LUN criado.
+
+. Verifique a criação do LUN executando a seguinte API com a chave retornada:
++
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+PEGAR
+ a| 
+`/storage-provider/luns/\{key}`
+
+|===
++
+*Exemplo de saída JSON*
+
++
+Você pode ver que o método POST de `/storage-provider/luns` invoca internamente todas as APIs necessárias para cada uma das funções e cria o objeto.  Por exemplo, invoca o `/storage-provider/performance-service-levels/` API para atribuição do Nível de Serviço de Desempenho no LUN.
+
++
+== Etapas de solução de problemas para falha na criação ou mapeamento de LUN
+
+
+
+Ao concluir este fluxo de trabalho, você ainda poderá ver uma falha na criação do seu LUN.  Mesmo que o LUN seja criado com sucesso, o mapeamento do LUN com o igroup pode falhar devido à indisponibilidade de um SAN LIF ou ponto de extremidade de acesso no nó no qual você cria o LUN.  Em caso de falha, você poderá ver a seguinte mensagem:
+
+[listing]
+----
+The nodes <node_name> and <partner_node_name> have no LIFs configured with the iSCSI or FCP protocol for Vserver <server_name>. Use the access-endpoints API to create a LIF for the LUN.
+----
+Siga estas etapas de solução de problemas para contornar essa falha.
+
+. Crie um ponto de extremidade de acesso compatível com o protocolo ISCSI/FCP no SVM no qual você tentou criar o LUN.
++
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+PUBLICAR
+ a| 
+`/storage-provider/access-endpoints`
+
+|===
++
+*Exemplo de cURL*
+
++
+Você deve inserir os detalhes do ponto de extremidade de acesso que deseja criar, como parâmetros de entrada.
+
++
+[NOTE]
+====
+Certifique-se de que no parâmetro de entrada você adicionou o endereço para indicar o nó inicial do LUN e o ha_address para indicar o nó parceiro do nó inicial.  Quando você executa esta operação, ela cria pontos de extremidade de acesso no nó inicial e no nó parceiro.
+
+====
+. Consulte o trabalho com a chave do objeto Job retornada na saída JSON para verificar se ele foi executado com sucesso para adicionar os pontos de extremidade de acesso no SVM e se os serviços iSCSI/FCP foram habilitados no SVM.
++
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+servidor de gerenciamento
+ a| 
+PEGAR
+ a| 
+`/management-server/jobs/\{key}`
+
+|===
++
+*Exemplo de saída JSON*
+
++
+No final da saída, você pode ver a chave dos pontos de extremidade de acesso criados.  Na saída a seguir, o valor "name": "accessEndpointKey" indica o ponto de extremidade de acesso criado no nó inicial do LUN, para o qual a chave é 9c964258-14ef-11ea-95e2-00a098e32c28.  O valor "name": "accessEndpointHAKey" indica o ponto de extremidade de acesso criado no nó parceiro do nó inicial, para o qual a chave é 9d347006-14ef-11ea-8760-00a098e3215f.
+
+. Modifique o LUN para atualizar o mapeamento do igroup.  Para obter mais informações sobre modificação de fluxo de trabalho, consulte "`Modificando cargas de trabalho de armazenamento`".
++
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+CORREÇÃO
+ a| 
+`/storage-provider/lun/\{key}`
+
+|===
++
+Na entrada, especifique a chave igroup com a qual você deseja atualizar o mapeamento LUN, juntamente com a chave LUN.
+
++
+*Exemplo de cURL*
+
++
+A saída JSON exibe uma chave de objeto Job que você pode usar para verificar se o mapeamento foi bem-sucedido.
+
+. Verifique o mapeamento do LUN consultando com a chave LUN.
++
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+PEGAR
+ a| 
+`/storage-provider/luns/\{key}`
+
+|===
++
+*Exemplo de saída JSON*
+
++
+Na saída, você pode ver que o LUN foi mapeado com sucesso com o igroup (chave d19ec2fa-fec7-11e8-b23d-00a098e32c28) com o qual foi provisionado inicialmente.
+
+

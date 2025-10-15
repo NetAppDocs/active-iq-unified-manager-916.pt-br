@@ -1,0 +1,42 @@
+---
+permalink: reporting/task_create_report_to_identify_volumes_nearing_full_capacity.html 
+sidebar: sidebar 
+keywords: create, report, identify, volumes, full capacity, snapshot, autodelete, turned off 
+summary: Você pode criar um relatório que contém a lista de volumes que estão se aproximando da capacidade máxima com o recurso de exclusão automática de instantâneo desabilitado.  Os resultados podem ajudar a identificar volumes nos quais você pode querer configurar a exclusão automática de instantâneos. 
+---
+= Crie um relatório para identificar volumes próximos da capacidade máxima que tenham a Exclusão Automática de Snapshot desativada
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar um relatório que contém a lista de volumes que estão se aproximando da capacidade máxima com o recurso de exclusão automática de instantâneo desabilitado.  Os resultados podem ajudar a identificar volumes nos quais você pode querer configurar a exclusão automática de instantâneos.
+
+.Antes de começar
+* Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+
+Siga as etapas abaixo para criar uma exibição personalizada que exiba as colunas necessárias na ordem correta e, em seguida, agende um relatório para ser gerado para essa exibição.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento* > *Volumes*.
+. No menu Exibir, selecione *Capacidade* > *Todos os volumes*.
+. Selecione *Mostrar/Ocultar* para remover quaisquer colunas que você não deseja no relatório.
+. Arraste e solte as colunas "`Exclusão automática de instantâneo`" e "Dias para o máximo`" perto da coluna "Capacidade de dados disponível`".
+. Clique no ícone de filtro, adicione os dois filtros a seguir e clique em *Aplicar filtro*:
++
+** Dias para completar menos de 30 dias
+** A exclusão automática de instantâneos está desabilitada
+
+
+. Clique no topo da coluna *Dias para completar* para que os volumes com menos dias restantes apareçam no topo da lista.
+. Salve a visualização com um nome específico que reflita o que a visualização está mostrando, por exemplo "`Volumes próximos da capacidade`".
+. Clique no botão *Relatórios agendados* na página de inventário.
+. Digite um nome para o agendamento do relatório e preencha os outros campos do relatório e clique na marca de seleção (image:../media/blue_check.gif[""] ) no final da linha.
++
+O relatório é enviado imediatamente como um teste.  Depois disso, o relatório é gerado e enviado por e-mail aos destinatários listados usando a frequência especificada.
+
+
+
+Com base nos resultados mostrados no relatório, talvez você queira habilitar a exclusão automática de instantâneos nos volumes ou encontrar uma maneira de aumentar o espaço disponível.

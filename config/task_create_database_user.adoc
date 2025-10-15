@@ -1,0 +1,47 @@
+---
+permalink: config/task_create_database_user.html 
+sidebar: sidebar 
+keywords: create, database, user 
+summary: Para dar suporte a uma conexão entre o Workflow Automation e o Unified Manager, ou para acessar visualizações de banco de dados, você deve primeiro criar um usuário de banco de dados com a função Esquema de Integração ou Esquema de Relatório na interface de usuário da Web do Unified Manager. 
+---
+= Criar um usuário de banco de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para dar suporte a uma conexão entre o Workflow Automation e o Unified Manager, ou para acessar visualizações de banco de dados, você deve primeiro criar um usuário de banco de dados com a função Esquema de Integração ou Esquema de Relatório na interface de usuário da Web do Unified Manager.
+
+.Antes de começar
+Você deve ter a função de Administrador do Aplicativo.
+
+Os usuários do banco de dados fornecem integração com o Workflow Automation e acesso a visualizações de banco de dados específicas de relatórios.  Os usuários do banco de dados não têm acesso à interface da Web do Unified Manager ou ao console de manutenção e não podem executar chamadas de API.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Geral* > *Usuários*.
+. Na página Usuários, clique em *Adicionar*.
+. Na caixa de diálogo Adicionar usuário, selecione *Usuário do banco de dados* na lista suspensa *Tipo*.
+. Digite um nome e uma senha para o usuário do banco de dados.
+. Na lista suspensa *Função*, selecione a função apropriada.
++
+[cols="2*"]
+|===
+| Se você é... | Escolha esta função 
+
+
+ a| 
+Conectando o Unified Manager com a automação do fluxo de trabalho
+ a| 
+Esquema de Integração
+
+
+
+ a| 
+Acessando relatórios e outras visualizações de banco de dados
+ a| 
+Esquema de Relatório
+
+|===
+. Clique em *Adicionar*.
+

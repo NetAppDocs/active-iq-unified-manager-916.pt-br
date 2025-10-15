@@ -1,0 +1,95 @@
+---
+permalink: performance-checker/concept_cluster_configuration_and_performance_data_collection_activity.html 
+sidebar: sidebar 
+keywords: cluster, configuration, performance, data, collection, activity 
+summary: O intervalo de coleta de dados de configuração do cluster é de 15 minutos.  Por exemplo, depois de adicionar um cluster, leva 15 minutos para exibir os detalhes do cluster na interface do usuário do Unified Manager.  Esse intervalo também se aplica ao fazer alterações em um cluster. 
+---
+= Configuração de cluster e atividade de coleta de dados de desempenho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O intervalo de coleta de _dados de configuração do cluster_ é de 15 minutos.  Por exemplo, depois de adicionar um cluster, leva 15 minutos para exibir os detalhes do cluster na interface do usuário do Unified Manager.  Esse intervalo também se aplica ao fazer alterações em um cluster.
+
+Por exemplo, se você adicionar dois novos volumes a uma SVM em um cluster, verá esses novos objetos na interface do usuário após o próximo intervalo de pesquisa, que pode ser de até 15 minutos.
+
+O Unified Manager coleta _estatísticas de desempenho_ atuais de todos os clusters monitorados a cada cinco minutos.  Ele analisa esses dados para identificar eventos de desempenho e possíveis problemas.  Ele retém 30 dias de dados de desempenho histórico de cinco minutos e 180 dias de dados de desempenho histórico de uma hora.  Isso permite que você visualize detalhes de desempenho muito granulares do mês atual e tendências gerais de desempenho de até um ano.
+
+As pesquisas de coleta são compensadas por alguns minutos para que os dados de cada cluster não sejam enviados ao mesmo tempo, o que pode afetar o desempenho.
+
+A tabela a seguir descreve as atividades de coleta que o Unified Manager executa:
+
+|===
+| Atividade | Intervalo de tempo | Descrição 
+
+
+ a| 
+Pesquisa de estatísticas de desempenho
+ a| 
+A cada 5 minutos
+ a| 
+Coleta dados de desempenho em tempo real de cada cluster.
+
+
+
+ a| 
+Análise estatística
+ a| 
+A cada 5 minutos
+ a| 
+Após cada pesquisa de estatísticas, o Unified Manager compara os dados coletados com limites definidos pelo usuário, definidos pelo sistema e dinâmicos.
+
+Se algum limite de desempenho for violado, o Unified Manager gera eventos e envia e-mails para usuários especificados, se configurado para isso.
+
+
+
+ a| 
+Enquete de configuração
+ a| 
+A cada 15 minutos
+ a| 
+Coleta informações detalhadas de inventário de cada cluster para identificar todos os objetos de armazenamento (nós, SVMs, volumes e assim por diante).
+
+
+
+ a| 
+Resumo
+ a| 
+A cada hora
+ a| 
+Resume as últimas 12 coletas de dados de desempenho de cinco minutos em médias horárias.
+
+Os valores médios horários são usados em algumas páginas da interface do usuário e são mantidos por 180 dias.
+
+
+
+ a| 
+Análise de previsão e poda de dados
+ a| 
+Todos os dias depois da meia-noite
+ a| 
+Analisa dados de cluster para estabelecer limites dinâmicos para latência de volume e IOPS para as próximas 24 horas.
+
+Exclui do banco de dados quaisquer dados de desempenho de cinco minutos com mais de 30 dias.
+
+
+
+ a| 
+Poda de dados
+ a| 
+Todos os dias depois das 2 da manhã
+ a| 
+Exclui do banco de dados quaisquer eventos com mais de 180 dias e limites dinâmicos com mais de 180 dias.
+
+
+
+ a| 
+Poda de dados
+ a| 
+Todos os dias depois das 3h30
+ a| 
+Exclui do banco de dados quaisquer dados de desempenho de uma hora com mais de 180 dias.
+
+|===

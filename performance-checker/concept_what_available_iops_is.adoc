@@ -1,0 +1,34 @@
+---
+permalink: performance-checker/concept_what_available_iops_is.html 
+sidebar: sidebar 
+keywords: available, iops, total iops, aggregate iops, volume iops 
+summary: O contador de IOPS disponíveis identifica o número restante de IOPS que podem ser adicionados a um nó ou agregado antes que o recurso atinja seu limite.  O IOPS total que um nó pode fornecer é baseado nas características físicas do nó — por exemplo, o número de CPUs, a velocidade da CPU e a quantidade de RAM.  O IOPS total que um agregado pode fornecer é baseado nas propriedades físicas dos discos — por exemplo, um disco SATA, SAS ou SSD. 
+---
+= O que é IOPS disponível
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O contador de IOPS disponíveis identifica o número restante de IOPS que podem ser adicionados a um nó ou agregado antes que o recurso atinja seu limite.
+
+O IOPS total que um nó pode fornecer é baseado nas características físicas do nó — por exemplo, o número de CPUs, a velocidade da CPU e a quantidade de RAM.  O IOPS total que um agregado pode fornecer é baseado nas propriedades físicas dos discos, por exemplo, um disco SATA, SAS ou SSD.
+
+O IOPS total de todos os volumes em um agregado pode não corresponder ao IOPS total do agregado.  Isso é discutido no seguinte artigo da base de conhecimento: KBlink:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/Why_does_the_sum_of_all_volume_IOPs_in_an_aggregate_not_match_the_aggregate_IOPs%3F["Por que a soma de todos os IOPs de volume em um agregado não corresponde aos IOPs agregados?"]
+
+Enquanto o contador de capacidade de desempenho livre fornece a porcentagem de um recurso que ainda está disponível, o contador de IOPS disponíveis informa o número exato de IOPS (cargas de trabalho) que podem ser adicionadas a um recurso antes de atingir a capacidade máxima de desempenho.
+
+Por exemplo, se você estiver usando um par de sistemas de armazenamento FAS2520 e FAS8060, um valor de capacidade de desempenho livre de 30% significa que você tem alguma capacidade de desempenho livre.  No entanto, esse valor não fornece visibilidade sobre quantas cargas de trabalho adicionais você pode implantar nesses nós.  O contador de IOPS disponíveis pode mostrar que você tem 500 IOPS disponíveis no FAS8060, mas apenas 100 IOPS disponíveis no FAS2520.
+
+Uma curva de latência versus IOPS de exemplo para um nó é mostrada na figura a seguir.
+
+image::../media/available_iops.gif[Uma captura de tela da interface do usuário que mostra uma curva de latência versus IOPS de exemplo para um nó.]
+
+O número máximo de IOPS que um recurso pode fornecer é o número de IOPS quando o contador de capacidade de desempenho usado está em 100% (o ponto ideal).  O ponto operacional identifica que o nó está operando atualmente a 100K IOPS com latência de 1,0 ms/op.  Com base nas estatísticas capturadas do nó, o Unified Manager determina que o IOPS máximo para o nó é 160K, o que significa que há 60K IOPS livres ou disponíveis.  Portanto, você pode adicionar mais cargas de trabalho a este nó para que seus sistemas sejam usados de forma mais eficiente.
+
+[NOTE]
+====
+Quando há atividade mínima do usuário no recurso, o valor de IOPS disponível é calculado assumindo uma carga de trabalho genérica baseada em aproximadamente 4.500 IOPS por núcleo de CPU.  Isso ocorre porque o Unified Manager não possui dados para estimar com precisão as características da carga de trabalho que está sendo atendida.
+
+====

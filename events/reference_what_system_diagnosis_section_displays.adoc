@@ -1,0 +1,29 @@
+---
+permalink: events/reference_what_system_diagnosis_section_displays.html 
+sidebar: sidebar 
+keywords: system, diagnosis, section, displays 
+summary: A seção Diagnóstico do Sistema da página Detalhes do Evento fornece informações que podem ajudar você a diagnosticar problemas que podem ter sido responsáveis pelo evento. 
+---
+= O que a seção Diagnóstico do Sistema exibe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A seção Diagnóstico do Sistema da página Detalhes do Evento fornece informações que podem ajudar você a diagnosticar problemas que podem ter sido responsáveis pelo evento.
+
+Esta área é exibida apenas para alguns eventos.
+
+Alguns eventos de desempenho fornecem gráficos relevantes para o evento específico que foi acionado.  Normalmente, isso inclui um gráfico de IOPS ou MBps e um gráfico de latência dos dez dias anteriores.  Quando organizados dessa forma, você pode ver quais componentes de armazenamento estão mais afetando a latência, ou sendo afetados pela latência, quando o evento está ativo.
+
+Para eventos de desempenho dinâmico, os seguintes gráficos são exibidos:
+
+* Latência da carga de trabalho - Exibe o histórico de latência das principais cargas de trabalho de vítima, agressor ou tubarão no componente em disputa.
+* Atividade da carga de trabalho - Exibe detalhes sobre o uso da carga de trabalho do componente do cluster em contenção.
+* Atividade de recurso - Exibe estatísticas históricas de desempenho para o componente do cluster em contenção.
+
+
+Outros gráficos são exibidos quando alguns componentes do cluster estão em disputa.
+
+Outros eventos fornecem uma breve descrição do tipo de análise que o sistema está executando no objeto de armazenamento.  Em alguns casos, haverá uma ou mais linhas; uma para cada componente que foi analisado, para políticas de desempenho definidas pelo sistema que analisam vários contadores de desempenho.  Nesse cenário, um ícone verde ou vermelho é exibido ao lado do diagnóstico para indicar se um problema foi encontrado ou não naquele diagnóstico específico.

@@ -1,0 +1,73 @@
+---
+permalink: storage-mgmt/concept_monitor_vms.html 
+sidebar: sidebar 
+keywords: monitor, virtual, machines, view, summary, topology, expand 
+summary: 'Para qualquer problema de latência nos aplicativos da máquina virtual (VM), pode ser necessário monitorar as VMs para analisar e solucionar a causa.  As VMs ficam disponíveis quando o vCenter Server e os clusters ONTAP que hospedam o armazenamento da VM são adicionados ao Unified Manager.' 
+---
+= Monitorar máquinas virtuais
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para qualquer problema de latência nos aplicativos da máquina virtual (VM), pode ser necessário monitorar as VMs para analisar e solucionar a causa.  As VMs ficam disponíveis quando o vCenter Server e os clusters ONTAP que hospedam o armazenamento da VM são adicionados ao Unified Manager.
+
+Você vê os detalhes das VMs na página *VMWARE* > > *Máquinas Virtuais*.  Informações como disponibilidade, status, capacidade usada e alocada, latência da rede, IOPS e latência da VM, armazenamento de dados e host são exibidas.  Para uma VM que oferece suporte a vários armazenamentos de dados, a grade mostra as métricas do armazenamento de dados com a pior latência, com um ícone de asterisco (*) indicando armazenamentos de dados adicionais.  Se você clicar no ícone, as métricas do armazenamento de dados adicional serão exibidas.  Algumas dessas colunas não estão disponíveis para classificação e filtragem.
+
+[NOTE]
+====
+Para visualizar uma VM e seus detalhes, a descoberta (sondagem ou coleta de métricas) do cluster ONTAP deve ser concluída.  Se o cluster for removido do Unified Manager, a VM não estará mais disponível após o próximo ciclo de descoberta.
+
+====
+Nesta página, você também pode visualizar a topologia detalhada de uma VM, exibindo os componentes aos quais a VM está relacionada, por exemplo, o host, o disco virtual e o armazenamento de dados conectado a ela.  A visualização da topologia exibe os componentes subjacentes em suas camadas específicas, na seguinte ordem: *Disco Virtual* > *VM* > *Host* > *Rede* > *Armazenamento de Dados* > *VMDK*.
+
+Você pode determinar o caminho de E/S e as latências no nível do componente a partir de um aspecto topológico e identificar se o armazenamento é a causa do problema de desempenho.  A exibição resumida da topologia exibe o caminho de E/S e destaca o componente que tem problemas de IOPS e latência para que você decida as etapas de solução de problemas.  Você também pode ter uma visão expandida da topologia que descreve cada componente separadamente, juntamente com a latência desse componente.  Você pode selecionar um componente para determinar o caminho de E/S destacado através das camadas.
+
+
+
+== Ver topologia resumida
+
+Para determinar problemas de desempenho visualizando as VMs em uma topologia resumida:
+
+. Vá para *VMWARE* > *Máquinas Virtuais*.
+. Procure sua VM digitando seu nome na caixa de pesquisa.  Você também pode filtrar os resultados da sua pesquisa com base em critérios específicos clicando no botão *Filtrar*.  No entanto, se você não conseguir encontrar sua VM, certifique-se de que o vCenter Server correspondente tenha sido adicionado e descoberto.
++
+[NOTE]
+====
+Os servidores vCenter permitem caracteres especiais (como %, &, *, $, #, @, !, \, /, :, *, ?, "`, <, >, |, ;, ') nos nomes de entidades do vSphere, como VM, cluster, armazenamento de dados, pasta ou arquivo.  O VMware vCenter Server e o ESX/ESXi Server não escapam caracteres especiais usados nos nomes de exibição.  No entanto, quando o nome é processado no Unified Manager, ele é exibido de forma diferente.  Por exemplo, uma VM chamada como `%$VC_AIQUM_clone_191124%` no vCenter Server é exibido como `%25$VC_AIQUM_clone_191124%25` no Unified Manager.  Você deve anotar esse problema ao consultar uma VM cujo nome contém caracteres especiais.
+
+====
+. Verifique o status da VM.  Os status da VM são recuperados do vCenter Server.  Os seguintes status estão disponíveis.  Para obter mais informações sobre esses status, consulte a documentação do VMware.
++
+** Normal
+** Aviso
+** Alerta
+** Não monitorado
+** Desconhecido
+
+
+. Clique na seta para baixo ao lado da VM para ver a visão resumida da topologia dos componentes nas camadas de computação, rede e armazenamento.  O nó que tem problemas de latência é destacado.  A exibição de resumo exibe a pior latência dos componentes.  Por exemplo, se uma VM tiver mais de um disco virtual, esta exibição mostrará o disco virtual que tem a pior latência entre todos os discos virtuais.
+. Para analisar a latência e a taxa de transferência do armazenamento de dados ao longo de um período de tempo, clique no botão *Analisador de Carga de Trabalho* na parte superior do ícone do objeto do armazenamento de dados.  Acesse a página Análise de Carga de Trabalho, onde você pode selecionar um intervalo de tempo e visualizar os gráficos de desempenho do armazenamento de dados.  Para obter mais informações sobre o analisador de carga de trabalho, consulte _Solução de problemas de cargas de trabalho usando o analisador de carga de trabalho_.
+
+
+
+
+== Ver topologia expandida
+
+Você pode detalhar cada componente separadamente visualizando a topologia expandida da VM.
+
+.Passos
+. Na visualização resumida da topologia, clique em *Expandir topologia*.  Você pode ver a topologia detalhada de cada componente separadamente com os números de latência para cada objeto.  Se houver vários nós em uma categoria, por exemplo, vários nós no armazenamento de dados ou VMDK, o nó com pior latência será destacado em vermelho.
+. Para verificar o caminho de E/S de um objeto específico, clique nesse objeto para ver o caminho de E/S e o mapeamento correspondente.  Por exemplo, para ver o mapeamento de um disco virtual, clique no disco virtual para visualizar seu mapeamento destacado para o respectivo VMDK.  Em caso de atraso no desempenho desses componentes, você pode coletar mais dados do ONTAP e solucionar o problema.
++
+[NOTE]
+====
+As métricas não são relatadas para VMDKs.  Na topologia, apenas os nomes VMDK são exibidos, e não as métricas.
+
+====
+
+
+*Informações relacionadas*
+
+link:../performance-checker/concept_troubleshooting_workloads_using_workload_analyzer.html["Solução de problemas de cargas de trabalho usando o Workload Analyzer"]

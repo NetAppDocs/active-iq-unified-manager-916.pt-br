@@ -1,0 +1,94 @@
+---
+permalink: config/reference_network_configuration_menu.html 
+sidebar: sidebar 
+keywords: network configuration menu 
+summary: O menu Configuração de rede permite que você gerencie as configurações de rede.  Você deve usar este menu quando a interface de usuário do Unified Manager não estiver disponível. 
+---
+= Menu de configuração de rede
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O menu Configuração de rede permite que você gerencie as configurações de rede.  Você deve usar este menu quando a interface de usuário do Unified Manager não estiver disponível.
+
+[NOTE]
+====
+Este menu não estará disponível se o Unified Manager estiver instalado no Red Hat Enterprise Linux ou no Microsoft Windows.
+
+====
+As seguintes opções de menu estão disponíveis.
+
+* *Exibir configurações de endereço IP*
++
+Exibe as configurações de rede atuais do dispositivo virtual, incluindo endereço IP, rede, endereço de transmissão, máscara de rede, gateway e servidores DNS.
+
+* *Alterar configurações de endereço IP*
++
+Permite que você altere qualquer configuração de rede do dispositivo virtual, incluindo endereço IP, máscara de rede, gateway ou servidores DNS.  Se você alternar suas configurações de rede de DHCP para rede estática usando o console de manutenção, não poderá editar o nome do host.  Você deve selecionar *Confirmar alterações* para que as alterações sejam aplicadas.
+
+* *Exibir configurações de pesquisa de nome de domínio*
++
+Exibe a lista de pesquisa de nomes de domínio usada para resolver nomes de host.
+
+* *Alterar configurações de pesquisa de nome de domínio*
++
+Permite que você altere os nomes de domínio que deseja pesquisar ao resolver nomes de host.  Você deve selecionar *Confirmar alterações* para que as alterações sejam aplicadas.
+
+* *Exibir rotas estáticas*
++
+Exibe as rotas de rede estáticas atuais.
+
+* *Alterar rotas estáticas*
++
+Permite adicionar ou excluir rotas de rede estáticas.  Você deve selecionar *Confirmar alterações* para que as alterações sejam aplicadas.
+
++
+** *Adicionar Rota*
++
+Permite adicionar uma rota estática.
+
+** *Excluir Rota*
++
+Permite que você exclua uma rota estática.
+
+** *Voltar*
++
+Leva você de volta ao *Menu Principal*.
+
+** *Saída*
++
+Sai do console de manutenção.
+
+
+
+* *Desabilitar interface de rede*
++
+Desabilita todas as interfaces de rede disponíveis.  Se apenas uma interface de rede estiver disponível, você não poderá desativá-la.  Você deve selecionar *Confirmar alterações* para que as alterações sejam aplicadas.
+
+* *Habilitar interface de rede*
++
+Habilita interfaces de rede disponíveis.  Você deve selecionar *Confirmar alterações* para que as alterações sejam aplicadas.
+
+* *Confirmar alterações*
++
+Aplica quaisquer alterações feitas nas configurações de rede do dispositivo virtual.  Você deve selecionar esta opção para aplicar quaisquer alterações feitas, ou as alterações não ocorrerão.
+
+* *Fazer ping em um host*
++
+Faz ping em um host de destino para confirmar alterações de endereço IP ou configurações de DNS.
+
+* *Restaurar para as configurações padrão*
++
+Redefine todas as configurações para os padrões de fábrica.  Você deve selecionar *Confirmar alterações* para que as alterações sejam aplicadas.
+
+* *Voltar*
++
+Leva você de volta ao *Menu Principal*.
+
+* *Saída*
++
+Sai do console de manutenção.
+
+

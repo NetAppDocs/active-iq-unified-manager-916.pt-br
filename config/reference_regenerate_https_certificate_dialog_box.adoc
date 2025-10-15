@@ -1,0 +1,68 @@
+---
+permalink: config/reference_regenerate_https_certificate_dialog_box.html 
+sidebar: sidebar 
+keywords: regenerate, https certificate, dialog, box 
+summary: A caixa de diálogo Regenerar certificado HTTPS permite que você personalize as informações de segurança e, em seguida, gere um novo certificado HTTPS com essas informações. 
+---
+= Caixa de diálogo Regenerar certificado HTTPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Regenerar certificado HTTPS permite que você personalize as informações de segurança e, em seguida, gere um novo certificado HTTPS com essas informações.
+
+As informações atuais do certificado aparecem nesta página.
+
+A seleção "`Regenerar usando atributos de certificado atuais`" e "Atualizar os atributos de certificado atuais`" permite que você regenere o certificado com as informações atuais ou gere um certificado com novas informações.
+
+* *Nome comum*
++
+Obrigatório. O nome de domínio totalmente qualificado (FQDN) que você deseja proteger.
+
++
+Em configurações de alta disponibilidade do Unified Manager, use o endereço IP virtual.
+
+* *E-mail*
++
+Opcional. Um endereço de e-mail para entrar em contato com sua organização; normalmente o endereço de e-mail do administrador do certificado ou do departamento de TI.
+
+* *Empresa*
++
+Opcional. Normalmente, o nome incorporado da sua empresa.
+
+* *Departamento*
++
+Opcional. O nome do departamento da sua empresa.
+
+* *Cidade*
++
+Opcional. A localização da sua empresa na cidade.
+
+* *Estado*
++
+Opcional. Localização do estado ou província, não abreviada, da sua empresa.
+
+* *País*
++
+Opcional. A localização da sua empresa no país.  Normalmente, este é um código ISO de duas letras do país.
+
+* *Nomes alternativos*
++
+Obrigatório. Nomes de domínio adicionais, não primários, que podem ser usados para acessar este servidor, além do host local existente ou outros endereços de rede.  Separe cada nome alternativo com uma vírgula.
+
++
+Marque a caixa de seleção "`Excluir informações de identificação local (por exemplo, host local)`" se desejar remover as informações de identificação local do campo Nomes alternativos no certificado.  Quando esta caixa de seleção estiver marcada, somente o que você inserir no campo será usado no campo Nomes Alternativos.  Se deixado em branco, o certificado resultante não terá nenhum campo Nomes Alternativos.
+
+* *TAMANHO DA CHAVE (ALGORITMO DA CHAVE: RSA)*
++
+O algoritmo principal é definido como RSA.  Você pode selecionar um dos tamanhos de chave: 2048, 3072 ou 4096 bits.  O tamanho padrão da chave é definido como 2048 bits.
+
+* *PERÍODO DE VALIDADE*
++
+O período de validade padrão é de 397 dias.  Se você tiver atualizado de uma versão anterior, poderá ver a validade do certificado anterior inalterada.
+
+
+
+Para mais informações, consulte link:../config/task_generate_an_https_security_certificate_ocf.html["Gerando certificados HTTPS"].

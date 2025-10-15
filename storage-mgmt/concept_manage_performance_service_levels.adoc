@@ -1,0 +1,267 @@
+---
+permalink: storage-mgmt/concept_manage_performance_service_levels.html 
+sidebar: sidebar 
+keywords: manage, performance service level, PSL, User-defined, system-defined PSL, bursty, Database PSL, extreme PSL, beyond extreme PSL 
+summary: Cálculos e gerenciamento de nível de serviço de desempenho. 
+---
+= Níveis de serviço de desempenho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um Nível de Serviço de Desempenho (PSL) permite que você defina os objetivos de desempenho e armazenamento para uma carga de trabalho.  Você pode atribuir um PSL a uma carga de trabalho ao criá-la inicialmente ou depois editando-a.
+
+O gerenciamento e o monitoramento dos recursos de armazenamento são baseados em Objetivos de Nível de Serviço (SLOs).  Os SLOs são definidos por acordos de nível de serviço baseados no desempenho e na capacidade exigidos.  No Unified Manager, os SLOs referem-se às definições de PSL dos aplicativos que estão sendo executados no armazenamento NetApp .  Os serviços de armazenamento são diferenciados com base no desempenho e na utilização dos recursos subjacentes.  Um PSL é uma descrição dos objetivos do serviço de armazenamento.  Um PSL permite que o provedor de armazenamento especifique os objetivos de desempenho e capacidade para a carga de trabalho.  Quando você atribui um PSL a uma carga de trabalho, a carga de trabalho correspondente no ONTAP é gerenciada por seus objetivos de desempenho e capacidade.  Cada PSL é governado por IOPs de pico, esperados e mínimos absolutos, além de latência esperada.
+
+O Unified Manager tem os seguintes tipos de PSLs:
+
+* *Definido pelo sistema*: O Unified Manager fornece algumas políticas predefinidas que não podem ser alteradas.  Esses PSLs predefinidos são:
++
+** Desempenho extremo
+** Desempenho
+** Valor
++
+Os PSLs de Desempenho Extremo, Desempenho e Valor são aplicáveis à maioria das cargas de trabalho de armazenamento comuns em um data center.
+
++
+O Unified Manager também oferece três níveis de serviço de desempenho para aplicativos de banco de dados.  São PSLs de altíssimo desempenho que suportam IOPS intermitentes e são apropriados para aplicativos de banco de dados com a maior demanda de taxa de transferência.
+
+** Extremo para logs de banco de dados
+** Extremo para dados compartilhados de banco de dados
+** Extremo para dados de banco de dados
+
+
+* *Definido pelo usuário*: Se os Níveis de Serviço de Desempenho predefinidos não atenderem às suas necessidades, você poderá criar novos PSLs para atender às suas necessidades.  Para obter informações, consultelink:../storage-mgmt/task_create_and_edit_psls.html["Criar e editar níveis de serviço de desempenho"] .
+* *Beyond Extreme*: Os PSLs Beyond Extreme são os PSLs recomendados pelo sistema, sugeridos para cargas de trabalho que exigem IOPs maiores que Extreme.  As cargas de trabalho são analisadas internamente com base em seu IOPS, capacidade e latência, e um Beyond Extreme PSL é recomendado para cada uma dessas cargas de trabalho na tela *Armazenamento > Cargas de trabalho > Todas as cargas de trabalho*.  Você pode aplicar os PSLs às cargas de trabalho para garantir um desempenho ideal.
++
+Os parâmetros IOPs para as cargas de trabalho são gerados dinamicamente, dependendo do comportamento da carga de trabalho, e anexados ao nome do Beyond Extreme PSL no formato `Beyond Extreme <number-(peak IOPS/TB)> <number(expected IOPS/TB)>` .  Por exemplo, se o sistema determinar que uma carga de trabalho tenha os IOPs de pico e esperados como `106345` e `37929` respectivamente, o Beyond Extreme PSL gerado para a carga de trabalho é denominado como `Beyond Extreme 106345 37929` .  Embora esses PSLs sejam recomendados pelo sistema, quando você os atribui a cargas de trabalho, esses PSLs são rotulados como `User-defined` no tipo.
+
+
+
+
+
+== Gerencie cargas de trabalho atribuindo PSLs
+
+Você pode acessar os PSLs na página *Políticas* > *Níveis de serviço de desempenho* e usando as APIs do provedor de armazenamento.  Gerenciar cargas de trabalho de armazenamento atribuindo PSLs a elas é conveniente, pois você não precisa gerenciar as cargas de trabalho de armazenamento individualmente.  Quaisquer modificações também podem ser gerenciadas reatribuindo outro PSL em vez de gerenciá-las individualmente.  O Unified Manager ajuda você a atribuir PSLs em suas cargas de trabalho com base em avaliações e recomendações internas.
+
+Para obter informações sobre como atribuir PSLs recomendados pelo sistema a cargas de trabalho, consultelink:..//storage-mgmt/concept_assign_policies_on_workloads.html#assign-system-recommended-psls-to-workloads["Atribuir PSLs recomendados pelo sistema às cargas de trabalho"]
+
+A página Níveis de serviço de desempenho lista as políticas de PSL disponíveis e permite que você as adicione, edite e exclua.
+
+
+NOTE: Não é possível modificar um PSL definido pelo sistema ou que esteja atualmente atribuído a uma carga de trabalho.  Não é possível excluir um PSL atribuído a uma carga de trabalho ou se ele for o único PSL disponível.
+
+Esta página exibe as seguintes informações:
+
+|===
+| Campo | Descrição 
+
+
+ a| 
+Nome
+ a| 
+Nome do PSL.
+
+
+
+ a| 
+Tipo
+ a| 
+Se a política é definida pelo sistema ou pelo usuário.
+
+
+
+ a| 
+IOPS/TB esperado
+ a| 
+Número mínimo de IOPS que um aplicativo deve executar em um LUN ou compartilhamento de arquivos.  IOPS esperado especifica o IOPS mínimo esperado alocado, com base no tamanho alocado do objeto de armazenamento.
+
+
+
+ a| 
+Pico IOPS/TB
+ a| 
+Número máximo de IOPS que um aplicativo pode executar em um LUN ou compartilhamento de arquivos.  O pico de IOPS especifica o máximo possível de IOPS alocado, com base no tamanho alocado do objeto de armazenamento ou no tamanho usado do objeto de armazenamento.
+
+Os IOPS de pico são baseados em uma política de alocação.  A política de alocação é espaço alocado ou espaço usado.  Quando a política de alocação é definida como espaço alocado, o pico de IOPS é calculado com base no tamanho do objeto de armazenamento.  Quando a política de alocação é definida como espaço usado, o pico de IOPS é calculado com base na quantidade de dados armazenados no objeto de armazenamento, levando em consideração a eficiência do armazenamento.  Por padrão, a política de alocação é definida como espaço usado.
+
+
+
+ a| 
+IOPS mínimo absoluto
+ a| 
+O IOPS mínimo absoluto é usado como uma substituição quando o IOPS esperado é menor que esse valor.  Os valores padrão dos PSLs definidos pelo sistema são os seguintes:
+
+* Desempenho extremo: se IOPS esperado >= 6144/TB, então IOPS mínimo absoluto = 1000
+* Desempenho: Se IOPS esperados >= 2048/TB e < 6144/TB, então IOPS mínimo absoluto = 500
+* Valor: Se IOPS esperado >= 128/TB e < 2048/TB, então IOPS mínimo absoluto = 75
+
+
+Os valores padrão dos PSLs do banco de dados definidos pelo sistema são os seguintes:
+
+* Extremo para logs de banco de dados: se IOPS esperado >= 22528, então IOPS mínimo absoluto = 4000
+* Extremo para dados compartilhados de banco de dados: se IOPS esperado >= 16384, então IOPS mínimo absoluto = 2000
+* Extremo para dados de banco de dados: se IOPS esperado >= 12288, então IOPS mínimo absoluto = 2000
+
+
+O valor mais alto do IOPS mínimo absoluto para PSLs personalizados pode ser no máximo 75.000.  O valor mais baixo é calculado da seguinte forma:
+
+1000/latência esperada
+
+
+
+ a| 
+Latência esperada
+ a| 
+Latência esperada para IOPS de armazenamento em milissegundos por operação (ms/op).
+
+
+
+ a| 
+Capacidade
+ a| 
+Capacidade total disponível e utilizada nos clusters.
+
+
+
+ a| 
+Cargas de trabalho
+ a| 
+Número de cargas de trabalho de armazenamento às quais o PSL foi atribuído.
+
+|===
+Para obter informações sobre como o pico de IOPS e os IOPs esperados ajudam a alcançar um desempenho diferenciado consistente em clusters ONTAP , consulte o seguinte artigo da KB:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/What_is_Performance_Budgeting%3F["O que é Orçamento de Desempenho?"]
+
+
+
+=== Eventos gerados para cargas de trabalho que violam o limite definido pelos PSLs
+
+Observe que, se as cargas de trabalho excederem o valor de latência esperado em 30% do tempo durante a hora anterior, o Unified Manager gerará um dos seguintes eventos para notificá-lo sobre um possível problema de desempenho:
+
+* Limite de latência do volume de carga de trabalho violado, conforme definido pela Política de nível de serviço de desempenho
+* Limite de latência do LUN da carga de trabalho violado, conforme definido pela Política de nível de serviço de desempenho.
+
+
+Talvez você queira analisar a carga de trabalho para ver o que pode estar causando os valores de latência mais altos.
+
+Para mais informações, consulte os seguintes links:
+
+* link:../events/reference_volume_events.html#impact-area-performance["Eventos de volume"]
+* link:../performance-checker/concept_what_happens_when_performance_threshold_policy_is_breached.html["O que acontece quando uma política de limite de desempenho é violada"]
+* link:..//performance-checker/concept_how_unified_manager_uses_workload_response_time.html["Como o Unified Manager usa a latência da carga de trabalho para identificar problemas de desempenho"]
+* link:../performance-checker/concept_what_performance_events_are.html["O que são eventos de performance"]
+
+
+
+
+=== PSLs definidos pelo sistema
+
+A tabela a seguir fornece informações sobre os PSLs definidos pelo sistema:
+
+|===
+| Nível de serviço de desempenho | Descrição e caso de uso | Latência esperada (ms/op) | IOPS de pico | IOPS esperado | IOPS mínimo absoluto 
+
+
+ a| 
+Desempenho extremo
+ a| 
+Fornece rendimento extremamente alto com latência muito baixa
+
+Ideal para aplicações sensíveis à latência
+ a| 
+1
+ a| 
+12288
+ a| 
+6144
+ a| 
+1000
+
+
+
+ a| 
+Desempenho
+ a| 
+Fornece alto rendimento com baixa latência
+
+Ideal para bancos de dados e aplicativos virtualizados
+ a| 
+2
+ a| 
+4096
+ a| 
+2048
+ a| 
+500
+
+
+
+ a| 
+Valor
+ a| 
+Oferece alta capacidade de armazenamento e latência moderada
+
+Ideal para aplicações de alta capacidade, como e-mail, conteúdo da web, compartilhamentos de arquivos e destinos de backup
+ a| 
+17
+ a| 
+512
+ a| 
+128
+ a| 
+75
+
+
+
+ a| 
+Extremo para logs de banco de dados
+ a| 
+Fornece rendimento máximo com a menor latência.
+
+Ideal para aplicativos de banco de dados que suportam logs de banco de dados.  Este PSL fornece o maior rendimento porque os logs do banco de dados são extremamente intermitentes e o registro está em constante demanda.
+ a| 
+1
+ a| 
+45056
+ a| 
+22528
+ a| 
+4000
+
+
+
+ a| 
+Extremo para dados compartilhados de banco de dados
+ a| 
+Fornece alta taxa de transferência com a menor latência.
+
+Ideal para aplicativos de banco de dados, dados armazenados em um repositório de dados comum, mas compartilhados entre bancos de dados.
+ a| 
+1
+ a| 
+32768
+ a| 
+16384
+ a| 
+2000
+
+
+
+ a| 
+Extremo para dados de banco de dados
+ a| 
+Fornece alto rendimento com a menor latência.
+
+Ideal para dados de aplicativos de banco de dados, como informações de tabelas de banco de dados e metadados.
+ a| 
+1
+ a| 
+24576
+ a| 
+12288
+ a| 
+2000
+
+|===

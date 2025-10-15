@@ -1,0 +1,29 @@
+---
+permalink: health-checker/task_reorder_annotation_rules.html 
+sidebar: sidebar 
+keywords: reorder, annotation rules 
+summary: Você pode alterar a ordem na qual o Unified Manager aplica regras de anotação aos objetos de armazenamento.  As regras de anotação são aplicadas aos objetos de armazenamento sequencialmente com base em sua classificação.  Quando você configura uma regra de anotação, a classificação é a menor.  Mas você pode alterar a classificação da regra de anotação dependendo de suas necessidades. 
+---
+= Reordenar regras de anotação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode alterar a ordem na qual o Unified Manager aplica regras de anotação aos objetos de armazenamento.  As regras de anotação são aplicadas aos objetos de armazenamento sequencialmente com base em sua classificação.  Quando você configura uma regra de anotação, a classificação é a menor.  Mas você pode alterar a classificação da regra de anotação dependendo de suas necessidades.
+
+.Antes de começar
+Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+Você pode selecionar uma única linha ou várias linhas e executar muitas operações de arrastar e soltar para alterar a classificação das regras de anotação.  No entanto, você deve salvar as alterações para que a repriorização seja exibida na guia Regras de anotação.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Anotações*.
+. Na aba *Regras de Anotação*, clique em *Reordenar*.
+. Na caixa de diálogo *Reordenar regra de anotação*, arraste e solte uma ou várias linhas para reorganizar a sequência das regras de anotação.
+. Clique em *Salvar*.
++
+Você deve salvar as alterações para que a reordenação seja exibida.
+
+

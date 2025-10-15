@@ -1,0 +1,30 @@
+---
+permalink: storage-mgmt/concept_overview_of_quota_process_um_6_1.html 
+sidebar: sidebar 
+keywords: overview, quota, process 
+summary: As cotas podem ser suaves ou rígidas.  Cotas flexíveis fazem com que o ONTAP envie uma notificação quando limites especificados são excedidos, e cotas rígidas impedem que uma operação de gravação seja bem-sucedida quando limites especificados são excedidos. 
+---
+= Visão geral do processo de cotas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As cotas podem ser suaves ou rígidas.  Cotas flexíveis fazem com que o ONTAP envie uma notificação quando limites especificados são excedidos, e cotas rígidas impedem que uma operação de gravação seja bem-sucedida quando limites especificados são excedidos.
+
+Quando o ONTAP recebe uma solicitação de um usuário ou grupo de usuários para gravar em um FlexVol volume, ele verifica se as cotas estão ativadas naquele volume para o usuário ou grupo de usuários e determina o seguinte:
+
+* Se o limite rígido será atingido
++
+Em caso afirmativo, a operação de gravação falhará quando o limite máximo for atingido e a notificação de cota máxima for enviada.
+
+* Se o limite suave será violado
++
+Em caso afirmativo, a operação de gravação será bem-sucedida quando o limite flexível for violado e a notificação de cota flexível for enviada.
+
+* Se uma operação de gravação não excederá o limite flexível
++
+Se sim, a operação de gravação será bem-sucedida e nenhuma notificação será enviada.
+
+

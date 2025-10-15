@@ -1,0 +1,68 @@
+---
+permalink: performance-checker/reference_cluster_performance_events_pane.html 
+sidebar: sidebar 
+keywords: cluster, performance, events, pane, counter 
+summary: O painel Eventos de desempenho do cluster exibe estatísticas de desempenho e todos os eventos ativos do cluster.  Isso é muito útil ao monitorar seus clusters e todo o desempenho e eventos relacionados a eles. 
+---
+= Painel de eventos de desempenho do cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O painel Eventos de desempenho do cluster exibe estatísticas de desempenho e todos os eventos ativos do cluster.  Isso é muito útil ao monitorar seus clusters e todo o desempenho e eventos relacionados a eles.
+
+
+
+== Todos os eventos neste painel de cluster
+
+O painel Todos os eventos neste cluster exibe todos os eventos de desempenho do cluster ativo nas últimas 72 horas.  O Total de Eventos Ativos é exibido na extrema esquerda; esse número representa o total de todos os eventos Novos e Confirmados para todos os objetos de armazenamento neste cluster.  Você pode clicar no link Total de eventos ativos para navegar até a página Inventário de eventos, que é filtrada para exibir esses eventos.
+
+O gráfico de barras Total de Eventos Ativos do cluster exibe o número total de eventos críticos e de aviso ativos:
+
+* Latência (total para nós, agregados, SVMs, volumes, LUNs e namespaces)
+* IOPS (total para clusters, nós, agregados, SVMs, volumes, LUNs e namespaces)
+* MB/s (total para clusters, nós, agregados, SVMs, volumes, LUNs, namespaces, portas e LIFs)
+* Capacidade de desempenho utilizada (total para nós e agregados)
+* Utilização (total para nós, agregados e portas)
+* Outros (taxa de perda de cache para volumes)
+
+
+A lista contém eventos de desempenho ativos acionados por políticas de limite definidas pelo usuário, políticas de limite definidas pelo sistema e limites dinâmicos.
+
+Os dados do gráfico (barras verticais do contador) são exibidos em vermelho (image:../media/treemapred_png.gif["Ícone para TreeMap – Cor vermelha"] ) para eventos críticos e amarelo (image:../media/treemapstatus_warning_png.gif["Ícone para TreeMap – Status de aviso"] ) para eventos de alerta.  Posicione o cursor sobre cada barra vertical do contador para visualizar o tipo e o número real de eventos.  Você pode clicar em *Atualizar* para atualizar os dados do painel do contador.
+
+Você pode mostrar ou ocultar eventos críticos e de aviso no gráfico de desempenho Total de Eventos Ativos clicando nos ícones *Crítico* e *Aviso* na legenda.  Se você ocultar determinados tipos de eventos, os ícones de legenda serão exibidos em cinza.
+
+
+
+== Painéis de balcão
+
+Os painéis de contadores exibem a atividade do cluster e os eventos de desempenho das 72 horas anteriores e incluem os seguintes contadores:
+
+* *Painel de contador IOPS*
++
+IOPS indica a velocidade operacional do cluster em número de operações de entrada/saída por segundo.  Este painel de contador fornece uma visão geral de alto nível da integridade do IOPS do cluster no período anterior de 72 horas.  Você pode posicionar o cursor sobre a linha de tendência do gráfico para visualizar o valor do IOPS de um período específico.
+
+* *Painel de contagem MB/s*
++
+MB/s indica quantos dados foram transferidos de e para o cluster em megabytes por segundo.  Este painel de contador fornece uma visão geral de alto nível da integridade de MB/s do cluster no período anterior de 72 horas.  Você pode posicionar o cursor sobre a linha de tendência do gráfico para visualizar o valor de MB/s para um tempo específico.
+
+
+
+O número no canto superior direito do gráfico na barra cinza é o valor médio do último período de 72 horas.  Os números mostrados na parte inferior e superior do gráfico de linha de tendência são os valores mínimo e máximo do último período de 72 horas.  A barra cinza abaixo do gráfico contém a contagem de eventos ativos (novos e reconhecidos) e eventos obsoletos do último período de 72 horas.
+
+Os painéis do contador contêm dois tipos de eventos:
+
+* *Ativo*
++
+Indica que o evento de desempenho está ativo no momento (novo ou reconhecido).  O problema que causou o evento não foi corrigido ou não foi resolvido.  O contador de desempenho do objeto de armazenamento permanece acima do limite de desempenho.
+
+* *Obsoleto*
++
+Indica que o evento não está mais ativo.  O problema que causou o evento foi corrigido ou resolvido.  O contador de desempenho do objeto de armazenamento não está mais acima do limite de desempenho.
+
+
+
+Para *Eventos Ativos*, se houver um evento, você pode posicionar o cursor sobre o ícone do evento e clicar no número do evento para acessar a página Detalhes do Evento apropriada.  Se houver mais de um evento, você pode clicar em *Exibir todos os eventos* para exibir a página Inventário de eventos, que é filtrada para mostrar todos os eventos para o tipo de contador de objeto selecionado.

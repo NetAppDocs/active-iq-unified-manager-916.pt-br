@@ -1,0 +1,52 @@
+---
+permalink: reporting/task_search_for_scheduled_report.html 
+sidebar: sidebar 
+keywords: search, schedule, report 
+summary: Você pode pesquisar relatórios agendados por nome, nome da exibição, tipo de objeto ou destinatários. 
+---
+= Pesquisar um relatório agendado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode pesquisar relatórios agendados por nome, nome da exibição, tipo de objeto ou destinatários.
+
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Agendamentos de relatórios*.
+. Use o campo de texto *Pesquisar relatórios agendados*.
++
+[cols="2*"]
+|===
+| Para encontrar relatórios de ... | Tentar ... 
+
+
+ a| 
+Nome do cronograma
+ a| 
+Digite parte do nome do agendamento do relatório.
+
+
+
+ a| 
+Ver nome
+ a| 
+Digite parte do nome da exibição do relatório.  As visualizações padrão e personalizadas aparecem na lista de visualizações.
+
+
+
+ a| 
+Destinatário
+ a| 
+Digite parte do endereço de e-mail.
+
+
+
+ a| 
+Tipo de arquivo
+ a| 
+Digite "PDF", "CSV" ou "XLSX".
+
+|===
+. Você pode clicar em um título de coluna para classificar os relatórios em ordem crescente ou decrescente por essa coluna, como nome ou formato da programação.
+

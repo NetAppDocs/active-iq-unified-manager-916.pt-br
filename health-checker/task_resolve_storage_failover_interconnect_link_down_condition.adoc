@@ -1,0 +1,55 @@
+---
+permalink: health-checker/task_resolve_storage_failover_interconnect_link_down_condition.html 
+sidebar: sidebar 
+keywords: scan, resolve, storage, failover, interconnect link, conditions 
+summary: Este fluxo de trabalho fornece um exemplo de como você pode verificar, avaliar e resolver condições de link de interconexão de failover de armazenamento inativo.  Neste cenário, você é um administrador que usa o Unified Manager para verificar riscos de failover de armazenamento antes de iniciar uma atualização de versão do ONTAP em seus nós. 
+---
+= Verificar e resolver condições de inatividade do link de interconexão de failover de armazenamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este fluxo de trabalho fornece um exemplo de como você pode verificar, avaliar e resolver condições de link de interconexão de failover de armazenamento inativo.  Neste cenário, você é um administrador que usa o Unified Manager para verificar riscos de failover de armazenamento antes de iniciar uma atualização de versão do ONTAP em seus nós.
+
+.Antes de começar
+Você deve ter a função de Operador, Administrador de Aplicativos ou Administrador de Armazenamento.
+
+Se as interconexões de failover de armazenamento entre nós de pares de HA falharem durante uma tentativa de atualização sem interrupções, a atualização falhará.  Portanto, a prática comum é que o administrador monitore e confirme a confiabilidade do failover de armazenamento nos nós do cluster alvos da atualização antes do início de uma atualização.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de eventos*.
+. Na página de inventário *Gerenciamento de eventos*, selecione *Eventos de disponibilidade ativa*.
+. Na parte superior da coluna *Nome* da página de inventário *Gerenciamento de eventos*, clique emimage:../media/filtericon_um60.png["Ícone para filtro de coluna"] e entrar `*failover` na caixa de texto para limitar o evento a ser exibido para eventos relacionados a failover de armazenamento.
++
+Todos os eventos anteriores relacionados às condições de failover de armazenamento são exibidos.
+
++
+Neste cenário, o Unified Manager exibe o evento "`Storage Failover Interconnect One or More Links Down`" na seção Incidentes de disponibilidade.
+
+. Se um ou mais eventos relacionados ao failover de armazenamento forem exibidos na página de inventário *Gerenciamento de eventos*, execute as seguintes etapas:
++
+.. Clique no link do título do evento para exibir detalhes do evento.
++
+Neste exemplo, você clica no título do evento "`Storage Failover Interconnect One or More Links Down`".
+
++
+A página Detalhes do evento é exibida.
+
+.. Na página Detalhes do evento, você pode executar uma ou mais das seguintes tarefas:
++
+*** Revise a mensagem de erro no campo Causa e avalie o problema.
+*** Atribua o evento a um administrador.
+*** Reconheça o evento.
+
+
+
+
+
+
+*Informações relacionadas*
+
+link:../events/reference_event_details_page.html["Página de detalhes do evento"]
+
+link:../config/reference_unified_manager_roles_and_capabilities.html["Funções e recursos do usuário do Unified Manager"]

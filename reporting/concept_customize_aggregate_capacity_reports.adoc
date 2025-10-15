@@ -1,0 +1,16 @@
+---
+permalink: reporting/concept_customize_aggregate_capacity_reports.html 
+sidebar: sidebar 
+keywords: customize, aggregate, capacity, reports 
+summary: Esses relatórios personalizados de amostra são usados para ajudar você a identificar e responder a possíveis problemas relacionados à capacidade de armazenamento agregada. 
+---
+= Personalizar relatórios de capacidade agregada
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esses relatórios personalizados de amostra são usados para ajudar você a identificar e responder a possíveis problemas relacionados à capacidade de armazenamento agregada.
+
+Os relatórios nesta seção são apenas exemplos para ajudar você a entender como criar relatórios sobre capacidade agregada para ajudar você a monitorar os recursos do seu sistema de armazenamento.

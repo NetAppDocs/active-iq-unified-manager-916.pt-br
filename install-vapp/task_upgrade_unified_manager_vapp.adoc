@@ -1,0 +1,23 @@
+---
+permalink: install-vapp/task_upgrade_unified_manager_vapp.html 
+sidebar: sidebar 
+keywords: upgrade, unified manager 
+summary: Você pode atualizar para o Unified Manager no VMware vSphere 
+---
+= Atualizar o Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode atualizar o Active IQ Unified Manager para a versão 9.16 somente a partir da versão 9.13 ou 9.14.
+
+Durante o processo de atualização, o Unified Manager não estará disponível.  Você deve concluir todas as operações em execução antes de atualizar o Unified Manager.
+
+Se o Unified Manager estiver pareado com uma instância do OnCommand Workflow Automation e houver novas versões de software disponíveis para ambos os produtos, você deverá desconectar os dois produtos e configurar uma nova conexão do Workflow Automation após executar as atualizações.  Se você estiver realizando uma atualização para apenas um dos produtos, faça login no Workflow Automation após a atualização e verifique se ele ainda está adquirindo dados do Unified Manager.
+
+.Passos
+. Siga os passos emlink:task_download_unified_manager_iso_image_vapp.html["Baixe a imagem ISO do Unified Manager"] .
+. Além disso, siga os passos descritos emlink:task_upgrade_unified_manager_virtual_appliance_vapp.html["Atualizar o Unified Manager"] .
+

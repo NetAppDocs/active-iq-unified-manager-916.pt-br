@@ -1,0 +1,31 @@
+---
+permalink: events/task_view_events_that_occurred_during_maintenance_window.html 
+sidebar: sidebar 
+keywords: view, events, occurred, maintenance, window 
+summary: Se necessário, você pode visualizar os eventos que foram gerados para todos os objetos de armazenamento durante uma janela de manutenção do Unified Manager.  A maioria dos eventos aparecerá no estado Obsoleto quando a janela de manutenção for concluída e todos os recursos do sistema estiverem funcionando novamente. 
+---
+= Ver eventos que ocorreram durante uma janela de manutenção
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se necessário, você pode visualizar os eventos que foram gerados para todos os objetos de armazenamento durante uma janela de manutenção do Unified Manager.  A maioria dos eventos aparecerá no estado Obsoleto quando a janela de manutenção for concluída e todos os recursos do sistema estiverem funcionando novamente.
+
+.Antes de começar
+Pelo menos uma janela de manutenção deve ser concluída antes que qualquer evento esteja disponível.
+
+Eventos que ocorreram durante uma janela de manutenção não aparecem na página de inventário do Gerenciamento de Eventos por padrão.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Eventos*.
++
+Por padrão, todos os eventos ativos (novos e confirmados) são exibidos na página de inventário do Gerenciamento de eventos.
+
+. No painel Exibir, selecione a opção *Todos os eventos gerados durante a manutenção*.
++
+A lista de eventos acionados durante os últimos 7 dias de todas as sessões da janela de manutenção e de todos os clusters é exibida.
+
+. Se houver várias janelas de manutenção para um único cluster, você pode clicar no ícone de calendário *Tempo de acionamento* e selecionar o período de tempo para os eventos da janela de manutenção que você deseja visualizar.
+

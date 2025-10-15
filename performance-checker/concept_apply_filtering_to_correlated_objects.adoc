@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_apply_filtering_to_correlated_objects.html 
+sidebar: sidebar 
+keywords: apply, filter, reduce, list, correlated, objects, grid 
+summary: A filtragem permite que você exiba um subconjunto menor e mais bem definido de objetos na grade.  Por exemplo, se você tiver 25 volumes na grade, a filtragem permitirá que você visualize apenas os volumes com taxa de transferência menor que 90 MBps ou latência maior que 1 ms/op. 
+---
+= Aplique filtragem para reduzir a lista de objetos correlacionados na grade
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A filtragem permite que você exiba um subconjunto menor e mais bem definido de objetos na grade.  Por exemplo, se você tiver 25 volumes na grade, a filtragem permitirá que você visualize apenas os volumes com taxa de transferência menor que 90 MBps ou latência maior que 1 ms/op.

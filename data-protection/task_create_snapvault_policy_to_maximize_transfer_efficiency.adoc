@@ -1,0 +1,35 @@
+---
+permalink: data-protection/task_create_snapvault_policy_to_maximize_transfer_efficiency.html 
+sidebar: sidebar 
+keywords: create, snapvault, policy,  maximize, transfer, efficiency 
+summary: Você pode criar uma nova política do SnapVault para definir a prioridade de uma transferência do SnapVault .  Você usa políticas para maximizar a eficiência das transferências do primário para o secundário em um relacionamento de proteção. 
+---
+= Crie uma política do SnapVault para maximizar a eficiência da transferência
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar uma nova política do SnapVault para definir a prioridade de uma transferência do SnapVault .  Você usa políticas para maximizar a eficiência das transferências do primário para o secundário em um relacionamento de proteção.
+
+.Antes de começar
+* Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+* Você deve ter configurado a Automação de Fluxo de Trabalho.
+* Você já deve ter preenchido a área Informações de destino na caixa de diálogo Configurar proteção.
+
+
+.Passos
+. Na guia * SnapVault* da caixa de diálogo *Configurar proteção*, clique no link *Criar política* na área *Configurações de relacionamento*.
++
+A guia SnapVault é exibida.
+
+. No campo *Nome da política*, digite o nome que você deseja dar à política.
+. No campo *Prioridade de transferência*, selecione a prioridade de transferência que você deseja atribuir à política.
+. *Opcional:* No campo *Comentário*, insira um comentário para a política.
+. Na área *Rótulo de replicação*, adicione ou edite um rótulo de replicação, conforme necessário.
+. Clique em *Criar*.
++
+A nova política é exibida na lista suspensa Criar política.
+
+

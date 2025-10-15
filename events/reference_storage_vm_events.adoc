@@ -1,0 +1,452 @@
+---
+permalink: events/reference_storage_vm_events.html 
+sidebar: sidebar 
+keywords: storage, vm events, impact area, availability, configuration, performance, security 
+summary: 'Os eventos de VM de armazenamento fornecem informações sobre o status das suas VMs de armazenamento (SVMs) para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, nível de impacto, tipo de fonte e gravidade.' 
+---
+= Eventos de VM de armazenamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de VM de armazenamento (máquina virtual de armazenamento, também conhecida como SVM) fornecem informações sobre o status das suas VMs de armazenamento (SVMs) para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, nível de impacto, tipo de fonte e gravidade.
+
+Um asterisco (*) identifica eventos do EMS que foram convertidos em eventos do Unified Manager.
+
+
+
+== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+Serviço CIFS de VM de armazenamento inativo (ocumEvtVserverCifsServiceStatusDown)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Serviço SVM CIFS não configurado (não aplicável)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informação
+
+
+
+ a| 
+Tentativas de conectar compartilhamento CIFS inexistente *(nbladeCifsNoPrivShare)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Conflito de nome CIFS NetBIOS *(nbladeCifsNbNameConflict)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Erro
+
+
+
+ a| 
+Falha na operação de cópia de sombra do CIFS *(cifsShadowCopyFailure)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Erro
+
+
+
+ a| 
+Muitas conexões CIFS *(nbladeCifsManyAuths)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Erro
+
+
+
+ a| 
+Conexão CIFS máxima excedida *(nbladeCifsMaxOpenSameFile)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Erro
+
+
+
+ a| 
+Número máximo de conexões CIFS por usuário excedido *(nbladeCifsMaxSessPerUsrConn)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Erro
+
+
+
+ a| 
+Serviço SVM FC/FCoE inativo (ocumEvtVserverFcServiceStatusDown)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Serviço SVM iSCSI inativo (ocumEvtVserverIscsiServiceStatusDown)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Serviço NFS de VM de armazenamento inativo (ocumEvtVserverNfsServiceStatusDown)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Serviço SVM FC/FCoE não configurado (não aplicável)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informação
+
+
+
+ a| 
+Serviço SVM iSCSI não configurado (não aplicável)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informação
+
+
+
+ a| 
+Serviço SVM NFS não configurado (não aplicável)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informação
+
+
+
+ a| 
+VM de armazenamento interrompida (ocumEvtVserverDown)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Aviso
+
+
+
+ a| 
+Servidor AV muito ocupado para aceitar nova solicitação de verificação *(nbladeVscanConnBackPressure)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Erro
+
+
+
+ a| 
+Nenhuma conexão de servidor AV para verificação de vírus *(nbladeVscanNoScannerConn)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Nenhum servidor AV registrado *(nbladeVscanNoRegdScanner)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Erro
+
+
+
+ a| 
+Nenhuma conexão de servidor AV responsiva *(nbladeVscanConnInactive)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informação
+
+
+
+ a| 
+Tentativa de usuário não autorizado no servidor AV *(nbladeVscanBadUserPrivAccess)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Erro
+
+
+
+ a| 
+Vírus encontrado pelo servidor AV *(nbladeVscanVirusDetected)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Erro
+
+|===
+
+
+== Área de impacto: configuração
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+SVM descoberto (não aplicável)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informação
+
+
+
+ a| 
+SVM excluído (não aplicável)
+ a| 
+Evento
+ a| 
+Conjunto
+ a| 
+Informação
+
+
+
+ a| 
+SVM renomeado (não aplicável)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informação
+
+|===
+
+
+== Área de impacto: desempenho
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+Limite crítico de IOPS de SVM violado (ocumSvmIopsIncident)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de aviso de IOPS SVM violado (ocumSvmIopsWarning)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Aviso
+
+
+
+ a| 
+Limite crítico de SVM MB/s violado (ocumSvmMbpsIncident)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de alerta de SVM MB/s violado (ocumSvmMbpsWarning)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Aviso
+
+
+
+ a| 
+Limite crítico de latência de SVM violado (ocumSvmLatencyIncident)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de aviso de latência SVM violado (ocumSvmLatencyWarning)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Aviso
+
+|===
+
+
+== Área de impacto: segurança
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+Log de auditoria desabilitado (ocumVserverAuditLogDisabled)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Aviso
+
+
+
+ a| 
+Banner de login desabilitado (ocumVserverLoginBannerDisabled)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Aviso
+
+
+
+ a| 
+SSH está usando cifras inseguras (ocumVserverSSHInsecure)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Aviso
+
+
+
+ a| 
+Banner de login alterado (ocumVserverLoginBannerChanged)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Aviso
+
+
+
+ a| 
+O monitoramento anti-ransomware da VM de armazenamento está desabilitado (antiRansomwareSvmStateDisabled)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Aviso
+
+
+
+ a| 
+O monitoramento anti-ransomware da VM de armazenamento está habilitado (modo de aprendizagem) (antiRansomwareSvmStateDryrun)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informação
+
+
+
+ a| 
+VM de armazenamento adequada para monitoramento anti-ransomware (modo de aprendizagem) (ocumEvtSvmArwCandidate)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informação
+
+|===

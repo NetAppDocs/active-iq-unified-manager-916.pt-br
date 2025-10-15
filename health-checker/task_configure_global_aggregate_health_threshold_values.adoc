@@ -1,0 +1,38 @@
+---
+permalink: health-checker/task_configure_global_aggregate_health_threshold_values.html 
+sidebar: sidebar 
+keywords: configure, global, aggregate, health, threshold values 
+summary: Você pode configurar valores de limite de integridade global para todos os agregados para rastrear qualquer violação de limite.  Eventos apropriados são gerados para violações de limites e você pode tomar medidas preventivas com base nesses eventos.  Você pode configurar os valores globais com base nas configurações de práticas recomendadas para limites que se aplicam a todos os agregados monitorados. 
+---
+= Configurar valores de limite de integridade agregada global
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar valores de limite de integridade global para todos os agregados para rastrear qualquer violação de limite.  Eventos apropriados são gerados para violações de limites e você pode tomar medidas preventivas com base nesses eventos.  Você pode configurar os valores globais com base nas configurações de práticas recomendadas para limites que se aplicam a todos os agregados monitorados.
+
+.Antes de começar
+Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+Quando você configura as opções globalmente, os valores padrão dos objetos são modificados.  Entretanto, se os valores padrão forem alterados no nível do objeto, os valores globais não serão modificados.
+
+As opções de limite têm valores padrão para melhor monitoramento; no entanto, você pode alterar os valores para atender aos requisitos do seu ambiente.
+
+Quando o crescimento automático é habilitado em volumes que residem no agregado, os limites de capacidade do agregado são considerados violados com base no tamanho máximo do volume definido pelo crescimento automático, não com base no tamanho do volume original.
+
+[NOTE]
+====
+Os valores limite de integridade não são aplicáveis ao agregado raiz do nó.
+
+====
+.Passos
+. No painel de navegação esquerdo, clique em *Limites de evento* > *Agregar*.
+. Configure os valores de limite apropriados para capacidade, crescimento e cópias de instantâneo.
+. Clique em *Salvar*.
+
+
+*Informações relacionadas*
+
+link:../config/task_add_users.html["Adicionando usuários"]

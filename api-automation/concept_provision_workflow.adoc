@@ -1,0 +1,37 @@
+---
+permalink: api-automation/concept_provision_workflow.html 
+sidebar: sidebar 
+keywords: workflow, workload, management 
+summary: 'Usando o Active IQ Unified Manager, você pode provisionar e modificar cargas de trabalho de armazenamento (LUNs, compartilhamentos de arquivos NFS e compartilhamentos CIFS).  O provisionamento consiste em várias etapas, desde a criação da Máquina Virtual de Armazenamento (SVM) até a aplicação de Políticas de Nível de Serviço de Desempenho e Eficiência de Armazenamento nas cargas de trabalho de armazenamento.  A modificação de cargas de trabalho consiste nas etapas para modificar parâmetros específicos e habilitar recursos adicionais neles.' 
+---
+= Fluxos de trabalho de API para gerenciamento de carga de trabalho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Usando o Active IQ Unified Manager, você pode provisionar e modificar cargas de trabalho de armazenamento (LUNs, compartilhamentos de arquivos NFS e compartilhamentos CIFS).  O provisionamento consiste em várias etapas, desde a criação da Máquina Virtual de Armazenamento (SVM) até a aplicação de Políticas de Nível de Serviço de Desempenho e Eficiência de Armazenamento nas cargas de trabalho de armazenamento.  A modificação de cargas de trabalho consiste nas etapas para modificar parâmetros específicos e habilitar recursos adicionais neles.
+
+Os seguintes fluxos de trabalho são descritos:
+
+* Fluxo de trabalho para provisionamento de máquinas virtuais de armazenamento (SVMs) no Unified Manager.
++
+[NOTE]
+====
+esse fluxo de trabalho deve ser executado antes do provisionamento de LUNs ou compartilhamentos de arquivos no Unified Manager.
+
+====
+* Provisionando compartilhamentos de arquivos.
+* Provisionando LUNs.
+* Modificando LUNs e compartilhamentos de arquivos (usando o exemplo para atualizar o parâmetro Nível de Serviço de Desempenho para as cargas de trabalho de armazenamento).
+* Modificando um compartilhamento de arquivo NFS para suportar o protocolo CIFS
+* Modificando cargas de trabalho para atualizar QoS para AQoS
+
+
+[NOTE]
+====
+Para cada fluxo de trabalho de provisionamento (LUN e compartilhamentos de arquivos), certifique-se de ter concluído o fluxo de trabalho para verificar as SVMs nos clusters.
+
+====
+Você também deve ler as recomendações e limitações antes de usar cada API nos fluxos de trabalho.  Os detalhes relevantes das APIs estão disponíveis em suas seções individuais listadas nos conceitos e referências relacionados.

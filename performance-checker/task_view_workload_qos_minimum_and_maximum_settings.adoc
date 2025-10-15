@@ -1,0 +1,71 @@
+---
+permalink: performance-checker/task_view_workload_qos_minimum_and_maximum_settings.html 
+sidebar: sidebar 
+keywords: view, workload, qos, minimum, maximum, settings, performance, explorer 
+summary: 'Você pode visualizar as configurações de política de qualidade de serviço (QoS) definidas ONTAP em um volume ou LUN nos gráficos do Performance Explorer.  Uma configuração de taxa de transferência máxima limita o impacto de cargas de trabalho concorrentes nos recursos do sistema.  Uma configuração mínima de taxa de transferência garante que uma carga de trabalho crítica atinja metas mínimas de taxa de transferência, independentemente da demanda de cargas de trabalho concorrentes.' 
+---
+= Visualize as configurações mínimas e máximas de QoS da carga de trabalho no Performance Explorer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode visualizar as configurações de política de qualidade de serviço (QoS) definidas ONTAP em um volume ou LUN nos gráficos do Performance Explorer.  Uma configuração de taxa de transferência máxima limita o impacto de cargas de trabalho concorrentes nos recursos do sistema.  Uma configuração mínima de taxa de transferência garante que uma carga de trabalho crítica atinja metas mínimas de taxa de transferência, independentemente da demanda de cargas de trabalho concorrentes.
+
+As configurações de IOPS e MB/s de taxa de transferência de QoS "mínimo`" e "máximo`" são exibidas nos gráficos de contadores somente se tiverem sido configuradas no ONTAP.  As configurações mínimas de taxa de transferência estão disponíveis somente em sistemas que executam o software ONTAP 9.2 ou posterior, somente em sistemas AFF , e podem ser definidas somente para IOPS no momento.
+
+Políticas de QoS adaptáveis ​​estão disponíveis a partir do ONTAP 9.3 e são expressas usando IOPS/TB em vez de IOPS.  Essas políticas ajustam automaticamente o valor da política de QoS com base no tamanho do volume, por carga de trabalho, mantendo assim a proporção de IOPS para terabytes conforme o tamanho do volume muda.  Você pode aplicar um grupo de políticas de QoS adaptável somente a volumes.  A terminologia de QoS "`esperado`" e "pico`" é usada para políticas de QoS adaptáveis ​​em vez de mínimo e máximo.
+
+O Unified Manager gera eventos de aviso para violações de política de QoS quando a taxa de transferência de carga de trabalho excede a configuração máxima de política de QoS definida durante cada período de coleta de desempenho da hora anterior.  A taxa de transferência da carga de trabalho pode exceder o limite de QoS por apenas um curto período de tempo durante cada período de coleta, mas o Unified Manager exibe a taxa de transferência "média" durante o período de coleta no gráfico.  Por esse motivo, você pode ver eventos de QoS mesmo que a taxa de transferência de uma carga de trabalho não tenha ultrapassado o limite da política mostrado no gráfico.
+
+.Passos
+. Na página *Performance Explorer* do volume ou LUN selecionado, execute as seguintes ações para visualizar as configurações de teto e piso de QoS:
++
+|===
+| Se você quiser... | Faça isso... 
+
+
+ a| 
+Veja o teto de IOPS (o QoS máximo)
+ a| 
+No gráfico Total ou Detalhamento do IOPS, clique em *Visualização com Zoom*.
+
+
+
+ a| 
+Veja o teto de MB/s (QoS máximo)
+ a| 
+No gráfico Total ou Detalhamento de MB/s, clique em *Visualização com Zoom*.
+
+
+
+ a| 
+Veja o piso IOPS (o QoS mínimo)
+ a| 
+No gráfico Total ou Detalhamento do IOPS, clique em *Visualização com Zoom*.
+
+
+
+ a| 
+Veja o teto de IOPS/TB (o pico de QoS)
+ a| 
+Para volumes, no gráfico IOPS/TB, clique em *Visualização com zoom*.
+
+
+
+ a| 
+Visualizar o piso IOPS/TB (a QoS esperada)
+ a| 
+Para volumes, no gráfico IOPS/TB, clique em *Visualização com zoom*.
+
+|===
++
+A linha tracejada horizontal indica o valor máximo ou mínimo de taxa de transferência definido no ONTAP.  Você também pode ver quando as alterações nos valores de QoS foram implementadas.
+
+. Para visualizar os valores específicos de IOPS e MB/s em comparação com a configuração de QoS, mova o cursor para a área do gráfico para ver a janela pop-up.
+
+
+Se você notar que determinados volumes ou LUNs têm IOPS ou MB/s muito altos e estão sobrecarregando os recursos do sistema, você pode usar o Gerenciador do Sistema ou a CLI do ONTAP para ajustar as configurações de QoS para que essas cargas de trabalho não afetem o desempenho de outras cargas de trabalho.
+
+Para obter mais informações sobre como ajustar as configurações de QoS, consulte http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-perf-mon/home.html["Visão geral da gestão de desempenho"]

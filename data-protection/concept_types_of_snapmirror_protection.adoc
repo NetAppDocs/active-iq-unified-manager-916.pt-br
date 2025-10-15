@@ -1,0 +1,85 @@
+---
+permalink: data-protection/concept_types_of_snapmirror_protection.html 
+sidebar: sidebar 
+keywords: types, snapmirror, protection, consistency group, SnapMirror active sync 
+summary: Dependendo da implantação da sua topologia de armazenamento de dados, o Unified Manager permite que você configure vários tipos de relacionamentos de proteção do SnapMirror .  Todas as variações da proteção SnapMirror oferecem proteção de recuperação de desastres contra failover, mas oferecem diferentes recursos em desempenho, flexibilidade de versão e proteção de múltiplas cópias de backup. 
+---
+= Tipos de proteção SnapMirror
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dependendo da implantação da sua topologia de armazenamento de dados, o Unified Manager permite que você configure vários tipos de relacionamentos de proteção do SnapMirror .  Todas as variações da proteção SnapMirror oferecem proteção de recuperação de desastres contra failover, mas oferecem diferentes recursos em desempenho, flexibilidade de versão e proteção de múltiplas cópias de backup.
+
+
+
+== Relacionamentos de proteção assíncronos tradicionais do SnapMirror
+
+A proteção assíncrona tradicional do SnapMirror fornece proteção de espelhamento de replicação de bloco entre volumes de origem e destino.
+
+Em relacionamentos SnapMirror tradicionais, as operações de espelhamento são executadas mais rapidamente do que em relacionamentos SnapMirror alternativos porque a operação de espelhamento é baseada na replicação de bloco.  No entanto, a proteção tradicional do SnapMirror exige que o volume de destino seja executado na mesma versão secundária ou posterior do software ONTAP que o volume de origem na mesma versão principal (por exemplo, versão 8.x para 8.x ou 9.x para 9.x).  A replicação de uma origem 9.1 para um destino 9.0 não é suportada porque o destino está executando uma versão principal anterior.
+
+
+
+== Proteção assíncrona SnapMirror com replicação flexível de versão
+
+A proteção assíncrona do SnapMirror com replicação flexível de versão fornece proteção de espelhamento de replicação lógica entre volumes de origem e destino, mesmo se esses volumes estiverem sendo executados em versões diferentes do software ONTAP 8.3 ou posterior (por exemplo, versão 8.3 para 8.3.1, ou 8.3 para 9.1, ou 9.2.2 para 9.2).
+
+Em relacionamentos SnapMirror com replicação flexível de versão, as operações de espelhamento não são executadas tão rapidamente quanto em relacionamentos SnapMirror tradicionais.
+
+Devido à execução mais lenta, o SnapMirror com proteção de replicação flexível de versão não é adequado para implementação em nenhuma das seguintes circunstâncias:
+
+* O objeto de origem contém mais de 10 milhões de arquivos a serem protegidos.
+* O objetivo do ponto de recuperação para os dados protegidos é de duas horas ou menos.  (Ou seja, o destino deve sempre conter dados espelhados e recuperáveis que não sejam mais de duas horas mais antigos que os dados na origem.)
+
+
+Em qualquer uma das circunstâncias listadas, é necessária a execução mais rápida baseada em replicação de bloco da proteção padrão do SnapMirror .
+
+
+
+== Proteção assíncrona SnapMirror com replicação flexível de versão e opção de backup
+
+A proteção assíncrona SnapMirror com replicação flexível de versão e opção de backup fornece proteção de espelhamento entre volumes de origem e destino e a capacidade de armazenar várias cópias dos dados espelhados no destino.
+
+O administrador de armazenamento pode especificar quais cópias do Snapshot são espelhadas da origem para o destino e também pode especificar por quanto tempo essas cópias serão mantidas no destino, mesmo que sejam excluídas na origem.
+
+Em relacionamentos SnapMirror com replicação flexível de versão e opção de backup, as operações de espelhamento não são executadas tão rapidamente quanto em relacionamentos SnapMirror tradicionais.
+
+
+
+== SnapMirror Unified Replication (espelho e cofre)
+
+A replicação unificada do SnapMirror permite que você configure a recuperação de desastres e o arquivamento no mesmo volume de destino.  Assim como no SnapMirror, a proteção de dados unificada executa uma transferência de linha de base na primeira vez que você a invoca.  Uma transferência de linha de base sob a política de proteção de dados unificada padrão "`MirrorAndVault`" faz uma cópia instantânea do volume de origem e, em seguida, transfere essa cópia e os blocos de dados aos quais ela faz referência para o volume de destino.  Assim como o SnapVault, a proteção de dados unificada não inclui cópias mais antigas do Snapshot na linha de base.
+
+
+
+== Proteção síncrona SnapMirror com sincronização estrita
+
+A proteção síncrona do SnapMirror com sincronização "estrita" garante que os volumes primário e secundário sejam sempre uma cópia verdadeira um do outro.  Se ocorrer uma falha de replicação ao tentar gravar dados no volume secundário, a E/S do cliente para o volume primário será interrompida.
+
+
+
+== Proteção síncrona SnapMirror com sincronização regular
+
+A proteção síncrona do SnapMirror com sincronização "regular" não exige que o volume primário e o secundário sejam sempre uma cópia verdadeira um do outro, garantindo assim a disponibilidade do volume primário.  Se ocorrer uma falha de replicação ao tentar gravar dados no volume secundário, os volumes primário e secundário ficarão fora de sincronia e a E/S do cliente continuará no volume primário.
+
+[NOTE]
+====
+O botão Restaurar e os botões Operação de relacionamento não estão disponíveis ao monitorar relacionamentos de proteção síncronos na exibição Integridade: Todos os volumes ou na página Detalhes do volume/integridade.
+
+====
+
+
+== Sincronização ativa do SnapMirror
+
+O recurso de sincronização ativa do SnapMirror está disponível com o ONTAP 9.8 e versões posteriores, e você pode usá-lo para proteger aplicativos com LUNs, permitindo que os aplicativos façam failover de forma transparente, garantindo a continuidade dos negócios em caso de desastre.
+
+Ele permite que você descubra e monitore os relacionamentos síncronos do SnapMirror para Grupos de Consistência (CGs) disponíveis em clusters e máquinas virtuais de armazenamento do Unified Manager.  A sincronização ativa do SnapMirror é suportada em clusters AFF ou clusters All SAN Array (ASA), onde os clusters primário e secundário podem ser AFF ou ASA.  A sincronização ativa do SnapMirror protege aplicativos com LUNs iSCSI ou FCP.
+
+Ao visualizar os volumes e LUNs protegidos pelo relacionamento de sincronização ativa do SnapMirror , você pode obter uma visão unificada dos relacionamentos de proteção, grupos de consistência no inventário de volume, visualizar a topologia de proteção para relacionamentos de grupo de consistência e visualizar dados históricos para relacionamentos de grupo de consistência de até um ano.  Você também pode baixar o relatório.  Você também pode visualizar o resumo dos relacionamentos do Grupo de Consistência, pesquisar suporte para relacionamentos do Grupo de Consistência e obter informações sobre volumes protegidos pelo Grupo de Consistência.
+
+Na página Relacionamentos, você também pode classificar, filtrar e estender a proteção nos objetos de armazenamento de origem e destino e seus relacionamentos protegidos pelo Grupo de Consistência.
+
+Para saber mais sobre a sincronização ativa do SnapMirror , consultelink:https://docs.netapp.com/us-en/ontap/smbc/index.html["Documentação do ONTAP 9 para sincronização ativa do Snapmirror (anteriormente SM-BC)"] .

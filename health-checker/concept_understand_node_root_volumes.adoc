@@ -1,0 +1,19 @@
+---
+permalink: health-checker/concept_understand_node_root_volumes.html 
+sidebar: sidebar 
+keywords: understand, node, root, volumes 
+summary: Você pode monitorar o volume raiz do nó usando o Unified Manager.  A melhor prática é que o volume raiz do nó tenha capacidade suficiente para evitar que o nó fique inativo. 
+---
+= Entenda os volumes raiz do nó
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode monitorar o volume raiz do nó usando o Unified Manager.  A melhor prática é que o volume raiz do nó tenha capacidade suficiente para evitar que o nó fique inativo.
+
+Quando a capacidade utilizada do volume raiz do nó excede 80% da capacidade total do volume raiz do nó, o evento Espaço de volume raiz do nó quase cheio é gerado.  Você pode configurar um alerta para o evento para receber uma notificação.  Você pode tomar as medidas apropriadas para evitar que o nó fique inativo usando o ONTAP System Manager ou o ONTAP CLI.
+
+
+NOTE: A funcionalidade de monitoramento de volumes raiz de nós não estará disponível se os clusters executarem o ONTAP versão 9.14.1 ou posterior.

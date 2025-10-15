@@ -1,0 +1,37 @@
+---
+permalink: health-checker/task_determine_if_volume_is_offline_because_of_broken_disks.html 
+sidebar: sidebar 
+keywords: determine, volume, offline, broken disks, aggregate 
+summary: Você pode usar a interface da Web do Unified Manager para confirmar ou eliminar a possibilidade de um volume estar offline porque problemas no disco RAID deixaram seu agregado de host offline. 
+---
+= Determinar se um volume está offline devido a discos quebrados em um agregado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a interface da Web do Unified Manager para confirmar ou eliminar a possibilidade de um volume estar offline porque problemas no disco RAID deixaram seu agregado de host offline.
+
+.Antes de começar
+Você deve ter a função de Operador, Administrador de Aplicativos ou Administrador de Armazenamento.
+
+Para determinar se a condição do volume offline é causada por problemas no disco RAID que estão deixando o agregado de hospedagem offline, execute as seguintes ações:
+
+.Passos
+. Localize e clique no link de hipertexto exibido em Agregado no painel *Dispositivos relacionados* da página de detalhes *Volume / Saúde*.
++
+A página Detalhes do agregado/saúde exibe o status online ou offline do agregado de hospedagem.  Se o status agregado for online, os problemas no disco RAID não serão a causa do volume estar offline.
+
+. Se o status agregado for offline, clique em *Informações do disco* e procure por eventos de disco quebrado na lista *Eventos* na guia *Informações do disco*.
+. Para identificar melhor os discos quebrados, clique no link de hipertexto exibido em Nó no painel *Dispositivos relacionados*.
++
+A página Detalhes do Cluster/Saúde é exibida.
+
+. Clique em *Discos* e selecione *Quebrado* no painel *Filtros* para listar todos os discos em estado quebrado.
++
+Se os discos no estado quebrado causaram o estado offline do agregado do host, o nome do agregado será exibido na coluna Agregado impactado.
+
+
+
+Após confirmar que a condição de volume offline é causada por discos RAID quebrados e o consequente agregado de host offline, entre em contato com o administrador ou operador apropriado para substituir manualmente os discos quebrados e colocar o agregado online novamente.

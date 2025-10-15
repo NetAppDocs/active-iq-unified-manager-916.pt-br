@@ -1,0 +1,42 @@
+---
+permalink: data-protection/task_quiesce_protection_relationship_from_volume_relationships.html 
+sidebar: sidebar 
+keywords: quiesce, protection, relationship, volume, relationships page 
+summary: Na página Relacionamentos de Volume, você pode desativar um relacionamento de proteção para impedir temporariamente que transferências de dados ocorram.  Você pode desativar um relacionamento quando quiser criar uma cópia do Snapshot de um volume de destino do SnapMirror que contém um banco de dados e quiser garantir que seu conteúdo esteja estável durante a operação de cópia do Snapshot. 
+---
+= Desative um relacionamento de proteção na página Relacionamentos de Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Na página Relacionamentos de Volume, você pode desativar um relacionamento de proteção para impedir temporariamente que transferências de dados ocorram.  Você pode desativar um relacionamento quando quiser criar uma cópia do Snapshot de um volume de destino do SnapMirror que contém um banco de dados e quiser garantir que seu conteúdo esteja estável durante a operação de cópia do Snapshot.
+
+.Antes de começar
+* Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+* Você deve ter configurado a Automação de Fluxo de Trabalho.
+
+
+A ação de inatividade não é exibida nas seguintes instâncias:
+
+* Se as configurações do RBAC não permitirem esta ação; por exemplo, se você tiver apenas privilégios de operador
+* Quando o ID do volume é desconhecido; por exemplo, quando você tem um relacionamento entre clusters e o cluster de destino ainda não foi descoberto
+* Quando você não emparelhou o Workflow Automation e o Unified Manager
+
+
+.Passos
+. Para desativar transferências para um ou mais relacionamentos de proteção, na página *Relacionamentos de volume*, selecione um ou mais volumes e, na barra de ferramentas, clique em *Desativar*.
++
+A caixa de diálogo Desativar é exibida.
+
+. Clique em *Continuar*.
++
+O status do trabalho de inatividade é exibido na parte superior da página de detalhes de Volume/Saúde, junto com um link para os detalhes do trabalho.
+
+. Clique no link *Ver detalhes* para ir para a página de detalhes do *Trabalho* para obter detalhes adicionais e o andamento do trabalho.
+. *Opcional:* Clique na seta *Voltar* no seu navegador para retornar à página *Relacionamentos de volume*.
++
+O trabalho de inatividade é concluído quando todas as tarefas são concluídas com sucesso.
+
+

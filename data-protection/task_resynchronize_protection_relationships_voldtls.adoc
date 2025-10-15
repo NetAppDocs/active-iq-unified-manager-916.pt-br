@@ -1,0 +1,53 @@
+---
+permalink: data-protection/task_resynchronize_protection_relationships_voldtls.html 
+sidebar: sidebar 
+keywords: resynchronize, protection, relationships, volume, health details page 
+summary: Você pode ressincronizar dados em um relacionamento SnapMirror ou SnapVault que foi quebrado e então o destino foi transformado em leitura/gravação para que os dados na origem correspondam aos dados no destino.  Você também pode ressincronizar quando uma cópia comum necessária do Snapshot no volume de origem for excluída, causando falha nas atualizações do SnapMirror ou SnapVault . 
+---
+= Ressincronizar relacionamentos de proteção na página de detalhes de Volume/Saúde
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode ressincronizar dados em um relacionamento SnapMirror ou SnapVault que foi quebrado e então o destino foi transformado em leitura/gravação para que os dados na origem correspondam aos dados no destino.  Você também pode ressincronizar quando uma cópia comum necessária do Snapshot no volume de origem for excluída, causando falha nas atualizações do SnapMirror ou SnapVault .
+
+.Antes de começar
+* Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+* Você deve ter configurado o OnCommand Workflow Automation.
+
+
+.Passos
+. Na guia *Proteção* da página de detalhes *Volume / Saúde*, localize na topologia o relacionamento de proteção que você deseja ressincronizar e clique com o botão direito do mouse.
+. Selecione *Ressincronizar* no menu.
++
+Como alternativa, no menu *Ações*, selecione *Relacionamento* > *Ressincronizar* para ressincronizar o relacionamento cujos detalhes você está visualizando no momento.
+
++
+A caixa de diálogo Ressincronizar é exibida.
+
+. Na aba *Opções de ressincronização*, selecione uma prioridade de transferência e a taxa máxima de transferência.
+. Clique em *Cópias de instantâneo de origem*; em seguida, na coluna *Cópia de instantâneo*, clique em *Padrão*.
++
+A caixa de diálogo Selecionar cópia do instantâneo de origem é exibida.
+
+. Se você quiser especificar uma cópia de Snapshot existente em vez de transferir a cópia de Snapshot padrão, clique em *Cópia de Snapshot existente* e selecione uma cópia de Snapshot na lista.
+. Clique em *Enviar*.
++
+Você retornará à caixa de diálogo Ressincronizar.
+
+. Se você selecionou mais de uma fonte para ressincronizar, clique em *Padrão* para a próxima fonte para a qual deseja especificar uma cópia de Snapshot existente.
+. Clique em *Enviar* para iniciar o trabalho de ressincronização.
++
+O trabalho de ressincronização é iniciado, você retorna à página de detalhes de Volume/Saúde e um link de trabalhos é exibido na parte superior da página.
+
+. *Opcional:* Clique em *Exibir trabalhos* na página *Detalhes do volume/saúde* para rastrear o status de cada trabalho de ressincronização.
++
+Uma lista filtrada de trabalhos é exibida.
+
+. *Opcional:* Clique na seta *Voltar* no seu navegador para retornar à página de detalhes *Volume / Saúde*.
++
+O trabalho de ressincronização é concluído quando todas as tarefas são concluídas com sucesso.
+
+

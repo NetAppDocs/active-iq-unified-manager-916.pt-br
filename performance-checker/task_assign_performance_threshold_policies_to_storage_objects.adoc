@@ -1,0 +1,78 @@
+---
+permalink: performance-checker/task_assign_performance_threshold_policies_to_storage_objects.html 
+sidebar: sidebar 
+keywords: assign, performance, threshold, policies, storage, objects 
+summary: Atribua uma política de limite de desempenho definida pelo usuário a um objeto de armazenamento para que o Unified Manager relate um evento se o valor do contador de desempenho exceder a configuração da política. 
+---
+= Atribuir políticas de limite de desempenho a objetos de armazenamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Atribua uma política de limite de desempenho definida pelo usuário a um objeto de armazenamento para que o Unified Manager relate um evento se o valor do contador de desempenho exceder a configuração da política.
+
+.Antes de começar
+Você deve ter a função de Administrador do Aplicativo.
+
+A política ou políticas de limite de desempenho que você deseja aplicar ao objeto devem existir.
+
+Você pode aplicar apenas uma política de desempenho por vez a um objeto ou a um grupo de objetos.
+
+Você pode atribuir no máximo três políticas de limite a cada objeto de armazenamento.  Ao atribuir políticas a vários objetos, se algum dos objetos já tiver o número máximo de políticas atribuídas, o Unified Manager executará as seguintes ações:
+
+* Aplica a política a todos os objetos selecionados que não atingiram seu limite máximo
+* Ignora os objetos que atingiram o número máximo de políticas
+* Exibe uma mensagem informando que a política não foi atribuída a todos os objetos
+
+
+.Passos
+. Na página Inventário de desempenho de qualquer objeto de armazenamento, selecione o objeto ou objetos aos quais você deseja atribuir uma política de limite:
++
+|===
+| Para atribuir limites a... | Clique... 
+
+
+ a| 
+Um único objeto
+ a| 
+A caixa de seleção à esquerda desse objeto.
+
+
+
+ a| 
+Vários objetos
+ a| 
+A caixa de seleção à esquerda de cada objeto.
+
+
+
+ a| 
+Todos os objetos na página
+ a| 
+Oimage:../media/select_dropdown_65_png.gif["selecione o ícone suspenso"] caixa suspensa e escolha *Selecionar todos os objetos nesta página*.
+
+
+
+ a| 
+Todos os objetos do mesmo tipo
+ a| 
+Oimage:../media/select_dropdown_65_png.gif["selecione o ícone suspenso"] caixa suspensa e escolha *Selecionar todos os objetos*.
+
+|===
++
+Você pode usar a funcionalidade de classificação e filtragem para refinar a lista de objetos na página de inventário para facilitar a aplicação de políticas de limite a muitos objetos.
+
+. Faça sua seleção e clique em *Atribuir política de limite de desempenho*.
++
+A página Atribuir política de limite de desempenho é exibida, mostrando uma lista de políticas de limite existentes para esse tipo específico de objeto de armazenamento.
+
+. Clique em cada política para exibir os detalhes das configurações de limite de desempenho para verificar se você selecionou a política de limite correta.
+. Depois de selecionar a política de limite apropriada, clique em *Atribuir política*.
++
+Uma mensagem de sucesso no topo da página confirma que a política de limite foi atribuída ao objeto ou objetos e fornece um link para a página Alertas para que você possa configurar as definições de alerta para este objeto e política.
+
+
+
+Se você quiser que alertas sejam enviados por e-mail ou como uma interceptação SNMP para notificá-lo de que um evento de desempenho específico foi gerado, você deve configurar as definições de alerta na página Configuração de alerta.

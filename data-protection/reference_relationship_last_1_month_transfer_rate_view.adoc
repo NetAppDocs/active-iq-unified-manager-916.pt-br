@@ -1,0 +1,37 @@
+---
+permalink: data-protection/reference_relationship_last_1_month_transfer_rate_view.html 
+sidebar: sidebar 
+keywords: relationship, 1 month, transfer rate, view 
+summary: 'A exibição Relacionamento: Taxa de transferência do último mês permite que você analise a quantidade de volume de dados que é transferida diariamente para volumes em relacionamentos assíncronos.  Esta página também fornece detalhes sobre transferências diárias e o tempo necessário para concluir a operação de transferência para volumes e VMs de armazenamento.' 
+---
+= Relacionamento: Visualização da taxa de transferência do último mês
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A exibição Relacionamento: Taxa de transferência do último mês permite que você analise a quantidade de volume de dados que é transferida diariamente para volumes em relacionamentos assíncronos.  Esta página também fornece detalhes sobre transferências diárias e o tempo necessário para concluir a operação de transferência para volumes e VMs de armazenamento.
+
+Os controles na parte superior da página permitem que você execute pesquisas para localizar objetos específicos, crie e aplique filtros para restringir a lista de dados exibidos, adicione/remova/reordene colunas na página e exporte os dados na página para um arquivo .csv, .pdf ou .xlsx.  Depois de personalizar a página, você pode salvar os resultados como uma visualização personalizada e então agendar um relatório desses dados para ser gerado e enviado por e-mail regularmente.  Por exemplo, se você quiser visualizar relacionamentos de volume, você pode acessar o menu *Armazenamento* > *Volumes* > *Relacionamento: Taxa de transferência do último mês* ou acessar o menu *Proteção* > *Relacionamentos* > *Relacionamentos: Taxa de transferência do último mês* e usar o *Filtro* para visualizar somente dados de volumes.
+
+* *Tamanho total da transferência*
++
+Exibe o tamanho total da transferência de volume em gigabytes.
+
+* *Dia*
++
+Exibe o dia em que a transferência de volume foi iniciada.
+
+* *Tempo Final*
++
+Exibe a hora de término da transferência de volume com data.
+
+
+
+*Informações relacionadas*
+
+* Para obter informações sobre a visualização *Relacionamento: MetroCluster*, consultelink:../storage-mgmt/task_monitor_metrocluster_configurations.html["Monitoramento das configurações do MetroCluster"] .
+* Para obter informações sobre a visualização *Relacionamento: Status de transferência do último mês*, consultelink:../data-protection/reference_relationship_last_1_month_transfer_status_view.html["Relacionamento: Visualização do status de transferência do último mês"] .
+* Para obter informações sobre a visualização *Relacionamento: Todos os relacionamentos*, consultelink:../data-protection/reference_relationship_last_1_month_transfer_rate_view.html["Relacionamento: Visualização da taxa de transferência do último mês"]
+

@@ -1,0 +1,46 @@
+---
+permalink: storage-mgmt/concept_provision_and_manage_workloads.html 
+sidebar: sidebar 
+keywords: provision, manage, workloads 
+summary: O recurso de gerenciamento ativo do Active IQ Unified Manager fornece níveis de serviço de desempenho, políticas de eficiência de armazenamento e APIs de provedores de armazenamento para provisionamento, monitoramento e gerenciamento de cargas de trabalho de armazenamento em um data center. 
+---
+= Provisionar e gerenciar cargas de trabalho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O recurso de gerenciamento ativo do Active IQ Unified Manager fornece níveis de serviço de desempenho, políticas de eficiência de armazenamento e APIs de provedores de armazenamento para provisionamento, monitoramento e gerenciamento de cargas de trabalho de armazenamento em um data center.
+
+[NOTE]
+====
+O Unified Manager fornece essa funcionalidade por padrão.  Você pode desativá-lo em *Gerenciamento de armazenamento* > *Configurações de recursos* se não planeja usar essa funcionalidade.
+
+====
+Quando ativado, você pode provisionar cargas de trabalho nos clusters ONTAP gerenciados pela sua instância do Unified Manager.  Você também pode atribuir políticas, como Níveis de Serviço de Desempenho e Políticas de Eficiência de Armazenamento nas cargas de trabalho e gerenciar seu ambiente de armazenamento com base nessas políticas.
+
+Este recurso habilita as seguintes funções:
+
+* Descoberta automática de cargas de trabalho de armazenamento nos clusters adicionados, permitindo fácil avaliação e implantação da carga de trabalho de armazenamento
+* Provisionamento de cargas de trabalho NAS com suporte aos protocolos NFS e CIFS
+* Provisionamento de cargas de trabalho SAN com suporte aos protocolos iSCSI e FCP
+* Suporte para protocolos NFS e CIFS no mesmo compartilhamento de arquivos
+* Gestão de Níveis de Serviço de Desempenho e Políticas de Eficiência de Armazenamento
+* Atribuição de níveis de serviço de desempenho e políticas de eficiência de armazenamento para cargas de trabalho de armazenamento
+
+
+As opções *Provisionamento*, *Armazenamento* > *Cargas de trabalho* e *Políticas* no painel esquerdo da interface do usuário permitem que você modifique várias configurações.
+
+Você pode executar as seguintes funções usando estas opções:
+
+* Visualize as cargas de trabalho de armazenamento na página *Armazenamento* > *Cargas de trabalho*
+* Crie cargas de trabalho de armazenamento na página Provisionar carga de trabalho
+* Crie e gerencie níveis de serviço de desempenho a partir de políticas
+* Crie e gerencie políticas de eficiência de armazenamento a partir de políticas
+* Atribuir políticas a cargas de trabalho de armazenamento na página Cargas de trabalho
+
+
+*Informações relacionadas*
+
+link:../config/concept_policy_based_storage_management.html["Gerenciamento de armazenamento baseado em políticas"]

@@ -1,0 +1,87 @@
+---
+permalink: storage-mgmt/reference_email_notification_format_page.html 
+sidebar: sidebar 
+keywords: email, notification, format, page 
+summary: 'A página Formato de notificação por e-mail exibe as regras do e-mail que é enviado a um usuário ou grupo de usuários quando há um problema relacionado à cota (limite flexível violado ou limite rígido atingido).' 
+---
+= Página Formato de Notificação por E-mail
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página Formato de notificação por e-mail exibe as regras do e-mail que é enviado a um usuário ou grupo de usuários quando há um problema relacionado à cota (limite flexível violado ou limite rígido atingido).
+
+A notificação por e-mail é enviada somente quando os seguintes eventos de cota de usuário ou grupo de usuários são gerados: Limite flexível de espaço em disco de cota de usuário ou grupo violado, Limite flexível de contagem de arquivos de cota de usuário ou grupo violado, Limite rígido de espaço em disco de cota de usuário ou grupo atingido ou Limite rígido de contagem de arquivos de cota de usuário ou grupo atingido.
+
+* *De*
++
+Exibe o endereço de e-mail de onde o e-mail é enviado, que você pode modificar.  Por padrão, este é o endereço de e-mail especificado na página Notificações.
+
+* *Assunto*
++
+Exibe o assunto do e-mail de notificação.
+
+* *Detalhes do e-mail*
++
+Exibe o texto do e-mail de notificação.  Você pode modificar o texto de acordo com suas necessidades.  Por exemplo, você pode fornecer informações relacionadas aos atributos de cota e reduzir o número de palavras-chave.  Entretanto, você não deve modificar as palavras-chave.
+
++
+Palavras-chave válidas são as seguintes:
+
++
+** $EVENT_NAME
++
+Especifica o nome do evento que causou a notificação por e-mail.
+
+** $QUOTA_TARGET
++
+Especifica a qtree ou volume no qual a cota é aplicável.
+
+** $QUOTA_USED_PERCENT
++
+Especifica a porcentagem do limite rígido do disco, limite flexível do disco, limite rígido do arquivo ou limite flexível do arquivo que é usado pelo usuário ou grupo de usuários.
+
+** $QUOTA_LIMIT
++
+Especifica o limite rígido do disco ou limite rígido do arquivo que é atingido pelo usuário ou grupo de usuários e um dos seguintes eventos é gerado:
+
++
+*** Limite máximo de espaço em disco de cota de usuário ou grupo atingido
+*** Limite de espaço em disco de cota de usuário ou grupo atingido
+*** Limite máximo de contagem de arquivos de cota de usuário ou grupo atingido
+*** Limite flexível de contagem de arquivos de cota de usuário ou grupo atingido
+
+
+** $QUOTA_USED
++
+Especifica o espaço em disco usado ou o número de arquivos criados pelo usuário ou grupo de usuários.
+
+** $QUOTA_USER
++
+Especifica o nome do usuário ou grupo de usuários.
+
+
+
+
+
+
+
+== Botões de comando
+
+Os botões de comando permitem que você visualize, salve ou cancele as alterações feitas no formato de notificação por e-mail:
+
+* *Prévia*
++
+Exibe uma prévia do e-mail de notificação.
+
+* *Restaurar para os padrões de fábrica*
++
+Permite restaurar o formato de notificação para os valores padrão de fábrica.
+
+* *Salvar*
++
+Salva as alterações feitas no formato de notificação.
+
+

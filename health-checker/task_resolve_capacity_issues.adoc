@@ -1,0 +1,41 @@
+---
+permalink: health-checker/task_resolve_capacity_issues.html 
+sidebar: sidebar 
+keywords: resolve, capacity issues 
+summary: Este fluxo de trabalho fornece um exemplo de como você pode resolver um problema de capacidade.  Neste cenário, você é um administrador ou operador e acessa a página do Painel do Gerenciador Unificado para verificar se algum dos objetos de armazenamento monitorados tem problemas de capacidade.  Você quer determinar a possível causa e solução do problema. 
+---
+= Resolver problemas de capacidade
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este fluxo de trabalho fornece um exemplo de como você pode resolver um problema de capacidade.  Neste cenário, você é um administrador ou operador e acessa a página Unified ManagerDashboard para verificar se algum dos objetos de armazenamento monitorados tem problemas de capacidade.  Você quer determinar a possível causa e solução do problema.
+
+.Antes de começar
+Você deve ter a função de Operador, Administrador de Aplicativos ou Administrador de Armazenamento.
+
+Na página Painel, procure por um evento de erro "`Volume Space Full`" no painel Capacidade, na lista suspensa de eventos.
+
+.Passos
+. No painel *Capacidade* da página *Painel*, clique no nome do evento de erro Espaço de Volume Cheio.
++
+A página Detalhes do evento para o erro é exibida.
+
+. Na página de detalhes do *Evento*, você pode executar uma ou mais das seguintes tarefas:
++
+** Revise a mensagem de erro no campo Causa e clique nas sugestões em Ações corretivas sugeridas para revisar as descrições de possíveis correções.
+** Clique no nome do objeto, neste caso um volume, no campo Origem para obter detalhes sobre o objeto.
+** Procure por notas que possam ter sido adicionadas sobre este evento.
+** Adicione uma nota ao evento.
+** Atribuir o evento a outro usuário.
+** Reconheça o evento.
+** Marque o evento como resolvido.
+
+
+
+
+*Informações relacionadas*
+
+link:../events/reference_event_details_page.html["Página de detalhes do evento"]

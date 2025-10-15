@@ -1,0 +1,71 @@
+---
+permalink: data-protection/reference_edit_relationship_dialog_box.html 
+sidebar: sidebar 
+keywords: edit, relationship, dialog box 
+summary: Você pode editar um relacionamento de proteção existente para alterar a taxa máxima de transferência, a política de proteção ou o cronograma de proteção. 
+---
+= Caixa de diálogo Editar relacionamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode editar um relacionamento de proteção existente para alterar a taxa máxima de transferência, a política de proteção ou o cronograma de proteção.
+
+
+
+== Informações de destino
+
+* *Grupo de Destinos*
++
+O nome do cluster de destino selecionado.
+
+* *Destino SVM*
++
+O nome do SVM selecionado
+
+* *Configurações de relacionamento*
++
+Permite que você especifique a taxa máxima de transferência, a política do SnapMirror e a programação que o relacionamento de proteção usa:
+
++
+** Taxa máxima de transferência
++
+Especifica a taxa máxima na qual os dados de base são transferidos entre clusters pela rede.  Quando selecionada, a largura de banda da rede é limitada ao valor especificado.  Você pode inserir um valor numérico e selecionar quilobytes por segundo (KBps), megabytes por segundo (MBps), gigabytes por segundo (GBps) ou terabytes por segundo (TBps).  A taxa máxima de transferência especificada deve ser maior que 1 KBps e menor que 4 TBps.  Se você optar por não usar uma taxa de transferência máxima, a transferência básica entre relacionamentos será ilimitada.  Se o cluster primário e o cluster secundário forem iguais, essa configuração será desabilitada.
+
+** Política do SnapMirror
++
+Especifica a política ONTAP SnapMirror para o relacionamento.  O padrão é DPDefault.
+
+** Criar política
++
+Inicia a caixa de diálogo Criar política do SnapMirror , que permite criar e usar uma nova política do SnapMirror .
+
+** Cronograma do SnapMirror
++
+Especifica a política ONTAP SnapMirror para o relacionamento.  Os horários disponíveis incluem Nenhum, 5 minutos, 8 horas, diário, por hora e semanal.  O padrão é Nenhum, indicando que nenhuma programação está associada ao relacionamento.  Relacionamentos sem agendamentos não têm valores de status de atraso, a menos que pertençam a um serviço de armazenamento.
+
+** Criar agendamento
++
+Inicia a caixa de diálogo Criar agendamento, que permite criar um novo agendamento do SnapMirror .
+
+
+
+
+
+
+
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes tarefas:
+
+* *Cancelar*
++
+Descarta as seleções e fecha a caixa de diálogo Configurar proteção.
+
+* *Enviar*
++
+Aplica suas seleções e fecha a caixa de diálogo Editar relacionamento.
+
+

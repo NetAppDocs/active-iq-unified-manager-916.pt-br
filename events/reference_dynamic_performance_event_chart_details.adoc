@@ -1,0 +1,68 @@
+---
+permalink: events/reference_dynamic_performance_event_chart_details.html 
+sidebar: sidebar 
+keywords: dynamic, performance, event, chart, details 
+summary: Para eventos de desempenho dinâmico, a seção Diagnóstico do Sistema da página Detalhes do Evento lista as principais cargas de trabalho com maior latência ou uso do componente do cluster que está em contenção.  As estatísticas de desempenho são baseadas no momento em que o evento de desempenho foi detectado até a última vez que o evento foi analisado.  Os gráficos também exibem estatísticas históricas de desempenho para o componente do cluster que está na disputa. 
+---
+= Detalhes do gráfico de eventos de desempenho dinâmico
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para eventos de desempenho dinâmico, a seção Diagnóstico do Sistema da página Detalhes do Evento lista as principais cargas de trabalho com maior latência ou uso do componente do cluster que está em contenção.
+
+As estatísticas de desempenho são baseadas no momento em que o evento de desempenho foi detectado até a última vez que o evento foi analisado.  Os gráficos também exibem estatísticas históricas de desempenho para o componente do cluster que está na disputa.
+
+Por exemplo, você pode identificar cargas de trabalho com alta utilização de um componente para determinar qual carga de trabalho mover para um componente menos utilizado.  Mover a carga de trabalho reduziria a quantidade de trabalho no componente atual, possivelmente tirando o componente da disputa.  No topo desta seção está o intervalo de data e hora em que um evento foi detectado e analisado pela última vez.  Para eventos ativos (novos ou reconhecidos), o último horário analisado é atualizado.
+
+Os gráficos de latência e atividade exibem os nomes das principais cargas de trabalho quando você passa o cursor sobre o gráfico.  Clicar no menu Tipo de carga de trabalho à direita do gráfico permite classificar as cargas de trabalho com base em sua função no evento, incluindo _tubarões_, _valentões_ ou _vítimas_, e exibe detalhes sobre sua latência e seu uso no componente do cluster em contenção.  Você pode comparar o valor real com o valor esperado para ver quando a carga de trabalho estava fora do intervalo esperado de latência ou uso.  Para obter informações, consultelink:..//performance-checker/concept_types_of_workloads_monitored_by_unified_manager.html["Tipos de cargas de trabalho monitoradas pelo Unified Manager"] .
+
+[NOTE]
+====
+Quando você classifica por desvio de pico na latência, as cargas de trabalho definidas pelo sistema não são exibidas na tabela, porque a latência se aplica somente às cargas de trabalho definidas pelo usuário.  Cargas de trabalho com valores de latência muito baixos não são exibidas na tabela.
+
+====
+Para obter mais informações sobre os limites de desempenho dinâmico, consultelink:../performance-checker/concept_analyze_events_from_dynamic_performance_thresholds.html["Analisando eventos a partir de limites de desempenho dinâmico"] .
+
+Para obter informações sobre como o Unified Manager classifica as cargas de trabalho e determina a ordem de classificação, consultelink:../performance-checker/concept_how_um_determines_performance_impact_for_incident.html["Como o Unified Manager determina o impacto no desempenho de um evento"] .
+
+Os dados nos gráficos mostram 24 horas de estatísticas de desempenho anteriores à última vez que o evento foi analisado.  Os valores reais e esperados para cada carga de trabalho são baseados no tempo em que a carga de trabalho esteve envolvida no evento.  Por exemplo, uma carga de trabalho pode se envolver em um evento depois que ele foi detectado, de modo que suas estatísticas de desempenho podem não corresponder aos valores no momento da detecção do evento.  Por padrão, as cargas de trabalho são classificadas por pico (maior) desvio na latência.
+
+[NOTE]
+====
+Como o Unified Manager retém no máximo 30 dias de dados históricos de desempenho e eventos de 5 minutos, se o evento tiver mais de 30 dias, nenhum dado de desempenho será exibido.
+
+====
+* *Coluna de classificação de carga de trabalho*
++
+** *Gráfico de latência*
++
+Exibe o impacto do evento na latência da carga de trabalho durante a última análise.
+
+** *Coluna de Uso de Componentes*
++
+Exibe detalhes sobre o uso da carga de trabalho do componente do cluster em contenção.  Nos gráficos, o uso real é uma linha azul.  Uma barra vermelha destaca a duração do evento, desde o momento da detecção até o último momento analisado. Para mais informações, consulte link:../performance-checker/reference_workload_performance_measurement_values.html["Valores de medição de desempenho da carga de trabalho"].
+
++
+[NOTE]
+====
+Para o componente de rede, como as estatísticas de desempenho da rede vêm da atividade fora do cluster, esta coluna não é exibida.
+
+====
+** *Uso de componentes*
++
+Exibe o histórico de utilização, em porcentagem, para os componentes de processamento de rede, processamento de dados e agregados ou o histórico de atividade, em porcentagem, para o componente de grupo de política de QoS.  O gráfico não é exibido para os componentes de rede ou interconexão.  Você pode apontar para as estatísticas para visualizar as estatísticas de uso em um momento específico.
+
+** *Histórico total de MB/s de gravação*
++
+Somente para o componente Recursos do MetroCluster , mostra a taxa de transferência total de gravação, em megabytes por segundo (MBps), para todas as cargas de trabalho de volume que estão sendo espelhadas para o cluster parceiro em uma configuração do MetroCluster .
+
+** *Histórico do Evento*
++
+Exibe linhas sombreadas em vermelho para indicar os eventos históricos do componente em disputa.  Para eventos obsoletos, o gráfico exibe eventos que ocorreram antes do evento selecionado ser detectado e depois que ele foi resolvido.
+
+
+
+

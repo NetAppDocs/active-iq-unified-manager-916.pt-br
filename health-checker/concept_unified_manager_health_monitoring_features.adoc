@@ -1,0 +1,51 @@
+---
+permalink: health-checker/concept_unified_manager_health_monitoring_features.html 
+sidebar: sidebar 
+keywords: unified manager, health, monitor, features 
+summary: O Unified Manager é criado em uma infraestrutura de servidor que oferece escalabilidade, capacidade de suporte e recursos aprimorados de monitoramento e notificação.  O Unified Manager oferece suporte ao monitoramento de sistemas que executam o software ONTAP . 
+---
+= Recursos de monitoramento de integridade do Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Unified Manager é criado em uma infraestrutura de servidor que oferece escalabilidade, capacidade de suporte e recursos aprimorados de monitoramento e notificação.  O Unified Manager oferece suporte ao monitoramento de sistemas que executam o software ONTAP .
+
+O Unified Manager inclui os seguintes recursos:
+
+* Descoberta, monitoramento e notificações para sistemas instalados com software ONTAP :
++
+** Objetos físicos: nós, discos, prateleiras de disco, pares SFO, portas e Flash Cache
+** Objetos lógicos: clusters, máquinas virtuais de armazenamento (SVMs), agregados, volumes, LUNs, namespaces, qtrees, LIFs, cópias de instantâneos, caminhos de junção, compartilhamentos NFS, compartilhamentos SMB, cotas de usuários e grupos, grupos de políticas de QoS e grupos de iniciadores
+** Protocolos: CIFS, NFS, FC, iSCSI, NVMe e FCoE
+** Eficiência de armazenamento: agregados SSD, agregados Flash Pool, agregados FabricPool , desduplicação e compactação
+** Proteção: relacionamentos SnapMirror (síncronos e assíncronos) e relacionamentos SnapVault
+
+
+* Visualizando o status de descoberta e monitoramento do cluster
+* MetroCluster sobre configurações de FC e IP: visualização e monitoramento da configuração, problemas e status de conectividade dos componentes do cluster.  Switches e pontes MetroCluster para configurações MetroCluster sobre FC
+* Alertas, eventos e infraestrutura de limite aprimorados
+* Autenticação LDAP, LDAPS, SAML e suporte ao usuário local
+* RBAC (para um conjunto predefinido de funções)
+* Pacote de suporte e suporte AutoSupport
+* Painel aprimorado para mostrar capacidade, disponibilidade, proteção e desempenho do ambiente
+* Interoperabilidade de movimentação de volume, histórico de movimentação de volume e histórico de alterações de caminho de junção
+* Área de escopo de impacto que exibe graficamente os recursos afetados por eventos como Alguns discos com falha, Espelhamento agregado do MetroCluster degradado e Discos sobressalentes do MetroCluster deixados para trás
+* Área de efeito possível que exibe o efeito dos eventos do MetroCluster
+* Área de Ações Corretivas Sugeridas que exibe as ações que podem ser executadas para resolver eventos como Alguns Discos com Falha, Espelhamento de Agregação do MetroCluster Degradado e Discos Sobressalentes do MetroCluster Deixados para Trás
+* Área de recursos que podem ser impactados que exibe os recursos que podem ser impactados por eventos como o evento Volume Offline, o evento Volume Restrito e o evento Espaço de Volume Thin-Provisioned em Risco
+* Suporte para SVMs com volumes FlexVol ou FlexGroup
+* Suporte para monitoramento de volumes raiz de nós
+* Monitoramento aprimorado de cópias de Snapshot, incluindo computação de espaço recuperável e exclusão de cópias de Snapshot
+* Anotações para objetos de armazenamento
+* Criação de relatórios e gerenciamento de informações de objetos de armazenamento, como capacidade física e lógica, utilização, economia de espaço, desempenho e eventos relacionados
+* Integração com OnCommand Workflow Automation para executar fluxos de trabalho
++
+O Storage Automation Store contém pacotes de fluxo de trabalho de armazenamento automatizado certificados pela NetApp, desenvolvidos para uso com o OnCommand Workflow Automation (WFA).  Você pode baixar os pacotes e importá-los para o WFA para executá-los.  Os fluxos de trabalho automatizados estão disponíveis aqui:
+
++
+https://automationstore.netapp.com["Loja de automação de armazenamento"]
+
+

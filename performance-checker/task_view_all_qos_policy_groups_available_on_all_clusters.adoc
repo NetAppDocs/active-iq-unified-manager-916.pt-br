@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/task_view_all_qos_policy_groups_available_on_all_clusters.html 
+sidebar: sidebar 
+keywords: viewing, qos, policy, groups, available, clusters 
+summary: Você pode exibir uma lista de todos os grupos de políticas de QoS disponíveis nos clusters que o Unified Manager está monitorando.  Isso inclui políticas de QoS tradicionais, políticas de QoS adaptáveis e políticas de QoS gerenciadas por políticas de nível de serviço de desempenho do Unified Manager. 
+---
+= Exibir todos os grupos de políticas de QoS disponíveis em todos os clusters
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode exibir uma lista de todos os grupos de políticas de QoS disponíveis nos clusters que o Unified Manager está monitorando.  Isso inclui políticas de QoS tradicionais, políticas de QoS adaptáveis e políticas de QoS gerenciadas por políticas de nível de serviço de desempenho do Unified Manager.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento* > *Grupos de políticas de QoS*.
++
+A exibição Desempenho: Grupos de políticas de QoS tradicionais é exibida por padrão.
+
+. Veja as configurações detalhadas para cada grupo de políticas de QoS tradicional disponível.
+. Clique no botão expandir (image:../media/chevron_down.gif[""] ) ao lado do nome do Grupo de Políticas de QoS para ver mais detalhes sobre o grupo de políticas.
+. No menu Exibir, selecione uma das opções adicionais para visualizar todos os grupos de políticas de QoS adaptáveis ou para visualizar todos os grupos de políticas de QoS que foram criados usando os Níveis de Serviço de Desempenho do Unified Manager.
+

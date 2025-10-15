@@ -1,0 +1,85 @@
+---
+permalink: config/reference_system_configuration_menu.html 
+sidebar: sidebar 
+keywords: system, configuration, menu 
+summary: O menu Configuração do Sistema permite que você gerencie seu dispositivo virtual fornecendo várias opções, como visualizar o status do servidor e reinicializar e desligar a máquina virtual. 
+---
+= Menu de configuração do sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O menu Configuração do Sistema permite que você gerencie seu dispositivo virtual fornecendo várias opções, como visualizar o status do servidor e reinicializar e desligar a máquina virtual.
+
+[NOTE]
+====
+Quando o Unified Manager é instalado em um sistema Linux ou Microsoft Windows, somente a opção "`Restaurar de um backup do Unified Manager`" está disponível neste menu.
+
+====
+As seguintes opções de menu estão disponíveis:
+
+* *Exibir status do servidor*
++
+Exibe o status atual do servidor.  As opções de status incluem Em execução e Não em execução.
+
++
+Se o servidor não estiver em execução, talvez seja necessário entrar em contato com o suporte técnico.
+
+* *Reinicializar máquina virtual*
++
+Reinicia a máquina virtual, interrompendo todos os serviços.  Após a reinicialização, a máquina virtual e os serviços são reiniciados.
+
+* *Desligar a máquina virtual*
++
+Desliga a máquina virtual, interrompendo todos os serviços.
+
++
+Você pode selecionar esta opção somente no console da máquina virtual.
+
+* *Alterar senha do usuário <usuário conectado>*
++
+Altera a senha do usuário que está conectado no momento, que só pode ser o usuário de manutenção.
+
+* *Aumentar o tamanho do disco de dados*
++
+Aumenta o tamanho do disco de dados (disco 3) na máquina virtual.
+
+* *Aumentar o tamanho do disco de swap*
++
+Aumenta o tamanho do disco de swap (disco 2) na máquina virtual.
+
+* *Alterar fuso horário*
++
+Altera o fuso horário para sua localização.
+
+* *Alterar servidor NTP*
++
+Altera as configurações do servidor NTP, como endereço IP ou nome de domínio totalmente qualificado (FQDN).
+
+* *Alterar serviço NTP*
++
+Alterna entre o `ntp` e `systemd-timesyncd` serviços.
+
+* *Restaurar de um backup do Unified Manager*
++
+Restaura o banco de dados e as definições de configuração do Unified Manager de uma versão de backup anterior.
+
+* *Redefinir certificado do servidor*
++
+Redefine o certificado de segurança do servidor.
+
+* *Alterar nome do host*
++
+Altera o nome do host no qual o dispositivo virtual está instalado.
+
+* *Voltar*
++
+Sai do menu Configuração do Sistema e retorna ao Menu Principal.
+
+* *Saída*
++
+Sai do menu do console de manutenção.
+
+

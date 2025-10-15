@@ -1,0 +1,23 @@
+---
+permalink: data-protection/task_abort_jobs.html 
+sidebar: sidebar 
+keywords: abort, jobs 
+summary: Você pode usar a página Tarefas para abortar uma tarefa se ela estiver demorando muito para terminar, estiver apresentando muitos erros ou não for mais necessária.  Você pode abortar um trabalho somente se seu status e tipo permitirem.  Você pode abortar qualquer tarefa em execução. 
+---
+= Abortar trabalhos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a página Tarefas para abortar uma tarefa se ela estiver demorando muito para terminar, estiver apresentando muitos erros ou não for mais necessária.  Você pode abortar um trabalho somente se seu status e tipo permitirem.  Você pode abortar qualquer tarefa em execução.
+
+.Antes de começar
+Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Proteção* > *Trabalhos*.
+. Na lista de trabalhos, selecione um trabalho e clique em *Abortar*.
+. No prompt de confirmação, clique em *Sim* para abortar o trabalho selecionado.
+

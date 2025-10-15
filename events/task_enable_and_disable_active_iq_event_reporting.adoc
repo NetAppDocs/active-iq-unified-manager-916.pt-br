@@ -1,0 +1,44 @@
+---
+permalink: events/task_enable_and_disable_active_iq_event_reporting.html 
+sidebar: sidebar 
+keywords: enable, disable, active iq, event, report 
+summary: 'Os eventos da plataforma Active IQ são gerados e exibidos na interface do usuário do Unified Manager por padrão.  Se você achar que esses eventos são muito "barulhentos" ou que não deseja visualizá-los no Unified Manager, você pode desabilitar a geração desses eventos.  Você pode habilitá-los mais tarde se quiser voltar a receber essas notificações.' 
+---
+= Habilitar e desabilitar relatórios de eventos do Active IQ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos da plataforma Active IQ são gerados e exibidos na interface do usuário do Unified Manager por padrão.  Se você achar que esses eventos são muito "barulhentos" ou que não deseja visualizá-los no Unified Manager, você pode desabilitar a geração desses eventos.  Você pode habilitá-los mais tarde se quiser voltar a receber essas notificações.
+
+.Antes de começar
+Você deve ter a função de Administrador do Aplicativo.
+
+Quando você desabilita esse recurso, o Unified Manager para de receber eventos da plataforma Active IQ imediatamente.
+
+Quando você habilita esse recurso, o Unified Manager começa a receber eventos da plataforma Active IQ logo após a meia-noite, com base no fuso horário do cluster.  O horário de início é baseado em quando o Unified Manager recebe mensagens do AutoSupport de cada cluster.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Geral* > *Configurações de recursos*.
+. Na página *Configurações de recursos*, desabilite ou habilite os eventos da plataforma Active IQ escolhendo uma das seguintes opções:
++
+|===
+| Se você quiser... | Então faça isto... 
+
+
+ a| 
+Desativar eventos da plataforma Active IQ
+ a| 
+No painel * Eventos do Portal Active IQ *, mova o botão deslizante para a esquerda.
+
+
+
+ a| 
+Habilitar eventos da plataforma Active IQ
+ a| 
+No painel * Eventos do Portal Active IQ *, mova o botão deslizante para a direita.
+
+|===
+

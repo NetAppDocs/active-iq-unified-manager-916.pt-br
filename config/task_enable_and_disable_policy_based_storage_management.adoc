@@ -1,0 +1,78 @@
+---
+permalink: config/task_enable_and_disable_policy_based_storage_management.html 
+sidebar: sidebar 
+keywords: provisioning, performance service levels, storage management, enable, disable, policy-based 
+summary: 'A partir do Unified Manager 9.7, você pode provisionar cargas de trabalho de armazenamento (volumes e LUNs) em seus clusters ONTAP e gerenciar essas cargas de trabalho com base nos níveis de serviço de desempenho atribuídos.  Essa funcionalidade é semelhante à criação de cargas de trabalho no ONTAP System Manager e à anexação de políticas de QoS, mas quando aplicada usando o Unified Manager, você pode provisionar e gerenciar cargas de trabalho em todos os clusters que sua instância do Unified Manager está monitorando.' 
+---
+= Habilitar e desabilitar o gerenciamento de armazenamento baseado em políticas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A partir do Unified Manager 9.7, você pode provisionar cargas de trabalho de armazenamento (volumes e LUNs) em seus clusters ONTAP e gerenciar essas cargas de trabalho com base nos níveis de serviço de desempenho atribuídos.  Essa funcionalidade é semelhante à criação de cargas de trabalho no ONTAP System Manager e à anexação de políticas de QoS, mas quando aplicada usando o Unified Manager, você pode provisionar e gerenciar cargas de trabalho em todos os clusters que sua instância do Unified Manager está monitorando.
+
+Você deve ter a função de Administrador do Aplicativo.
+
+Esta opção é habilitada por padrão, mas você pode desabilitá-la se não quiser provisionar e gerenciar cargas de trabalho usando o Unified Manager.
+
+Quando ativada, esta opção fornece muitos itens novos na interface do usuário:
+
+[cols="2*"]
+|===
+| Novo conteúdo | Localização 
+
+
+ a| 
+Uma página para provisionar novas cargas de trabalho
+ a| 
+Disponível em *Tarefas comuns* > *Provisionamento*
+
+
+
+ a| 
+Uma página para criar políticas de nível de serviço de desempenho
+ a| 
+Disponível em *Configurações* > *Políticas* > *Níveis de serviço de desempenho*
+
+
+
+ a| 
+Uma página para criar políticas de eficiência de armazenamento de desempenho
+ a| 
+Disponível em *Configurações* > *Políticas* > *Eficiência de armazenamento*
+
+
+
+ a| 
+Painéis que descrevem seu desempenho de carga de trabalho atual e IOPS de carga de trabalho
+ a| 
+Disponível no Painel
+
+|===
+Consulte a ajuda on-line do produto para obter mais informações sobre essas páginas e essa funcionalidade.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Geral* > *Configurações de recursos*.
+. Na página *Configurações de recursos*, desative ou ative o gerenciamento de armazenamento baseado em políticas escolhendo uma das seguintes opções:
++
+[cols="2*"]
+|===
+| Se você quiser... | Então faça isto... 
+
+
+ a| 
+Desabilitar o gerenciamento de armazenamento baseado em políticas
+ a| 
+No painel *Gerenciamento de armazenamento baseado em políticas*, mova o botão deslizante para a esquerda.
+
+
+
+ a| 
+Habilitar gerenciamento de armazenamento baseado em políticas
+ a| 
+No painel *Gerenciamento de armazenamento baseado em políticas*, mova o botão deslizante para a direita.
+
+|===
+

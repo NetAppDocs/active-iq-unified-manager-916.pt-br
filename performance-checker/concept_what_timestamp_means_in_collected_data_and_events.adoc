@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_what_timestamp_means_in_collected_data_and_events.html 
+sidebar: sidebar 
+keywords: timestamp, means, collected, data, events 
+summary: O registro de data e hora que aparece nos dados de desempenho e integridade coletados, ou que aparece como o horário de detecção de um evento, é baseado no horário do cluster ONTAP , ajustado ao fuso horário definido no navegador da web. 
+---
+= O que o registro de data e hora significa em dados e eventos coletados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O registro de data e hora que aparece nos dados de desempenho e integridade coletados, ou que aparece como o horário de detecção de um evento, é baseado no horário do cluster ONTAP , ajustado ao fuso horário definido no navegador da web.
+
+É altamente recomendável que você use um servidor Network Time Protocol (NTP) para sincronizar a hora em seus servidores do Unified Manager, clusters ONTAP e navegadores da web.
+
+[NOTE]
+====
+Se você vir registros de data e hora que parecem incorretos para um cluster específico, talvez seja necessário verificar se o horário do cluster foi definido corretamente.
+
+====

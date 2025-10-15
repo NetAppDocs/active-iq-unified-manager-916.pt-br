@@ -1,0 +1,37 @@
+---
+permalink: data-protection/task_monitor_storage_vms_using_relationships_page.html 
+sidebar: sidebar 
+keywords: relationships page, monitor, storage, vm 
+summary: Você pode monitorar os relacionamentos de recuperação de desastres da sua VM de armazenamento na página Relacionamentos na seção PROTEÇÃO do INVENTÁRIO.  Por padrão, a página Relacionamentos lista apenas os relacionamentos de nível superior, já que o filtro de relacionamentos constituintes é aplicado. 
+---
+= Monitorar VMs de armazenamento usando a página Relacionamentos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode monitorar os relacionamentos de recuperação de desastres da sua VM de armazenamento na página Relacionamentos na seção PROTEÇÃO do INVENTÁRIO.  Por padrão, a página Relacionamentos lista apenas os relacionamentos de nível superior, já que o filtro de relacionamentos constituintes é aplicado.
+
+.Antes de começar
+Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+Use filtros para visualizar os relacionamentos de recuperação de desastres da VM de armazenamento.
+
+.Passos
+. No painel de navegação esquerdo, clique em *PROTEÇÃO* > *Relacionamentos*.
++
+A página exibe todos os tipos de relacionamentos: volume, grupo de consistência e relacionamentos de VM de armazenamento.
+
+. Clique em *Filtro* e selecione *Tipo de objeto de relacionamento* e *VM de armazenamento* para visualizar apenas os relacionamentos de recuperação de desastres da VM de armazenamento.
+. Clique em *Aplicar filtro*.
++
+[NOTE]
+====
+Você deve limpar o filtro de relacionamentos constituintes para visualizar todos os relacionamentos de proteção.
+
+====
++
+A página exibe apenas relacionamentos de recuperação de desastres de VM de armazenamento.
+
+

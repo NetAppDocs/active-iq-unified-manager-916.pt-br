@@ -1,0 +1,264 @@
+---
+permalink: storage-mgmt/reference_what_ontap_issues_can_unified_manager_fix.html 
+sidebar: sidebar 
+keywords: ontap issues, fix it action, automatic remediation feature, remediation events, fix-it messages, fix-it events 
+summary: Esta tabela descreve os problemas do ONTAP que o Unified Manager pode resolver diretamente da interface do usuário do Unified Manager clicando no botão Corrigir ou Corrigir tudo. 
+---
+= Quais problemas o Unified Manager pode corrigir
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ao usar o recurso de correção automática do Active IQ Unified Manager, você pode optar por resolver determinados problemas do ONTAP ou gerenciar determinados recursos do ONTAP , como monitoramento anti-ransomware, de forma eficaz por meio do Unified Manager.
+
+Esta tabela descreve esses problemas ou recursos do ONTAP que você pode gerenciar diretamente por meio do botão *Corrigir* ou *Corrigir tudo* na interface da Web do Unified Manager.
+
+|===
+| Nome e descrição do evento | Ação de Gestão | Operação "Consertar" 
+
+
+ a| 
+Volume Espaço Cheio
+
+O volume está quase sem espaço e ultrapassou o limite de capacidade máxima.  Este limite é definido por padrão como 90% do tamanho do volume.
+ a| 
+Habilitar crescimento automático de volume
+ a| 
+O Unified Manager determina que o crescimento automático de volume não está configurado para este volume, então ele habilita esse recurso para que o volume aumente em capacidade quando necessário.
+
+
+
+ a| 
+Inodes completos
+
+Este volume ficou sem inodes e não pode aceitar novos arquivos.
+ a| 
+Aumentar o número de inodes no volume
+ a| 
+Aumenta o número de inodes no volume em 2%.
+
+
+
+ a| 
+Incompatibilidade de política de nível de armazenamento detectada
+
+O volume tem muitos dados inativos e a política de hierarquização atual está definida como "somente instantâneo" ou "nenhum".
+ a| 
+Habilitar hierarquização automática da nuvem
+ a| 
+Como o volume já reside em um FabricPool, ele altera a política de camadas para "automática" para que os dados inativos sejam movidos para a camada de nuvem de menor custo.
+
+
+
+ a| 
+Incompatibilidade de nível de armazenamento detectada
+
+O volume tem muitos dados inativos, mas não reside em uma camada de armazenamento habilitada para nuvem (FabricPool).
+ a| 
+Alterar nível de armazenamento dos volumes
+ a| 
+Move o volume para a camada de armazenamento habilitada para nuvem e define a política de camadas como "automática" para mover dados inativos para a camada de nuvem.
+
+
+
+ a| 
+Log de auditoria desabilitado
+
+O log de auditoria não está habilitado para a VM de armazenamento
+ a| 
+Habilitar registro de auditoria para a VM de armazenamento
+ a| 
+Habilita o registro de auditoria na VM de armazenamento.
+
+Observe que a VM de armazenamento já deve ter um local de log de auditoria local ou remoto configurado.
+
+
+
+ a| 
+Banner de login desabilitado
+
+O banner de login do cluster deve ser habilitado para aumentar a segurança, deixando claras as restrições de acesso.
+ a| 
+Definir banner de login para o cluster
+ a| 
+Define o banner de login do cluster como "`Acesso restrito a usuários autorizados`".
+
+
+
+ a| 
+Banner de login desabilitado
+
+O banner de login para a VM de armazenamento deve ser habilitado para aumentar a segurança, deixando claras as restrições de acesso.
+ a| 
+Definir banner de login para a VM de armazenamento
+ a| 
+Define o banner de login da VM de armazenamento como "Acesso restrito a usuários autorizados".
+
+
+
+ a| 
+SSH está usando cifras inseguras
+
+Cifras com o sufixo "-cbc" são consideradas inseguras.
+ a| 
+Remover cifras inseguras do cluster
+ a| 
+Remove as cifras inseguras — como aes192-cbc e aes128-cbc — do cluster.
+
+
+
+ a| 
+SSH está usando cifras inseguras
+
+Cifras com o sufixo "-cbc" são consideradas inseguras.
+ a| 
+Remover cifras inseguras da VM de armazenamento
+ a| 
+Remove as cifras inseguras — como aes192-cbc e aes128-cbc — da VM de armazenamento.
+
+
+
+ a| 
+Transporte HTTPS de AutoSupport desabilitado
+
+O protocolo de transporte usado para enviar mensagens do AutoSupport ao suporte técnico deve ser criptografado.
+ a| 
+Defina HTTPS como o protocolo de transporte para mensagens do AutoSupport
+ a| 
+Define HTTPS como o protocolo de transporte para mensagens do AutoSupport no cluster.
+
+
+
+ a| 
+Limite de desequilíbrio de carga do cluster violado
+
+Indica que a carga está desequilibrada entre os nós do cluster.  Este evento é gerado quando a variação da capacidade de desempenho utilizada é maior que 30% entre os nós.
+ a| 
+Balancear cargas de trabalho do cluster
+ a| 
+O Unified Manager identifica o melhor volume para mover de um nó para outro para reduzir o desequilíbrio e, em seguida, move o volume.
+
+
+
+ a| 
+Limite de desequilíbrio de capacidade do cluster violado
+
+Indica que a capacidade está desequilibrada entre os agregados no cluster.  Este evento é gerado quando a variação da capacidade utilizada é maior que 70% entre os agregados.
+ a| 
+Capacidade do cluster de equilíbrio
+ a| 
+O Unified Manager identifica o melhor volume a ser movido de um agregado para outro para reduzir o desequilíbrio e, em seguida, move o volume.
+
+
+
+ a| 
+Limite de capacidade de desempenho usado violado
+
+Indica que a carga no nó pode ficar superutilizada se você não reduzir a utilização de uma ou mais cargas de trabalho altamente ativas.  Este evento é gerado quando o valor da capacidade de desempenho do nó utilizada é maior que 100% por mais de 12 horas.
+ a| 
+Limitar carga alta no nó
+ a| 
+O Unified Manager identifica o volume com o maior IOPS e aplica uma política de QoS usando os níveis históricos esperados e de pico de IOPS para reduzir a carga no nó.
+
+
+
+ a| 
+Limite de alerta de evento dinâmico violado
+
+Indica que o nó já está operando em um estado sobrecarregado devido à carga anormalmente alta de algumas das cargas de trabalho.
+ a| 
+Reduzir sobrecarga no nó
+ a| 
+O Unified Manager identifica o volume com o maior IOPS e aplica uma política de QoS usando os níveis históricos esperados e de pico de IOPS para reduzir a carga no nó.
+
+
+
+ a| 
+A aquisição não é possível
+
+O failover está desabilitado no momento, então o acesso aos recursos do nó durante uma interrupção ou reinicialização seria perdido até que o nó ficasse disponível novamente.
+ a| 
+Habilitar failover de nó
+ a| 
+O Unified Manager envia o comando apropriado para habilitar o failover em todos os nós do cluster.
+
+
+
+ a| 
+A opção Cf.takeover.on_panic está configurada como DESLIGADA
+
+A opção nodeshell "cf.takeover.on_panic" está definida como *off*, o que pode causar um problema em sistemas configurados com HA.
+ a| 
+Habilitar aquisição em caso de pânico
+ a| 
+O Unified Manager envia o comando apropriado ao cluster para alterar essa configuração para *ativado*.
+
+
+
+ a| 
+Desabilitar a opção snapmirror.enable do nodeshell
+
+A antiga opção do nodeshell "snapmirror.enable" está definida como *on*, o que pode causar um problema durante a inicialização após a atualização para o ONTAP 9.3 ou superior.
+ a| 
+Defina a opção snapmirror.enable como desativada
+ a| 
+O Unified Manager envia o comando apropriado ao cluster para alterar essa configuração para *desativado*.
+
+
+
+ a| 
+Telnet habilitado
+
+Indica um possível problema de segurança porque o Telnet não é seguro e transmite dados de maneira não criptografada.
+ a| 
+Desativar Telnet
+ a| 
+O Unified Manager envia o comando apropriado ao cluster para desabilitar o Telnet.
+
+
+
+ a| 
+Configurar aprendizado anti-ransomware de VM de armazenamento
+
+Verifica periodicamente clusters com licenças para monitoramento anti-ransomware.  Valida se uma VM de armazenamento suporta apenas volumes NFS ou SMB em tal cluster.
+ a| 
+Coloque as VMs de armazenamento em um `learning` modo de monitoramento anti-ransomware
+ a| 
+O Unified Manager define o monitoramento anti-ransomware para `learning` estado para as VMs de armazenamento por meio do console de gerenciamento do cluster.  O monitoramento anti-ransomware em todos os novos volumes criados na VM de armazenamento é movido automaticamente para um modo de aprendizado.  Por meio dessa capacitação, o ONTAP pode aprender o padrão de atividade nos volumes e detectar anomalias devido a possíveis ataques maliciosos.
+
+
+
+ a| 
+Configurar aprendizado anti-ransomware de volume
+
+Verifica periodicamente clusters com licenças para monitoramento anti-ransomware.  Valida se um volume suporta apenas serviços NFS ou SMB em tal cluster.
+ a| 
+Coloque volumes em `learning` modo de monitoramento anti-ransomware
+ a| 
+O Unified Manager define o monitoramento anti-ransomware para `learning` estado dos volumes por meio do console de gerenciamento do cluster.  Por meio dessa capacitação, o ONTAP pode aprender o padrão de atividade nos volumes e detectar anomalias devido a possíveis ataques maliciosos.
+
+
+
+ a| 
+Habilitar volume anti-ransomware
+
+Verifica periodicamente clusters com licenças para monitoramento anti-ransomware.  Detecta se os volumes estão no `learning` modo de monitoramento anti-ransomware por mais de 45 dias e determina a perspectiva de colocá-los no modo ativo.
+ a| 
+Coloque volumes em `active` modo de monitoramento anti-ransomware
+ a| 
+O Unified Manager define o monitoramento anti-ransomware para `active` nos volumes por meio do console de gerenciamento do cluster.  Por meio dessa habilitação, o ONTAP pode aprender o padrão de atividade nos volumes e detectar anomalias devido a possíveis ataques maliciosos, além de criar alertas para ações de proteção de dados.
+
+
+
+ a| 
+Desativar volume anti-ransomware
+
+Verifica periodicamente clusters com licenças para monitoramento anti-ransomware.  Detecta notificações repetitivas durante o monitoramento anti-ransomware ativo nos volumes (por exemplo, vários avisos de possíveis ataques de ransomware são retornados ao longo de 30 dias).
+ a| 
+Desabilitar monitoramento anti-ransomware em volumes
+ a| 
+O Unified Manager desabilita o monitoramento anti-ransomware nos volumes por meio do console de gerenciamento do cluster.
+
+|===

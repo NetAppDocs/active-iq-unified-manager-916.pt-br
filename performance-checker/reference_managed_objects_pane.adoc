@@ -1,0 +1,50 @@
+---
+permalink: performance-checker/reference_managed_objects_pane.html 
+sidebar: sidebar 
+keywords: managed, objects, pane 
+summary: O painel Objetos gerenciados na guia Resumo de desempenho fornece uma visão geral de alto nível dos tipos e contagens de objetos de armazenamento do cluster.  Este painel permite que você acompanhe o status dos objetos em cada cluster. 
+---
+= Painel Objetos Gerenciados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O painel Objetos gerenciados na guia Resumo de desempenho fornece uma visão geral de alto nível dos tipos e contagens de objetos de armazenamento do cluster.  Este painel permite que você acompanhe o status dos objetos em cada cluster.
+
+A contagem de objetos gerenciados são dados pontuais do último período de coleta.  Novos objetos são descobertos em intervalos de 15 minutos.
+
+Clicar no número vinculado para qualquer tipo de objeto exibe a página de inventário de desempenho do objeto para esse tipo de objeto.  A página de inventário de objetos é filtrada para mostrar apenas os objetos neste cluster.
+
+Os objetos gerenciados são:
+
+* *Nós*
++
+Um sistema físico em um cluster.
+
+* *Agregados*
++
+Um conjunto de vários grupos de discos independentes (RAID) redundantes que podem ser gerenciados como uma única unidade para proteção e provisionamento.
+
+* *Portas*
++
+Um ponto de conexão física em nós que é usado para conectar a outros dispositivos em uma rede.
+
+* *VMs de armazenamento*
++
+Uma máquina virtual que fornece acesso à rede por meio de endereços de rede exclusivos.  Uma SVM pode fornecer dados de um namespace distinto e pode ser administrada separadamente do restante do cluster.
+
+* *Volumes*
++
+Uma entidade lógica que contém dados de usuário acessíveis por meio de um ou mais protocolos de acesso suportados.  A contagem inclui volumes FlexVol e FlexGroup ; não inclui constituintes FlexGroup .
+
+* *LUNs*
++
+O identificador de uma unidade lógica Fibre Channel (FC) ou uma unidade lógica iSCSI.  Uma unidade lógica normalmente corresponde a um volume de armazenamento e é representada dentro de um sistema operacional de computador como um dispositivo.
+
+* *Interfaces de rede*
++
+Uma interface de rede lógica que representa um ponto de acesso de rede a um nó.  A contagem inclui todos os tipos de interface.
+
+

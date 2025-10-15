@@ -1,0 +1,99 @@
+---
+permalink: events/reference_storage_failover_settings_events.html 
+sidebar: sidebar 
+keywords: storage, failover, settings, events, impact area, availability 
+summary: 'Os eventos de configuração de failover de armazenamento (SFO) fornecem informações sobre se o failover de armazenamento está desabilitado ou não configurado para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, nível de impacto, tipo de fonte e gravidade.' 
+---
+= Eventos de configurações de failover de armazenamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de configuração de failover de armazenamento (SFO) fornecem informações sobre se o failover de armazenamento está desabilitado ou não configurado para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, nível de impacto, tipo de fonte e gravidade.
+
+
+
+== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+Interconexão de failover de armazenamento com um ou mais links inativos (ocumEvtSfoInterconnectOneOrMoreLinksDown)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Aviso
+
+
+
+ a| 
+Failover de armazenamento desabilitado (ocumEvtSfoSettingsDisabled)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Erro
+
+
+
+ a| 
+Failover de armazenamento não configurado (ocumEvtSfoSettingsNotConfigured)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Erro
+
+
+
+ a| 
+Estado de failover de armazenamento - aquisição (ocumEvtSfoStateTakeover)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Aviso
+
+
+
+ a| 
+Estado de failover de armazenamento - Devolução parcial (ocumEvtSfoStatePartialGiveback)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Erro
+
+
+
+ a| 
+Status do nó de failover de armazenamento inativo (ocumEvtSfoNodeStatusDown)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Erro
+
+
+
+ a| 
+Aquisição de failover de armazenamento não é possível (ocumEvtSfoTakeoverNotPossible)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Erro
+
+|===

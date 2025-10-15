@@ -1,0 +1,70 @@
+---
+permalink: performance-checker/concept_components_of_performance_explorer_page.html 
+sidebar: sidebar 
+keywords: components, performance, explorer, page 
+summary: A página Performance Explorer permite comparar o desempenho de objetos semelhantes em um cluster, por exemplo, todos os volumes em um cluster.  Isso é benéfico ao solucionar problemas de eventos de desempenho e ajustar o desempenho do objeto.  Você também pode comparar objetos com o objeto raiz, que é a linha de base contra a qual outras comparações de objetos são feitas. 
+---
+= Componentes da página do Performance Explorer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página Performance Explorer permite comparar o desempenho de objetos semelhantes em um cluster, por exemplo, todos os volumes em um cluster.  Isso é benéfico ao solucionar problemas de eventos de desempenho e ajustar o desempenho do objeto.  Você também pode comparar objetos com o objeto raiz, que é a linha de base contra a qual outras comparações de objetos são feitas.
+
+Você pode clicar no botão *Alternar para a visualização de integridade* para exibir a página de detalhes de integridade deste objeto.  Em alguns casos, você pode aprender informações importantes sobre as definições de configuração de armazenamento deste objeto que podem ajudar na solução de problemas.
+
+A página Performance Explorer exibe uma lista de objetos de cluster e seus dados de desempenho.  Esta página exibe todos os objetos de cluster do mesmo tipo (por exemplo, volumes e suas estatísticas de desempenho específicas do objeto) em um formato tabular.  Esta visualização fornece uma visão geral eficiente do desempenho do objeto de cluster.
+
+[NOTE]
+====
+Se "`N/A`" aparecer em qualquer célula da tabela, significa que um valor para esse contador não está disponível porque não há E/S naquele objeto naquele momento.
+
+====
+A página Performance Explorer contém os seguintes componentes:
+
+* *Intervalo de tempo*
++
+Permite que você selecione um intervalo de tempo para os dados do objeto.
+
++
+Você pode escolher um intervalo predefinido ou especificar seu próprio intervalo de tempo personalizado.
+
+* *Ver e comparar*
++
+Permite selecionar qual tipo de objeto correlacionado é exibido na grade.
+
++
+As opções disponíveis dependem do tipo de objeto raiz e dos dados disponíveis.  Você pode clicar na lista suspensa Exibir e comparar para selecionar um tipo de objeto.  O tipo de objeto selecionado é exibido na lista.
+
+* *Filtragem*
++
+Permite que você restrinja a quantidade de dados recebidos, com base em suas preferências.
+
++
+Você pode criar filtros que se aplicam aos dados do objeto — por exemplo, IOPS maior que 4.  Você pode adicionar até quatro filtros simultâneos.
+
+* *Comparando*
++
+Exibe uma lista dos objetos que você selecionou para comparação com o objeto raiz.
+
++
+Os dados dos objetos no painel Comparação são exibidos nos Gráficos de Contadores.
+
+* *Ver estatísticas em*
++
+Para volume e LUNs, permite que você selecione se as estatísticas serão exibidas após cada ciclo de coleta (padrão 5 minutos) ou se as estatísticas serão mostradas como uma média horária.  Essa funcionalidade permite que você visualize o gráfico de latência em suporte ao programa "Garantia de Desempenho" da NetApp .
+
+* *Gráficos de Contagem*
++
+Exibe dados gráficos para cada categoria de desempenho do objeto.
+
++
+Normalmente, apenas três ou quatro gráficos são exibidos por padrão.  O componente Escolher gráficos permite que você exiba gráficos adicionais ou oculte gráficos específicos.  Você também pode optar por mostrar ou ocultar a Linha do tempo de eventos.
+
+* *Cronograma dos eventos*
++
+Exibe eventos de desempenho e integridade que ocorrem na linha do tempo selecionada no componente Intervalo de tempo.
+
+

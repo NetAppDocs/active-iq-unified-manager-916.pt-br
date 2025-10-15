@@ -1,0 +1,40 @@
+---
+permalink: storage-mgmt/task_change_performance_statistics_collection_interval.html 
+sidebar: sidebar 
+keywords: change, performance, statistics, collection, interval 
+summary: O intervalo de coleta padrão para estatísticas de desempenho é de 5 minutos.  Você pode alterar esse intervalo para 10 ou 15 minutos se perceber que as coletas de clusters grandes não estão terminando dentro do tempo padrão.  Esta configuração afeta a coleta de estatísticas de todos os clusters que esta instância do Unified Manager está monitorando. 
+---
+= Alterar o intervalo de coleta de estatísticas de desempenho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O intervalo de coleta padrão para estatísticas de desempenho é de 5 minutos.  Você pode alterar esse intervalo para 10 ou 15 minutos se perceber que as coletas de clusters grandes não estão terminando dentro do tempo padrão.  Esta configuração afeta a coleta de estatísticas de todos os clusters que esta instância do Unified Manager está monitorando.
+
+.Antes de começar
+Você deve ter um ID de usuário e uma senha autorizados para efetuar login no console de manutenção do servidor do Unified Manager.
+
+O problema das coletas de estatísticas de desempenho não serem concluídas no prazo é indicado pelas mensagens de banner `Unable to consistently collect from cluster <cluster_name> or Data collection is taking too long on cluster <cluster_name>.`
+
+Você deve alterar o intervalo de coleta somente quando necessário devido a um problema de coleta de estatísticas.  Não altere esta configuração por nenhum outro motivo.
+
+[NOTE]
+====
+Alterar esse valor da configuração padrão de 5 minutos pode afetar o número e a frequência de eventos de desempenho relatados pelo Unified Manager.  Por exemplo, limites de desempenho definidos pelo sistema acionam eventos quando a política é excedida por 30 minutos.  Ao utilizar coletas de 5 minutos, a política deve ser excedida por seis coletas consecutivas.  Para coletas de 15 minutos, a política deve ser excedida por apenas dois períodos de coleta.
+
+====
+Uma mensagem na parte inferior da página Configuração do Cluster indica o intervalo atual de coleta de dados estatísticos.
+
+.Passos
+. Efetue login usando SSH como usuário de manutenção no host do Unified Manager.
++
+Os prompts do console de manutenção do Unified Manager são exibidos.
+
+. Digite o número da opção de menu rotulada *Configuração do intervalo de pesquisa de desempenho* e pressione Enter.
+. Se solicitado, digite a senha do usuário de manutenção novamente.
+. Digite o número do novo intervalo de pesquisa que você deseja definir e pressione Enter.
+
+
+Se você alterou o intervalo de coleta do Unified Manager para 10 ou 15 minutos e tem uma conexão atual com um provedor de dados externo (como o Graphite), você deve alterar o intervalo de transmissão do provedor de dados para que seja igual ou maior que o intervalo de coleta do Unified Manager.

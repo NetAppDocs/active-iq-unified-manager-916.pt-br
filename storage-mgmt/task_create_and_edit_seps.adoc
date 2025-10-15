@@ -1,0 +1,58 @@
+---
+permalink: storage-mgmt/task_create_and_edit_seps.html 
+sidebar: sidebar 
+keywords: create, edit, storage, efficiency, policies 
+summary: Quando as Políticas de Eficiência de Armazenamento definidas pelo sistema não correspondem aos seus requisitos de carga de trabalho, você pode criar suas próprias Políticas de Eficiência de Armazenamento otimizadas para suas cargas de trabalho. 
+---
+= Criar e editar políticas de eficiência de armazenamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando as Políticas de Eficiência de Armazenamento definidas pelo sistema não correspondem aos seus requisitos de carga de trabalho, você pode criar suas próprias Políticas de Eficiência de Armazenamento otimizadas para suas cargas de trabalho.
+
+.Antes de começar
+* Você deve ter a função de Administrador do Aplicativo.
+* O nome da Política de Eficiência de Armazenamento deve ser exclusivo e você não pode usar as seguintes palavras-chave reservadas:
++
+`High`, `Low` , `Unassigned` , `Learning` , `Idle` , `Default` , e `None` .
+
+
+
+Você cria e edita Políticas de Eficiência de Armazenamento personalizadas na página Políticas de Eficiência de Armazenamento, definindo as características de eficiência de armazenamento necessárias para os aplicativos que acessarão o armazenamento.
+
+[NOTE]
+====
+Não é possível modificar uma Política de Eficiência de Armazenamento se ela estiver atualmente atribuída a uma carga de trabalho.
+
+====
+.Passos
+. No painel de navegação esquerdo, em *Configurações*, selecione *Políticas* > *Eficiência de armazenamento*.
+. Na página *Políticas de Eficiência de Armazenamento*, clique no botão apropriado dependendo se você deseja criar uma nova Política de Eficiência de Armazenamento ou se deseja editar uma Política de Eficiência de Armazenamento existente.
++
+|===
+| Para... | Siga estes passos... 
+
+
+ a| 
+Crie uma nova Política de Eficiência de Armazenamento
+ a| 
+Clique em *Adicionar*
+
+
+
+ a| 
+Editar uma Política de Eficiência de Armazenamento existente
+ a| 
+Selecione uma Política de Eficiência de Armazenamento existente e clique em *Editar*
+
+|===
++
+A página para adicionar ou editar uma Política de Eficiência de Armazenamento é exibida.
+
+. Personalize a Política de Eficiência de Armazenamento especificando as características de eficiência de armazenamento e clique em *Enviar* para salvar a Política de Eficiência de Armazenamento.
+
+
+Você pode aplicar a Política de Eficiência de Armazenamento nova ou alterada às cargas de trabalho (LUNs, Compartilhamentos de Arquivos NFS, Compartilhamentos CIFS) na página Cargas de Trabalho ou ao provisionar uma nova carga de trabalho.

@@ -1,0 +1,14 @@
+---
+permalink: api-automation/concept_manage_storage_workloads.html 
+sidebar: sidebar 
+keywords: manage, workloads 
+summary: As APIs descritas aqui abrangem várias funções de administração de armazenamento, como visualizar cargas de trabalho de armazenamento, criar LUNs e compartilhamentos de arquivos, gerenciar níveis de serviço de desempenho e políticas de eficiência de armazenamento e atribuir políticas em cargas de trabalho de armazenamento. 
+---
+= Gerencie cargas de trabalho usando APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As APIs descritas aqui abrangem várias funções de administração de armazenamento, como visualizar cargas de trabalho de armazenamento, criar LUNs e compartilhamentos de arquivos, gerenciar níveis de serviço de desempenho e políticas de eficiência de armazenamento e atribuir políticas em cargas de trabalho de armazenamento.

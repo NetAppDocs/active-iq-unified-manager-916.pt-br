@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_add_disks_and_perform_aggregate_layout_reconstruction.html 
+sidebar: sidebar 
+keywords: add, disks, perform, aggregate, layout, reconstruction 
+summary: Você pode adicionar discos a um agregado para aumentar a capacidade de armazenamento e o desempenho desse agregado.  Após adicionar os discos, você só verá uma melhoria no desempenho após reconstruir o agregado. 
+---
+= Adicionar discos e executar reconstrução de layout agregado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode adicionar discos a um agregado para aumentar a capacidade de armazenamento e o desempenho desse agregado.  Após adicionar os discos, você só verá uma melhoria no desempenho após reconstruir o agregado.
+
+Quando você recebe um evento de limite definido pelo sistema na página Detalhes do evento, o texto da descrição do evento lista o nome do agregado que está apresentando o problema.  Você pode adicionar discos e reconstruir dados neste agregado.
+
+Os discos que você adiciona ao agregado já devem existir no cluster.  Se o cluster não tiver discos extras disponíveis, talvez seja necessário entrar em contato com o administrador ou comprar mais discos.  Você pode usar o ONTAP System Manager ou os comandos ONTAP para adicionar discos a um agregado.
+
+https://www.netapp.com/pdf.html?item=/media/19675-tr-3838.pdf["Relatório Técnico 3838: Guia de Configuração do Subsistema de Armazenamento"^]

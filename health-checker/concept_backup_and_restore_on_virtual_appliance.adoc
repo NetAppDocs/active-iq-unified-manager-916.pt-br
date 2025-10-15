@@ -1,0 +1,29 @@
+---
+permalink: health-checker/concept_backup_and_restore_on_virtual_appliance.html 
+sidebar: sidebar 
+keywords: backup, restore, unified manager, virtual, appliance, snapshot copy, copies 
+summary: O modelo de backup e restauração do Unified Manager quando instalado em um dispositivo virtual é capturar e restaurar uma imagem do aplicativo virtual completo. 
+---
+= Backup e restauração do Unified Manager no appliance virtual
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O modelo de backup e restauração do Unified Manager quando instalado em um dispositivo virtual é capturar e restaurar uma imagem do aplicativo virtual completo.
+
+As seguintes tarefas permitem que você conclua um backup do dispositivo virtual:
+
+. Desligue a VM e faça um snapshot do appliance virtual do Unified Manager.
+. Faça uma cópia do NetApp Snapshot no armazenamento de dados para capturar o snapshot do VMware.
++
+Se o armazenamento de dados não estiver hospedado em um sistema executando o software ONTAP , siga as diretrizes do fornecedor de armazenamento para criar um backup do snapshot do VMware.
+
+. Replique a cópia do NetApp Snapshot, ou equivalente do snapshot, para um armazenamento alternativo.
+. Exclua o snapshot do VMware.
+
+
+Você deve implementar um agendamento de backup usando essas tarefas para garantir que o dispositivo virtual do Unified Manager esteja protegido caso surjam problemas.
+
+Para restaurar a VM, você pode usar o snapshot do VMware criado para restaurar a VM ao estado de backup do momento.

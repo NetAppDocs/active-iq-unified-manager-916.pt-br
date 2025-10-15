@@ -1,0 +1,33 @@
+---
+permalink: events/reference_fans_events.html 
+sidebar: sidebar 
+keywords: fans, events, impact, area, availability 
+summary: Os eventos de fãs fornecem informações sobre o status dos fãs nos nós do seu data center para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, o nível de impacto, o tipo de fonte e a gravidade. 
+---
+= Eventos para fãs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de fãs fornecem informações sobre o status dos fãs nos nós do seu data center para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, o nível de impacto, o tipo de fonte e a gravidade.
+
+
+
+== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+Um ou mais fãs com falha (ocumEvtFansOneOrMoreFailed)
+ a| 
+Incidente
+ a| 
+Nó
+ a| 
+Crítico
+
+|===

@@ -1,0 +1,408 @@
+---
+permalink: events/reference_lun_events.html 
+sidebar: sidebar 
+keywords: lun, events, impact area, availability, capacity, configuration, performance 
+summary: Os eventos de LUN fornecem informações sobre o status dos seus LUNs, para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, o nível de impacto, o tipo de fonte e a gravidade. 
+---
+= Eventos LUN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de LUN fornecem informações sobre o status dos seus LUNs, para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, o nível de impacto, o tipo de fonte e a gravidade.
+
+
+
+== Área de impacto: disponibilidade
+
+Um asterisco (*) identifica eventos do EMS que foram convertidos em eventos do Unified Manager.
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+LUN offline (ocumEvtLunOffline)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+LUN destruído *(lunDestroy)
+ a| 
+Evento
+ a| 
+LUN
+ a| 
+Informação
+
+
+
+ a| 
+LUN mapeado com sistema operacional não suportado no igroup(igroupUnsupportedOsType)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Aviso
+
+
+
+ a| 
+Caminho ativo único para acessar LUN (ocumEvtLunSingleActivePath)
+ a| 
+Risco
+ a| 
+LUN
+ a| 
+Aviso
+
+
+
+ a| 
+Nenhum caminho ativo para acessar LUN (ocumEvtLunNotReachable)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Nenhum caminho otimizado para acessar o LUN (ocumEvtLunOptimizedPathInactive)
+ a| 
+Risco
+ a| 
+LUN
+ a| 
+Aviso
+
+
+
+ a| 
+Nenhum caminho para acessar o LUN do parceiro HA (ocumEvtLunHaPathInactive)
+ a| 
+Risco
+ a| 
+LUN
+ a| 
+Aviso
+
+
+
+ a| 
+Nenhum caminho para acessar o LUN de um nó no par HA (ocumEvtLunNodePathStatusDown)
+ a| 
+Risco
+ a| 
+LUN
+ a| 
+Erro
+
+|===
+
+
+== Área de impacto: capacidade
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+Espaço insuficiente para cópia de instantâneo de LUN (ocumEvtLunSnapshotNotPossible)
+ a| 
+Risco
+ a| 
+Volume
+ a| 
+Aviso
+
+|===
+
+
+== Área de impacto: configuração
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+LUN mapeado com sistema operacional não suportado no igroup(igroupUnsupportedOsType)
+ a| 
+Risco
+ a| 
+LUN
+ a| 
+Aviso
+
+|===
+
+
+== Área de impacto: desempenho
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+Limite crítico de IOPS de LUN violado (ocumLunIopsIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de aviso de IOPS de LUN violado (ocumLunIopsWarning)
+ a| 
+Risco
+ a| 
+LUN
+ a| 
+Aviso
+
+
+
+ a| 
+Limite crítico de LUN MB/s violado (ocumLunMbpsIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de alerta de LUN MB/s violado (ocumLunMbpsWarning)
+ a| 
+Risco
+ a| 
+LUN
+ a| 
+Aviso
+
+
+
+ a| 
+Limite crítico de latência de LUN ms/op violado (ocumLunLatencyIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de alerta de latência de LUN ms/op violado (ocumLunLatencyWarning)
+ a| 
+Risco
+ a| 
+LUN
+ a| 
+Aviso
+
+
+
+ a| 
+Limite crítico de latência de LUN e IOPS violado (ocumLunLatencyIopsIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de alerta de latência de LUN e IOPS violado (ocumLunLatencyIopsWarning)
+ a| 
+Risco
+ a| 
+LUN
+ a| 
+Aviso
+
+
+
+ a| 
+Limite crítico de latência de LUN e MB/s violado (ocumLunLatencyMbpsIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de alerta de latência de LUN e MB/s violado (ocumLunLatencyMbpsWarning)
+ a| 
+Risco
+ a| 
+LUN
+ a| 
+Aviso
+
+
+
+ a| 
+Limite crítico de latência de LUN e capacidade de desempenho agregado violado (ocumLunLatencyAggregatePerfCapacityUsedIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de aviso de latência de LUN e capacidade de desempenho agregado usada violado (ocumLunLatencyAggregatePerfCapacityUsedWarning)
+ a| 
+Risco
+ a| 
+LUN
+ a| 
+Aviso
+
+
+
+ a| 
+Limite crítico de latência de LUN e utilização agregada violado (ocumLunLatencyAggregateUtilizationIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de aviso de latência de LUN e utilização agregada violado (ocumLunLatencyAggregateUtilizationWarning)
+ a| 
+Risco
+ a| 
+LUN
+ a| 
+Aviso
+
+
+
+ a| 
+Limite crítico de latência de LUN e capacidade de desempenho de nó violado (ocumLunLatencyNodePerfCapacityUsedIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de aviso de capacidade usada de desempenho do nó e latência do LUN violado (ocumLunLatencyNodePerfCapacityUsedWarning)
+ a| 
+Risco
+ a| 
+LUN
+ a| 
+Aviso
+
+
+
+ a| 
+Latência de LUN e capacidade de desempenho do nó usada - Limite crítico de aquisição violado (ocumLunLatencyAggregatePerfCapacityUsedTakeoverIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Latência de LUN e capacidade de desempenho do nó usada - Limite de aviso de aquisição violado (ocumLunLatencyAggregatePerfCapacityUsedTakeoverWarning)
+ a| 
+Risco
+ a| 
+LUN
+ a| 
+Aviso
+
+
+
+ a| 
+Limite crítico de latência de LUN e utilização de nó violado (ocumLunLatencyNodeUtilizationIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de aviso de latência de LUN e utilização de nó violado (ocumLunLatencyNodeUtilizationWarning)
+ a| 
+Risco
+ a| 
+LUN
+ a| 
+Aviso
+
+
+
+ a| 
+Limite de aviso de IOPS máximo de QoS LUN violado (ocumQosLunMaxIopsWarning)
+ a| 
+Risco
+ a| 
+LUN
+ a| 
+Aviso
+
+
+
+ a| 
+Limite de alerta de QoS LUN Max MB/s violado (ocumQosLunMaxMbpsWarning)
+ a| 
+Risco
+ a| 
+LUN
+ a| 
+Aviso
+
+
+
+ a| 
+Limite de latência do LUN de carga de trabalho violado, conforme definido pela Política de nível de serviço de desempenho (ocumConformanceLatencyWarning)
+ a| 
+Risco
+ a| 
+LUN
+ a| 
+Aviso
+
+|===

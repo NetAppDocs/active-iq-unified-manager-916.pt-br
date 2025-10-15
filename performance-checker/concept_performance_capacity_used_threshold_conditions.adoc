@@ -1,0 +1,53 @@
+---
+permalink: performance-checker/concept_performance_capacity_used_threshold_conditions.html 
+sidebar: sidebar 
+keywords: performance, capacity, threshold, conditions 
+summary: Você pode criar políticas de limite de desempenho definidas pelo usuário para que eventos sejam acionados quando o valor de capacidade de desempenho usada para um nó ou agregado exceder a configuração de limite de capacidade de desempenho usada definida. 
+---
+= Capacidade de desempenho usada em condições de limiar de desempenho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar políticas de limite de desempenho definidas pelo usuário para que eventos sejam acionados quando o valor de capacidade de desempenho usada para um nó ou agregado exceder a configuração de limite de capacidade de desempenho usada definida.
+
+Além disso, os nós podem ser configurados com uma política de limite de "`Aquisição de capacidade de desempenho usada`".  Esta política de limite totaliza as estatísticas de capacidade de desempenho usadas para ambos os nós em um par de HA para determinar se um dos nós não teria capacidade suficiente se o outro nó falhasse.  Como a carga de trabalho durante o failover é a combinação das cargas de trabalho dos dois nós parceiros, a mesma política de aquisição de capacidade de desempenho usada pode ser aplicada a ambos os nós.
+
+[NOTE]
+====
+Essa equivalência de capacidade de desempenho usada geralmente é verdadeira entre nós.  No entanto, se houver significativamente mais tráfego entre nós destinado a um dos nós por meio de seu parceiro de failover, a capacidade de desempenho total usada ao executar todas as cargas de trabalho em um nó parceiro em comparação ao outro nó parceiro poderá ser ligeiramente diferente dependendo de qual nó falhou.
+
+====
+As condições de capacidade de desempenho usadas também podem ser usadas como configurações de limite de desempenho secundário para criar uma política de limite de combinação ao definir limites para LUNs e volumes.  A condição de capacidade de desempenho usada é aplicada ao agregado ou nó no qual o volume ou LUN reside.  Por exemplo, você pode criar uma política de limite de combinação usando os seguintes critérios:
+
+|===
+| Objeto de armazenamento | Contador de desempenho | Limite de alerta | Limiar crítico | Duração 
+
+
+ a| 
+Volume
+ a| 
+Latência
+ a| 
+15 ms/operação
+ a| 
+25 ms/op
+ a| 
+20 minutos
+
+
+
+ a| 
+Agregar
+ a| 
+Capacidade de desempenho utilizada
+ a| 
+80%
+ a| 
+95%
+ a| 
+
+|===
+Políticas de limite de combinação fazem com que um evento seja gerado somente quando ambas as condições são violadas durante toda a duração.

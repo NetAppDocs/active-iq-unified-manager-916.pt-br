@@ -1,0 +1,35 @@
+---
+permalink: reporting/task_edit_scheduled_reports.html 
+sidebar: sidebar 
+keywords: editing, schedule, reports 
+summary: Depois que os relatórios forem agendados, você poderá editá-los na página Agendamentos de Relatórios. 
+---
+= Editar relatórios agendados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois que os relatórios forem agendados, você poderá editá-los na página Agendamentos de Relatórios.
+
+.Antes de começar
+* Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Agendamentos de relatórios*.
++
+image::../media/scheduled_reports_2.gif[Uma captura de tela da interface do usuário que mostra relatórios agendados.]
+
++
+[NOTE]
+====
+Se você tiver as permissões apropriadas, poderá alterar qualquer relatório e sua programação no sistema.
+
+====
+. Clique no ícone maisimage:../media/more_icon.gif[""] para o cronograma que você deseja alterar.
+. Clique em *Editar*.
+. Você pode alterar o *Nome do agendamento*, a lista de *Destinatários*, a *Frequência* e o *Formato* do agendamento do relatório.
+. Quando terminar, clique na marca de seleção para salvar suas alterações.
+

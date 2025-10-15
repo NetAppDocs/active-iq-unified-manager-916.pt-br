@@ -1,0 +1,58 @@
+---
+permalink: config/reference_saml_authentication_page_um.html 
+sidebar: sidebar 
+keywords: saml authentication page 
+summary: 'Você pode usar a página Autenticação SAML para configurar o Unified Manager para autenticar usuários remotos usando SAML por meio de um provedor de identidade seguro (IdP) antes que eles possam fazer login na interface da Web do Unified Manager.' 
+---
+= Página de autenticação SAML
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a página Autenticação SAML para configurar o Unified Manager para autenticar usuários remotos usando SAML por meio de um provedor de identidade seguro (IdP) antes que eles possam fazer login na interface da Web do Unified Manager.
+
+* Você deve ter a função de Administrador de Aplicativos para criar ou modificar a configuração SAML.
+* Você deve ter configurado a autenticação remota.
+* Você deve ter configurado pelo menos um usuário remoto ou grupo remoto.
+
+
+Após a autenticação remota e os usuários remotos terem sido configurados, você pode marcar a caixa de seleção Habilitar autenticação SAML para habilitar a autenticação usando um provedor de identidade seguro.
+
+* *URI do IdP*
++
+O URI para acessar o IdP do servidor do Unified Manager.  Exemplos de URIs estão listados abaixo.
+
++
+URI de exemplo do ADFS:
+
++
+`+https://win2016-dc.ntap2016.local/federationmetadata/2007-06/federationmetadata.xml+`
+
++
+Exemplo de URI Shibboleth:
+
++
+`+https://centos7.ntap2016.local/idp/shibboleth+`
+
+* *Metadados IdP*
++
+Os metadados do IdP em formato XML.
+
++
+Se o URL do IdP estiver acessível no servidor do Unified Manager, você poderá clicar no botão *Obter metadados do IdP* para preencher este campo.
+
+* *Sistema Host (FQDN)*
++
+O FQDN do sistema host do Unified Manager, conforme definido durante a instalação.  Você pode alterar esse valor se necessário.
+
+* *URI do host*
++
+O URI para acessar o sistema host do Unified Manager a partir do IdP.
+
+* *Metadados do host*
++
+Metadados do sistema host em formato XML.
+
+

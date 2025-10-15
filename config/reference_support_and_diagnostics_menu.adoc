@@ -1,0 +1,29 @@
+---
+permalink: config/reference_support_and_diagnostics_menu.html 
+sidebar: sidebar 
+keywords: support and diagnostics, menu 
+summary: O menu Suporte e Diagnóstico permite que você gere um pacote de suporte que pode ser enviado ao suporte técnico para obter assistência na solução de problemas. 
+---
+= Menu de Suporte e Diagnóstico
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O menu Suporte e Diagnóstico permite que você gere um pacote de suporte que pode ser enviado ao suporte técnico para obter assistência na solução de problemas.
+
+As seguintes opções de menu estão disponíveis:
+
+* *Gerar Pacote de Suporte de Luz*
++
+Permite que você produza um pacote de suporte leve que contém apenas 30 dias de logs e registros de banco de dados de configuração — ele exclui dados de desempenho, arquivos de gravação de aquisição e despejo de heap do servidor.
+
+* *Gerar Pacote de Suporte*
++
+Permite que você crie um pacote de suporte completo (arquivo 7-Zip) contendo informações de diagnóstico no diretório inicial do usuário de diagnóstico.  Se o seu sistema estiver conectado à Internet, você também poderá carregar o pacote de suporte para o NetApp.
+
++
+O arquivo inclui informações geradas por uma mensagem do AutoSupport , o conteúdo do banco de dados do Unified Manager, dados detalhados sobre os componentes internos do servidor do Unified Manager e logs de nível detalhado normalmente não incluídos em mensagens do AutoSupport ou no pacote de suporte leve.
+
+

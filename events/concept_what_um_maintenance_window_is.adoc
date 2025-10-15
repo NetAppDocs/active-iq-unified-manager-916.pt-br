@@ -1,0 +1,20 @@
+---
+permalink: events/concept_what_um_maintenance_window_is.html 
+sidebar: sidebar 
+keywords: unified manager, maintenance, window 
+summary: Defina uma janela de manutenção do Unified Manager para suprimir eventos e alertas por um período específico quando você tiver agendado manutenção de cluster e não quiser receber uma enxurrada de notificações indesejadas. 
+---
+= O que é uma janela de manutenção do Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Defina uma janela de manutenção do Unified Manager para suprimir eventos e alertas por um período específico quando você tiver agendado manutenção de cluster e não quiser receber uma enxurrada de notificações indesejadas.
+
+Quando a janela de manutenção é iniciada, um evento "Janela de manutenção de objeto iniciada" é publicado na página de inventário do Gerenciamento de eventos.  Este evento se torna obsoleto automaticamente quando a janela de manutenção termina.
+
+Durante uma janela de manutenção, os eventos relacionados a todos os objetos naquele cluster ainda são gerados, mas não aparecem em nenhuma das páginas da interface do usuário, e nenhum alerta ou outro tipo de notificação é enviado para esses eventos.  No entanto, você pode visualizar os eventos que foram gerados para todos os objetos de armazenamento durante uma janela de manutenção selecionando uma das opções Exibir na página de inventário do Gerenciamento de Eventos.
+
+Você pode agendar uma janela de manutenção para ser iniciada no futuro, alterar os horários de início e término de uma janela de manutenção agendada e cancelar uma janela de manutenção agendada.

@@ -1,0 +1,31 @@
+---
+permalink: storage-mgmt/task_view_status_of_management_actions_to_fix.html 
+sidebar: sidebar 
+keywords: view, status, management, actions, chosen, fix 
+summary: Você pode visualizar o status de todas as ações de gerenciamento que você escolheu corrigir na página Ações de gerenciamento.  A maioria das ações é mostrada como Concluída rapidamente depois que o Unified Manager envia o comando ONTAP ao cluster.  No entanto, algumas ações, como mover um volume, podem demorar mais. 
+---
+= Visualize o status das ações de gerenciamento que você escolheu corrigir
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode visualizar o status de todas as ações de gerenciamento que você escolheu corrigir na página Ações de gerenciamento.  A maioria das ações é mostrada como *Concluída* rapidamente depois que o Unified Manager envia o comando ONTAP ao cluster.  No entanto, algumas ações, como mover um volume, podem demorar mais.
+
+Há três filtros disponíveis na página Ações de gerenciamento:
+
+* *Concluído* mostra as ações de gerenciamento que foram concluídas com sucesso e aquelas que falharam.  Ações *falhadas* fornecem um motivo para a falha para que você possa resolver o problema manualmente.
+* *Em andamento* mostra as ações de gerenciamento que estão sendo implementadas e aquelas que estão programadas para serem implementadas.
+* *Recomendado* mostra todas as ações de gerenciamento que estão atualmente ativas para todos os clusters monitorados.
+
+
+.Passos
+. Clique em *Ações de gerenciamento* no painel de navegação esquerdo.  Alternativamente, clique emimage:../media/more_icon.gif["mais ícone"] na parte superior do painel *Ações de gerenciamento* no *Painel* e selecione a visualização que deseja ver.
++
+A página Ações de gerenciamento é exibida.
+
+. Você pode clicar no ícone de acento circunflexo ao lado da ação de gerenciamento no campo *Descrição* para ver detalhes sobre o problema e o comando que está sendo usado para corrigi-lo.
+. Para visualizar quaisquer ações que *falharam*, classifique pela coluna *Status* na Visualização *Concluídas*.  Você pode usar a ferramenta *Filtro* para o mesmo propósito.
+. Se quiser ver mais informações sobre uma ação de gerenciamento com falha ou se decidir corrigir uma ação de gerenciamento recomendada, clique em *Exibir detalhes do evento* na área expandida depois de clicar no ícone de circunflexo ao lado da ação de gerenciamento.  Um botão *Corrigir* está disponível nessa página.
+

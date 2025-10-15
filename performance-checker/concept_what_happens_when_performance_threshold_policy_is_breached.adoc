@@ -1,0 +1,27 @@
+---
+permalink: performance-checker/concept_what_happens_when_performance_threshold_policy_is_breached.html 
+sidebar: sidebar 
+keywords: happens, performance, threshold, policy, breached 
+summary: Quando um valor de contador excede seu valor limite de desempenho definido pelo período de tempo especificado na duração, o limite é violado e um evento é relatado. 
+---
+= O que acontece quando uma política de limite de desempenho é violada
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando um valor de contador excede seu valor limite de desempenho definido pelo período de tempo especificado na duração, o limite é violado e um evento é relatado.
+
+O evento faz com que as seguintes ações sejam iniciadas:
+
+* O evento é exibido no Painel, na página Resumo do Cluster de Desempenho, na página Eventos e na página Inventário de Desempenho específica do objeto.
+* (opcional) Um alerta por e-mail sobre o evento pode ser enviado a um ou mais destinatários de e-mail, e uma interceptação SNMP pode ser enviada a um receptor de interceptação.
+* (opcional) Um script pode ser executado para modificar ou atualizar automaticamente objetos de armazenamento.
+
+
+A primeira ação é sempre executada.  Você configura se as ações opcionais são executadas na página Configuração de alerta.  Você pode definir ações exclusivas dependendo se uma política de limite de Aviso ou Crítico for violada.
+
+Após uma violação de política de limite de desempenho ocorrer em um objeto de armazenamento, nenhum outro evento será gerado para essa política até que o valor do contador fique abaixo do valor limite, momento em que a duração é redefinida para esse limite.  Enquanto o limite continua sendo excedido, o horário de término do evento é continuamente atualizado para refletir que o evento está em andamento.
+
+Um evento de limite captura ou congela as informações relacionadas à gravidade e à definição da política para que informações de limite exclusivas sejam exibidas com o evento, mesmo que a política de limite seja modificada no futuro.

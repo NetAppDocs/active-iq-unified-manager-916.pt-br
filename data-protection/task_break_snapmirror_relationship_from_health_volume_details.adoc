@@ -1,0 +1,29 @@
+---
+permalink: data-protection/task_break_snapmirror_relationship_from_health_volume_details.html 
+sidebar: sidebar 
+keywords: break, snapmirror, relationship, volume, health details 
+summary: Você pode quebrar um relacionamento de proteção na página de detalhes do Volume/Integridade e interromper as transferências de dados entre um volume de origem e um volume de destino em um relacionamento SnapMirror .  Você pode romper um relacionamento quando quiser migrar dados, para recuperação de desastres ou para testes de aplicativos.  O volume de destino é alterado para um volume de leitura e gravação.  Você não pode quebrar um relacionamento SnapVault . 
+---
+= Interromper um relacionamento SnapMirror na página de detalhes Volume/Saúde
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode quebrar um relacionamento de proteção na página de detalhes do Volume/Integridade e interromper as transferências de dados entre um volume de origem e um volume de destino em um relacionamento SnapMirror .  Você pode romper um relacionamento quando quiser migrar dados, para recuperação de desastres ou para testes de aplicativos.  O volume de destino é alterado para um volume de leitura e gravação.  Você não pode quebrar um relacionamento SnapVault .
+
+.Antes de começar
+* Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+* Você deve ter configurado a Automação de Fluxo de Trabalho.
+
+
+.Passos
+. Na guia *Proteção* da página de detalhes *Volume / Saúde*, selecione na topologia o relacionamento SnapMirror que você deseja quebrar.
+. Clique com o botão direito do mouse no destino e selecione *Quebrar* no menu.
++
+A caixa de diálogo Romper relacionamento é exibida.
+
+. Clique em *Continuar* para encerrar o relacionamento.
+. Na topologia, verifique se o relacionamento foi quebrado.
+

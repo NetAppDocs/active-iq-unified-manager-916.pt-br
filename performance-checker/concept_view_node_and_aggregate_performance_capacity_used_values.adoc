@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/concept_view_node_and_aggregate_performance_capacity_used_values.html 
+sidebar: sidebar 
+keywords: view, node, aggregate, performance, capacity, used, values 
+summary: Você pode monitorar os valores de capacidade de desempenho usados para todos os nós ou para todos os agregados em um cluster, ou pode visualizar detalhes de um único nó ou agregado. 
+---
+= Exibir valores usados de capacidade de desempenho de nó e agregado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode monitorar os valores de capacidade de desempenho usados para todos os nós ou para todos os agregados em um cluster, ou pode visualizar detalhes de um único nó ou agregado.
+
+Os valores usados na capacidade de desempenho aparecem no Painel, nas páginas Inventário de desempenho, na página Melhores desempenhos, na página Criar política de limite, nas páginas do Explorador de desempenho e em gráficos detalhados.  Por exemplo, a página Desempenho: Todos os agregados fornece uma coluna Capacidade de desempenho usada para visualizar o valor da capacidade de desempenho usada para todos os agregados.
+
+image::../media/node_inventory_used_headroom.gif[Uma captura de tela da interface do usuário da página Desempenho: Todos os agregados]
+
+Monitorar a capacidade de desempenho utilizada pelo contador permite identificar o seguinte:
+
+* Se algum nó ou agregado em algum cluster tem um valor de capacidade de alto desempenho usado
+* Se algum nó ou agregado em algum cluster tem eventos de capacidade de desempenho ativa usados
+* Os nós e agregados que têm o maior e o menor valor de capacidade de desempenho usado em um cluster
+* Valores de contador de latência e utilização em conjunto com nós ou agregados que têm valores usados de alta capacidade de desempenho
+* Como os valores de capacidade de desempenho usados para nós em um par HA serão afetados se um dos nós falhar
+* Os volumes e LUNs mais movimentados em um agregado que tem um alto valor de capacidade de desempenho usado
+

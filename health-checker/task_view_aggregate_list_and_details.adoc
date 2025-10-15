@@ -1,0 +1,41 @@
+---
+permalink: health-checker/task_view_aggregate_list_and_details.html 
+sidebar: sidebar 
+keywords: view, aggregate list, details 
+summary: 'Na visualização Saúde: Todos os agregados, você pode monitorar seu inventário de agregados.  A exibição Capacidade: Todos os agregados permite que você visualize informações sobre a capacidade e a utilização de agregados em todos os clusters.' 
+---
+= Veja a lista agregada e os detalhes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Na visualização Saúde: Todos os agregados, você pode monitorar seu inventário de agregados.  A exibição Capacidade: Todos os agregados permite que você visualize informações sobre a capacidade e a utilização de agregados em todos os clusters.
+
+.Antes de começar
+Você deve ter a função de Operador, Administrador de Aplicativos ou Administrador de Armazenamento.
+
+Você pode visualizar detalhes como capacidade e configuração agregadas e informações do disco na página Detalhes do agregado/saúde.  Você pode usar esses detalhes antes de configurar as configurações de limite, se necessário.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento* > *Agregados*.
+. Escolha uma das seguintes maneiras de visualizar os detalhes agregados:
++
+** Para visualizar informações sobre a integridade de todos os agregados em todos os clusters, no menu Exibir, selecione Integridade: visualização Todos os agregados.
+** Para visualizar informações sobre a capacidade e a utilização de todos os agregados em todos os clusters, no menu Exibir, selecione Capacidade: visualização Todos os agregados.
+** Para ver os detalhes completos, clique no nome do agregado.
++
+Você também pode visualizar os detalhes completos clicando em *Exibir detalhes* na caixa de diálogo de detalhes mínimos.
+
+
+
+. Visualize os objetos relacionados ao agregado clicando em *Visualizar relacionados* na caixa de diálogo de detalhes mínimos.
+
+
+*Informações relacionadas*
+
+* link:../health-checker/reference_health_aggregate_details_page.html["Página de detalhes agregados/de saúde"]
+* link:../performance-checker/performance-view-all.html#performance-all-aggregates-view["Desempenho: Visualização de todos os agregados"]
+* link:../reporting/concept_customize_aggregate_capacity_reports.html["Personalizando relatórios de capacidade agregada"]
+

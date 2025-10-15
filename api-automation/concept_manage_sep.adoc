@@ -1,0 +1,103 @@
+---
+permalink: api-automation/concept_manage_sep.html 
+sidebar: sidebar 
+keywords: manage, storage, efficiency, policy 
+summary: Você pode visualizar, criar, modificar e excluir Políticas de Eficiência de Armazenamento usando as APIs do provedor de armazenamento. 
+---
+= Gerencie políticas de eficiência de armazenamento usando APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode visualizar, criar, modificar e excluir Políticas de Eficiência de Armazenamento usando as APIs do provedor de armazenamento.
+
+[NOTE]
+====
+Observe os seguintes pontos:
+
+* Não é obrigatório atribuir uma Política de Eficiência de Armazenamento ao criar uma carga de trabalho no Unified Manager.
+* Não é possível cancelar a atribuição de uma Política de Eficiência de Armazenamento de uma carga de trabalho depois que uma política é atribuída a ela.
+* Se uma carga de trabalho tiver algumas configurações de armazenamento especificadas em volumes ONTAP , como desduplicação e compactação, essas configurações poderão ser substituídas pelas configurações especificadas na Política de Eficiência de Armazenamento que você aplica ao adicionar as cargas de trabalho de armazenamento no Unified Manager.
+
+
+====
+
+
+== Ver políticas de eficiência de armazenamento
+
+Você pode usar o método a seguir para visualizar as Políticas de Eficiência de Armazenamento antes de atribuí-las às cargas de trabalho de armazenamento.  Esta API lista todas as Políticas de Eficiência de Armazenamento definidas pelo sistema e criadas pelo usuário e recupera os atributos de todas as Políticas de Eficiência de Armazenamento.  Se quiser consultar uma Política de Eficiência de Armazenamento específica, você precisa inserir o ID exclusivo da política para recuperar seus detalhes.
+
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+PEGAR
+ a| 
+`/storage-provider/storage-efficiency-policies`
+
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===
+
+
+== Adicionar políticas de eficiência de armazenamento
+
+Você pode usar o método a seguir para criar Políticas de Eficiência de Armazenamento personalizadas e atribuí-las às suas cargas de trabalho de armazenamento se as políticas definidas pelo sistema não atenderem aos requisitos de provisionamento para suas cargas de trabalho de armazenamento.  Insira os detalhes da Política de Eficiência de Armazenamento que você deseja criar, como parâmetros de entrada.
+
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+PUBLICAR
+ a| 
+`/storage-provider/storage-efficiency-policies`
+
+|===
+
+
+== Excluir políticas de eficiência de armazenamento
+
+Você pode usar o seguinte método para excluir uma Política de Eficiência de Armazenamento específica.  Não é possível excluir uma Política de Eficiência de Armazenamento se ela estiver atribuída a uma carga de trabalho ou se for a única Política de Eficiência de Armazenamento disponível.  Você precisa fornecer o ID exclusivo da Política de Eficiência de Armazenamento como um parâmetro de entrada para excluir uma Política de Eficiência de Armazenamento específica.
+
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+EXCLUIR
+ a| 
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===
+
+
+== Modificar políticas de eficiência de armazenamento
+
+Você pode usar o seguinte método para modificar uma Política de Eficiência de Armazenamento e atualizar suas propriedades.  Não é possível modificar uma Política de Eficiência de Armazenamento definida pelo sistema ou atribuída a uma carga de trabalho.  Você precisa fornecer o ID exclusivo da Política de Eficiência de Armazenamento para modificar uma Política de Eficiência de Armazenamento específica.  Além disso, você precisa fornecer a propriedade que deseja atualizar, juntamente com seu valor.
+
+[cols="3*"]
+|===
+| Categoria | verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+CORREÇÃO
+ a| 
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===

@@ -1,0 +1,36 @@
+---
+permalink: performance-checker/task_search_on_object_inventory_performance_pages.html 
+sidebar: sidebar 
+keywords: object, inventory, performance, pages 
+summary: Você pode pesquisar strings nas páginas de Desempenho do Inventário de Objetos.  Use o campo Pesquisar localizado no canto superior direito da página para localizar rapidamente dados com base no nome do objeto ou no nome da política.  Isso permite que você localize rapidamente objetos específicos e seus dados associados, ou localize rapidamente políticas e visualize dados de objetos de políticas associados. 
+---
+= Pesquisar nas páginas de desempenho do inventário de objetos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode pesquisar strings nas páginas de Desempenho do Inventário de Objetos.  Use o campo *Pesquisar* localizado no canto superior direito da página para localizar rapidamente dados com base no nome do objeto ou no nome da política.  Isso permite que você localize rapidamente objetos específicos e seus dados associados, ou localize rapidamente políticas e visualize dados de objetos de políticas associados.
+
+.Etapa
+. Execute uma das seguintes opções, com base nos seus requisitos de pesquisa:
++
+|===
+| Para localizar isto... | Digite isto... 
+
+
+ a| 
+Um objeto específico
+ a| 
+Digite o nome do objeto no campo *Pesquisar* e clique em *Pesquisar*.  O objeto que você pesquisou e seus dados relacionados são exibidos.
+
+
+
+ a| 
+Uma política de limite de desempenho definida pelo usuário
+ a| 
+Digite todo ou parte do nome da política no campo *Pesquisar* e clique em *Pesquisar*.  Os objetos atribuídos à política que você pesquisou são exibidos.
+
+|===
+

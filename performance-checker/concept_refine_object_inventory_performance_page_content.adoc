@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_refine_object_inventory_performance_page_content.html 
+sidebar: sidebar 
+keywords: refining, performance, inventory, page, contents 
+summary: As páginas de inventário para objetos de desempenho contêm ferramentas para ajudar você a refinar o conteúdo de dados de inventário de objetos, permitindo que você localize dados específicos de forma rápida e fácil. 
+---
+= Refinando o conteúdo da página de inventário de desempenho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As páginas de inventário para objetos de desempenho contêm ferramentas para ajudar você a refinar o conteúdo de dados de inventário de objetos, permitindo que você localize dados específicos de forma rápida e fácil.
+
+As informações contidas nas páginas de inventário de objetos de desempenho podem ser extensas, muitas vezes abrangendo várias páginas.  Esse tipo de dado abrangente é excelente para monitorar, rastrear e melhorar o desempenho; no entanto, localizar dados específicos requer ferramentas que permitam localizar rapidamente os dados que você está procurando.  Portanto, as páginas de inventário de objetos de desempenho contêm funcionalidades para pesquisa, classificação e filtragem.  Além disso, a pesquisa e a filtragem podem funcionar juntas para refinar ainda mais seus resultados.

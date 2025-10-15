@@ -1,0 +1,30 @@
+---
+permalink: performance-checker/task_specify_custom_time_range.html 
+sidebar: sidebar 
+keywords: specify, custom, time range 
+summary: A página Performance Explorer permite que você especifique o intervalo de data e hora para seus dados de desempenho.  Especificar um intervalo de tempo personalizado oferece maior flexibilidade do que usar intervalos de tempo predefinidos ao refinar dados de objetos de cluster. 
+---
+= Especifique um intervalo de tempo personalizado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página Performance Explorer permite que você especifique o intervalo de data e hora para seus dados de desempenho.  Especificar um intervalo de tempo personalizado oferece maior flexibilidade do que usar intervalos de tempo predefinidos ao refinar dados de objetos de cluster.
+
+Você pode selecionar um intervalo de tempo entre uma hora e 390 dias.  13 meses equivalem a 390 dias porque cada mês é contado como 30 dias.  Especificar um intervalo de data e hora fornece mais detalhes e permite que você amplie eventos de desempenho específicos ou séries de eventos.  Especificar um intervalo de tempo também ajuda a solucionar possíveis problemas de desempenho, pois especificar um intervalo de data e hora exibe dados sobre o evento de desempenho com mais detalhes.  Use o controle *Intervalo de tempo* para selecionar intervalos de data e hora predefinidos ou especifique seu próprio intervalo de data e hora personalizado de até 390 dias.  Os botões para intervalos de tempo predefinidos variam de *Última hora* até *Últimos 13 meses*.
+
+Selecionar a opção *Últimos 13 meses* ou especificar um intervalo de datas personalizado maior que 30 dias exibe uma caixa de diálogo alertando que os dados de desempenho exibidos para um período maior que 30 dias são mapeados usando médias horárias e não pesquisas de dados de 5 minutos.  Portanto, pode ocorrer uma perda de granularidade visual da linha do tempo.  Se você clicar na opção *Não mostrar novamente* na caixa de diálogo, a mensagem não aparecerá quando você selecionar a opção *Últimos 13 meses* ou especificar um intervalo de datas personalizado maior que 30 dias.  Os dados resumidos também se aplicam a um intervalo de tempo menor, se o intervalo de tempo incluir uma hora/data superior a 30 dias a partir de hoje.
+
+Ao selecionar um intervalo de tempo (personalizado ou predefinido), intervalos de tempo de 30 dias ou menos são baseados em amostras de dados de intervalo de 5 minutos.  Intervalos de tempo maiores que 30 dias são baseados em amostras de dados de intervalo de uma hora.
+
+image::../media/time_range_selector.gif[Uma captura de tela da interface do usuário que mostra o painel Intervalo de tempo.]
+
+. Clique na caixa suspensa *Intervalo de tempo* e o painel Intervalo de tempo será exibido.
+. Para selecionar um intervalo de tempo predefinido, clique em um dos botões *Último...* à direita do painel *Intervalo de tempo*.  Ao selecionar um intervalo de tempo predefinido, dados de até 13 meses estarão disponíveis.  O botão de intervalo de tempo predefinido que você selecionou é destacado, e os dias e horários correspondentes são exibidos nos calendários e seletores de horário.
+. Para selecionar um intervalo de datas personalizado, clique na data de início no calendário *De* à esquerda.  Clique em *<* ou *>* para navegar para frente ou para trás no calendário.  Para especificar a data final, clique em uma data no calendário *Até* à direita.  Observe que a data final padrão é hoje, a menos que você especifique uma data final diferente.  O botão *Intervalo personalizado* à direita do painel Intervalo de tempo é destacado, indicando que você selecionou um intervalo de datas personalizado.
+. Para selecionar um intervalo de tempo personalizado, clique no controle *Tempo* abaixo do calendário *De* e selecione a hora de início.  Para especificar o horário de término, clique no controle *Hora* abaixo do calendário *Até* à direita e selecione o horário de término.  O botão *Intervalo personalizado* à direita do painel Intervalo de tempo é destacado, indicando que você selecionou um intervalo de tempo personalizado.
+. Opcionalmente, você pode especificar os horários de início e término ao selecionar um intervalo de datas predefinido.  Selecione o intervalo de datas predefinido, conforme descrito anteriormente, e depois selecione os horários de início e término, conforme descrito anteriormente.  As datas selecionadas são destacadas nos calendários, os horários de início e término especificados são exibidos nos controles *Tempo* e o botão *Intervalo personalizado* é destacado.
+. Após selecionar o intervalo de data e hora, clique em *Aplicar intervalo*.  As estatísticas de desempenho para esse intervalo de tempo são exibidas nos gráficos e na linha do tempo de Eventos.
+

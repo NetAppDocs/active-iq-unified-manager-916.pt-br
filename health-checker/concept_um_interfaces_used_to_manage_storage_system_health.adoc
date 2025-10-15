@@ -1,0 +1,32 @@
+---
+permalink: health-checker/concept_um_interfaces_used_to_manage_storage_system_health.html 
+sidebar: sidebar 
+keywords: unified manager, interfaces, manage, storage system, health 
+summary: Esta seção contém informações sobre as duas interfaces de usuário que o Active IQ Unified Manager fornece para solucionar problemas de capacidade de armazenamento de dados, disponibilidade e proteção.  As duas interfaces de usuário são a interface de usuário da Web do Unified Manager e o console de manutenção. 
+---
+= Interfaces do Unified Manager usadas para gerenciar a integridade do sistema de armazenamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead lead"]
+Estas seções contêm informações sobre as duas interfaces de usuário que o Active IQ Unified Manager fornece para solucionar problemas de capacidade de armazenamento de dados, disponibilidade e proteção.  As duas interfaces de usuário são a interface de usuário da Web do Unified Manager e o console de manutenção.
+
+Se quiser usar os recursos de proteção no Unified Manager, você também deve instalar e configurar o OnCommand Workflow Automation (WFA).
+
+
+
+== Interface da Web do Unified Manager
+
+A interface de usuário da Web do Unified Manager permite que um administrador monitore e solucione problemas de cluster relacionados à capacidade de armazenamento de dados, disponibilidade e proteção.
+
+Estas seções descrevem alguns fluxos de trabalho comuns que um administrador pode seguir para solucionar problemas de capacidade de armazenamento, disponibilidade de dados ou proteção exibidos na interface do usuário da Web do Unified Manager.
+
+
+
+== Console de manutenção
+
+O console de manutenção do Unified Manager permite que um administrador monitore, diagnostique e resolva problemas do sistema operacional, problemas de atualização de versão, problemas de acesso do usuário e problemas de rede relacionados ao próprio servidor do Unified Manager.  Se a interface de usuário da Web do Unified Manager não estiver disponível, o console de manutenção será a única forma de acesso ao Unified Manager.
+
+Você pode usar essas informações para acessar o console de manutenção e usá-las para resolver problemas relacionados ao funcionamento do servidor do Unified Manager.

@@ -1,0 +1,29 @@
+---
+permalink: health-checker/task_edit_annotation_rules.html 
+sidebar: sidebar 
+keywords: edit, annotation rules 
+summary: Você pode editar regras de anotação para modificar os grupos de condições e as condições dentro do grupo de condições para adicionar ou remover anotações de objetos de armazenamento. 
+---
+= Editar regras de anotação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode editar regras de anotação para modificar os grupos de condições e as condições dentro do grupo de condições para adicionar ou remover anotações de objetos de armazenamento.
+
+.Antes de começar
+Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+As anotações são dissociadas dos objetos de armazenamento quando você edita as regras de anotação associadas.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Anotações*.
+. Na aba *Regras de anotação*, selecione a regra de anotação que deseja editar e clique em *Ações* > *Editar*.
+. Na caixa de diálogo *Editar regra de anotação*, altere o nome da regra, o nome e o valor da anotação, os grupos de condições e as condições, conforme necessário.
++
+Não é possível alterar o tipo de objeto de destino para uma regra de anotação.
+
+. Clique em *Salvar*.
+

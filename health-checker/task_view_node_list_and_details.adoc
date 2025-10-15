@@ -1,0 +1,54 @@
+---
+permalink: health-checker/task_view_node_list_and_details.html 
+sidebar: sidebar 
+keywords: view, node list, details 
+summary: 'Você pode usar a visualização Saúde: Todos os nós para visualizar a lista de nós em seus clusters.  Você pode usar a página Detalhes do cluster/integridade para visualizar informações detalhadas sobre os nós que fazem parte do cluster monitorado.' 
+---
+= Ver a lista de nós e detalhes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a visualização Saúde: Todos os nós para visualizar a lista de nós em seus clusters.  Você pode usar a página Detalhes do cluster/integridade para visualizar informações detalhadas sobre os nós que fazem parte do cluster monitorado.
+
+.Antes de começar
+Você deve ter a função de Operador, Administrador de Aplicativos ou Administrador de Armazenamento.
+
+Você pode visualizar detalhes como o estado do nó, o cluster que contém o nó, detalhes da capacidade agregada (usada e total) e detalhes da capacidade bruta (utilizável, sobressalente e total).  Você também pode obter informações sobre pares de HA, prateleiras de discos e portas.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento* > *Nós*.
+. Na visualização *Saúde: Todos os nós*, clique no nó cujos detalhes você deseja visualizar.
++
+As informações detalhadas do nó selecionado são exibidas na página Detalhes do cluster/integridade.  O painel esquerdo exibe a lista de pares de HA.  Por padrão, os Detalhes do HA estão abertos, exibindo detalhes do estado do HA e eventos relacionados ao par de HA selecionado.
+
+. Para visualizar outros detalhes sobre o nó, execute a ação apropriada:
++
+[cols="2*"]
+|===
+| Para visualizar... | Clique... 
+
+
+ a| 
+Detalhes sobre as prateleiras de disco
+ a| 
+*Prateleiras de disco*.
+
+
+
+ a| 
+Informações relacionadas ao porto
+ a| 
+*Portas*.
+
+|===
+
+
+Para mais informações, consulte:
+
+* link:../performance-checker/performance-view-all.html#performance-all-nodes-view["Desempenho: visualização de todos os nós"]
+* link:../performance-checker/concept_view_node_and_aggregate_available_iops_values.html["Visualizando valores de IOPS disponíveis de nós e agregados"]
+* link:../performance-checker/concept_view_node_and_aggregate_performance_capacity_used_values.html["Visualizando valores usados de capacidade de desempenho de nós e agregados"]
+

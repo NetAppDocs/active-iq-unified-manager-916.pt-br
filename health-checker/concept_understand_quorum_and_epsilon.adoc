@@ -1,0 +1,30 @@
+---
+permalink: health-checker/concept_understand_quorum_and_epsilon.html 
+sidebar: sidebar 
+keywords: understand, quorum, epsilon 
+summary: Quorum e epsilon são medidas importantes da saúde e função do cluster que, juntas, indicam como os clusters abordam potenciais desafios de comunicação e conectividade. 
+---
+= Entenda o quorum e o epsilon
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quorum e epsilon são medidas importantes da saúde e função do cluster que, juntas, indicam como os clusters abordam potenciais desafios de comunicação e conectividade.
+
+_Quorum_ é uma pré-condição para um cluster totalmente funcional.  Quando um cluster está em quorum, uma maioria simples de nós está saudável e pode se comunicar entre si.  Quando o quorum é perdido, o cluster perde a capacidade de realizar operações normais de cluster.  Somente uma coleção de nós pode ter quorum por vez, porque todos os nós compartilham coletivamente uma única visão dos dados.  Portanto, se dois nós não comunicantes tiverem permissão para modificar os dados de maneiras divergentes, não será mais possível reconciliar os dados em uma única visualização de dados.
+
+Cada nó no cluster participa de um protocolo de votação que elege um nó mestre; cada nó restante é um secundário.  O nó mestre é responsável por sincronizar informações em todo o cluster.  Quando o quórum é formado, ele é mantido por votação contínua.  Se o nó mestre ficar offline e o cluster ainda estiver no quorum, um novo mestre será eleito pelos nós que permanecerem online.
+
+Como há a possibilidade de empate em um cluster que tem um número par de nós, um nó tem um peso de votação fracionário extra chamado épsilon.  Se a conectividade entre duas porções iguais de um grande cluster falhar, o grupo de nós que contém epsilon mantém o quorum, assumindo que todos os nós estão saudáveis.  Por exemplo, a ilustração a seguir mostra um cluster de quatro nós no qual dois dos nós falharam.  Entretanto, como um dos nós sobreviventes contém epsilon, o cluster permanece no quorum mesmo que não haja uma maioria simples de nós saudáveis.
+
+image::../media/epsilon_preserving_quorum.gif[Esta imagem é explicada pelo texto ao redor.]
+
+O Epsilon é atribuído automaticamente ao primeiro nó quando o cluster é criado.  Se o nó que contém o epsilon ficar com problemas, assumir o controle de seu parceiro de alta disponibilidade ou for assumido por seu parceiro de alta disponibilidade, o epsilon será automaticamente reatribuído a um nó saudável em um par de HA diferente.
+
+Colocar um nó offline pode afetar a capacidade do cluster de permanecer no quorum.  Portanto, o ONTAP emite uma mensagem de aviso se você tentar uma operação que tire o cluster do quorum ou o coloque a uma indisponibilidade de uma perda de quorum.  Você pode desabilitar as mensagens de aviso de quorum usando o comando cluster quorum-service options modify no nível de privilégio avançado.
+
+Em geral, assumindo conectividade confiável entre os nós do cluster, um cluster maior é mais estável que um cluster menor.  O requisito de quorum de uma maioria simples de metade dos nós mais epsilon é mais fácil de manter em um cluster de 24 nós do que em um cluster de dois nós.
+
+Um cluster de dois nós apresenta alguns desafios específicos para manter o quorum.  Clusters de dois nós usam HA de cluster, no qual nenhum nó contém epsilon; em vez disso, ambos os nós são continuamente pesquisados para garantir que, se um nó falhar, o outro tenha acesso total de leitura e gravação aos dados, bem como acesso a interfaces lógicas e funções de gerenciamento.

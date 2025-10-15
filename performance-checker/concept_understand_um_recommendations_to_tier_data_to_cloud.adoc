@@ -1,0 +1,59 @@
+---
+permalink: performance-checker/concept_understand_um_recommendations_to_tier_data_to_cloud.html 
+sidebar: sidebar 
+keywords: understand, unified manager, recommendations, tier, data, cloud 
+summary: 'A exibição Desempenho: Todos os volumes exibe informações relacionadas ao tamanho dos dados do usuário armazenados no volume que está inativo (frio).  Em alguns casos, o Unified Manager identifica determinados volumes que se beneficiariam da hierarquização dos dados inativos na camada de nuvem (provedor de nuvem ou StorageGRID) de um agregado habilitado para FabricPool.' 
+---
+= Entenda as recomendações do Unified Manager para hierarquizar dados na nuvem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A exibição Desempenho: Todos os volumes exibe informações relacionadas ao tamanho dos dados do usuário armazenados no volume que está inativo (frio).  Em alguns casos, o Unified Manager identifica determinados volumes que se beneficiariam da hierarquização dos dados inativos na camada de nuvem (provedor de nuvem ou StorageGRID) de um agregado habilitado para FabricPool.
+
+[NOTE]
+====
+O FabricPool foi introduzido no ONTAP 9.2, portanto, se você estiver usando uma versão do software ONTAP anterior à 9.2, a recomendação do Unified Manager para hierarquizar dados exige a atualização do seu software ONTAP .  Além disso, o `*auto*` A política de hierarquização foi introduzida no ONTAP 9.4 e a `*all*` A política de hierarquização foi introduzida no ONTAP 9.6, portanto, se a recomendação for usar a política de hierarquização automática, você deve atualizar para o ONTAP 9.4 ou superior.
+
+====
+Os três campos a seguir na exibição Desempenho: Todos os volumes fornecem informações sobre se você pode melhorar a utilização do disco do seu sistema de armazenamento e economizar espaço na camada de desempenho movendo dados inativos para a camada de nuvem.
+
+* *Política de níveis*
++
+A política de camadas determina se os dados no volume permanecem na camada de desempenho ou se alguns dos dados são movidos da camada de desempenho para a camada de nuvem.
+
++
+O valor neste campo indica a política de camadas definida no volume, mesmo que o volume não resida atualmente em um agregado FabricPool .  A política de hierarquização entra em vigor somente quando o volume está em um agregado FabricPool .
+
+* *Dados Frios*
++
+Os dados frios exibem o tamanho dos dados do usuário armazenados no volume que está inativo (frio).
+
++
+Um valor é exibido aqui somente ao usar o software ONTAP 9.4 ou superior porque ele requer que o agregado no qual o volume é implantado tenha o `*inactive data reporting parameter*` definido para `*enabled*` , e que o limite mínimo de dias de resfriamento foi atingido (para volumes que utilizam o `*snapshot-only*` ou `*auto*` política de hierarquização).  Caso contrário, o valor será listado como "`N/A`".
+
+* *Recomendação de Nuvem*
++
+Depois que informações suficientes forem capturadas sobre a atividade de dados no volume, o Unified Manager poderá determinar que nenhuma ação é necessária ou que você pode economizar espaço na camada de desempenho hierarquizando dados inativos na camada de nuvem.
+
+
+
+[NOTE]
+====
+O campo Dados frios é atualizado a cada 15 minutos, mas o campo Recomendação de nuvem é atualizado a cada 7 dias quando a análise de dados frios é realizada no volume.  Portanto, a quantidade exata de dados frios pode diferir entre os campos.  O campo Recomendação de Nuvem exibe a data em que a análise foi executada.
+
+====
+Quando o Relatório de Dados Inativos está ativado, o campo Dados Frios exibe a quantidade exata de dados inativos.  Sem o recurso de relatório de dados inativos, o Unified Manager usa estatísticas de desempenho para determinar se os dados estão inativos em um volume.  A quantidade de dados inativos não é exibida no campo Dados Frios neste caso, mas é exibida quando você passa o cursor sobre a palavra *Nível* para visualizar a recomendação da nuvem.
+
+As recomendações de nuvem que você verá são:
+
+* *Aprendizado*.  Não foram coletados dados suficientes para fazer uma recomendação.
+* *Nível*.  A análise determinou que o volume contém dados inativos (frios) e que você deve configurar o volume para mover esses dados para a camada de nuvem.  Em alguns casos, isso pode exigir que você mova o volume para um agregado habilitado para FabricPool primeiro.  Em outros casos em que o volume já está em um agregado FabricPool , você só precisa alterar a política de camadas.
+* *Nenhuma ação*.  O volume tem muito poucos dados inativos, o volume já está definido para a política de hierarquização "`auto`" em um agregado FabricPool ou o volume é um volume de proteção de dados.  Este valor também é exibido quando o volume está offline ou quando está sendo usado em uma configuração do MetroCluster .
+
+
+Para mover um volume ou alterar a política de camadas de volume ou as configurações de relatórios de dados inativos agregados, use o ONTAP System Manager, os comandos ONTAP CLI ou uma combinação dessas ferramentas.
+
+Se você estiver conectado ao Unified Manager com a função de Administrador de Aplicativos ou Administrador de Armazenamento, o link *Configurar Volume* estará disponível na recomendação de nuvem quando você passar o cursor sobre a palavra *Nível*.  Clique neste botão para abrir a página Volumes no Gerenciador do Sistema para fazer a alteração recomendada.

@@ -1,0 +1,28 @@
+---
+permalink: config/task_delete_users_or_groups.html 
+sidebar: sidebar 
+keywords: delete, users, groups 
+summary: Você pode excluir um ou mais usuários do banco de dados do servidor de gerenciamento para impedir que usuários específicos acessem o Unified Manager.  Você também pode excluir grupos para que todos os usuários do grupo não possam mais acessar o servidor de gerenciamento. 
+---
+= Excluir usuários ou grupos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode excluir um ou mais usuários do banco de dados do servidor de gerenciamento para impedir que usuários específicos acessem o Unified Manager.  Você também pode excluir grupos para que todos os usuários do grupo não possam mais acessar o servidor de gerenciamento.
+
+.Antes de começar
+* Ao excluir grupos remotos, você deve reatribuir os eventos atribuídos aos usuários dos grupos remotos.
++
+Se você estiver excluindo usuários locais ou remotos, os eventos atribuídos a esses usuários serão automaticamente desatribuídos.
+
+* Você deve ter a função de Administrador do Aplicativo.
+
+
+.Passos
+. No painel de navegação esquerdo, clique em *Geral* > *Usuários*.
+. Na página Usuários, selecione os usuários ou grupos que você deseja excluir e clique em *Excluir*.
+. Clique em *Sim* para confirmar a exclusão.
+

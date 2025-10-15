@@ -1,0 +1,99 @@
+---
+permalink: reporting/concept_unified_manager_databases_accessible_for_reporting.html 
+sidebar: sidebar 
+keywords: unified manager, databases, access, custom, reporting 
+summary: O Unified Manager usa um banco de dados MySQL para armazenar dados dos clusters que está monitorando.  Os dados são persistidos em vários esquemas no banco de dados MySQL. 
+---
+= Bancos de dados do Unified Manager acessíveis para relatórios personalizados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Unified Manager usa um banco de dados MySQL para armazenar dados dos clusters que está monitorando.  Os dados são persistidos em vários esquemas no banco de dados MySQL.
+
+Todos os dados da tabela dos seguintes bancos de dados estão disponíveis:
+
+[cols="2*"]
+|===
+| Banco de dados | Descrição 
+
+
+ a| 
+modelo netapp
+ a| 
+Dados sobre os objetos nos controladores ONTAP .
+
+
+
+ a| 
+netapp_model_view
+ a| 
+Dados sobre os objetos nos controladores ONTAP , adequados para consumo de ferramentas de relatório.
+
+
+
+ a| 
+netapp_desempenho
+ a| 
+Contadores de desempenho específicos do cluster.
+
+
+
+ a| 
+ocum
+ a| 
+Dados e informações do aplicativo Unified Manager para dar suporte à filtragem da interface do usuário, classificação e cálculo de alguns campos derivados.
+
+
+
+ a| 
+ocum_report
+ a| 
+Dados para configuração de inventário e informações relacionadas à capacidade.
+
+
+
+ a| 
+ocum_report_birth
+ a| 
+Visualizações para configuração de inventário e dados relacionados à capacidade, adequadas para consumo de ferramentas de relatório.
+
+
+
+ a| 
+opm
+ a| 
+Definições de configuração de desempenho e informações de limite.
+
+
+
+ a| 
+monitor de escala
+ a| 
+Dados sobre problemas de desempenho e integridade do aplicativo Unified Manager.
+
+
+
+ a| 
+modelo_vmware
+ a| 
+Dados de objetos VMware para datastores hospedados no armazenamento NetApp .
+
+
+
+ a| 
+visualização_do_modelo_vmware
+ a| 
+Visualizações de dados de objetos VMware para datastores hospedados no armazenamento NetApp , adequados para consumo de ferramentas de relatório.
+
+
+
+ a| 
+desempenho_vmware
+ a| 
+Dados do contador de desempenho do VMware para datastores hospedados no armazenamento NetApp .
+
+|===
+Um usuário de relatórios — um usuário de banco de dados com a função Esquema de relatório — pode acessar os dados nessas tabelas.  Este usuário tem acesso somente leitura a relatórios e outras visualizações de banco de dados diretamente do banco de dados do Unified Manager.  Observe que este usuário não tem permissão para acessar nenhuma tabela que contenha dados do usuário ou informações de credenciais do cluster.

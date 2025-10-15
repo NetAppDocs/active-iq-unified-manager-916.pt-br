@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_volume_relationship_reports.html 
+sidebar: sidebar 
+keywords: customize, volume, relationship, reports 
+summary: O relatório Inventário de relacionamentos de volume permite que você analise os detalhes do inventário de armazenamento em um cluster, entenda o grau de proteção necessário para os volumes e filtre os detalhes do volume com base na origem da falha, no padrão e nas programações. 
+---
+= Personalizar relatórios de relacionamento de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O relatório Inventário de relacionamentos de volume permite que você analise os detalhes do inventário de armazenamento em um cluster, entenda o grau de proteção necessário para os volumes e filtre os detalhes do volume com base na origem da falha, no padrão e nas programações.

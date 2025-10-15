@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task_configure_volume_health_thresholds_for_groups.html 
+sidebar: sidebar 
+keywords: configure, volume, health, thresholds, groups 
+summary: Você pode configurar limites de integridade de volume em nível de grupo para capacidade, cópias de instantâneo, cotas de qtree, crescimento e inodes. 
+---
+= Configurar limites de integridade de volume para grupos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar limites de integridade de volume em nível de grupo para capacidade, cópias de instantâneo, cotas de qtree, crescimento e inodes.
+
+.Antes de começar
+Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+O tipo de ação de grupo de limite de integridade do volume é aplicado somente aos volumes de um grupo.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Grupos*.
+. Na aba *Ações de Grupo*, clique em *Adicionar*.
+. Insira um nome e uma descrição para a ação do grupo.
+. Na caixa suspensa *Grupo*, selecione um grupo para o qual você deseja configurar a ação do grupo.
+. Selecione *Tipo de ação* como limite de integridade do volume.
+. Selecione a categoria para a qual você deseja definir o limite.
+. Insira os valores necessários para o limite de saúde.
+. Clique em *Adicionar*.
+

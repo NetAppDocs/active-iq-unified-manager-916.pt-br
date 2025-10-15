@@ -1,0 +1,87 @@
+---
+permalink: storage-mgmt/task_view_and_add_vcenter_servers.html 
+sidebar: sidebar 
+keywords: view, add, vcenter, server 
+summary: 'Para visualizar e solucionar problemas de desempenho das máquinas virtuais (VMs), os vCenter Servers associados devem ser adicionados à sua instância do Active IQ Unified Manager .' 
+---
+= Visualizar e adicionar o vCenter Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para visualizar e solucionar problemas de desempenho das máquinas virtuais (VMs), os vCenter Servers associados devem ser adicionados à sua instância do Active IQ Unified Manager .
+
+.Antes de começar
+Antes de adicionar ou visualizar servidores vCenter, verifique o seguinte:
+
+* Você conhece os nomes do vCenter Server.
+* Você sabe o endereço IP do vCenter Server e tem as credenciais necessárias.  As credenciais devem ser de um administrador do vCenter Server ou de um usuário raiz com acesso somente leitura ao vCenter Server.
+* O vCenter Server que você deseja adicionar executa o vSphere 6.5 ou posterior.
++
+
+NOTE: O suporte do Unified Manager para VMware ESXi e vCenter Server está disponível em inglês e japonês.
+
+* A configuração de coleta de dados no vCenter Server é definida para o nível de estatísticas de `_Level 3_` , garantindo o nível necessário de coleta de métricas para todos os objetos monitorados.  A duração do intervalo deve ser `_5 minutes_` , e o período de salvamento deve ser `_1 day_` .
++
+Para obter mais informações, consulte a seção "`Níveis de coleta de dados`" do _Guia de monitoramento e desempenho do vSphere_ na documentação do VMware.
+
+* Os valores de latência no vCenter Server são configurados em milissegundos, e não em microssegundos, para cálculos bem-sucedidos dos valores de latência.
+* Ao adicionar o armazenamento de dados ao vCenter Server, você pode usar o endereço IP do host ou o nome de domínio totalmente qualificado (FQDN).  Caso você esteja adicionando FQDN, certifique-se de que o nome de domínio possa ser resolvido pelo servidor do Unified Manager.  Por exemplo, para uma instalação Linux, certifique-se de que o nome de domínio seja adicionado no `/etc/resolv.conf` arquivo.
+* O horário atual do vCenter Server está sincronizado com o fuso horário do vCenter Server.
+* O vCenter Server está acessível para uma descoberta bem-sucedida.
+* Você tem acesso de leitura ao VMware SDK ao adicionar o vCenter Server ao Unified Manager.  Isso é necessário para a pesquisa de configuração.
+
+
+Para cada vCenter Server adicionado e descoberto, o Unified Manager coleta os dados de configuração, como detalhes do vCenter Server e do servidor ESXi, mapeamento ONTAP , detalhes do armazenamento de dados e número de VMs hospedadas.  Ele também coleta as métricas de desempenho dos componentes.
+
+.Passos
+. Vá para *VMWARE* > *vCenter* e verifique se o seu vCenter Server está disponível na lista.
++
+[NOTE]
+====
+Se o seu vCenter Server não estiver disponível, você deverá adicioná-lo.
+
+====
++
+.. Clique em *Adicionar*.
+.. Adicione o endereço IP correto para o vCenter Server e certifique-se de que o dispositivo esteja acessível.
+.. Adicione o nome de usuário e a senha do administrador ou usuário root com acesso somente leitura ao vCenter Server.
+.. Adicione o número da porta personalizada se estiver usando qualquer porta diferente da padrão 443.
+.. Clique em *Salvar*.
++
+Após a descoberta bem-sucedida, um certificado de servidor será exibido para você aceitar.
+
++
+Quando você aceita o certificado, o vCenter Server é adicionado à lista de vCenter Servers disponíveis.  Adicionar o dispositivo não resulta na coleta de dados para as VMs associadas, e a coleta ocorre nos intervalos agendados.
+
+
+
+. Se o seu vCenter Server estiver disponível na página *vCenters*, verifique seu status passando o mouse sobre o campo *Status* para exibir se o seu vCenter Server está funcionando conforme o esperado ou se há um aviso ou erro.
++
+[NOTE]
+====
+Adicionar o vCenter Server permite que você visualize os seguintes status.  No entanto, os dados de desempenho e latência das VMs correspondentes podem levar até uma hora após a adição do vCenter Server para serem refletidos com precisão.
+
+====
++
+** Verde: "Normal", indicando que o vCenter Server foi descoberto e as métricas de desempenho foram coletadas com sucesso
+** Amarelo: "Aviso" (por exemplo, quando o nível de estatísticas do vCenter Server não foi definido como 3 ou superior para obter estatísticas para cada objeto)
+** Laranja: "Erro" (indica qualquer erro interno, como exceção, falha na coleta de dados de configuração ou inacessibilidade do vCenter Server). Você pode clicar no ícone de exibição da coluna (*Mostrar/Ocultar*) para visualizar a mensagem de status do vCenter Server e solucionar o problema.
+
+
+. Caso o vCenter Server esteja inacessível ou as credenciais tenham sido alteradas, edite os detalhes do vCenter Server selecionando *vCenter* > *Editar*.
+. Faça as alterações necessárias na página *Editar VMware vCenter Server*.
+. Clique em *Salvar*.
+
+
+*Começa a coleta de dados do vCenter Server*
+
+O vCenter Server coleta amostras de dados de desempenho de 20 segundos em tempo real e as acumula em amostras de 5 minutos.  O cronograma para coleta de dados de desempenho do Unified Manager é baseado nas configurações padrão do vCenter Server.  O Unified Manager processa as amostras de 5 minutos obtidas do vCenter Server e calcula uma média horária de IOPS e latência para discos virtuais, VMs e hosts.  Para armazenamentos de dados, o Unified Manager calcula uma média horária de IOPS e latência de amostras obtidas do ONTAP.  Esses valores estão disponíveis no topo da hora.  As métricas de desempenho não ficam disponíveis imediatamente após a adição do vCenter Server e só ficam disponíveis quando a próxima hora começa.  A pesquisa de dados de desempenho começa ao concluir um ciclo de coleta de dados de configuração.
+
+Para pesquisar dados de configuração do vCenter Server, o Unified Manager segue o mesmo cronograma usado para coletar dados de configuração do cluster.  Para obter informações sobre a configuração do vCenter Server e o cronograma de coleta de dados de desempenho, consulte "Configuração do cluster e atividade de coleta de dados de desempenho".
+
+*Informações relacionadas*
+
+link:../performance-checker/concept_cluster_configuration_and_performance_data_collection_activity.html["Configuração de cluster e atividade de coleta de dados de desempenho"]

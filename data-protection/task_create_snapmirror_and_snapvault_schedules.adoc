@@ -1,0 +1,44 @@
+---
+permalink: data-protection/task_create_snapmirror_and_snapvault_schedules.html 
+sidebar: sidebar 
+keywords: create, snapmirror, snapvault, schedules 
+summary: Você pode criar agendamentos básicos ou avançados do SnapMirror e do SnapVault para habilitar transferências automáticas de proteção de dados em um volume de origem ou primário para que as transferências ocorram com mais ou menos frequência, dependendo da frequência com que os dados são alterados em seus volumes. 
+---
+= Crie agendamentos SnapMirror e SnapVault
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar agendamentos básicos ou avançados do SnapMirror e do SnapVault para habilitar transferências automáticas de proteção de dados em um volume de origem ou primário para que as transferências ocorram com mais ou menos frequência, dependendo da frequência com que os dados são alterados em seus volumes.
+
+.Antes de começar
+* Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+* Você já deve ter preenchido a área Informações de destino na caixa de diálogo Configurar proteção.
+* Você deve ter configurado a Automação de Fluxo de Trabalho para executar esta tarefa.
+
+
+.Passos
+. Na guia * SnapMirror* ou * SnapVault* da caixa de diálogo *Configurar proteção*, clique no link *Criar agendamento* na área *Configurações de relacionamento*.
++
+A caixa de diálogo Criar agendamento é exibida.
+
+. No campo *Nome da programação*, digite o nome que você deseja dar à programação.
+. Selecione uma das seguintes opções:
++
+** *Básico*
++
+Selecione se você deseja criar uma programação básica no estilo intervalo.
+
+** *Avançado*
++
+Selecione se você deseja criar uma programação no estilo cron.
+
+
+
+. Clique em *Criar*.
++
+O novo agendamento é exibido na lista suspensa Agendamento do SnapMirror ou Agendamento do SnapVault .
+
+

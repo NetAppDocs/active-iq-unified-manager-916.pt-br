@@ -1,0 +1,107 @@
+---
+permalink: performance-checker/concept_how_user_defined_performance_threshold_policies_work.html 
+sidebar: sidebar 
+keywords: user-defined, performance, threshold, policies, work 
+summary: 'Defina políticas de limite de desempenho em objetos de armazenamento (por exemplo, em agregados e volumes) para que um evento possa ser enviado ao administrador de armazenamento para informá-lo de que o cluster está enfrentando um problema de desempenho.' 
+---
+= Como funcionam as políticas de limite de desempenho definidas pelo usuário
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Defina políticas de limite de desempenho em objetos de armazenamento (por exemplo, em agregados e volumes) para que um evento possa ser enviado ao administrador de armazenamento para informá-lo de que o cluster está enfrentando um problema de desempenho.
+
+Você cria uma política de limite de desempenho para um objeto de armazenamento por meio de:
+
+* Selecionando um objeto de armazenamento
+* Selecionando um contador de desempenho associado a esse objeto
+* Especificar valores que definem os limites superiores do contador de desempenho que são considerados situações de advertência e críticas
+* Especificando um período de tempo que define por quanto tempo o contador deve exceder o limite superior
+
+
+Por exemplo, você pode definir uma política de limite de desempenho em um volume para receber uma notificação de evento crítico sempre que o IOPS desse volume exceder 750 operações por segundo durante 10 minutos consecutivos.  Essa mesma política de limite também pode especificar que um evento de aviso seja enviado quando o IOPS exceder 500 operações por segundo durante 10 minutos.
+
+[NOTE]
+====
+A versão atual fornece limites que enviam eventos quando um valor de contador excede a configuração de limite.  Não é possível definir limites que enviem eventos quando um valor do contador cair abaixo de uma configuração de limite.
+
+====
+Um exemplo de gráfico de contador é mostrado aqui, indicando que um limite de alerta (ícone amarelo) foi violado às 13h00 e que um limite crítico (ícone vermelho) foi violado às 12h10, 12h30 e 13h10:
+
+image::../media/opm2_threshold_breach.gif[Uma captura de tela da interface do usuário que mostra um exemplo de gráfico de contador.]
+
+Uma violação de limite deve ocorrer continuamente durante o período especificado.  Se o limite cair abaixo dos valores-limite por qualquer motivo, uma violação subsequente será considerada o início de uma nova duração.
+
+Alguns objetos de cluster e contadores de desempenho permitem que você crie uma política de limite de combinação que exige que dois contadores de desempenho excedam seus limites máximos antes que um evento seja gerado.  Por exemplo, você pode criar uma política de limite usando os seguintes critérios:
+
+|===
+| Objeto de cluster | Contador de desempenho | Limite de alerta | Limiar crítico | Duração 
+
+
+ a| 
+Volume
+ a| 
+Latência
+ a| 
+10 milissegundos
+ a| 
+20 milissegundos
+ a| 
+15 minutos
+
+
+
+ a| 
+Agregar
+ a| 
+Utilização
+ a| 
+65%
+ a| 
+85%
+ a| 
+
+|===
+Políticas de limite que usam dois objetos de cluster fazem com que um evento seja gerado somente quando ambas as condições são violadas.  Por exemplo, usando a política de limite definida na tabela:
+
+|===
+| Se a latência do volume estiver na média... | E a utilização agregada do disco é... | Então... 
+
+
+ a| 
+15 milissegundos
+ a| 
+50%
+ a| 
+Nenhum evento é relatado.
+
+
+
+ a| 
+15 milissegundos
+ a| 
+75%
+ a| 
+Um evento de Aviso é relatado.
+
+
+
+ a| 
+25 milissegundos
+ a| 
+75%
+ a| 
+Um evento de Aviso é relatado.
+
+
+
+ a| 
+25 milissegundos
+ a| 
+90%
+ a| 
+Um evento crítico é relatado.
+
+|===

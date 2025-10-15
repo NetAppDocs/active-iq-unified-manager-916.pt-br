@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_run_storage_efficiency_operations_at_less_busy_times.html 
+sidebar: sidebar 
+keywords: run, storage, efficiency, operations, less, busy, times 
+summary: Você pode modificar a política ou a programação que lida com operações de eficiência de armazenamento para serem executadas quando as cargas de trabalho do volume afetado estiverem menos ocupadas. 
+---
+= Execute operações de eficiência de armazenamento em horários de menor movimento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode modificar a política ou a programação que lida com operações de eficiência de armazenamento para serem executadas quando as cargas de trabalho do volume afetado estiverem menos ocupadas.
+
+As operações de eficiência de armazenamento podem usar uma grande quantidade de recursos de CPU do cluster e prejudicar os volumes nos quais as operações estão sendo executadas.  Se os volumes das vítimas tiverem alta atividade ao mesmo tempo em que as operações de eficiência de armazenamento são executadas, sua latência pode aumentar e acionar um evento.
+
+Na página Detalhes do evento, a seção Diagnóstico do sistema exibe cargas de trabalho no grupo de políticas de QoS por desvio de pico na atividade para identificar as cargas de trabalho agressivas.  Se você vir "`eficiência de armazenamento`" exibido próximo ao topo da tabela, essas operações estão intimidando as cargas de trabalho das vítimas.  Ao modificar a política de eficiência ou o agendamento para execução quando essas cargas de trabalho estiverem menos ocupadas, você pode evitar que as operações de eficiência de armazenamento causem contenção em um cluster.
+
+Você pode usar o ONTAP System Manager para gerenciar políticas de eficiência.  Você pode usar os comandos ONTAP para gerenciar políticas e cronogramas de eficiência.

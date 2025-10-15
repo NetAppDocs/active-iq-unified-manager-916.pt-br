@@ -1,0 +1,59 @@
+---
+permalink: events/reference_disable_events_dialog_box.html 
+sidebar: sidebar 
+keywords: disable, events, dialog box, properties, area, command buttons 
+summary: A caixa de diálogo Desabilitar eventos exibe a lista de tipos de eventos para os quais você pode desabilitar eventos.  Você pode desabilitar eventos para um tipo de evento com base em uma gravidade específica ou para um conjunto de eventos. 
+---
+= Caixa de diálogo Desativar eventos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Desabilitar eventos exibe a lista de tipos de eventos para os quais você pode desabilitar eventos.  Você pode desabilitar eventos para um tipo de evento com base em uma gravidade específica ou para um conjunto de eventos.
+
+Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+
+
+== Área de Propriedades do Evento
+
+A área Propriedades do Evento especifica as seguintes propriedades do evento:
+
+* *Gravidade do Evento*
++
+Permite selecionar eventos com base no tipo de gravidade, que pode ser Crítico, Erro, Aviso ou Informação.
+
+* *Nome do evento contém*
++
+Permite filtrar eventos cujo nome contém os caracteres especificados.
+
+* *Eventos correspondentes*
++
+Exibe a lista de eventos correspondentes ao tipo de gravidade do evento e à sequência de texto especificada.
+
+* *Desativar eventos*
++
+Exibe a lista de eventos que você selecionou para desabilitar.
+
++
+A gravidade do evento também é exibida junto com o nome do evento.
+
+
+
+
+
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes tarefas para os eventos selecionados:
+
+* *Salvar e fechar*
++
+Desativa o tipo de evento e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Descarta as alterações e fecha a caixa de diálogo.
+
+

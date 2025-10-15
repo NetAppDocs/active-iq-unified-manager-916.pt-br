@@ -1,0 +1,22 @@
+---
+permalink: config/concept_inactivity_timeout.html 
+sidebar: sidebar 
+keywords: inactivity timeout, feature settings 
+summary: Você pode especificar o valor do tempo limite de inatividade para o Active IQ Unified Manager.  Após um período de inatividade especificado, o aplicativo será desconectado automaticamente. Esta opção é habilitada por padrão. 
+---
+= Especificar tempo limite de inatividade
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode especificar o valor do tempo limite de inatividade para o Active IQ Unified Manager.  Após um período de inatividade especificado, o aplicativo será desconectado automaticamente. Esta opção é habilitada por padrão.
+
+Você pode desativar esse recurso ou modificar o tempo em *Geral* > *Configurações de recursos* > *Tempo limite de inatividade*.  Depois de ativar esse recurso, você deve especificar o limite de tempo de inatividade (em minutos) no campo *SAIR APÓS*, após o qual o sistema efetuará logout automaticamente.  O valor padrão é 4320 minutos (72 horas).
+
+[NOTE]
+====
+Esta opção não estará disponível se você tiver habilitado a autenticação Security Assertion Markup Language (SAML).
+
+====

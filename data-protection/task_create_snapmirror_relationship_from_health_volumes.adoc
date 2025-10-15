@@ -1,0 +1,65 @@
+---
+permalink: data-protection/task_create_snapmirror_relationship_from_health_volumes.html 
+sidebar: sidebar 
+keywords: create, snapmirror, protection, relationship, health, volumes view 
+summary: 'Usar a visualização Saúde: Todos os volumes permite que você crie vários relacionamentos de proteção do SnapMirror ao mesmo tempo selecionando mais de um volume na mesma VM de armazenamento.' 
+---
+= Crie um relacionamento de proteção SnapMirror na visualização Saúde: Todos os volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Usar a visualização Saúde: Todos os volumes permite que você crie vários relacionamentos de proteção do SnapMirror ao mesmo tempo selecionando mais de um volume na mesma VM de armazenamento.
+
+.Antes de começar
+* Você deve ter a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+* Você deve ter configurado a Automação de Fluxo de Trabalho.
+
+
+O menu *Proteger* não é exibido nas seguintes instâncias:
+
+* Se as configurações do RBAC não permitirem esta ação: por exemplo, se você tiver apenas privilégios de operador
+* Quando o ID do volume é desconhecido: por exemplo, quando você tem um relacionamento entre clusters e o cluster de destino ainda não foi descoberto
+
+
+.Passos
+. Na visualização *Saúde: Todos os volumes*, selecione um volume que você deseja proteger.
++
+Como alternativa, para criar vários relacionamentos de proteção no mesmo SVM, selecione um ou mais volumes na exibição Integridade: Todos os volumes e clique em *Proteger* > * SnapMirror* na barra de ferramentas.
+
++
+A caixa de diálogo Configurar proteção é exibida.
+
+. Clique em * SnapMirror* para visualizar a aba * SnapMirror* e configurar as informações de destino.
+. Clique em *Avançado* para definir a garantia de espaço, conforme necessário, e depois clique em *Aplicar*.
+. Preencha a área *Informações de destino* e a área *Configurações de relacionamento* na aba * SnapMirror*.
+. Clique em *Aplicar*.
++
+Você retornará à visualização Saúde: Todos os volumes.
+
+. Clique no link da tarefa de configuração de proteção na parte superior da visualização *Saúde: Todos os volumes*.
++
+Se você estiver criando apenas um relacionamento de proteção, a página Detalhes do trabalho será exibida; no entanto, se você estiver criando mais de um relacionamento de proteção, uma lista de todos os trabalhos associados à operação de proteção será exibida.
+
+. Faça um dos seguintes:
++
+** Se você tiver apenas uma tarefa, clique em *Atualizar* para atualizar a lista de tarefas e os detalhes das tarefas associadas à tarefa de configuração de proteção e para determinar quando a tarefa será concluída.
+** Se você tem mais de um emprego:
++
+... Clique em um trabalho na lista de trabalhos.
+... Clique em *Atualizar* para atualizar a lista de tarefas e os detalhes das tarefas associadas ao trabalho de configuração de proteção e para determinar quando o trabalho será concluído.
+... Use o botão *Voltar* para retornar à lista filtrada e visualizar outro trabalho.
+
+
+
+
+
+
+Dependendo do SVM de destino especificado durante a configuração ou das opções habilitadas nas configurações avançadas, o relacionamento SnapMirror resultante pode ser uma das diversas variações possíveis:
+
+* Se você especificou um SVM de destino que é executado na mesma versão ou em uma versão mais recente do ONTAP em comparação ao volume de origem, um relacionamento SnapMirror baseado em replicação de bloco é o resultado padrão.
+* Se você especificou um SVM de destino que é executado na mesma versão ou em uma versão mais recente do ONTAP em comparação com a do volume de origem, mas ativou a replicação flexível de versão nas configurações avançadas, o resultado será um relacionamento SnapMirror com replicação flexível de versão.
+* Se você especificou um SVM de destino que é executado em uma versão anterior do ONTAP do que a do volume de origem, e a versão anterior oferece suporte à replicação flexível de versão, um relacionamento SnapMirror com replicação flexível de versão é o resultado automático.
+

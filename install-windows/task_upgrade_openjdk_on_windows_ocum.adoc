@@ -1,0 +1,45 @@
+---
+permalink: install-windows/task_upgrade_openjdk_on_windows_ocum.html 
+sidebar: sidebar 
+keywords: openjdk, jre, upgrade 
+summary: Você pode atualizar para uma versão mais recente do OpenJDK no servidor Windows em que o Unified Manager está instalado para obter correções para vulnerabilidades de segurança. 
+---
+= Atualizar o OpenJDK
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode atualizar para uma versão mais recente do OpenJDK no servidor Windows em que o Unified Manager está instalado para obter correções para vulnerabilidades de segurança.
+
+.Antes de começar
+Você deve ter privilégios de administrador do Windows para o sistema no qual o Unified Manager está instalado.
+
+Você pode atualizar versões do OpenJDK dentro de famílias de versões.  Por exemplo, você pode atualizar do OpenJDK 11.0.16 para o OpenJDK 11.0.18, mas não pode atualizar diretamente do OpenJDK 11 para o OpenJDK 12.
+
+.Passos
+. Efetue login como usuário administrador na máquina host do Unified Manager.
+. Baixe a versão apropriada do OpenJDK (64 bits) do site do OpenJDK para o sistema de destino.
++
+Por exemplo, baixe `jdk-11.0.18_windows-x64_bin.zip from https://www.oracle.com/in/java/technologies/javase/jdk11-archive-downloads.html` .
+
++
+
+NOTE: É necessária uma conta Oracle para baixar o arquivo.  Se você não tiver uma conta Oracle, vá paralink:https://login.oracle.com/mysso/signon.jsp?request_id=007["Login na conta Oracle"] página para criar uma.
+
+. Use o console de Serviços do Windows para interromper os seguintes serviços do Unified Manager:
++
+** Serviço de aquisição NetApp Active IQ (Ocie-au)
+** Serviço de servidor de gerenciamento NetApp Active IQ (Oncommandsvc)
+
+
+. Expandir o `zip` arquivo.
+. Copie os diretórios e arquivos do resultado `jdk` diretório (por exemplo, `jdk-11.0.18` para o local onde o Java está instalado.  Exemplo: `C:\Program Files\NetApp\JDK\`
+. Inicie os serviços do Unified Manager usando o console de Serviços do Windows:
++
+** Serviço de servidor de gerenciamento NetApp Active IQ (Oncommandsvc)
+** Serviço de aquisição NetApp Active IQ (Ocie-au)
+
+
+

@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_what_storage_efficiency_is.html 
+sidebar: sidebar 
+keywords: storage, efficiency 
+summary: 'A eficiência de armazenamento permite que você armazene a quantidade máxima de dados pelo menor custo e acomoda o rápido crescimento de dados, consumindo menos espaço.  A estratégia da NetApp para eficiência de armazenamento é baseada na fundação integrada de virtualização de armazenamento e armazenamento unificado fornecido pelo seu sistema operacional ONTAP principal e sistema de arquivos Write Anywhere File Layout (WAFL).' 
+---
+= O que é eficiência de armazenamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A eficiência de armazenamento permite que você armazene a quantidade máxima de dados pelo menor custo e acomoda o rápido crescimento de dados, consumindo menos espaço.  A estratégia da NetApp para eficiência de armazenamento é baseada na fundação integrada de virtualização de armazenamento e armazenamento unificado fornecido pelo seu sistema operacional ONTAP principal e sistema de arquivos Write Anywhere File Layout (WAFL).
+
+A eficiência de armazenamento inclui o uso de tecnologias como provisionamento fino, cópia de Snapshot, desduplicação, compactação de dados, FlexClone, replicação fina com SnapVault e volume SnapMirror, RAID-DP, Flash Cache, agregado Flash Pool e agregados habilitados para FabricPool, que ajudam a aumentar a utilização do armazenamento e diminuir os custos de armazenamento.
+
+A arquitetura de armazenamento unificada permite que você consolide com eficiência uma rede de área de armazenamento (SAN), armazenamento conectado à rede (NAS) e armazenamento secundário em uma única plataforma.
+
+Unidades de disco de alta densidade, como unidades Serial Advanced Technology Attachment (SATA) configuradas no Flash Pool Aggregate ou com Flash Cache e tecnologia RAID-DP, aumentam a eficiência sem afetar o desempenho e a resiliência.
+
+Um agregado habilitado para FabricPool inclui um agregado totalmente SSD ou HDD (começando com o ONTAP 9.8) como a camada de desempenho local e um armazenamento de objetos que você especifica como a camada de nuvem.  Configurar o FabricPool ajuda você a gerenciar em qual camada de armazenamento (camada local ou camada de nuvem) os dados devem ser armazenados com base na frequência de acesso aos dados.
+
+Tecnologias como provisionamento fino, cópia de Snapshot, desduplicação, compactação de dados, replicação fina com SnapVault e volume SnapMirror e FlexClone oferecem maiores economias.  Você pode usar essas tecnologias individualmente ou em conjunto para atingir a máxima eficiência de armazenamento.

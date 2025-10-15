@@ -1,0 +1,33 @@
+---
+permalink: events/reference_power_supplies_events.html 
+sidebar: sidebar 
+keywords: power, supplies, events, impact area, availability 
+summary: Os eventos de fontes de alimentação fornecem informações sobre o status do seu hardware para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, o nível de impacto, o tipo de fonte e a gravidade. 
+---
+= Eventos de fornecimento de energia
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de fontes de alimentação fornecem informações sobre o status do seu hardware para que você possa monitorar possíveis problemas.  Os eventos são agrupados por área de impacto e incluem o nome do evento e da armadilha, o nível de impacto, o tipo de fonte e a gravidade.
+
+
+
+== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (nome da armadilha) | Nível de impacto | Tipo de fonte | Gravidade 
+
+
+ a| 
+Uma ou mais fontes de alimentação com falha (ocumEvtPowerSupplyOneOrMoreFailed)
+ a| 
+Incidente
+ a| 
+Nó
+ a| 
+Crítico
+
+|===

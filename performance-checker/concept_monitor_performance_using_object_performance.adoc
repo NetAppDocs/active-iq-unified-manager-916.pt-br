@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_monitor_performance_using_object_performance.html 
+sidebar: sidebar 
+keywords: monitoring, performance, inventory, pages 
+summary: As páginas de desempenho do inventário de objetos exibem informações de desempenho, eventos de desempenho e integridade de objetos para todos os objetos dentro de uma categoria de tipo de objeto.  Isso fornece uma visão geral rápida do status de desempenho de cada objeto dentro de um cluster, por exemplo, para todos os nós ou todos os volumes. 
+---
+= Monitore o desempenho usando as páginas do Inventário de Desempenho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As páginas de desempenho do inventário de objetos exibem informações de desempenho, eventos de desempenho e integridade de objetos para todos os objetos dentro de uma categoria de tipo de objeto.  Isso fornece uma visão geral rápida do status de desempenho de cada objeto dentro de um cluster, por exemplo, para todos os nós ou todos os volumes.
+
+As páginas de desempenho do inventário de objetos fornecem uma visão geral de alto nível do status do objeto, permitindo que você avalie o desempenho geral de todos os objetos e compare os dados de desempenho do objeto.  Você pode refinar o conteúdo das páginas de inventário de objetos pesquisando, classificando e filtrando.  Isso é benéfico ao monitorar e gerenciar o desempenho de objetos, porque permite localizar rapidamente objetos com problemas de desempenho e iniciar o processo de solução de problemas.
+
+image::../media/perf_node_inventory.gif[Uma captura de tela da interface do usuário que mostra os detalhes do objeto na página de inventário Desempenho/Todos os nós.]
+
+Por padrão, os objetos nas páginas de inventário de desempenho são classificados com base na criticidade do desempenho do objeto.  Objetos com novos eventos críticos de desempenho são listados primeiro, e objetos com eventos de aviso são listados em segundo lugar.  Isso fornece uma indicação visual imediata dos problemas que devem ser resolvidos.  Todos os dados de desempenho são baseados em uma média de 72 horas.
+
+Você pode navegar facilmente da página de desempenho do inventário de objetos para uma página de detalhes do objeto clicando no nome do objeto na coluna de nome do objeto.  Por exemplo, na página de inventário Desempenho/Todos os nós, você clicaria em um objeto de nó na coluna *Nós*.  A página de detalhes do objeto fornece informações detalhadas sobre o objeto selecionado, incluindo comparação lado a lado de eventos ativos.
