@@ -15,6 +15,7 @@ Os eventos de relacionamento do SnapMirror fornecem informações sobre o status
 
 
 
+[[impact-area-protection]]
 == Área de impacto: proteção
 
 Um asterisco (*) identifica eventos do EMS que foram convertidos em eventos do Unified Manager.

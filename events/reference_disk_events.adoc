@@ -15,6 +15,7 @@ Os eventos de discos fornecem informações sobre o status dos discos para que v
 
 
 
+[[impact-area-availability]]
 == Área de impacto: disponibilidade
 
 |===

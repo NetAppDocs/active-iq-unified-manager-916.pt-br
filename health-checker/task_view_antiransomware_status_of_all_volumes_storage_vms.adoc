@@ -20,6 +20,7 @@ Para obter mais informações sobre os diferentes status anti-ransomware, consul
 
 
 
+[[view-security-details-of-all-volumes-with-anti-ransomware-detection]]
 == Visualize detalhes de segurança de todos os volumes com detecção anti-ransomware
 
 .Passos
@@ -33,6 +34,7 @@ NOTE: O anti-ransomware não é compatível com volumes offline, volumes restrit
 
 
 
+[[view-security-details-of-all-storage-vms-with-anti-ransomware-detection]]
 == Visualize detalhes de segurança de todas as VMs de armazenamento com detecção anti-ransomware
 
 .Passos

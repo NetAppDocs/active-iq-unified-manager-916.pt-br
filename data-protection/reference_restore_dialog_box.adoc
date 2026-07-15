@@ -15,6 +15,7 @@ Você pode usar a caixa de diálogo Restaurar para restaurar dados para um volum
 
 
 
+[[restore-from]]
 == Restaurar de
 
 A área Restaurar de permite que você especifique de onde deseja restaurar os dados.
@@ -35,6 +36,7 @@ Por padrão, no máximo 995 objetos são exibidos na lista.  Você pode desmarca
 
 
 
+[[select-items-to-restore]]
 == Selecione itens para restaurar
 
 A área Selecionar itens para restaurar permite que você selecione o volume inteiro ou arquivos e pastas específicos que deseja restaurar.  Você pode selecionar no máximo 10 arquivos, pastas ou uma combinação de ambos.  Quando o número máximo de itens é selecionado, as caixas de seleção de itens são desabilitadas.
@@ -65,6 +67,7 @@ Não é possível restaurar fluxos de arquivos NTFS.
 ====
 
 
+[[restore-to]]
 == Restaurar para
 
 A área Restaurar para permite que você especifique onde deseja restaurar os dados.
@@ -92,6 +95,7 @@ Quando marcada, preserva a estrutura do arquivo ou diretório original.  Por exe
 
 
 
+[[command-buttons]]
 == Botões de comando
 
 Os botões de comando permitem que você execute as seguintes tarefas:

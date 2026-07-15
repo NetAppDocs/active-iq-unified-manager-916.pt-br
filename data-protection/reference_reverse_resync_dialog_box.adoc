@@ -17,6 +17,7 @@ Quando um desastre desabilita o volume de origem no seu relacionamento de prote�
 
 
 
+[[before-reverse-resync]]
 == Antes da ressincronização reversa
 
 Exibe a origem e o destino de um relacionamento antes de uma operação de ressincronização reversa.
@@ -33,6 +34,7 @@ O nome e a localização do volume de destino antes de uma operação de ressinc
 
 
 
+[[after-reverse-resync]]
 == Após ressincronização reversa
 
 Exibe qual é a origem e o destino de um relacionamento após uma operação de ressincronização de reserva.
@@ -49,6 +51,7 @@ O nome e a localização do volume de destino após uma operação de ressincron
 
 
 
+[[command-buttons]]
 == Botões de comando
 
 Os botões de comando permitem que você execute as seguintes ações:

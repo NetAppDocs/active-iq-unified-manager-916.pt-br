@@ -27,6 +27,7 @@ Você deve ter a função de Administrador de Aplicativos ou Administrador de Ar
 
 
 
+[[example-of-configuring-a-condition-for-an-annotation-rule]]
 == Exemplo de configuração de uma condição para uma regra de anotação
 
 Considere uma condição para o tipo de objeto SVM, onde o nome do objeto contém "`svm_data`".

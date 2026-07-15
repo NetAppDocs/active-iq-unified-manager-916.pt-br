@@ -15,6 +15,7 @@ O sistema VMware vSphere no qual você instala o Unified Manager requer uma vers
 
 
 
+[[operating-system-software]]
 == Software do sistema operacional
 
 O sistema operacional suportado é o VMware ESXi 8.0.
@@ -37,6 +38,7 @@ O horário do servidor VMware ESXi deve ser o mesmo que o horário do servidor N
 
 
 
+[[installation-requirements]]
 == Requisitos de instalação
 
 O VMware High Availability para o appliance virtual Unified Manager é suportado.

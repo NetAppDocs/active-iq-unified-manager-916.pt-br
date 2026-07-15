@@ -20,6 +20,7 @@ Você pode monitorar somente a VM de armazenamento de dados.
 ====
 
 
+[[command-buttons]]
 == Botões de comando
 
 Os botões de comando permitem que você execute as seguintes tarefas para a VM de armazenamento selecionada:
@@ -48,6 +49,7 @@ Permite que você navegue até a visualização Saúde: Todas as VMs de armazena
 
 
 
+[[health-tab]]
 == Aba de saúde
 
 A guia Saúde exibe informações detalhadas sobre disponibilidade de dados, capacidade de dados e problemas de proteção de vários objetos, como volumes, agregados, NAS LIFs, SAN LIFs, LUNs, protocolos, serviços, compartilhamentos NFS e compartilhamentos CIFS.
@@ -73,6 +75,7 @@ Fornece uma visão geral rápida da integridade relacionada à proteção da VM 
 
 
 
+[[capacity-tab]]
 == Aba de capacidade
 
 A guia Capacidade exibe informações detalhadas sobre a capacidade de dados do SVM selecionado.
@@ -152,6 +155,7 @@ Para volumes FlexVol , exibe o nome do agregado que contém o volume.  Para volu
 
 
 
+[[configuration-tab]]
 == Guia de configuração
 
 A guia Configuração exibe detalhes de configuração sobre a VM de armazenamento selecionada, como seu cluster, volume raiz, o tipo de volumes que ela contém (volumes FlexVol ), políticas e proteção criada na VM de armazenamento:
@@ -252,6 +256,7 @@ Exibe os endereços IP do servidor DNS ou NIS.  Quando o servidor NIS está habi
 
 
 
+[[network-interfaces-tab]]
 == Guia Interfaces de rede
 
 A guia Interfaces de rede exibe detalhes sobre as interfaces de rede de dados (LIFs) criadas na VM de armazenamento selecionada:
@@ -311,6 +316,7 @@ Exibe o nome do grupo de failover.
 
 
 
+[[qtrees-tab]]
 == Guia Qtrees
 
 A aba Qtrees exibe detalhes sobre qtrees e suas cotas.  Você pode clicar no botão *Editar Limites* se quiser editar as configurações de limite de integridade para a capacidade do qtree para um ou mais qtrees.
@@ -399,6 +405,7 @@ Exibe o limite flexível para o número de arquivos permitidos nas qtrees.  O va
 
 
 
+[[user-and-group-quotas-tab]]
 == Guia Cotas de Usuário e Grupo
 
 Exibe detalhes sobre as cotas de usuários e grupos de usuários para a VM de armazenamento selecionada.  Você pode visualizar informações como o status da cota, o nome do usuário ou grupo de usuários, limites flexíveis e rígidos definidos nos discos e arquivos, quantidade de espaço em disco e número de arquivos usados, além do valor limite do disco.  Você também pode alterar o endereço de e-mail associado a um usuário ou grupo de usuários.
@@ -487,6 +494,7 @@ Exibe o endereço de e-mail do usuário ou grupo de usuários para o qual as not
 
 
 
+[[nfs-shares-tab]]
 == Guia de compartilhamentos NFS
 
 A guia Compartilhamentos NFS exibe informações sobre compartilhamentos NFS, como seu status, o caminho associado ao volume (volumes FlexGroup ou FlexVol ), níveis de acesso de clientes aos compartilhamentos NFS e a política de exportação definida para os volumes exportados.  Os compartilhamentos NFS não serão exibidos nas seguintes condições: se o volume não estiver montado ou se os protocolos associados à política de exportação do volume não contiverem compartilhamentos NFS.
@@ -568,6 +576,7 @@ Exibe as regras que definem a permissão de acesso para volumes exportados.  Voc
 
 
 
+[[smb-shares-tab]]
 == Guia de compartilhamentos de PMEs
 
 Exibe informações sobre os compartilhamentos SMB na VM de armazenamento selecionada.  Você pode visualizar informações como o status do compartilhamento SMB, o nome do compartilhamento, o caminho associado à VM de armazenamento, o status do caminho de junção do compartilhamento, o objeto que o contém, o estado do volume que o contém, os dados de segurança do compartilhamento e as políticas de exportação definidas para o compartilhamento.  Você também pode determinar se existe um caminho NFS equivalente para o compartilhamento SMB.
@@ -675,6 +684,7 @@ Especifica se há um equivalente NFS para o compartilhamento.
 
 
 
+[[san-tab]]
 == Guia SAN
 
 Exibe detalhes sobre LUNs, grupos de iniciadores e iniciadores para a VM de armazenamento selecionada.  Por padrão, a visualização de LUNs é exibida.  Você pode visualizar detalhes sobre os grupos iniciadores na guia Grupos de iniciadores e detalhes sobre os iniciadores na guia Iniciadores.
@@ -721,12 +731,14 @@ Exibe o nome e o tipo do iniciador e o número total de grupos de iniciadores ma
 
 
 
+[[related-annotations-pane]]
 == Painel de Anotações Relacionadas
 
 O painel Anotações relacionadas permite que você visualize os detalhes das anotações associadas à VM de armazenamento selecionada.  Os detalhes incluem o nome da anotação e os valores da anotação que são aplicados à VM de armazenamento.  Você também pode remover anotações manuais do painel Anotações Relacionadas.
 
 
 
+[[related-devices-pane]]
 == Painel de dispositivos relacionados
 
 O painel Dispositivos relacionados permite que você visualize o cluster, os agregados e os volumes relacionados à VM de armazenamento:
@@ -751,12 +763,14 @@ Exibe o número e a capacidade dos volumes que pertencem à VM de armazenamento 
 
 
 
+[[related-groups-pane]]
 == Painel de Grupos Relacionados
 
 O painel Grupos relacionados permite que você visualize a lista de grupos associados à VM de armazenamento selecionada.
 
 
 
+[[related-alerts-pane]]
 == Painel de alertas relacionados
 
 O painel Alertas relacionados permite que você visualize a lista de alertas criados para a VM de armazenamento selecionada.  Você também pode adicionar um alerta clicando no link *Adicionar alerta* ou editar um alerta existente clicando no nome do alerta.

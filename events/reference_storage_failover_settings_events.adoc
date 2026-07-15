@@ -15,6 +15,7 @@ Os eventos de configuração de failover de armazenamento (SFO) fornecem informa
 
 
 
+[[impact-area-availability]]
 == Área de impacto: disponibilidade
 
 |===

@@ -15,6 +15,7 @@ Você pode usar a caixa de diálogo Criar pool de recursos para nomear e descrev
 
 
 
+[[resource-pool-name]]
 == Nome do pool de recursos
 
 As caixas de texto permitem que você adicione as seguintes informações para criar um pool de recursos:
@@ -23,18 +24,21 @@ Permite que você especifique um nome de pool de recursos.
 
 
 
+[[description]]
 == Descrição
 
 Permite que você descreva um pool de recursos.
 
 
 
+[[members]]
 == Membros
 
 Exibe os membros do pool de recursos.  Você também pode adicionar e excluir membros.
 
 
 
+[[command-buttons]]
 == Botões de comando
 
 Os botões de comando permitem que você execute as seguintes tarefas:

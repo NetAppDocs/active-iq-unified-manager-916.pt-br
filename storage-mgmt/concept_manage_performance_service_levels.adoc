@@ -42,6 +42,7 @@ Os parâmetros IOPs para as cargas de trabalho são gerados dinamicamente, depen
 
 
 
+[[manage-workloads-by-assigning-psls]]
 == Gerencie cargas de trabalho atribuindo PSLs
 
 Você pode acessar os PSLs na página *Políticas* > *Níveis de serviço de desempenho* e usando as APIs do provedor de armazenamento.  Gerenciar cargas de trabalho de armazenamento atribuindo PSLs a elas é conveniente, pois você não precisa gerenciar as cargas de trabalho de armazenamento individualmente.  Quaisquer modificações também podem ser gerenciadas reatribuindo outro PSL em vez de gerenciá-las individualmente.  O Unified Manager ajuda você a atribuir PSLs em suas cargas de trabalho com base em avaliações e recomendações internas.
@@ -136,6 +137,7 @@ Para obter informações sobre como o pico de IOPS e os IOPs esperados ajudam a 
 
 
 
+[[events-generated-for-workloads-breaching-the-threshold-defined-by-psls]]
 === Eventos gerados para cargas de trabalho que violam o limite definido pelos PSLs
 
 Observe que, se as cargas de trabalho excederem o valor de latência esperado em 30% do tempo durante a hora anterior, o Unified Manager gerará um dos seguintes eventos para notificá-lo sobre um possível problema de desempenho:
@@ -156,6 +158,7 @@ Para mais informações, consulte os seguintes links:
 
 
 
+[[system-defined-psls]]
 === PSLs definidos pelo sistema
 
 A tabela a seguir fornece informações sobre os PSLs definidos pelo sistema:

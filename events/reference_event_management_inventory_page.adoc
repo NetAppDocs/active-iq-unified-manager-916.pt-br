@@ -17,6 +17,7 @@ As informações nesta página são atualizadas automaticamente a cada 5 minutos
 
 
 
+[[filter-components]]
 == Componentes do filtro
 
 Permite que você personalize as informações exibidas na lista de eventos.  Você pode refinar a lista de eventos exibidos usando os seguintes componentes:
@@ -31,6 +32,7 @@ Isso inclui itens como todos os eventos ativos (novos e reconhecidos), eventos d
 
 
 
+[[command-buttons]]
 == Botões de comando
 
 Os botões de comando permitem que você execute as seguintes tarefas:
@@ -86,6 +88,7 @@ Permite que você escolha as colunas que serão exibidas na página e selecione 
 
 
 
+[[events-list]]
 == Lista de eventos
 
 Exibe detalhes de todos os eventos ordenados por tempo de disparo.

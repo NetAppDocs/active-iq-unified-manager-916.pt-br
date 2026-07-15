@@ -22,6 +22,7 @@ Você deve carregar a chave privada junto com a cadeia de certificados porque es
 
 
 
+[[format-for-loading-a-certificate-with-an-ec-key-pair]]
 == Formato para carregar um certificado com um par de chaves EC
 
 As curvas permitidas são "`prime256v1`" e "`secp384r1`".  Exemplo de certificado com um par EC gerado externamente:
@@ -49,6 +50,7 @@ As curvas permitidas são "`prime256v1`" e "`secp384r1`".  Exemplo de certificad
 ----
 
 
+[[format-for-loading-a-certificate-with-an-rsa-key-pair]]
 == Formato para carregar um certificado com um par de chaves RSA
 
 Os tamanhos de chave permitidos para o par de chaves RSA pertencente ao certificado de host são 2048, 3072 e 4096. certificado com um *par de chaves RSA* gerado externamente:
@@ -75,6 +77,7 @@ Após o upload do certificado, você deve reiniciar a instância do Active IQ Un
 
 
 
+[[checks-while-uploading-externally-generated-certificates]]
 == Verificações durante o upload de certificados gerados externamente
 
 O sistema realiza verificações ao carregar um certificado gerado usando ferramentas externas.  Se alguma das verificações falhar, o certificado será rejeitado.  Também há validação incluída para os certificados gerados a partir do CSR dentro do produto e para certificados gerados usando ferramentas externas.

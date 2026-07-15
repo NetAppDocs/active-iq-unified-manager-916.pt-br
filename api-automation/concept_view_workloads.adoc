@@ -15,6 +15,7 @@ As APIs listadas aqui permitem que você visualize uma lista consolidada de carg
 
 
 
+[[view-storage-workloads]]
 == Exibir cargas de trabalho de armazenamento
 
 Você pode usar o método a seguir para visualizar todas as cargas de trabalho de armazenamento em todos os clusters do seu data center.  Para obter informações sobre como filtrar a resposta com base em colunas específicas, consulte a documentação de referência da API disponível na sua instância do Unified Manager.
@@ -34,6 +35,7 @@ PEGAR
 |===
 
 
+[[view-storage-workloads-summary]]
 == Exibir resumo das cargas de trabalho de armazenamento
 
 Você pode usar o método a seguir para avaliar a capacidade usada, a capacidade disponível, o IOPS usado, o IOPS disponível e o número de cargas de trabalho de armazenamento gerenciadas por cada Nível de Serviço de Desempenho.  As cargas de trabalho de armazenamento exibidas podem ser para qualquer LUN, compartilhamento de arquivos NFS ou compartilhamento CIFS.  A API fornece uma visão geral das cargas de trabalho de armazenamento, uma visão geral das cargas de trabalho de armazenamento provisionadas pelo Unified Manager, uma visão geral do data center, uma visão geral do espaço total, usado e disponível e IOPS no data center, em termos dos Níveis de Serviço de Desempenho atribuídos.  As informações recebidas em resposta a esta API são usadas para preencher o painel na interface do usuário do Unified Manager.

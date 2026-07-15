@@ -15,6 +15,7 @@ Os eventos de switch do MetroCluster para configurações do MetroCluster sobre 
 
 
 
+[[impact-area-availability]]
 == Área de impacto: disponibilidade
 
 |===

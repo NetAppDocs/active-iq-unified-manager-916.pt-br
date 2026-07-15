@@ -25,6 +25,7 @@ Observe os seguintes pontos:
 ====
 
 
+[[view-storage-efficiency-policies]]
 == Ver políticas de eficiência de armazenamento
 
 Você pode usar o método a seguir para visualizar as Políticas de Eficiência de Armazenamento antes de atribuí-las às cargas de trabalho de armazenamento.  Esta API lista todas as Políticas de Eficiência de Armazenamento definidas pelo sistema e criadas pelo usuário e recupera os atributos de todas as Políticas de Eficiência de Armazenamento.  Se quiser consultar uma Política de Eficiência de Armazenamento específica, você precisa inserir o ID exclusivo da política para recuperar seus detalhes.
@@ -46,6 +47,7 @@ PEGAR
 |===
 
 
+[[add-storage-efficiency-policies]]
 == Adicionar políticas de eficiência de armazenamento
 
 Você pode usar o método a seguir para criar Políticas de Eficiência de Armazenamento personalizadas e atribuí-las às suas cargas de trabalho de armazenamento se as políticas definidas pelo sistema não atenderem aos requisitos de provisionamento para suas cargas de trabalho de armazenamento.  Insira os detalhes da Política de Eficiência de Armazenamento que você deseja criar, como parâmetros de entrada.
@@ -65,6 +67,7 @@ PUBLICAR
 |===
 
 
+[[delete-storage-efficiency-policies]]
 == Excluir políticas de eficiência de armazenamento
 
 Você pode usar o seguinte método para excluir uma Política de Eficiência de Armazenamento específica.  Não é possível excluir uma Política de Eficiência de Armazenamento se ela estiver atribuída a uma carga de trabalho ou se for a única Política de Eficiência de Armazenamento disponível.  Você precisa fornecer o ID exclusivo da Política de Eficiência de Armazenamento como um parâmetro de entrada para excluir uma Política de Eficiência de Armazenamento específica.
@@ -84,6 +87,7 @@ EXCLUIR
 |===
 
 
+[[modify-storage-efficiency-policies]]
 == Modificar políticas de eficiência de armazenamento
 
 Você pode usar o seguinte método para modificar uma Política de Eficiência de Armazenamento e atualizar suas propriedades.  Não é possível modificar uma Política de Eficiência de Armazenamento definida pelo sistema ou atribuída a uma carga de trabalho.  Você precisa fornecer o ID exclusivo da Política de Eficiência de Armazenamento para modificar uma Política de Eficiência de Armazenamento específica.  Além disso, você precisa fornecer a propriedade que deseja atualizar, juntamente com seu valor.

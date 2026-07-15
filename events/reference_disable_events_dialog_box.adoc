@@ -17,6 +17,7 @@ Você deve ter a função de Administrador de Aplicativos ou Administrador de Ar
 
 
 
+[[event-properties-area]]
 == Área de Propriedades do Evento
 
 A área Propriedades do Evento especifica as seguintes propriedades do evento:
@@ -44,6 +45,7 @@ A gravidade do evento também é exibida junto com o nome do evento.
 
 
 
+[[command-buttons]]
 == Botões de comando
 
 Os botões de comando permitem que você execute as seguintes tarefas para os eventos selecionados:

@@ -15,6 +15,7 @@ Você pode usar as APIs listadas aqui para gerenciar mapeamentos do Active Direc
 
 
 
+[[view-active-directory-mappings]]
 == Exibir mapeamentos do Active Directory
 
 Você pode visualizar os detalhes de configuração dos mapeamentos do Active Directory para uma SVM usando o seguinte método.  Para visualizar os mapeamentos do Active Directory em uma SVM, você precisa inserir a chave SVM.  Para consultar os detalhes de um mapeamento específico, você deve inserir a chave de mapeamento.
@@ -36,6 +37,7 @@ PEGAR
 |===
 
 
+[[add-active-directory-mapping]]
 == Adicionar mapeamento do Active Directory
 
 Você pode criar mapeamentos do Active Directory em uma SVM usando o seguinte método.  Você deve inserir os detalhes do mapeamento como parâmetros de entrada.

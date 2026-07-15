@@ -22,6 +22,7 @@ O fluxo de trabalho pressupõe que o LUN ou compartilhamento de arquivos foi pro
 ====
 
 
+[[modify-file-shares]]
 == Modificar compartilhamentos de arquivos
 
 Ao modificar um compartilhamento de arquivo, você pode atualizar os seguintes parâmetros:
@@ -191,6 +192,7 @@ Veja os detalhes do compartilhamento de arquivos na saída.
 
 
 
+[[update-luns]]
 == Atualizar LUNs
 
 Ao atualizar um LUN, você pode modificar os seguintes parâmetros:

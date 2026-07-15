@@ -15,6 +15,7 @@ A caixa de diálogo Ressincronizar permite que você ressincronize dados em um r
 
 
 
+[[resynchronization-options-tab]]
 == Guia Opções de ressincronização
 
 A guia Opções de ressincronização permite que você defina a prioridade de transferência e a taxa máxima de transferência para o relacionamento de proteção que você está ressincronizando.
@@ -31,6 +32,7 @@ Especifica a taxa máxima na qual os dados são transferidos entre clusters pela
 
 
 
+[[source-snapshot-copies-tab]]
 == Guia Cópias de instantâneos de origem
 
 A guia Cópias do Snapshot de Origem exibe as seguintes informações sobre a cópia do Snapshot de origem usada para a transferência de linha de base:
@@ -55,6 +57,7 @@ Exibe a cópia do Snapshot usada para a transferência de dados.  Clicar no valo
 
 
 
+[[command-buttons]]
 == Botões de comando
 
 * *Enviar*

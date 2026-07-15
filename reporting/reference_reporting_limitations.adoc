@@ -15,6 +15,7 @@ Há algumas limitações na nova funcionalidade de relatórios do Active IQ Unif
 
 
 
+[[existing-reports-from-previous-versions-of-unified-manager]]
 == Relatórios existentes de versões anteriores do Unified Manager
 
 Você só pode editar o agendamento e os destinatários de relatórios existentes que foram criados e importados (como arquivos .rptdesign) no Unified Manager 9.5 e versões anteriores.  Se você personalizou qualquer um dos relatórios padrão fornecidos com o Unified Manager 9.5 ou anterior, esses relatórios personalizados não serão importados para a nova ferramenta de relatórios.
@@ -29,24 +30,28 @@ As visualizações padrão podem ser geradas como relatórios sem a necessidade 
 
 
 
+[[schedule-and-report-relationship]]
 == Relacionamento entre agendamento e relatório
 
 Você pode criar muitos agendamentos diferentes com qualquer combinação de destinatários para cada relatório salvo.  No entanto, você não pode reutilizar o agendamento para vários relatórios.
 
 
 
+[[report-protection]]
 == Proteção de relatórios
 
 Qualquer usuário com as permissões apropriadas pode editar ou excluir relatórios.  Não há como impedir que outros usuários removam ou façam alterações em visualizações ou programações salvas.
 
 
 
+[[event-reports]]
 == Relatórios de eventos
 
 Embora você possa personalizar a visualização do evento e baixar o relatório resultante no formato CSV, não é possível agendar relatórios de eventos recorrentes para geração e distribuição.
 
 
 
+[[report-attachments]]
 == Anexos de relatórios
 
 Relatórios não podem ser enviados no corpo de um e-mail.  Em vez disso, os relatórios são enviados apenas como anexos em PDF, Excel ou CSV.

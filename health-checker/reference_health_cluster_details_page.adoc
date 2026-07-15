@@ -17,6 +17,7 @@ O status ao lado do nome do cluster, por exemplo (Bom), representa o status da c
 
 
 
+[[command-buttons]]
 == Botões de comando
 
 Os botões de comando permitem que você execute as seguintes tarefas para o cluster selecionado:
@@ -46,6 +47,7 @@ Permite que você navegue até a visualização Saúde: Todos os clusters.
 
 
 
+[[health-tab]]
 == Aba de saúde
 
 Exibe informações detalhadas sobre a disponibilidade de dados e problemas de capacidade de dados de vários objetos de cluster, como nós, SVMs e agregados.  Problemas de disponibilidade estão relacionados à capacidade de atendimento de dados dos objetos do cluster.  Problemas de capacidade estão relacionados à capacidade de armazenamento de dados dos objetos do cluster.
@@ -54,6 +56,7 @@ Você pode clicar no gráfico de um objeto para visualizar uma lista filtrada do
 
 
 
+[[availability-issues]]
 === Problemas de disponibilidade
 
 Exibe graficamente o número total de objetos, incluindo objetos que têm problemas de disponibilidade e objetos que não têm nenhum problema relacionado à disponibilidade.  As cores no gráfico representam os diferentes níveis de gravidade dos problemas.  As informações abaixo do gráfico fornecem detalhes sobre problemas de disponibilidade que podem afetar ou já afetaram a disponibilidade de dados no cluster.  Por exemplo, são exibidas informações sobre prateleiras de disco que estão inativas e agregados que estão offline.
@@ -65,18 +68,21 @@ Os dados exibidos no gráfico de barras do SFO são baseados no estado HA dos n�
 ====
 
 
+[[capacity-issues]]
 === Problemas de capacidade
 
 Exibe graficamente o número total de objetos, incluindo objetos com problemas de capacidade e objetos que não têm nenhum problema relacionado à capacidade.  As cores no gráfico representam os diferentes níveis de gravidade dos problemas.  As informações abaixo do gráfico fornecem detalhes sobre problemas de capacidade que podem impactar ou já impactaram a capacidade de dados no cluster.  Por exemplo, são exibidas informações sobre agregados que provavelmente violarão os valores limite definidos.
 
 
 
+[[capacity-tab]]
 == Aba de capacidade
 
 Exibe informações detalhadas sobre a capacidade do cluster selecionado.
 
 
 
+[[capacity]]
 === Capacidade
 
 Exibe o gráfico de capacidade de dados sobre a capacidade usada e a capacidade disponível de todos os agregados alocados:
@@ -109,6 +115,7 @@ Exibe a capacidade provisionada para todos os volumes subjacentes.
 
 
 
+[[details]]
 === Detalhes
 
 Exibe informações detalhadas sobre a capacidade utilizada e disponível.  O cálculo exclui os dados agregados raiz.
@@ -137,12 +144,14 @@ Exibe a capacidade de armazenamento disponível para todos os discos sobressalen
 
 
 
+[[cloud-tier]]
 === Camada de nuvem
 
 Exibe a capacidade total da camada de nuvem usada e a capacidade usada para cada camada de nuvem conectada para agregados habilitados para FabricPool no cluster.  Um FabricPool pode ser licenciado ou não licenciado.
 
 
 
+[[physical-capacity-breakout-by-disk-type]]
 === Divisão da capacidade física por tipo de disco
 
 A área Divisão de capacidade física por tipo de disco exibe informações detalhadas sobre a capacidade de disco dos vários tipos de discos no cluster.  Ao clicar no tipo de disco, você pode ver mais informações sobre o tipo de disco na guia Discos.
@@ -179,6 +188,7 @@ Exibe o número de discos não atribuídos no cluster.
 
 
 
+[[aggregates-with-capacity-issues-list]]
 === Lista de agregados com problemas de capacidade
 
 Exibe em formato tabular detalhes sobre a capacidade utilizada e a capacidade disponível dos agregados que apresentam problemas de risco de capacidade.
@@ -218,12 +228,14 @@ Exibe o número estimado de dias restantes antes que o agregado atinja a capacid
 
 
 
+[[configuration-tab]]
 == Guia de configuração
 
 Exibe detalhes sobre o cluster selecionado, como endereço IP, contato e localização:
 
 
 
+[[cluster-overview]]
 === Visão geral do cluster
 
 * Interface de gerenciamento
@@ -258,6 +270,7 @@ Identifica se este é um cluster configurado como All SAN Array.
 
 
 
+[[remote-cluster-overview]]
 === Visão geral do cluster remoto
 
 Fornece detalhes sobre o cluster remoto em uma configuração do MetroCluster .  Essas informações são exibidas apenas para configurações do MetroCluster .
@@ -278,6 +291,7 @@ Exibe a localização do cluster remoto.
 
 
 
+[[metrocluster-overview]]
 === Visão geral do MetroCluster
 
 Fornece detalhes sobre o cluster local em configurações MetroCluster sobre FC ou MetroCluster sobre IP.  Essas informações são exibidas somente para configurações do MetroCluster sobre FC ou IP.
@@ -323,6 +337,7 @@ Exibe o modo de comutação para a configuração do MetroCluster sobre IP.  Os 
 
 
 
+[[nodes]]
 === Nós
 
 * Disponibilidade
@@ -337,6 +352,7 @@ Exibe as versões do ONTAP que os nós estão executando, bem como o número de 
 
 
 
+[[storage-virtual-machines]]
 === Máquinas Virtuais de Armazenamento
 
 * Disponibilidade
@@ -347,6 +363,7 @@ Exibe o número de SVMs que estão ativos (image:../media/availability_up_um60.g
 
 
 
+[[network-interfaces]]
 === Interfaces de rede
 
 * Disponibilidade
@@ -373,6 +390,7 @@ Exibe o número de LIFs intercluster.
 
 
 
+[[protocols]]
 === Protocolos
 
 * Protocolos de Dados
@@ -383,6 +401,7 @@ Exibe a lista de protocolos de dados licenciados que estão habilitados para o c
 
 
 
+[[protection]]
 === Proteção
 
 * Mediadores
@@ -408,12 +427,14 @@ Exibe quando o cluster suporta mediadores e o mediador está configurado.  O sta
 
 
 
+[[cloud-tiers]]
 === Camadas de nuvem
 
 Lista os nomes das camadas de nuvem às quais este cluster está conectado.  Ele também lista o tipo (Amazon S3, Microsoft Azure Cloud, IBM Cloud Object Storage, Google Cloud Storage, Alibaba Cloud Object Storage ou StorageGRID) e os estados das camadas de nuvem (Disponível ou Indisponível).
 
 
 
+[[metrocluster-connectivity-tab]]
 == Guia de conectividade do MetroCluster
 
 Exibe os problemas e o status de conectividade dos componentes do cluster na configuração do MetroCluster sobre FC.  Um cluster é exibido em uma caixa vermelha quando o parceiro de recuperação de desastres do cluster tem problemas.
@@ -438,6 +459,7 @@ Se o status do problema de conectividade entre componentes for determinado por v
 
 
 
+[[metrocluster-replication-tab]]
 == Guia de replicação do MetroCluster
 
 Exibe o status dos dados que estão sendo replicados em uma configuração MetroCluster sobre FC.  Você pode usar a guia Replicação do MetroCluster para garantir a proteção de dados espelhando os dados de forma síncrona com os clusters já pareados.  Um cluster é exibido em uma caixa vermelha quando o parceiro de recuperação de desastres do cluster tem problemas.
@@ -453,60 +475,70 @@ Na guia Replicação do MetroCluster , o cluster local fornece a representação
 
 
 
+[[network-interfaces-tab]]
 == Guia Interfaces de rede
 
 Exibe detalhes sobre todos os LIFs não relacionados a dados criados no cluster selecionado.
 
 
 
+[[network-interface]]
 === Interface de rede
 
 Exibe o nome do LIF criado no cluster selecionado.
 
 
 
+[[operational-status]]
 === Status operacional
 
 Exibe o status operacional da interface, que pode ser Up (image:../media/lif_status_up.gif["Ícone para status LIF – Ativo"] ), Abaixo (image:../media/lif_status_down.gif["Ícone para status LIF – Inativo"] ), ou Desconhecido (image:../media/hastate_unknown.gif["Ícone para estado HA – desconhecido"] ).  O status operacional de uma interface de rede é determinado pelo status de suas portas físicas.
 
 
 
+[[administrative-status]]
 === Situação Administrativa
 
 Exibe o status administrativo da interface, que pode ser Ativo (image:../media/lif_status_up.gif["Ícone para status LIF – Ativo"] ), Abaixo (image:../media/lif_status_down.gif["Ícone para status LIF – Inativo"] ), ou Desconhecido (image:../media/hastate_unknown.gif["Ícone para estado HA – desconhecido"] ).  Você pode controlar o status administrativo de uma interface ao fazer alterações na configuração ou durante a manutenção.  O status administrativo pode ser diferente do status operacional.  Entretanto, se o status administrativo de um LIF for Inativo, o status operacional será Inativo por padrão.
 
 
 
+[[ip-address]]
 === Endereço IP
 
 Exibe o endereço IP da interface.
 
 
 
+[[role]]
 === Papel
 
 Exibe a função da interface.  As funções possíveis são LIFs de gerenciamento de cluster, LIFs de gerenciamento de nó, LIFs de cluster e LIFs intercluster.
 
 
 
+[[home-port]]
 === Porto de origem
 
 Exibe a porta física à qual a interface foi originalmente associada.
 
 
 
+[[current-port]]
 === Porto atual
 
 Exibe a porta física à qual a interface está atualmente associada.  Após a migração do LIF, a porta atual pode ser diferente da porta inicial.
 
 
 
+[[failover-policy]]
 === Política de Failover
 
 Exibe a política de failover configurada para a interface.
 
 
 
+[[routing-groups]]
 === Grupos de roteamento
 
 Exibe o nome do grupo de roteamento.  Você pode ver mais informações sobre as rotas e o gateway de destino clicando no nome do grupo de roteamento.
@@ -515,18 +547,21 @@ Grupos de roteamento não são suportados pelo ONTAP 8.3 ou posterior e, portant
 
 
 
+[[failover-group]]
 === Grupo de Failover
 
 Exibe o nome do grupo de failover.
 
 
 
+[[nodes-tab]]
 == Guia Nós
 
 Exibe informações sobre nós no cluster selecionado.  Você pode visualizar informações detalhadas sobre os pares de HA, prateleiras de disco e portas:
 
 
 
+[[ha-details]]
 === Detalhes do HA
 
 Fornece uma representação pictórica do estado do HA e do status de integridade dos nós no par HA.  O status de saúde do nó é indicado pelas seguintes cores:
@@ -555,6 +590,7 @@ Se houver clusters de nó único, você também poderá visualizar detalhes sobr
 
 
 
+[[disk-shelves]]
 === Prateleiras de disco
 
 Exibe informações sobre as prateleiras de disco no par HA.
@@ -608,6 +644,7 @@ Exibe a versão do firmware da prateleira de disco.
 
 
 
+[[ports]]
 === Portos
 
 Exibe informações sobre as portas FC, FCoE e Ethernet associadas.  Você pode visualizar detalhes sobre as portas e os LIFs associados clicando nos ícones de porta.
@@ -647,54 +684,63 @@ Você pode visualizar os eventos relacionados ao porto na lista de Eventos.  Voc
 
 
 
+[[disks-tab]]
 == Aba Discos
 
 Exibe detalhes sobre os discos no cluster selecionado.  Você pode visualizar informações relacionadas ao disco, como o número de discos usados, discos sobressalentes, discos quebrados e discos não atribuídos.  Você também pode visualizar outros detalhes, como o nome do disco, o tipo de disco e o nó proprietário do disco.
 
 
 
+[[disk-pool-summary]]
 === Resumo do pool de discos
 
 Exibe o número de discos, categorizados por tipos efetivos (FCAL, SAS, SATA, MSATA, SSD, NVMe SSD, SSD CAP, Array LUN e VMDISK) e o estado dos discos.  Você também pode visualizar outros detalhes, como o número de agregados, discos compartilhados, discos sobressalentes, discos quebrados, discos não atribuídos e discos não suportados.  Se você clicar no link de contagem do tipo de disco efetivo, os discos do estado selecionado e do tipo efetivo serão exibidos.  Por exemplo, se você clicar no link de contagem para o estado do disco Quebrado e tipo efetivo SAS, todos os discos com o estado do disco Quebrado e tipo efetivo SAS serão exibidos.
 
 
 
+[[disk]]
 === Disco
 
 Exibe o nome do disco.
 
 
 
+[[raid-groups]]
 === Grupos RAID
 
 Exibe o nome do grupo RAID.
 
 
 
+[[owner-node]]
 === Nó Proprietário
 
 Exibe o nome do nó ao qual o disco pertence.  Se o disco não estiver atribuído, nenhum valor será exibido nesta coluna.
 
 
 
+[[state]]
 === Estado
 
 Exibe o estado do disco: Agregado, Compartilhado, Sobressalente, Quebrado, Não atribuído, Não suportado ou Desconhecido.  Por padrão, esta coluna é classificada para exibir os estados na seguinte ordem: Quebrado, Não atribuído, Sem suporte, Sobressalente, Agregado e Compartilhado.
 
 
 
+[[local-disk]]
 === Disco local
 
 Exibe Sim ou Não para indicar se o disco está localizado no cluster local ou no cluster remoto.  Esta coluna é exibida somente para clusters em uma configuração MetroCluster .
 
 
 
+[[position]]
 === Posição
 
 Exibe a posição do disco com base no seu tipo de contêiner: por exemplo, Cópia, Dados ou Paridade.  Por padrão, esta coluna está oculta.
 
 
 
+[[impacted-aggregates]]
 === Agregados Impactados
 
 Exibe o número de agregados afetados devido à falha do disco.  Você pode mover o ponteiro sobre o link de contagem para visualizar os agregados impactados e, em seguida, clicar no nome do agregado para visualizar os detalhes do agregado.  Você também pode clicar na contagem agregada para visualizar a lista de agregados impactados na exibição Saúde: Todos os agregados.
@@ -707,30 +753,35 @@ Nenhum valor é exibido nesta coluna para os seguintes casos:
 
 
 
+[[storage-pool]]
 === Pool de armazenamento
 
 Exibe o nome do pool de armazenamento ao qual o SSD pertence.  Você pode mover o ponteiro sobre o nome do pool de armazenamento para visualizar detalhes do pool de armazenamento.
 
 
 
+[[storable-capacity]]
 === Capacidade de armazenamento
 
 Exibe a capacidade do disco disponível para uso.
 
 
 
+[[raw-capacity]]
 === Capacidade bruta
 
 Exibe a capacidade do disco bruto e não formatado antes do dimensionamento correto e da configuração RAID.  Por padrão, esta coluna está oculta.
 
 
 
+[[type]]
 === Tipo
 
 Exibe os tipos de discos: por exemplo, ATA, SATA, FCAL ou VMDISK.
 
 
 
+[[effective-type]]
 === Tipo Eficaz
 
 Exibe o tipo de disco atribuído pelo ONTAP.
@@ -739,60 +790,70 @@ Certos tipos de disco ONTAP são considerados equivalentes para fins de criaçã
 
 
 
+[[spare-blocks-consumed]]
 === Blocos de reposição consumidos %
 
 Exibe em porcentagem os blocos sobressalentes que são consumidos no disco SSD.  Esta coluna fica em branco para discos que não sejam SSD.
 
 
 
+[[rated-life-used]]
 === Vida útil nominal usada em %
 
 Exibe em porcentagem uma estimativa da vida útil do SSD, com base no uso real do SSD e na previsão do fabricante sobre a vida útil do SSD.  Um valor maior que 99 indica que a resistência estimada foi consumida, mas pode não indicar falha do SSD.  Se o valor for desconhecido, o disco será omitido.
 
 
 
+[[firmware]]
 === Firmware
 
 Exibe a versão do firmware do disco.
 
 
 
+[[rpm]]
 === RPM
 
 Exibe as revoluções por minuto (RPM) do disco.  Por padrão, esta coluna está oculta.
 
 
 
+[[model]]
 === Modelo
 
 Exibe o número do modelo do disco.  Por padrão, esta coluna está oculta.
 
 
 
+[[vendor]]
 === Fornecedor
 
 Exibe o nome do fornecedor do disco.  Por padrão, esta coluna está oculta.
 
 
 
+[[shelf-id]]
 === ID da prateleira
 
 Exibe o ID da prateleira onde o disco está localizado.
 
 
 
+[[bay]]
 === Baía
 
 Exibe o ID do compartimento onde o disco está localizado.
 
 
 
+[[related-annotations-pane]]
 == Painel de Anotações Relacionadas
 
 Permite que você visualize os detalhes da anotação associados ao cluster selecionado.  Os detalhes incluem o nome da anotação e os valores da anotação que são aplicados ao cluster.  Você também pode remover anotações manuais do painel Anotações Relacionadas.
 
 
 
+[[related-devices-pane]]
 == Painel de dispositivos relacionados
 
 Permite que você visualize detalhes do dispositivo associados ao cluster selecionado.
@@ -805,36 +866,42 @@ O painel Dispositivos relacionados permite que você visualize e navegue até os
 
 
 
+[[metrocluster-partner]]
 === Parceiro MetroCluster
 
 Exibe o status de integridade do parceiro MetroCluster .  Usando o link de contagem, você pode navegar mais e obter informações sobre a integridade e a capacidade dos componentes do cluster.
 
 
 
+[[nodes]]
 === Nós
 
 Exibe o número, a capacidade e o status de integridade dos nós que pertencem ao cluster selecionado.  Capacidade indica a capacidade total utilizável sobre a capacidade disponível.
 
 
 
+[[storage-virtual-machines]]
 === Máquinas Virtuais de Armazenamento
 
 Exibe o número de SVMs que pertencem ao cluster selecionado.
 
 
 
+[[aggregates]]
 === Agregados
 
 Exibe o número, a capacidade e o status de integridade dos agregados que pertencem ao cluster selecionado.
 
 
 
+[[related-groups-pane]]
 == Painel de Grupos Relacionados
 
 Permite que você visualize a lista de grupos que inclui o cluster selecionado.
 
 
 
+[[related-alerts-pane]]
 == Painel de alertas relacionados
 
 O painel Alertas relacionados permite que você visualize a lista de alertas para o cluster selecionado.  Você também pode adicionar um alerta clicando no link Adicionar alerta ou editar um alerta existente clicando no nome do alerta.

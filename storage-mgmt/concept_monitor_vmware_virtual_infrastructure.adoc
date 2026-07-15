@@ -43,6 +43,7 @@ image::../media/vm_workflow.gif[fluxo de trabalho vm]
 
 
 
+[[what-is-not-supported]]
 == O que não é suportado
 
 * Os armazenamentos de dados que estão fora do ONTAP e são mapeados para instâncias do vCenter Server não são suportados no Unified Manager.  Nenhuma VM com discos virtuais nesses armazenamentos de dados é suportada.

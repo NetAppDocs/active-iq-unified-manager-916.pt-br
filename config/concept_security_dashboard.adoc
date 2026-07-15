@@ -24,6 +24,7 @@ Os critérios de segurança para seus clusters ONTAP , VMs de armazenamento e vo
 
 
 
+[[customize-security-settings]]
 == Personalizar configurações de segurança
 
 Para personalizar as configurações de monitoramento de conformidade aplicáveis ​​ao seu ambiente ONTAP , siga estas etapas:
@@ -42,6 +43,7 @@ Os parâmetros de conformidade de segurança que você habilita ou desabilita po
 
 
 
+[[customize-autosupport-and-authentication-settings]]
 == Personalize as configurações de AutoSupport e autenticação
 
 Na seção * Configurações do AutoSupport *, você pode especificar se o transporte HTTPS deve ser usado para enviar mensagens do AutoSupport do ONTAP.

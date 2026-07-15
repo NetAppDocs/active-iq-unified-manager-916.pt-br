@@ -15,6 +15,7 @@ Você pode editar um relacionamento de proteção existente para alterar a taxa 
 
 
 
+[[destination-information]]
 == Informações de destino
 
 * *Grupo de Destinos*
@@ -56,6 +57,7 @@ Inicia a caixa de diálogo Criar agendamento, que permite criar um novo agendame
 
 
 
+[[command-buttons]]
 == Botões de comando
 
 Os botões de comando permitem que você execute as seguintes tarefas:

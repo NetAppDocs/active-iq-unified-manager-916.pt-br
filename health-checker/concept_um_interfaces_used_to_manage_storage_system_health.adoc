@@ -17,6 +17,7 @@ Se quiser usar os recursos de proteção no Unified Manager, você também deve 
 
 
 
+[[unified-manager-web-ui]]
 == Interface da Web do Unified Manager
 
 A interface de usuário da Web do Unified Manager permite que um administrador monitore e solucione problemas de cluster relacionados à capacidade de armazenamento de dados, disponibilidade e proteção.
@@ -25,6 +26,7 @@ Estas seções descrevem alguns fluxos de trabalho comuns que um administrador p
 
 
 
+[[maintenance-console]]
 == Console de manutenção
 
 O console de manutenção do Unified Manager permite que um administrador monitore, diagnostique e resolva problemas do sistema operacional, problemas de atualização de versão, problemas de acesso do usuário e problemas de rede relacionados ao próprio servidor do Unified Manager.  Se a interface de usuário da Web do Unified Manager não estiver disponível, o console de manutenção será a única forma de acesso ao Unified Manager.

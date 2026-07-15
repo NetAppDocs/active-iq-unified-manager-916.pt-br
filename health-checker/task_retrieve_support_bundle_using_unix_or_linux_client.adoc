@@ -49,6 +49,7 @@ O nome do pacote de suporte é fornecido quando você o gera usando o console de
 
 
 
+[[examples]]
 == Exemplos
 
 O exemplo a seguir usa SCP para recuperar o pacote de suporte:

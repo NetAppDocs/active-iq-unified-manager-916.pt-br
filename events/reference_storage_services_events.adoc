@@ -15,6 +15,7 @@ Os eventos de serviços de armazenamento fornecem informações sobre a criaçã
 
 
 
+[[impact-area-configuration]]
 == Área de impacto: configuração
 
 |===
@@ -55,6 +56,7 @@ Informação
 |===
 
 
+[[impact-area-protection]]
 == Área de impacto: proteção
 
 |===

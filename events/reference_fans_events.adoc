@@ -15,6 +15,7 @@ Os eventos de fãs fornecem informações sobre o status dos fãs nos nós do se
 
 
 
+[[impact-area-availability]]
 == Área de impacto: disponibilidade
 
 |===

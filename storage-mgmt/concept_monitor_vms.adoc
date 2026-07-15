@@ -26,6 +26,7 @@ Você pode determinar o caminho de E/S e as latências no nível do componente a
 
 
 
+[[view-summary-topology]]
 == Ver topologia resumida
 
 Para determinar problemas de desempenho visualizando as VMs em uma topologia resumida:
@@ -53,6 +54,7 @@ Os servidores vCenter permitem caracteres especiais (como %, &, *, $, #, @, !, \
 
 
 
+[[view-expanded-topology]]
 == Ver topologia expandida
 
 Você pode detalhar cada componente separadamente visualizando a topologia expandida da VM.

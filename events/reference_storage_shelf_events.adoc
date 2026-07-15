@@ -15,6 +15,7 @@ Os eventos da prateleira de armazenamento informam se sua prateleira de armazena
 
 
 
+[[impact-area-availability]]
 == Área de impacto: disponibilidade
 
 |===

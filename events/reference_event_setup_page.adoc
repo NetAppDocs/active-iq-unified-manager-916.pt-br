@@ -17,6 +17,7 @@ Você só poderá acessar esta página se tiver a função de Administrador de A
 
 
 
+[[command-buttons]]
 == Botões de comando
 
 Os botões de comando permitem que você execute as seguintes tarefas para eventos selecionados:
@@ -41,6 +42,7 @@ Inicia a caixa de diálogo Inscrever-se em eventos do EMS, que permite que você
 
 
 
+[[list-view]]
 == Visualização de lista
 
 A exibição de lista exibe (em formato tabular) informações sobre eventos que estão desabilitados.  Você pode usar os filtros de coluna para personalizar os dados exibidos.

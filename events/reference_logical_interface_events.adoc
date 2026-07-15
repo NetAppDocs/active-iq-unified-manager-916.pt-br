@@ -15,6 +15,7 @@ Os eventos da interface de rede fornecem informações sobre o status da sua int
 
 
 
+[[impact-area-availability]]
 == Área de impacto: disponibilidade
 
 |===
@@ -66,6 +67,7 @@ Aviso
 |===
 
 
+[[impact-area-configuration]]
 == Área de impacto: configuração
 
 |===
@@ -84,6 +86,7 @@ Informação
 |===
 
 
+[[impact-area-performance]]
 == Área de impacto: desempenho
 
 |===

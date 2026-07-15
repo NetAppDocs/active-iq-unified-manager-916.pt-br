@@ -15,6 +15,7 @@ O painel Eventos de desempenho do cluster exibe estatísticas de desempenho e to
 
 
 
+[[all-events-on-this-cluster-pane]]
 == Todos os eventos neste painel de cluster
 
 O painel Todos os eventos neste cluster exibe todos os eventos de desempenho do cluster ativo nas últimas 72 horas.  O Total de Eventos Ativos é exibido na extrema esquerda; esse número representa o total de todos os eventos Novos e Confirmados para todos os objetos de armazenamento neste cluster.  Você pode clicar no link Total de eventos ativos para navegar até a página Inventário de eventos, que é filtrada para exibir esses eventos.
@@ -37,6 +38,7 @@ Você pode mostrar ou ocultar eventos críticos e de aviso no gráfico de desemp
 
 
 
+[[counter-panels]]
 == Painéis de balcão
 
 Os painéis de contadores exibem a atividade do cluster e os eventos de desempenho das 72 horas anteriores e incluem os seguintes contadores:

@@ -28,6 +28,7 @@ Os comandos CURL, exemplos, solicitações e respostas às APIs estão disponív
 ====
 
 
+[[apis-for-storage-objects-in-your-data-center]]
 == APIs para objetos de armazenamento em seu data center
 
 [cols="3*"]
@@ -203,6 +204,7 @@ Se você tiver habilitado o provisionamento de carga de trabalho baseado em SLO 
 
 
 
+[[apis-for-network-elements-in-your-data-center]]
 == APIs para elementos de rede em seu data center
 
 As seguintes APIs na categoria datacenter recuperam informações sobre as portas e interfaces de rede em seu ambiente, especificamente as portas FC, interfaces FC, portas Ethernet e interfaces IP.

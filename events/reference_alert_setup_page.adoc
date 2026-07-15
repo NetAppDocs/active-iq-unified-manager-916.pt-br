@@ -17,6 +17,7 @@ Você deve ter a função de Administrador de Aplicativos ou Administrador de Ar
 
 
 
+[[command-buttons]]
 == Botões de comando
 
 * *Adicionar*
@@ -51,6 +52,7 @@ Permite habilitar ou desabilitar o envio de alertas quando eventos são movidos 
 
 
 
+[[list-view]]
 == Visualização de lista
 
 A exibição de lista exibe, em formato tabular, informações sobre os alertas criados.  Você pode usar os filtros de coluna para personalizar os dados exibidos.  Você também pode selecionar um alerta para ver mais informações sobre ele na área de detalhes.
@@ -79,6 +81,7 @@ Especifica a frequência (em minutos) com que o servidor de gerenciamento contin
 
 
 
+[[details-area]]
 == Área de detalhes
 
 A área de detalhes fornece mais informações sobre o alerta selecionado.

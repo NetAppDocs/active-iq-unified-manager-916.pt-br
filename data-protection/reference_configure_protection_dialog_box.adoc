@@ -15,6 +15,7 @@ Você pode usar a caixa de diálogo Configurar proteção para criar relacioname
 
 
 
+[[source-tab]]
 == Guia Fonte
 
 * *Visualização de topologia*
@@ -65,6 +66,7 @@ Exibe a cópia do Snapshot usada para a transferência de linha de base.  Se o v
 
 
 
+[[snapmirror-tab]]
 == Guia SnapMirror
 
 Permite que você especifique um cluster de destino, uma máquina virtual de armazenamento (SVM) e um agregado para um relacionamento de proteção, bem como uma convenção de nomenclatura para destinos ao criar um relacionamento SnapMirror .  Você também pode especificar uma política e agendamento do SnapMirror .
@@ -157,6 +159,7 @@ Inicia a caixa de diálogo Criar agendamento, que permite criar um novo agendame
 
 
 
+[[snapvault-tab]]
 == Guia SnapVault
 
 Permite que você especifique um cluster secundário, SVM e agregado para um relacionamento de proteção, bem como uma convenção de nomenclatura para volumes secundários ao criar um relacionamento SnapVault .  Você também pode especificar uma política e uma programação do SnapVault .
@@ -249,6 +252,7 @@ Inicia a caixa de diálogo Criar agendamento, que permite criar um agendamento d
 
 
 
+[[command-buttons]]
 == Botões de comando
 
 Os botões de comando permitem que você execute as seguintes tarefas:

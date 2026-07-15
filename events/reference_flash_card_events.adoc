@@ -15,6 +15,7 @@ Os eventos de flash cards fornecem informações sobre o status dos flash cards 
 
 
 
+[[impact-area-availability]]
 == Área de impacto: disponibilidade
 
 |===

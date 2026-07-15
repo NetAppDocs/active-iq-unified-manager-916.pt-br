@@ -15,6 +15,7 @@ Os eventos de gabinetes fornecem informações sobre o status dos gabinetes de p
 
 
 
+[[impact-area-availability]]
 == Área de impacto: disponibilidade
 
 |===
@@ -72,6 +73,7 @@ Aviso
 |===
 
 
+[[impact-area-configuration]]
 == Área de impacto: configuração
 
 |===

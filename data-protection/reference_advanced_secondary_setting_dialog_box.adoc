@@ -72,6 +72,7 @@ A garantia de espaço é definida como Volume por padrão.
 
 
 
+[[command-buttons]]
 == Botões de comando
 
 Os botões de comando permitem que você execute as seguintes tarefas:

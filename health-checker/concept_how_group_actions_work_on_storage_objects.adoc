@@ -17,6 +17,7 @@ Os grupos oferecem suporte a tipos exclusivos de ações de grupo.  Você pode t
 
 
 
+[[example-of-unique-group-actions]]
 == Exemplo de ações de grupo exclusivas
 
 Considere um volume A que pertence aos grupos G1 e G2, e as seguintes ações de grupo de limite de integridade de volume são configuradas para esses grupos:

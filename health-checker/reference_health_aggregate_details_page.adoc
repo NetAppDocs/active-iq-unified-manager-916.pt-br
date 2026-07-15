@@ -15,6 +15,7 @@ Você pode usar a página Detalhes do agregado/saúde para visualizar informaç�
 
 
 
+[[command-buttons]]
 == Botões de comando
 
 [NOTE]
@@ -48,6 +49,7 @@ Permite que você navegue até a visualização Saúde: Todos os agregados.
 
 
 
+[[capacity-tab]]
 == Aba de capacidade
 
 A guia Capacidade exibe informações detalhadas sobre o agregado selecionado, como sua capacidade, limites e taxa de crescimento diária.
@@ -204,6 +206,7 @@ Você pode selecionar o gráfico que deseja visualizar nas listas suspensas.  Vo
 
 
 
+[[disk-information-tab]]
 == Guia Informações do Disco
 
 Exibe informações detalhadas sobre os discos no agregado selecionado, incluindo o tipo e o tamanho do RAID e o tipo de discos usados no agregado.  A guia também exibe graficamente os grupos RAID e os tipos de discos usados (como SAS, ATA, FCAL, SSD ou VMDISK).  Você pode visualizar mais informações, como o compartimento do disco, a prateleira e a velocidade de rotação, posicionando o cursor sobre os discos de paridade e os discos de dados.
@@ -385,6 +388,7 @@ Exibe o nome da camada de nuvem, se você tiver configurado um agregado habilita
 
 
 
+[[configuration-tab]]
 == Guia de configuração
 
 A guia Configuração exibe detalhes sobre o agregado selecionado, como seu nó de cluster, tipo de bloco, tipo de RAID, tamanho do RAID e contagem de grupos de RAID:
@@ -456,6 +460,7 @@ Exibe se a criptografia SSL está habilitada para a camada de nuvem.
 
 
 
+[[history-area]]
 == Área de história
 
 A área Histórico exibe gráficos que fornecem informações sobre a capacidade do agregado selecionado.  Além disso, você pode clicar no botão *Exportar* para criar um relatório no formato CSV para o gráfico que você está visualizando.
@@ -480,6 +485,7 @@ Exibe a tendência de como a capacidade agregada é usada com base no histórico
 
 
 
+[[events-list]]
 == Lista de eventos
 
 A lista de eventos exibe detalhes sobre eventos novos e reconhecidos:
@@ -500,6 +506,7 @@ Exibe o tempo decorrido desde que o evento foi gerado.  Se o tempo decorrido exc
 
 
 
+[[related-devices-pane]]
 == Painel de dispositivos relacionados
 
 O painel Dispositivos relacionados permite que você visualize o nó do cluster, os volumes e os discos relacionados ao agregado:
@@ -528,6 +535,7 @@ Exibe o número de discos no agregado selecionado.
 
 
 
+[[related-alerts-pane]]
 == Painel de alertas relacionados
 
 O painel Alertas relacionados permite que você visualize a lista de alertas criados para o agregado selecionado.  Você também pode adicionar um alerta clicando no link Adicionar alerta ou editar um alerta existente clicando no nome do alerta.

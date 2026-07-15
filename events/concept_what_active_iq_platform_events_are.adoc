@@ -21,4 +21,4 @@ Esses eventos do Active IQ não se sobrepõem aos eventos existentes do Unified 
 
 Para obter mais informações sobre como habilitar eventos de plataforma, consultelink:../config/concept_active_iq_platform_events.html["Habilitando eventos do portal Active IQ"] .  Para obter mais informações sobre o upload do arquivo de regras, consultelink:../events/task_upload_new_active_iq_rules_file.html["Carregando um novo arquivo de regras do Active IQ"] .
 
-O NetApp Active IQ é um serviço baseado em nuvem que fornece análise preditiva e suporte proativo para otimizar as operações do sistema de armazenamento na nuvem híbrida da NetApp .  Ver https://www.netapp.com/us/products/data-infrastructure-management/active-iq.aspx["NetApp Active IQ"] para mais informações.
+NetApp Active IQ é um serviço baseado em nuvem que fornece análises preditivas e suporte proativo para otimizar as operações do sistema de storage em toda a nuvem híbrida NetApp. Veja  https://docs.netapp.com/us-en/active-iq/index.html["NetApp Active IQ"^] para mais informações.

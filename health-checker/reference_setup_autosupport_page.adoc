@@ -22,6 +22,7 @@ Um usuário com função de administrador de armazenamento pode gerar e enviar m
 ====
 
 
+[[send-on-demand-autosupport-messages]]
 == Enviar mensagens de AutoSupport sob demanda
 
 Você pode gerar e enviar uma mensagem sob demanda para o suporte técnico, para um destinatário de e-mail específico ou para ambos.
@@ -36,6 +37,7 @@ Você pode gerar e enviar uma mensagem sob demanda para o suporte técnico, para
 
 
 
+[[enable-periodic-autosupport]]
 == Habilitar AutoSupport periódico
 
 Você pode enviar mensagens específicas e predefinidas ao suporte técnico para diagnóstico e resolução de problemas periodicamente.  Esta funcionalidade é habilitada por padrão.  Se desabilitado, um administrador ou usuário de manutenção pode habilitar as configurações.
@@ -49,6 +51,7 @@ Você pode enviar mensagens específicas e predefinidas ao suporte técnico para
 
 
 
+[[upload-on-demand-support-bundle]]
 == Pacote de suporte sob demanda para upload
 
 Você pode gerar e enviar um pacote de suporte ao suporte técnico com base na necessidade de solução de problemas.  O Unified Manager armazena apenas os dois pacotes de suporte gerados mais recentemente.  Pacotes de suporte mais antigos são excluídos do sistema.
@@ -72,6 +75,7 @@ Mesmo que você não selecione nenhum tipo de dado, o pacote de suporte ainda se
 
 
 
+[[set-up-http-proxy-server]]
 == Configurar servidor proxy HTTP
 
 Você pode designar um proxy para fornecer acesso à Internet para enviar conteúdo do AutoSupport ao suporte caso seu ambiente não forneça acesso direto do servidor do Unified Manager.  Esta seção está disponível apenas para usuários administradores e de manutenção.
